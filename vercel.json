@@ -12,6 +12,8 @@
     { "source": "/models/yangwang-u8l", "destination": "/models/yangwang-u8l.html" },
     { "source": "/concierge", "destination": "/concierge.html" },
     { "source": "/about", "destination": "/about.html" },
+    { "source": "/configure", "destination": "/config.html" },
+    { "source": "/build", "destination": "/config.html" },
     { "source": "/join", "destination": "/join.html" },
     { "source": "/test-drive", "destination": "/test-drive.html" },
     { "source": "/ownership", "destination": "/ownership.html" },
