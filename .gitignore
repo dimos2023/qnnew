@@ -2,3 +2,8 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+
+# Oversized source video masters (web copies live as s800/u9/u8l.mp4)
+assets/video/Maextro_S800_Final_Master_v3_1080p.mp4
+assets/video/BYD_Yangwang_U9_Homepage_Hero_Film_1080p_v2.mp4
+assets/video/BYD_Yangwang_U8L_Homepage_Cinematic_Film_1080p.mp4
