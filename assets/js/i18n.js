@@ -715,16 +715,63 @@
     },
   };
 
-  const STORE = 'legacy_lang';
-  const getLang = () => {
-    // ?lang=ar|en wins (shareable deep links), then the saved preference.
-    const q = new URLSearchParams(location.search).get('lang');
-    if (q === 'ar' || q === 'en') return q;
-    try { return localStorage.getItem(STORE) === 'ar' ? 'ar' : 'en'; } catch { return 'en'; }
+  const STORE = 'qn_country';
+
+  /* Country selector. Order requested: USA · UAE · Saudi · Egypt.
+     Flags are inline SVG (emoji flags do not render on Windows). Each country
+     maps to a base language; the OVERRIDES layer tunes chosen strings to the
+     culture/market of that country. */
+  const FLAGS = {
+    us: '<svg viewBox="0 0 24 16" class="cs-svg"><rect width="24" height="16" fill="#b22234"/><g fill="#fff"><rect y="1.23" width="24" height="1.23"/><rect y="3.69" width="24" height="1.23"/><rect y="6.15" width="24" height="1.23"/><rect y="8.61" width="24" height="1.23"/><rect y="11.07" width="24" height="1.23"/><rect y="13.53" width="24" height="1.23"/></g><rect width="10" height="8.61" fill="#3c3b6e"/><g fill="#fff"><circle cx="2" cy="2" r=".55"/><circle cx="4.5" cy="2" r=".55"/><circle cx="7" cy="2" r=".55"/><circle cx="3.2" cy="4.3" r=".55"/><circle cx="5.7" cy="4.3" r=".55"/><circle cx="2" cy="6.5" r=".55"/><circle cx="4.5" cy="6.5" r=".55"/><circle cx="7" cy="6.5" r=".55"/></g></svg>',
+    ae: '<svg viewBox="0 0 24 16" class="cs-svg"><rect width="24" height="16" fill="#fff"/><rect width="24" height="5.34" fill="#00843d"/><rect y="10.66" width="24" height="5.34" fill="#000"/><rect width="6.4" height="16" fill="#ce1126"/></svg>',
+    sa: '<svg viewBox="0 0 24 16" class="cs-svg"><rect width="24" height="16" fill="#006c35"/><rect x="5" y="6.2" width="14" height="1.5" rx=".5" fill="#fff"/><rect x="4" y="10.4" width="16" height="1.3" rx=".4" fill="#fff"/><rect x="4" y="10.4" width="1.3" height="3" fill="#fff"/></svg>',
+    eg: '<svg viewBox="0 0 24 16" class="cs-svg"><rect width="24" height="16" fill="#fff"/><rect width="24" height="5.34" fill="#ce1126"/><rect y="10.66" width="24" height="5.34" fill="#000"/><circle cx="12" cy="8" r="1.7" fill="#c8a24a"/></svg>'
+  };
+  const COUNTRIES = {
+    us: { flag: FLAGS.us, name: 'United States', lang: 'en' },
+    ae: { flag: FLAGS.ae, name: 'الإمارات', lang: 'ar' },
+    sa: { flag: FLAGS.sa, name: 'السعودية', lang: 'ar' },
+    eg: { flag: FLAGS.eg, name: 'مصر', lang: 'ar' }
+  };
+  const ORDER = ['us', 'ae', 'sa', 'eg'];
+  const DEFAULT_C = 'us';
+
+  /* Per-country cultural / market overrides (merged over the base-language
+     dictionary). Extend freely — any data-i18n key can be tuned per country. */
+  const OVERRIDES = {
+    us: {
+      'hero.lede': 'A curated collection of the world’s most exclusive high-performance electric vehicles — commissioned for a discerning American clientele through the QN Automotive digital atelier.',
+      'cta.lede': 'Register your interest and our concierge team will reach out with an exclusive commissioning experience across the United States.'
+    },
+    ae: {
+      'hero.lede': 'مجموعةٌ منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليفٍ خاصٍ لنخبة دولة الإمارات ودول الخليج، عبر أتيليه QN Automotive الرقمي.',
+      'cta.lede': 'سجّل اهتمامك ليتواصل معك فريق الكونسيرج في دولة الإمارات ويقدّم لك تجربة تخصيصٍ حصرية تليق بمقامك.'
+    },
+    sa: {
+      'hero.lede': 'مجموعةٌ منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليفٍ خاصٍ لنخبة المملكة العربية السعودية ودول الخليج، عبر أتيليه QN Automotive الرقمي.',
+      'cta.lede': 'سجّل اهتمامك ليتواصل معك فريق الكونسيرج في المملكة العربية السعودية ويقدّم لك تجربة تخصيصٍ حصرية تليق بمقامك.'
+    },
+    eg: {
+      'hero.lede': 'مجموعةٌ منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليفٍ خاصٍ لصفوة مصر، عبر أتيليه QN Automotive الرقمي.',
+      'cta.lede': 'سجّل اهتمامك ليتواصل معك فريق الكونسيرج في مصر ويقدّم لك تجربة تخصيصٍ حصرية تليق بذوقك الرفيع.'
+    }
   };
 
-  function apply(lang) {
-    const d = DICT[lang] || DICT.en;
+  const getCountry = () => {
+    const q = new URLSearchParams(location.search).get('country');
+    if (q && COUNTRIES[q]) return q;
+    try {
+      const c = localStorage.getItem(STORE);
+      if (c && COUNTRIES[c]) return c;
+      if (localStorage.getItem('legacy_lang') === 'ar') return 'eg'; // migrate old pref
+    } catch { /* ignore */ }
+    return DEFAULT_C;
+  };
+
+  function apply(country) {
+    if (!COUNTRIES[country]) country = DEFAULT_C;
+    const lang = COUNTRIES[country].lang;
+    const d = Object.assign({}, DICT[lang] || DICT.en, OVERRIDES[country] || {});
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.classList.toggle('rtl', lang === 'ar');
@@ -732,33 +779,56 @@
       const v = d[el.getAttribute('data-i18n')];
       if (v != null) el.innerHTML = v;
     });
-    // Input/textarea placeholders.
     document.querySelectorAll('[data-i18n-ph]').forEach((el) => {
       const v = d[el.getAttribute('data-i18n-ph')];
       if (v != null) el.setAttribute('placeholder', v);
     });
-    const t = document.getElementById('lang-toggle');
-    if (t) t.textContent = lang === 'ar' ? 'EN' : 'ع';
-    try { localStorage.setItem(STORE, lang); } catch { /* ignore */ }
-    window.dispatchEvent(new CustomEvent('legacy:langchange', { detail: { lang } }));
+    const cur = document.querySelector('#country-switch .cs-current .cs-flag');
+    if (cur) cur.innerHTML = COUNTRIES[country].flag;
+    document.querySelectorAll('#country-switch [data-country]').forEach((b) => {
+      b.setAttribute('aria-checked', b.getAttribute('data-country') === country ? 'true' : 'false');
+    });
+    try { localStorage.setItem(STORE, country); } catch { /* ignore */ }
+    window.dispatchEvent(new CustomEvent('legacy:langchange', { detail: { lang, country } }));
   }
 
-  window.LegacyI18n = { apply, getLang, toggle: () => apply(getLang() === 'ar' ? 'en' : 'ar') };
+  window.LegacyI18n = { apply, getCountry, get lang() { return COUNTRIES[getCountry()].lang; } };
 
-  // Set document direction/lang synchronously (in <head>) so returning Arabic
-  // visitors never see an LTR flash — but defer the text swap until the DOM
-  // exists, since [data-i18n] elements aren't parsed yet here.
   (function primeDir() {
-    const lang = getLang();
+    const lang = COUNTRIES[getCountry()].lang;
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.classList.toggle('rtl', lang === 'ar');
   })();
 
+  function buildSwitcher() {
+    const host = document.getElementById('country-switch');
+    if (!host || host.dataset.ready) return;
+    host.dataset.ready = '1';
+    const cur = getCountry();
+    let html = '<button type="button" class="cs-current" aria-haspopup="true" aria-expanded="false" aria-label="Country and language">'
+      + '<span class="cs-flag">' + COUNTRIES[cur].flag + '</span>'
+      + '<svg class="cs-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+      + '<div class="cs-menu" role="menu">';
+    ORDER.forEach((code) => {
+      html += '<button type="button" class="cs-opt" role="menuitemradio" data-country="' + code + '" aria-checked="false" aria-label="' + COUNTRIES[code].name + '" title="' + COUNTRIES[code].name + '">'
+        + '<span class="cs-flag">' + COUNTRIES[code].flag + '</span></button>';
+    });
+    html += '</div>';
+    host.innerHTML = html;
+    const currentBtn = host.querySelector('.cs-current');
+    const setOpen = (o) => { host.classList.toggle('open', o); currentBtn.setAttribute('aria-expanded', o ? 'true' : 'false'); };
+    currentBtn.addEventListener('click', (e) => { e.stopPropagation(); setOpen(!host.classList.contains('open')); });
+    host.querySelectorAll('[data-country]').forEach((b) => {
+      b.addEventListener('click', (e) => { e.stopPropagation(); apply(b.getAttribute('data-country')); setOpen(false); });
+    });
+    document.addEventListener('click', (e) => { if (!host.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  }
+
   function boot() {
-    apply(getLang());
-    const t = document.getElementById('lang-toggle');
-    if (t) t.addEventListener('click', () => window.LegacyI18n.toggle());
+    buildSwitcher();
+    apply(getCountry());
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
