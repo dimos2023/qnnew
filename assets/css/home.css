@@ -79,7 +79,32 @@
 
 @media (max-width: 900px) {
   .nav { display: none; }
-  .menu-btn { display: block; }
+  .menu-btn { display: block; position: relative; z-index: 101; }
+
+  /* Full-screen menu when the hamburger is tapped */
+  body.nav-open { overflow: hidden; }
+  body.nav-open .nav {
+    display: flex !important;
+    position: fixed; inset: 0; z-index: 95;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: clamp(18px, 4vh, 30px);
+    background: rgba(8, 9, 11, 0.97);
+    -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    padding: 96px 24px max(28px, env(safe-area-inset-bottom));
+    animation: navFade var(--dur) var(--ease);
+  }
+  body.nav-open .nav a {
+    font-family: var(--serif); font-size: clamp(1.5rem, 6vw, 2rem);
+    font-weight: 600; color: var(--ink); letter-spacing: 0.01em;
+  }
+  body.nav-open .nav a::after { display: none; }
+  /* hamburger morphs to an X */
+  body.nav-open .menu-btn span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  body.nav-open .menu-btn span:nth-child(2) { transform: translateY(-8px) rotate(-45deg); }
+  @keyframes navFade { from { opacity: 0; } to { opacity: 1; } }
+}
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+  body.nav-open .nav { animation: none; }
 }
 
 /* --- HERO: full-bleed cinematic, one idea, bottom-anchored copy ---------- */

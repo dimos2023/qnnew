@@ -67,4 +67,24 @@
   }
 
   // The language toggle is owned by i18n.js (loaded in <head>).
+
+  // Mobile nav drawer — the hamburger opens the full-screen menu.
+  (function () {
+    var btn = document.querySelector('.menu-btn');
+    var nav = document.querySelector('.site-header .nav');
+    if (!btn || !nav) return;
+    var close = function () {
+      document.body.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !document.body.classList.contains('nav-open');
+      document.body.classList.toggle('nav-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
 })();

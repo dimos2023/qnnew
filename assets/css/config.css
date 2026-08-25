@@ -153,6 +153,32 @@
 .cfg-actions { display: grid; gap: 10px; margin-top: 18px; }
 .cfg-note { margin-top: 12px; font-size: 0.74rem; color: var(--ink-mute); line-height: 1.5; text-align: center; }
 
+/* ---- Prevent horizontal overflow: let grid/flex children shrink ---- */
+.cfg-layout { min-width: 0; }
+.cfg-layout > * { min-width: 0; }
+.cfg-panel { min-width: 0; }
+.cfg-tile .cfg-oname, .cfg-add .cfg-oname { min-width: 0; overflow-wrap: anywhere; }
+.cfg-sum-row { min-width: 0; gap: 12px; }
+.cfg-sum-row > * { min-width: 0; }
+.cfg-sum-row .num { white-space: nowrap; }
+
+/* ---- Phones ---- */
+@media (max-width: 640px) {
+  .cfg-page main { padding-top: 84px; }
+  .cfg-head { padding-inline: 16px; }
+  .cfg-head .lede { max-width: none; }
+  .cfg-layout { padding-inline: 16px; gap: 26px; }
+  .cfg-tabs { gap: 8px; }
+  .cfg-tab { padding: 10px 14px; font-size: 0.72rem; letter-spacing: 0.05em; }
+  .cfg-stage { aspect-ratio: 4 / 3; }
+  .cfg-opts.swatch { gap: 12px 14px; }
+  .cfg-swatch { width: 74px; }
+  .cfg-swatch .sw { width: 42px; height: 42px; }
+  .cfg-tile, .cfg-add { padding: 13px 14px; }
+  .cfg-summary { padding: 18px 16px; }
+  .cfg-sum-row.total b { font-size: 1.45rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cfg-stage-media, .cfg-swatch .sw, .cfg-tile, .cfg-add, .cfg-add .cfg-check, .cfg-tab { transition: none; }
 }
