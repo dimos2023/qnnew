@@ -17,7 +17,7 @@
   padding-block: 12px;
 }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand img { height: 34px; width: auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); }
+.brand img { height: 44px; width: auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); }
 .brand .wordmark {
   font-family: var(--serif); font-weight: 600; font-size: 21px;
   letter-spacing: 0.16em; color: var(--ink); line-height: 1;

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="78 28 464 486" fill="none" role="img" aria-label="QN">
+  <defs>
+    <linearGradient id="qnChamp" x1="310" y1="30" x2="310" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#faf1e6"/>
+      <stop offset="0.3" stop-color="#ead9c2"/>
+      <stop offset="0.58" stop-color="#d8bd9c"/>
+      <stop offset="0.8" stop-color="#c6a279"/>
+      <stop offset="1" stop-color="#b5895f"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#qnChamp)">
+    <!-- crown -->
+    <path d="M310 44c8 6 12 15 10 25 6-5 14-4 18 3 3 6 1 13-4 17 8 1 14 8 13 16-1 9-9 15-18 14l-38 0c-9 1-17-5-18-14-1-8 5-15 13-16-5-4-7-11-4-17 4-7 12-8 18-3-2-10 2-19 10-25z"/>
+    <path d="M198 150c22 26 52 40 84 41l-4-38 32 0-4 38c32-1 62-15 84-41l14 60c-40 22-84 30-110 30s-70-8-110-30z"/>
+    <circle cx="198" cy="150" r="11"/><circle cx="422" cy="150" r="11"/>
+    <circle cx="256" cy="140" r="7"/><circle cx="364" cy="140" r="7"/>
+    <!-- wings -->
+    <path d="M232 356c-46 6-92 8-138 26 40 2 66 8 84 22-40 2-70 10-96 28 40-2 64 2 82 14-30 4-54 12-74 28 46-6 96-16 138-40z"/>
+    <path d="M388 356c46 6 92 8 138 26-40 2-66 8-84 22 40 2 70 10 96 28-40-2-64 2-82 14 30 4 54 12 74 28-46-6-96-16-138-40z"/>
+    <!-- ring (Q) + tail -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M310 250c-64 0-116 52-116 116s52 116 116 116 116-52 116-116-52-116-116-116zm0 30c47 0 86 39 86 86s-39 86-86 86-86-39-86-86 39-86 86-86z"/>
+    <path d="M356 430c14 12 20 30 16 48-2 10-9 18-19 21-9 3-19-2-22-11 8 2 16-1 20-8 5-9 4-20-3-28z"/>
+    <!-- N -->
+    <path d="M270 306h20l40 62v-62h20v120h-20l-40-62v62h-20z"/>
+  </g>
+</svg>
