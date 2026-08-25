@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Register Your Interest · LEGACY MOTORS</title>
+  <meta name="description" content="Register your interest with Legacy Motors — join an invitation-only community and receive a private commissioning experience for the S800, U9, and U8L.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Amiri:wght@400;700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/legacy.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/page.css">
+  <script src="/assets/js/i18n.js"></script>
+</head>
+<body class="page-interior">
+
+  <header class="site-header scrolled" id="site-header">
+    <a class="brand" href="/">
+      <img src="/assets/brand/bolt-dark.png" alt="LEGACY">
+      <span class="wordmark">LEGACY<small>MOTORS</small></span>
+    </a>
+    <nav class="nav">
+      <a href="/#models" data-i18n="nav.models">Models</a>
+      <a href="/ownership" data-i18n="nav.ownership">Ownership</a>
+      <a href="/journal" data-i18n="nav.journal">Journal</a>
+      <a href="/concierge" data-i18n="nav.concierge">Concierge</a>
+      <a href="/about" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle">ع</button>
+      <button class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-media"><img src="/assets/models/u9/band-clean.png" alt=""></div>
+      <div class="inner">
+        <p class="eyebrow reveal" data-i18n="jn.eyebrow">Join the elite</p>
+        <h1 class="reveal d1" data-i18n="jn.title">Register your interest</h1>
+        <p class="lede reveal d2" data-i18n="jn.lede">An invitation-only community. Share your details and our concierge team will begin your private commissioning journey.</p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="shell">
+        <form class="form-card reveal" id="join-form" novalidate>
+          <div class="field-grid">
+            <div class="field"><label data-i18n="jn.fName">Full name</label><input name="name" type="text" required></div>
+            <div class="field"><label data-i18n="jn.fEmail">Email</label><input name="email" type="email" dir="ltr" required></div>
+            <div class="field"><label data-i18n="jn.fPhone">Phone</label><input name="phone" type="tel" dir="ltr"></div>
+            <div class="field"><label data-i18n="jn.fCity">City</label><input name="city" type="text"></div>
+            <div class="field"><label data-i18n="jn.fCompany">Company (optional)</label><input name="company" type="text"></div>
+            <div class="field">
+              <label data-i18n="jn.fModel">Model of interest</label>
+              <select name="model">
+                <option value="">—</option>
+                <option>MAEXTRO S800</option>
+                <option>YANGWANG U9</option>
+                <option>YANGWANG U8L</option>
+              </select>
+            </div>
+          </div>
+          <p class="form-alert" id="join-alert"></p>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-chrome" data-i18n="jn.submit">Register interest</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-bottom" style="margin-top:0;border:0">
+        <span>© 2026 LEGACY MOTORS</span>
+        <a class="md-back" href="/"><span class="arrow">←</span> <span data-i18n="jn.back">Back to home</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/legacy.js" defer></script>
+  <script src="/assets/js/forms.js" defer></script>
+</body>
+</html>

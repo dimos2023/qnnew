@@ -1,0 +1,143 @@
+/* =============================================================================
+   LEGACY MOTORS — design system
+   Synthesised from the shared DNA of Porsche, Ferrari and Mercedes-Maybach:
+   photography as interface, extreme whitespace, near-monochrome with a single
+   rationed accent (here: metallic chrome), serif display + Arabic-first type,
+   sharp 0px geometry, no shadow system, slow cinematic motion.
+   ========================================================================== */
+
+:root {
+  /* --- Canvas: cinematic near-black (never pure #000, per Ferrari) --- */
+  --bg:            #0d0e10;
+  --bg-elev:       #16171a;   /* elevated surface / cards */
+  --bg-elev-2:     #1e1f23;
+  --bg-light:      #f4f3f0;   /* light editorial bands (cream, per Legacy board) */
+  --bg-light-2:    #e9e7e2;
+
+  /* --- Ink --- */
+  --ink:           #f6f6f4;   /* display on dark */
+  --ink-dim:       #a9aab0;   /* body on dark */
+  --ink-mute:      #6c6d73;   /* captions / disabled */
+  --ink-dark:      #14151a;   /* text on light bands */
+  --ink-dark-dim:  #55565c;
+
+  /* --- Accent: metallic chrome (rationed, like Ferrari's red) --- */
+  --chrome-1:      #eef0f2;
+  --chrome-2:      #c7cace;
+  --chrome-3:      #9a9ea4;
+  --chrome-4:      #6e7075;
+  --chrome-grad:   linear-gradient(145deg, #f2f3f5 0%, #c7cace 38%, #83868c 70%, #babdc2 100%);
+  --gold:          #b7935a;   /* whisper accent from the LEGACY wordmark — hairlines only */
+
+  /* --- Hairlines --- */
+  --line:          rgba(255,255,255,0.10);
+  --line-strong:   rgba(255,255,255,0.20);
+  --line-dark:     rgba(20,21,26,0.14);
+
+  /* --- Spacing ladder (Porsche 1/4/8/16/32/48/80 + Ferrari 96/128) --- */
+  --s1: 4px;  --s2: 8px;  --s3: 16px; --s4: 24px; --s5: 32px;
+  --s6: 48px; --s7: 64px; --s8: 96px; --s9: 128px; --s10: 180px;
+
+  /* --- Type --- */
+  --serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --serif-ar: 'Amiri', 'Scheherazade New', 'Cormorant Garamond', serif;
+  --sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+  --sans-ar: 'Tajawal', 'Manrope', system-ui, sans-serif;
+
+  /* --- Motion (slow, unhurried — never springy) --- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur:  0.6s;
+  --dur-slow: 0.9s;
+
+  --edge: clamp(20px, 6vw, 88px);   /* page side gutter */
+  --maxw: 1440px;
+}
+
+/* --- reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);         /* English primary */
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+html.rtl body { font-family: var(--sans-ar); line-height: 1.85; }  /* Arabic needs air */
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+::selection { background: var(--chrome-2); color: var(--ink-dark); }
+
+/* Latin/number fragments inside Arabic keep LTR & the Latin sans */
+.ltr { direction: ltr; unicode-bidi: isolate; font-family: var(--sans); }
+
+/* --- Typography scale ---------------------------------------------------- */
+/* English (default) uses Cormorant Garamond; Arabic (.rtl) uses Amiri. */
+h1, h2, h3, .display { font-family: var(--serif); font-weight: 600; line-height: 1.1; }
+html.rtl h1, html.rtl h2, html.rtl h3, html.rtl .display,
+html.rtl .hero h1 { font-family: var(--serif-ar); }
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--chrome-3);
+}
+html.rtl .eyebrow { letter-spacing: 0.12em; font-family: var(--sans-ar); }
+h2 { font-size: clamp(30px, 5vw, 60px); letter-spacing: -0.01em; }
+h3 { font-size: clamp(22px, 3vw, 32px); }
+.lede { font-size: clamp(17px, 2vw, 21px); color: var(--ink-dim); line-height: 1.9; }
+.muted { color: var(--ink-mute); }
+
+/* --- Buttons: sharp, restrained (ghost primary, chrome reserved) --------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 34px;
+  font-family: var(--sans-ar);
+  font-size: 14px; font-weight: 700; letter-spacing: 0.06em;
+  border-radius: 0;                 /* sharp geometry */
+  transition: all var(--dur) var(--ease);
+}
+.btn-chrome {
+  background: var(--chrome-grad);
+  color: #17181c;
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+}
+.btn-chrome:hover { background-position: 100% 50%; }
+.btn-ghost {
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+}
+.btn-ghost:hover { border-color: var(--chrome-2); background: rgba(255,255,255,0.04); }
+.btn-text {
+  padding: 0; gap: 12px; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.btn-text .arrow { transition: transform var(--dur) var(--ease); color: var(--chrome-3); }
+.btn-text:hover .arrow { transform: translateX(8px); }         /* LTR: toward the end */
+html.rtl .btn-text:hover .arrow { transform: translateX(-8px); } /* RTL: toward the end */
+
+/* --- Section rhythm ------------------------------------------------------ */
+.section { padding-block: clamp(64px, 12vw, 128px); }
+.shell { width: min(100% - 2*var(--edge), var(--maxw)); margin-inline: auto; }
+.section-head { margin-bottom: var(--s7); max-width: 640px; }
+.section-head h2 { margin-top: var(--s2); }
+.section-head .lede { margin-top: var(--s3); }
+
+/* --- Scroll-reveal (JS toggles .in) -------------------------------------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 0.08s; }
+.reveal.d2 { transition-delay: 0.16s; }
+.reveal.d3 { transition-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
