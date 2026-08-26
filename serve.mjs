@@ -42,7 +42,7 @@ http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
   const file = resolveFile(pathname);
   res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   if (!file || !fs.existsSync(file)) {
     res.statusCode = 404;

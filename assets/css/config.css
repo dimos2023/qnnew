@@ -58,9 +58,18 @@
 @media (max-width: 940px) { .cfg-stage { position: static; aspect-ratio: 16 / 10; } }
 .cfg-stage-media {
   grid-area: 1 / 1;
+  position: relative;
   transition: background var(--dur-slow) var(--ease);
   background: #141519;
 }
+/* Embedded interactive 3D configurator (S800) fills the stage. */
+.cfg-stage-media iframe.cfg-3d {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border: 0; display: block; background: #0d0d0d;
+}
+.cfg-stage.has-3d .cfg-stage-hint { display: none; }
+.cfg-stage.has-3d .cfg-stage-info { pointer-events: none; }
+.cfg-stage.has-3d .cfg-stage-scrim { background: linear-gradient(180deg, transparent 60%, rgba(8,9,11,0.7) 100%); }
 .cfg-stage-scrim {
   grid-area: 1 / 1;
   background: linear-gradient(180deg, rgba(8,9,11,0.5) 0%, transparent 32%, transparent 62%, rgba(8,9,11,0.72) 100%);

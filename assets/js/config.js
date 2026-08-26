@@ -116,6 +116,31 @@
   /* ---- State ---- */
   var state = { model: MODELS[0].id, single: {}, multi: {} };
 
+  /* Interactive 3D viewer per model. The embedded app hides its own chrome and
+     is driven by postMessage (exterior/interior colour, wheels, camera view) —
+     its option codes (e1-e6, i1-i6, w1-w3) match the groups above. */
+  var VIEWER = {
+    s800: '/assets/models/s800/maextro-s800-web-3d/index.html?SN=5008010020201'
+  };
+  function viewerFrame() { return document.querySelector('#cfg-stage-media iframe.cfg-3d'); }
+  function postViewer(msg) {
+    var f = viewerFrame();
+    if (f && f.contentWindow) { try { f.contentWindow.postMessage(msg, '*'); } catch (e) {} }
+  }
+  function pushCurrentToViewer() {
+    var m = model(); if (!VIEWER[m.id]) return;
+    postViewer({ type: 'maextroSetView', view: 'exterior' });
+    if (state.single.exterior) postViewer({ type: 'maextroSetOption', kind: 'exterior', value: state.single.exterior });
+    if (state.single.wheels)   postViewer({ type: 'maextroSetOption', kind: 'wheels',   value: state.single.wheels });
+  }
+  /* Push an option change to the 3D car; switch camera to the right view. */
+  function syncViewer(gid, oid) {
+    if (!VIEWER[model().id]) return;
+    if (gid === 'exterior') { postViewer({ type: 'maextroSetView', view: 'exterior' }); postViewer({ type: 'maextroSetOption', kind: 'exterior', value: oid }); }
+    else if (gid === 'interior') { postViewer({ type: 'maextroSetView', view: 'interior' }); postViewer({ type: 'maextroSetOption', kind: 'interior', value: oid }); }
+    else if (gid === 'wheels') { postViewer({ type: 'maextroSetView', view: 'exterior' }); postViewer({ type: 'maextroSetOption', kind: 'wheels', value: oid }); }
+  }
+
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var lang = function () { return (window.LegacyI18n && window.LegacyI18n.lang) || 'en'; };
   var country = function () { return (window.LegacyI18n && window.LegacyI18n.getCountry && window.LegacyI18n.getCountry()) || 'us'; };
@@ -178,10 +203,29 @@
     if (eyebrow) eyebrow.textContent = t(m, 'eyebrow');
     if (name) name.textContent = m.name;
     if (finish) finish.textContent = ext ? t(ext, 'name') : '';
-    /* Placeholder visual: tint the stage with the chosen finish. Replace #cfg-stage-media
-       with your <model-viewer> or renders when ready. */
-    if (media && ext) media.style.background =
-      'radial-gradient(120% 90% at 50% 20%, rgba(255,255,255,.05), transparent 60%), ' + ext.css;
+    if (!media) return;
+    var stage = media.closest('.cfg-stage');
+    var url = VIEWER[m.id];
+    if (url) {
+      /* Interactive 3D viewer for this model. */
+      if (stage) stage.classList.add('has-3d');
+      if (!viewerFrame()) {
+        media.style.background = '#0d0d0d';
+        var f = document.createElement('iframe');
+        f.className = 'cfg-3d';
+        f.title = m.name + ' — interactive 3D';
+        f.setAttribute('allow', 'accelerometer; gyroscope; xr-spatial-tracking; fullscreen');
+        f.addEventListener('load', pushCurrentToViewer);
+        f.src = url;
+        media.appendChild(f);
+      }
+    } else {
+      /* No 3D model yet — tint the stage with the chosen finish. */
+      if (stage) stage.classList.remove('has-3d');
+      var old = viewerFrame(); if (old) old.remove();
+      if (ext) media.style.background =
+        'radial-gradient(120% 90% at 50% 20%, rgba(255,255,255,.05), transparent 60%), ' + ext.css;
+    }
   }
 
   function renderGroups() {
@@ -225,6 +269,7 @@
           state.multi[gid][oid] = !state.multi[gid][oid];
         } else {
           state.single[gid] = oid;
+          syncViewer(gid, oid);   // drive the live 3D car
         }
         renderGroups(); renderStage(); renderSummary();
       });
