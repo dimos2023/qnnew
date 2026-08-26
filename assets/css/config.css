@@ -55,7 +55,11 @@
   overflow: hidden;
   display: grid;
 }
-@media (max-width: 940px) { .cfg-stage { position: static; aspect-ratio: 16 / 10; } }
+/* On phones the stage stays pinned at the top while the options scroll under
+   it, so the car (and every colour/wheel change) is always in view. */
+@media (max-width: 940px) {
+  .cfg-stage { position: sticky; top: 84px; aspect-ratio: auto; height: 40vh; z-index: 5; }
+}
 .cfg-stage-media {
   grid-area: 1 / 1;
   position: relative;

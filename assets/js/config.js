@@ -23,11 +23,11 @@
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
           { id: 'e1', name: 'Starlight Black', nameAr: 'أسود النجوم', css: 'linear-gradient(135deg,#15151a,#3a3a42)', price: 0 },
-          { id: 'e2', name: 'Cloud Silver-Purple', nameAr: 'فضي بنفسجي', css: 'linear-gradient(135deg,#c2bfce,#6d6a7e)', price: 0 },
-          { id: 'e3', name: 'Dawn Gold Black', nameAr: 'ذهبي الفجر', css: 'linear-gradient(135deg,#24201a,#8a744c)', price: 1200 },
-          { id: 'e4', name: 'Wilderness Brown-Gold', nameAr: 'بني ذهبي', css: 'linear-gradient(135deg,#5a4a34,#c19a6b)', price: 1200 },
-          { id: 'e5', name: 'Soaring Ink White', nameAr: 'أبيض لؤلؤي', css: 'linear-gradient(135deg,#eef0f2,#c7cace)', price: 0 },
-          { id: 'e6', name: 'Cloud Sunset Glow', nameAr: 'توهج الغروب', css: 'linear-gradient(135deg,#c98a5a,#7a4a34)', price: 1800 }
+          { id: 'e2', name: 'Moonlight Silver', nameAr: 'فضي القمر', css: 'linear-gradient(135deg,#dfe1e5,#9a9da2)', price: 0 },
+          { id: 'e3', name: 'Cloud Silver-Purple', nameAr: 'فضي بنفسجي', css: 'linear-gradient(135deg,#c3bccf,#6d6a7e)', price: 1200 },
+          { id: 'e4', name: 'Dawn Gold Black', nameAr: 'ذهبي الفجر', css: 'linear-gradient(135deg,#e6d3b3,#1b1b1f)', price: 1200 },
+          { id: 'e5', name: 'Wilderness Brown-Gold', nameAr: 'بني ذهبي', css: 'linear-gradient(135deg,#cba97c,#5a4230)', price: 1800 },
+          { id: 'e6', name: 'Soaring Ink White', nameAr: 'أبيض لؤلؤي', css: 'linear-gradient(135deg,#eef0f2,#cdd0d4)', price: 0 }
         ]},
         { id: 'interior', label: 'Interior', labelAr: 'المقصورة', type: 'swatch', options: [
           { id: 'i1', name: 'Obsidian & Chrome', nameAr: 'أسود وكروم', css: 'linear-gradient(135deg,#1b1b1f,#4a4a50)', price: 0 },
