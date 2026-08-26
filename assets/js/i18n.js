@@ -27,7 +27,7 @@
       'bp.note': 'Indicative pricing for guidance only. Your concierge confirms the final, all-inclusive quote and delivery for your market.',
       'hero.kicker': 'A legacy that drives the future',
       'hero.title': 'The luxury<br>you deserve',
-      'hero.lede': 'A curated collection of the most exclusive high-performance electric vehicles — commissioned for the elite of Egypt and the Gulf through the QN Automotive digital atelier.',
+      'hero.lede': 'A curated collection of the most exclusive high-performance electric vehicles — commissioned for the elite of Egypt, the UAE and Saudi Arabia through the QN Automotive digital atelier.',
       'hero.cta1': 'Explore the collection',
       'hero.cta2': 'Speak with a concierge',
       's800.eyebrow': 'The Flagship',
@@ -58,7 +58,7 @@
       'foot.ownership': 'Ownership', 'foot.compare': 'Compare', 'foot.commission': 'Bespoke commission',
       'foot.journal': 'Journal', 'foot.owners': 'Owners', 'foot.xp': 'The Experience',
       'foot.marque': 'The Marque', 'foot.usage': 'Usage policy',
-      'foot.tagline': 'The luxury you deserve. A legacy built for tomorrow. The elite gateway to the finest electric vehicles in Egypt and the Gulf.',
+      'foot.tagline': 'The luxury you deserve. A legacy built for tomorrow. The elite gateway to the finest electric vehicles in Egypt, the UAE and Saudi Arabia.',
       'foot.rights': 'Driven by QN Automotive. Built for tomorrow.',
       'scroll': 'SCROLL',
 
@@ -143,7 +143,7 @@
 
       /* --- About page --- */
       'ab.eyebrow': 'Our Story', 'ab.title': 'Driven by QN Automotive.<br>Built for tomorrow.',
-      'ab.quote': 'QN Automotive is writing a new chapter in regional mobility — the exclusive gateway introducing hyper-engineered electric icons to Egypt and the Gulf, at an invitation-only level of luxury.',
+      'ab.quote': 'QN Automotive is writing a new chapter in regional mobility — the exclusive gateway introducing hyper-engineered electric icons to Egypt, the UAE and Saudi Arabia, at an invitation-only level of luxury.',
       'ab.v1t': 'Discretion', 'ab.v1b': 'We do not compete on volume. We exist for collectors, founders, and families who expect privacy, narrative, and engineering theatre.',
       'ab.v2t': 'Craftsmanship', 'ab.v2b': 'Every allocation is curated and delivered with white-glove care — from bespoke specification to the moment of arrival.',
       'ab.v3t': 'QN Automotive', 'ab.v3b': 'Electric performance is not the future — it is the present, refined. We bring the world\'s finest hyper-EVs to a market that deserves them.',
@@ -347,7 +347,7 @@
       "xp.b3body": "In the days before delivery, we send a headset to your door for a private reveal of your finished car — exactly as it will arrive.",
       "xp.ctaEyebrow": "Request the Experience",
       "xp.ctaTitle": "We will send a headset",
-      "xp.ctaLede": "Available to registered clients across Egypt and the Gulf. Tell us which car you would like to step into.",
+      "xp.ctaLede": "Available to registered clients across Egypt, the UAE and Saudi Arabia. Tell us which car you would like to step into.",
       "xp.ctaBtn1": "Request the Experience",
       "xp.ctaBtn2": "Begin a commission",
       "up.eyebrow": "Legal",
@@ -393,7 +393,7 @@
       'bp.note': 'الأسعار استرشادية للتوجيه فقط. يؤكد لك فريق الكونسيرج العرض النهائي الشامل والتسليم في سوقك.',
       'hero.kicker': 'إرث يقود المستقبل',
       'hero.title': 'الفخامة التي<br>تستحقها',
-      'hero.lede': 'مجموعة منتقاة من أفخم السيارات الكهربائية فائقة الأداء — تخصص للنخبة في مصر والخليج عبر أتيليه QN Automotive الرقمي.',
+      'hero.lede': 'مجموعة منتقاة من أفخم السيارات الكهربائية فائقة الأداء — تخصص للنخبة في مصر والإمارات والسعودية عبر أتيليه QN Automotive الرقمي.',
       'hero.cta1': 'اكتشف المجموعة',
       'hero.cta2': 'تواصل مع الكونسيرج',
       's800.eyebrow': 'الطراز الرائد',
@@ -424,7 +424,7 @@
       'foot.ownership': 'التملك', 'foot.compare': 'المقارنة', 'foot.commission': 'التفصيل الخاص',
       'foot.journal': 'المجلة', 'foot.owners': 'الملاك', 'foot.xp': 'التجربة الغامرة',
       'foot.marque': 'العلامة', 'foot.usage': 'سياسة الاستخدام',
-      'foot.tagline': 'الفخامة التي تستحقها. إرث يبنى للغد. بوابة النخبة لأفخم السيارات الكهربائية في مصر والخليج.',
+      'foot.tagline': 'الفخامة التي تستحقها. إرث يبنى للغد. بوابة النخبة لأفخم السيارات الكهربائية في مصر والإمارات والسعودية.',
       'foot.rights': 'QN Automotive يقود المستقبل · صنع للغد.',
       'scroll': 'SCROLL',
 
@@ -509,7 +509,7 @@
 
       /* --- About page --- */
       'ab.eyebrow': 'قصتنا', 'ab.title': 'QN Automotive يقود المستقبل.<br>صنع للغد.',
-      'ab.quote': 'QN Automotive تكتب فصلا جديدا في التنقل الإقليمي — البوابة الحصرية لإدخال أيقونات كهربائية فائقة الهندسة إلى مصر والخليج، على مستوى فخامة بالدعوة فقط.',
+      'ab.quote': 'QN Automotive تكتب فصلا جديدا في التنقل الإقليمي — البوابة الحصرية لإدخال أيقونات كهربائية فائقة الهندسة إلى مصر والإمارات والسعودية، على مستوى فخامة بالدعوة فقط.',
       'ab.v1t': 'السرية', 'ab.v1b': 'لا نتنافس على الحجم. نحن للجامعين ورجال الأعمال والعائلات التي تتوقع الخصوصية والسرد والمسرح الهندسي.',
       'ab.v2t': 'الحرفية', 'ab.v2b': 'كل تخصيص منتقى ويسلم بعناية القفاز الأبيض — من المواصفة المخصصة حتى لحظة الوصول.',
       'ab.v3t': 'الإرث', 'ab.v3b': 'الأداء الكهربائي ليس المستقبل — بل الحاضر، مصقولا. نجلب أفخم السيارات الكهربائية في العالم لسوق يستحقها.',
@@ -713,7 +713,7 @@
       "xp.b3body": "في الأيام قبل التسليم، نرسل نظارة إلى بابك لكشف خاص لسيارتك المكتملة — تماما كما ستصل.",
       "xp.ctaEyebrow": "اطلب التجربة",
       "xp.ctaTitle": "سنرسل لك نظارة",
-      "xp.ctaLede": "متاحة للعملاء المسجلين في مصر والخليج. أخبرنا أي سيارة تود أن تدخل إليها.",
+      "xp.ctaLede": "متاحة للعملاء المسجلين في مصر والإمارات والسعودية. أخبرنا أي سيارة تود أن تدخل إليها.",
       "xp.ctaBtn1": "اطلب التجربة",
       "xp.ctaBtn2": "ابدأ تفصيلا",
       "up.eyebrow": "قانوني",
@@ -768,11 +768,11 @@
       'cta.lede': 'Register your interest and our concierge team will reach out with an exclusive commissioning experience across the United States.'
     },
     ae: {
-      'hero.lede': 'مجموعة منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليف خاص لنخبة دولة الإمارات ودول الخليج، عبر أتيليه QN Automotive الرقمي.',
+      'hero.lede': 'مجموعة منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليف خاص لنخبة دولة الإمارات والسعودية، عبر أتيليه QN Automotive الرقمي.',
       'cta.lede': 'سجل اهتمامك ليتواصل معك فريق الكونسيرج في دولة الإمارات ويقدم لك تجربة تخصيص حصرية تليق بمقامك.'
     },
     sa: {
-      'hero.lede': 'مجموعة منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليف خاص لنخبة المملكة العربية السعودية ودول الخليج، عبر أتيليه QN Automotive الرقمي.',
+      'hero.lede': 'مجموعة منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليف خاص لنخبة المملكة العربية السعودية والإمارات، عبر أتيليه QN Automotive الرقمي.',
       'cta.lede': 'سجل اهتمامك ليتواصل معك فريق الكونسيرج في المملكة العربية السعودية ويقدم لك تجربة تخصيص حصرية تليق بمقامك.'
     },
     eg: {
