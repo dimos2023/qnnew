@@ -59,7 +59,7 @@
       'foot.journal': 'Journal', 'foot.owners': 'Owners', 'foot.xp': 'The Experience',
       'foot.marque': 'The Marque', 'foot.usage': 'Usage policy',
       'foot.tagline': 'The luxury you deserve. A legacy built for tomorrow. The elite gateway to the finest electric vehicles in Egypt and the Gulf.',
-      'foot.rights': 'Driven by legacy. Built for tomorrow.',
+      'foot.rights': 'Driven by QN Automotive. Built for tomorrow.',
       'scroll': 'SCROLL',
 
       /* --- MAEXTRO S800 detail --- */
@@ -142,7 +142,7 @@
       'jn.submit': 'Register interest', 'jn.back': 'Back to home',
 
       /* --- About page --- */
-      'ab.eyebrow': 'Our Story', 'ab.title': 'Driven by legacy.<br>Built for tomorrow.',
+      'ab.eyebrow': 'Our Story', 'ab.title': 'Driven by QN Automotive.<br>Built for tomorrow.',
       'ab.quote': 'QN Automotive is writing a new chapter in regional mobility — the exclusive gateway introducing hyper-engineered electric icons to Egypt and the Gulf, at an invitation-only level of luxury.',
       'ab.v1t': 'Discretion', 'ab.v1b': 'We do not compete on volume. We exist for collectors, founders, and families who expect privacy, narrative, and engineering theatre.',
       'ab.v2t': 'Craftsmanship', 'ab.v2b': 'Every allocation is curated and delivered with white-glove care — from bespoke specification to the moment of arrival.',
@@ -425,7 +425,7 @@
       'foot.journal': 'المجلة', 'foot.owners': 'الملاك', 'foot.xp': 'التجربة الغامرة',
       'foot.marque': 'العلامة', 'foot.usage': 'سياسة الاستخدام',
       'foot.tagline': 'الفخامة التي تستحقها. إرث يبنى للغد. بوابة النخبة لأفخم السيارات الكهربائية في مصر والخليج.',
-      'foot.rights': 'إرث يقود المستقبل · صنع للغد.',
+      'foot.rights': 'QN Automotive يقود المستقبل · صنع للغد.',
       'scroll': 'SCROLL',
 
       /* --- MAEXTRO S800 detail --- */
@@ -508,7 +508,7 @@
       'jn.submit': 'سجل اهتمامك', 'jn.back': 'العودة للرئيسية',
 
       /* --- About page --- */
-      'ab.eyebrow': 'قصتنا', 'ab.title': 'إرث يقود المستقبل.<br>صنع للغد.',
+      'ab.eyebrow': 'قصتنا', 'ab.title': 'QN Automotive يقود المستقبل.<br>صنع للغد.',
       'ab.quote': 'QN Automotive تكتب فصلا جديدا في التنقل الإقليمي — البوابة الحصرية لإدخال أيقونات كهربائية فائقة الهندسة إلى مصر والخليج، على مستوى فخامة بالدعوة فقط.',
       'ab.v1t': 'السرية', 'ab.v1b': 'لا نتنافس على الحجم. نحن للجامعين ورجال الأعمال والعائلات التي تتوقع الخصوصية والسرد والمسرح الهندسي.',
       'ab.v2t': 'الحرفية', 'ab.v2b': 'كل تخصيص منتقى ويسلم بعناية القفاز الأبيض — من المواصفة المخصصة حتى لحظة الوصول.',
