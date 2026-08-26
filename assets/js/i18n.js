@@ -369,7 +369,7 @@
       "up.li2": "Submit false, unlawful or misleading information through our forms.",
       "up.li3": "Copy or scrape content for republication without permission.",
       "up.h7": "7 · Contact",
-      "up.p7": "Questions about this policy? Reach our concierge team on WhatsApp at +20 121 233 2993 or by email at concierge@legacymotors.com.",
+      "up.p7": "Questions about this policy? Reach our concierge team on WhatsApp at +20 110 182 0001 or by email at info@qnautomotive.com.",
     },
     ar: {
       'nav.models': 'الموديلات',
@@ -735,7 +735,7 @@
       "up.li2": "تُرسل معلوماتٍ زائفة أو غير قانونية أو مضلّلة عبر نماذجنا.",
       "up.li3": "تنسخ المحتوى أو تجمعه لإعادة نشره دون إذن.",
       "up.h7": "7 · التواصل",
-      "up.p7": "أسئلة حول هذه السياسة؟ تواصل مع فريق الكونسيرج على واتساب 2993 233 121 20+ أو عبر البريد concierge@legacymotors.com.",
+      "up.p7": "أسئلة حول هذه السياسة؟ تواصل مع فريق الكونسيرج على واتساب 2993 233 121 20+ أو عبر البريد info@qnautomotive.com.",
     },
   };
 
