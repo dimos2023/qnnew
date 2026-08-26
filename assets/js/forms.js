@@ -19,7 +19,13 @@
     box.textContent = msg;
   }
 
-  async function submit(form, collection, buildDoc) {
+  // Enquiries are emailed via FormSubmit (no backend needed). The first
+  // submission sends a one-time activation email to this address — click the
+  // link once and every later enquiry arrives in the inbox.
+  const FORM_EMAIL = 'info@qnautomotive.com';
+  const ENDPOINT = 'https://formsubmit.co/ajax/' + encodeURIComponent(FORM_EMAIL);
+
+  async function submit(form, subject) {
     const box = alertBox(form);
     const data = Object.fromEntries(new FormData(form).entries());
 
@@ -35,12 +41,18 @@
     if (btn) btn.disabled = true;
 
     try {
-      if (window.LEGACY_FB && window.LEGACY_FB.addDoc) {
-        await window.LEGACY_FB.addDoc(collection, buildDoc(data));
-      } else {
-        // Firebase not wired yet — simulate a brief network round-trip.
-        await new Promise((r) => setTimeout(r, 500));
-      }
+      const payload = Object.assign({}, data, {
+        _subject: subject,
+        _template: 'table',
+        _captcha: 'false'
+      });
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || json.success === false || json.success === 'false') throw new Error('failed');
       form.reset();
       show(box, 'ok',
         t('Received. Our concierge team will be in touch shortly.',
@@ -58,11 +70,7 @@
   if (concierge) {
     concierge.addEventListener('submit', (e) => {
       e.preventDefault();
-      submit(concierge, 'contact_inquiries', (d) => ({
-        fullName: d.name, email: (d.email || '').toLowerCase(), phone: d.phone || '',
-        model: d.model || '', message: d.message || '', source: 'legacy-site',
-        status: 'new', createdAt: Date.now(),
-      }));
+      submit(concierge, 'New concierge enquiry — QN Automotive');
     });
   }
 
@@ -70,11 +78,7 @@
   if (join) {
     join.addEventListener('submit', (e) => {
       e.preventDefault();
-      submit(join, 'registration_requests', (d) => ({
-        name: d.name, email: (d.email || '').toLowerCase(), phone: d.phone || '',
-        company: d.company || '', model: d.model || '', city: d.city || '',
-        status: 'pending', source: 'legacy-site', submittedAt: Date.now(),
-      }));
+      submit(join, 'New interest registration — QN Automotive');
     });
   }
 
@@ -82,11 +86,7 @@
   if (testdrive) {
     testdrive.addEventListener('submit', (e) => {
       e.preventDefault();
-      submit(testdrive, 'test_drive_requests', (d) => ({
-        name: d.name, email: (d.email || '').toLowerCase(), phone: d.phone || '',
-        model: d.model || '', city: d.city || '', preferredDate: d.date || '',
-        status: 'new', source: 'legacy-site', createdAt: Date.now(),
-      }));
+      submit(testdrive, 'New test-drive request — QN Automotive');
     });
   }
 
