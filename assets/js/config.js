@@ -27,7 +27,7 @@
           { id: 'e3', name: 'Dawn Gold Black', nameAr: 'ذهبي الفجر', css: 'linear-gradient(135deg,#24201a,#8a744c)', price: 1200 },
           { id: 'e4', name: 'Wilderness Brown-Gold', nameAr: 'بني ذهبي', css: 'linear-gradient(135deg,#5a4a34,#c19a6b)', price: 1200 },
           { id: 'e5', name: 'Soaring Ink White', nameAr: 'أبيض لؤلؤي', css: 'linear-gradient(135deg,#eef0f2,#c7cace)', price: 0 },
-          { id: 'e6', name: 'Cloud Sunset Glow', nameAr: 'توهّج الغروب', css: 'linear-gradient(135deg,#c98a5a,#7a4a34)', price: 1800 }
+          { id: 'e6', name: 'Cloud Sunset Glow', nameAr: 'توهج الغروب', css: 'linear-gradient(135deg,#c98a5a,#7a4a34)', price: 1800 }
         ]},
         { id: 'interior', label: 'Interior', labelAr: 'المقصورة', type: 'swatch', options: [
           { id: 'i1', name: 'Obsidian & Chrome', nameAr: 'أسود وكروم', css: 'linear-gradient(135deg,#1b1b1f,#4a4a50)', price: 0 },
@@ -49,7 +49,7 @@
           { id: 'p3', name: 'Electronic Side Mirrors', nameAr: 'مرايا جانبية إلكترونية', price: 3000 }
         ]},
         { id: 'accessories', label: 'Accessories', labelAr: 'الإكسسوارات', type: 'multi', options: [
-          { id: 'a1', name: 'Portable Charging Adapter', nameAr: 'محوّل شحن محمول', price: 950 },
+          { id: 'a1', name: 'Portable Charging Adapter', nameAr: 'محول شحن محمول', price: 950 },
           { id: 'a2', name: 'Fitted All-weather Mats', nameAr: 'دواسات لكل الفصول', price: 480 }
         ]}
       ]
@@ -59,7 +59,7 @@
       base: 236000,
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
-          { id: 'e1', name: 'Red Glow Danzhu', nameAr: 'أحمر متوهّج', css: 'linear-gradient(135deg,#c1121f,#7a0a12)', price: 0 },
+          { id: 'e1', name: 'Red Glow Danzhu', nameAr: 'أحمر متوهج', css: 'linear-gradient(135deg,#c1121f,#7a0a12)', price: 0 },
           { id: 'e2', name: 'Moonlight Silver', nameAr: 'فضي القمر', css: 'linear-gradient(135deg,#d6d8dc,#8a8d92)', price: 0 },
           { id: 'e3', name: 'Argyle Purple', nameAr: 'بنفسجي', css: 'linear-gradient(135deg,#4a2a6a,#1e1030)', price: 1500 },
           { id: 'e4', name: 'Track Matte Grey', nameAr: 'رمادي مطفي', css: 'linear-gradient(135deg,#3a3c40,#1c1e22)', price: 2400 }
@@ -78,8 +78,8 @@
           { id: 'p3', name: 'Track Telemetry Suite', nameAr: 'حزمة تيليمتري الحلبة', price: 3500 }
         ]},
         { id: 'accessories', label: 'Accessories', labelAr: 'الإكسسوارات', type: 'multi', options: [
-          { id: 'a1', name: 'Fitted Car Cover', nameAr: 'غطاء سيارة مخصّص', price: 1200 },
-          { id: 'a2', name: 'Portable Charging Adapter', nameAr: 'محوّل شحن محمول', price: 950 }
+          { id: 'a1', name: 'Fitted Car Cover', nameAr: 'غطاء سيارة مخصص', price: 1200 },
+          { id: 'a2', name: 'Portable Charging Adapter', nameAr: 'محول شحن محمول', price: 950 }
         ]}
       ]
     },
@@ -97,7 +97,7 @@
           { id: 'i2', name: 'Onyx & Gold', nameAr: 'أونيكس وذهب', css: 'linear-gradient(135deg,#1b1b1f,#7a6a3a)', price: 2500 }
         ]},
         { id: 'wheels', label: 'Wheels', labelAr: 'الجنوط', type: 'tile', options: [
-          { id: 'w1', name: '23" Multi-spoke Polished', nameAr: '23 بوصة ملمّع', price: 0 },
+          { id: 'w1', name: '23" Multi-spoke Polished', nameAr: '23 بوصة ملمع', price: 0 },
           { id: 'w2', name: '23" Gloss-black Off-road', nameAr: '23 بوصة أسود لامع', price: 1800 }
         ]},
         { id: 'packages', label: 'Premium packages', labelAr: 'الباقات المميزة', type: 'multi', options: [

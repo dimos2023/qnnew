@@ -3,7 +3,7 @@
 موقع فاخر مستقل للعربيات (MAEXTRO S800 · YANGWANG U9 · YANGWANG U8L) — HTML/CSS/JS، بدون خطوة build.
 
 ## تشغيل محلي
-محتاج Node.js متثبّت. من داخل الفولدر ده:
+محتاج Node.js متثبت. من داخل الفولدر ده:
 
 ```bash
 node serve.mjs

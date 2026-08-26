@@ -34,7 +34,7 @@
       return show(box, 'err', t('Please enter your name.', 'من فضلك أدخل اسمك.'));
     }
     if (data.email !== undefined && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email || '')) {
-      return show(box, 'err', t('Please enter a valid email.', 'من فضلك أدخل بريداً إلكترونياً صحيحاً.'));
+      return show(box, 'err', t('Please enter a valid email.', 'من فضلك أدخل بريدا إلكترونيا صحيحا.'));
     }
 
     const btn = form.querySelector('button[type=submit]');
@@ -56,7 +56,7 @@
       form.reset();
       show(box, 'ok',
         t('Received. Our concierge team will be in touch shortly.',
-          'تم الاستلام. سيتواصل معك فريق الكونسيرج قريباً.'));
+          'تم الاستلام. سيتواصل معك فريق الكونسيرج قريبا.'));
     } catch (e) {
       show(box, 'err',
         t('Something went wrong. Please try again or contact us on WhatsApp.',
