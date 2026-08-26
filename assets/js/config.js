@@ -264,7 +264,7 @@
     var wa = $('#cfg-cta-wa');
     if (wa) wa.addEventListener('click', function (e) {
       e.preventDefault();
-      window.open('https://wa.me/201060108394?text=' + encodeURIComponent(buildSummaryText()), '_blank', 'noopener');
+      window.open('https://wa.me/201144433316?text=' + encodeURIComponent(buildSummaryText()), '_blank', 'noopener');
     });
     var dl = $('#cfg-cta-download');
     if (dl) dl.addEventListener('click', function (e) {

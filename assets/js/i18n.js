@@ -369,7 +369,7 @@
       "up.li2": "Submit false, unlawful or misleading information through our forms.",
       "up.li3": "Copy or scrape content for republication without permission.",
       "up.h7": "7 · Contact",
-      "up.p7": "Questions about this policy? Reach our concierge team on WhatsApp at +20 110 182 0001 or by email at info@qnautomotive.com.",
+      "up.p7": "Questions about this policy? Reach our concierge team on WhatsApp at +20 114 443 3316 or by email at info@qnautomotive.com.",
     },
     ar: {
       'nav.models': 'الموديلات',
