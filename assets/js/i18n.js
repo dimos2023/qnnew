@@ -150,6 +150,23 @@
       'ab.ctaEyebrow': 'Begin the conversation', 'ab.ctaTitle': 'Join an invitation-only world',
       'ab.ctaBtn': 'Register your interest', 'ab.back': 'Back to home',
 
+      /* --- Philosophy page --- */
+      'phil.eyebrow': 'Our Philosophy',
+      'phil.title': 'Detail you don\'t see —<br>you feel',
+      'phil.lede': 'To us, luxury is not ornament — it is restraint. Every QN Automotive vehicle is the sum of decisions about what to leave out: the noise you never hear, the seams you never find, the effort you never see.',
+      'phil.p1t': 'Restraint over spectacle',
+      'phil.p1b': 'True presence needs no announcement. We design for the person who has nothing to prove, refining every line until only the essential remains.',
+      'phil.p2t': 'Material honesty',
+      'phil.p2b': 'Nappa that ages, metal that is metal, glass that is glass. We use real materials, finished by hand, because the senses always know the difference.',
+      'phil.p3t': 'Silence as luxury',
+      'phil.p3b': 'The rarest commodity is calm. Acoustic isolation, effortless torque, and a cabin tuned like an instrument turn every journey into stillness.',
+      'phil.p4t': 'Engineered for arrival',
+      'phil.p4b': 'A car is judged in its last ten metres. Every line, light, and closing sound is composed for the moment you step out — and the room turns.',
+      'phil.ctaEyebrow': 'Experience it in person',
+      'phil.ctaTitle': 'Feel the philosophy for yourself',
+      'phil.ctaBtn': 'Book a private viewing',
+      'phil.back': 'Back to home',
+
       /* --- Extended pages (ownership, compare, commission, journal, article, owners, test-drive, experience, usage) --- */
       "own.eyebrow": "Ownership",
       "own.title": "Ownership, tailored to you",
@@ -515,6 +532,23 @@
       'ab.v3t': 'الإرث', 'ab.v3b': 'الأداء الكهربائي ليس المستقبل — بل الحاضر، مصقولا. نجلب أفخم السيارات الكهربائية في العالم لسوق يستحقها.',
       'ab.ctaEyebrow': 'ابدأ الحوار', 'ab.ctaTitle': 'انضم إلى عالم بالدعوة فقط',
       'ab.ctaBtn': 'سجل اهتمامك', 'ab.back': 'العودة للرئيسية',
+
+      /* --- Philosophy page --- */
+      'phil.eyebrow': 'فلسفتنا',
+      'phil.title': 'تفصيل لا يرى —<br>بل يشعر به',
+      'phil.lede': 'الفخامة عندنا ليست زخرفا، بل انضباط. كل مركبة QN Automotive هي حصيلة قرارات عما يجب حذفه: الضجيج الذي لا تسمعه، والوصلات التي لا تجدها، والجهد الذي لا تراه.',
+      'phil.p1t': 'الانضباط قبل الاستعراض',
+      'phil.p1b': 'الحضور الحقيقي لا يحتاج إعلانا. نصمم لمن لا شيء لديه ليثبته، ونصقل كل خط حتى لا يبقى إلا الجوهري.',
+      'phil.p2t': 'صدق الخامة',
+      'phil.p2b': 'جلد يزداد جمالا مع الزمن، معدن هو معدن، وزجاج هو زجاج. نستخدم خامات حقيقية تشطب باليد، لأن الحواس تدرك الفرق دائما.',
+      'phil.p3t': 'الصمت فخامة',
+      'phil.p3b': 'أندر ما يقتنى هو الهدوء. عزل صوتي، وعزم انسيابي، ومقصورة موزونة كآلة موسيقية تحول كل رحلة إلى سكون.',
+      'phil.p4t': 'مهندسة للوصول',
+      'phil.p4b': 'تحكم على السيارة في آخر عشرة أمتار. كل خط وضوء وصوت إغلاق مؤلف للحظة نزولك — حين تلتفت القاعة.',
+      'phil.ctaEyebrow': 'اختبرها بنفسك',
+      'phil.ctaTitle': 'اشعر بالفلسفة بنفسك',
+      'phil.ctaBtn': 'احجز معاينة خاصة',
+      'phil.back': 'العودة للرئيسية',
 
       /* --- Extended pages --- */
       "own.eyebrow": "التملك",
