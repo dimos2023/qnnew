@@ -40,9 +40,9 @@
 
   /* --- Type --- */
   --serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --serif-ar: 'Amiri', 'Scheherazade New', 'Cormorant Garamond', serif;
+  --serif-ar: 'IBM Plex Sans Arabic', 'Manrope', system-ui, sans-serif;
   --sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
-  --sans-ar: 'Tajawal', 'Manrope', system-ui, sans-serif;
+  --sans-ar: 'IBM Plex Sans Arabic', 'Manrope', system-ui, sans-serif;
 
   /* --- Motion (slow, unhurried — never springy) --- */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -76,7 +76,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .ltr { direction: ltr; unicode-bidi: isolate; font-family: var(--sans); }
 
 /* --- Typography scale ---------------------------------------------------- */
-/* English (default) uses Cormorant Garamond; Arabic (.rtl) uses Amiri. */
+/* English (default) uses Cormorant Garamond; Arabic (.rtl) uses IBM Plex Sans Arabic. */
 h1, h2, h3, .display { font-family: var(--serif); font-weight: 600; line-height: 1.1; }
 html.rtl h1, html.rtl h2, html.rtl h3, html.rtl .display,
 html.rtl .hero h1 { font-family: var(--serif-ar); }
