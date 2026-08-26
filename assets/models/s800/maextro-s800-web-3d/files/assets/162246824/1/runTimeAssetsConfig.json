@@ -1,0 +1,764 @@
+{
+    "showState": [
+        {
+            "sceneName": "M6",
+            "assetsTags": [
+                {
+                    "tags": "x1l"
+                },
+                {
+                    "tags": "x1l_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "50080100157",
+            "assetsTags": [
+                {
+                    "tags": "x4a"
+                },
+                {
+                    "tags": "x4a_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010029801",
+            "assetsTags": [
+                {
+                    "tags": "x4w"
+                },
+                {
+                    "tags": "x4w_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010023501",
+            "assetsTags": [
+                {
+                    "tags": "f1l"
+                },
+                {
+                    "tags": "f1l_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010028001",
+            "assetsTags": [
+                {
+                    "tags": "SHA"
+                },
+                {
+                    "tags": "SHA_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010020201",
+            "assetsTags": [
+                {
+                    "tags": "x6"
+                },
+                {
+                    "tags": "x6_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010020301",
+            "assetsTags": [
+                {
+                    "tags": "x65s"
+                },
+                {
+                    "tags": "x65s_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010007101",
+            "assetsTags": [
+                {
+                    "tags": "f3"
+                },
+                {
+                    "tags": "f3_runTimeAssets"
+                },
+                {
+                    "tags": "f3_jiaren"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010004501",
+            "assetsTags": [
+                {
+                    "tags": "f2a"
+                },
+                {
+                    "tags": "f2a_runTimeAssets"
+                },
+                {
+                    "tags": "f2a_jiaren"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010010601",
+            "assetsTags": [
+                {
+                    "tags": "eh3n"
+                },
+                {
+                    "tags": "eh3n_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010013301",
+            "assetsTags": [
+                {
+                    "tags": "x1c"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                },
+                {
+                    "tags": "x1c_runTimeAssets"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010015901",
+            "assetsTags": [
+                {
+                    "tags": "ehyn"
+                },
+                {
+                    "tags": "ehyn_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "---50080100157---",
+            "assetsTags": [
+                {
+                    "tags": "x4_single"
+                },
+                {
+                    "tags": "x4_camera_data"
+                },
+                {
+                    "tags": "opendoor_mp3"
+                },
+                {
+                    "tags": "x4_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "50080100143",
+            "assetsTags": [
+                {
+                    "tags": "f1a_single"
+                },
+                {
+                    "tags": "f1a_runTimeAssets"
+                },
+                {
+                    "tags": "f1a_camera_data"
+                },
+                {
+                    "tags": "opendoor_mp3"
+                },
+                {
+                    "tags": "3dui_assets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        }
+    ],
+    "loadPk": [
+        {
+            "sceneName": "M6",
+            "assetsTags": [
+                {
+                    "tags": "x1l"
+                },
+                {
+                    "tags": "x1l_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "50080100157",
+            "assetsTags": [
+                {
+                    "tags": "x4a"
+                },
+                {
+                    "tags": "x4a_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010029801",
+            "assetsTags": [
+                {
+                    "tags": "x4w"
+                },
+                {
+                    "tags": "x4w_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010023501",
+            "assetsTags": [
+                {
+                    "tags": "f1l"
+                },
+                {
+                    "tags": "f1l_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010028001",
+            "assetsTags": [
+                {
+                    "tags": "SHA"
+                },
+                {
+                    "tags": "SHA_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010020201",
+            "assetsTags": [
+                {
+                    "tags": "x6"
+                },
+                {
+                    "tags": "x6_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010020301",
+            "assetsTags": [
+                {
+                    "tags": "x65s"
+                },
+                {
+                    "tags": "x65s_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010007101",
+            "assetsTags": [
+                {
+                    "tags": "f3"
+                },
+                {
+                    "tags": "f3_runTimeAssets"
+                },
+                {
+                    "tags": "f3_jiaren"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010004501",
+            "assetsTags": [
+                {
+                    "tags": "f2a"
+                },
+                {
+                    "tags": "f2a_runTimeAssets"
+                },
+                {
+                    "tags": "f2a_jiaren"
+                },
+                {
+                    "tags": "highlight"
+                },
+                {
+                    "tags": "car_headlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010010601",
+            "assetsTags": [
+                {
+                    "tags": "eh3n"
+                },
+                {
+                    "tags": "eh3n_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010013301",
+            "assetsTags": [
+                {
+                    "tags": "x1c"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                },
+                {
+                    "tags": "x1c_runTimeAssets"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010015901",
+            "assetsTags": [
+                {
+                    "tags": "ehyn"
+                },
+                {
+                    "tags": "ehyn_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "---50080100157---",
+            "assetsTags": [
+                {
+                    "tags": "x4_single"
+                },
+                {
+                    "tags": "x4_camera_data"
+                },
+                {
+                    "tags": "opendoor_mp3"
+                },
+                {
+                    "tags": "x4_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "50080100143",
+            "assetsTags": [
+                {
+                    "tags": "f1a_single"
+                },
+                {
+                    "tags": "f1a_runTimeAssets"
+                },
+                {
+                    "tags": "m7_camera_data"
+                },
+                {
+                    "tags": "m7_m5_camera_data"
+                },
+                {
+                    "tags": "opendoor_mp3"
+                },
+                {
+                    "tags": "3dui_assets"
+                }
+            ]
+        }
+    ],
+    "unloadPk": [
+        {
+            "sceneName": "M6",
+            "assetsTags": [
+                {
+                    "tags": "x1l"
+                },
+                {
+                    "tags": "x1l_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "50080100157",
+            "assetsTags": [
+                {
+                    "tags": "x4a"
+                },
+                {
+                    "tags": "x4a_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010029801",
+            "assetsTags": [
+                {
+                    "tags": "x4w"
+                },
+                {
+                    "tags": "x4w_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010023501",
+            "assetsTags": [
+                {
+                    "tags": "f1l"
+                },
+                {
+                    "tags": "f1l_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010028001",
+            "assetsTags": [
+                {
+                    "tags": "SHA"
+                },
+                {
+                    "tags": "SHA_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010020201",
+            "assetsTags": [
+                {
+                    "tags": "x6"
+                },
+                {
+                    "tags": "x6_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010020301",
+            "assetsTags": [
+                {
+                    "tags": "x65s"
+                },
+                {
+                    "tags": "x65s_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010007101",
+            "assetsTags": [
+                {
+                    "tags": "f3"
+                },
+                {
+                    "tags": "f3_runTimeAssets"
+                },
+                {
+                    "tags": "f3_jiaren"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010004501",
+            "assetsTags": [
+                {
+                    "tags": "f2a"
+                },
+                {
+                    "tags": "f2a_runTimeAssets"
+                },
+                {
+                    "tags": "f2a_jiaren"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010010601",
+            "assetsTags": [
+                {
+                    "tags": "eh3n"
+                },
+                {
+                    "tags": "eh3n_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010013301",
+            "assetsTags": [
+                {
+                    "tags": "x1c"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                },
+                {
+                    "tags": "x1c_runTimeAssets"
+                }
+            ]
+        },
+        {
+            "sceneName": "5008010015901",
+            "assetsTags": [
+                {
+                    "tags": "ehyn"
+                },
+                {
+                    "tags": "ehyn_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "---50080100157---",
+            "assetsTags": [
+                {
+                    "tags": "x4_single"
+                },
+                {
+                    "tags": "x4_camera_data"
+                },
+                {
+                    "tags": "opendoor_mp3"
+                },
+                {
+                    "tags": "x4_runTimeAssets"
+                },
+                {
+                    "tags": "car_headlight"
+                },
+                {
+                    "tags": "highlight"
+                }
+            ]
+        },
+        {
+            "sceneName": "50080100143",
+            "assetsTags": [
+                {
+                    "tags": "f1a_single"
+                },
+                {
+                    "tags": "f1a_runTimeAssets"
+                },
+                {
+                    "tags": "m7_camera_data"
+                },
+                {
+                    "tags": "m7_m5_camera_data"
+                }
+            ]
+        }
+    ]
+}

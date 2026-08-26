@@ -1,0 +1,279 @@
+/* 车身顶部按钮 */
+.custom-hotspot_01 {
+    height: 0.35rem;
+    width: 0.25rem;
+    background-image: url("$152955050%");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.custom-hotspot_02 {
+    height: 0.35rem;
+    width: 0.25rem;
+    background-image: url("$152955050%");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.custom-hotspot_03 {
+    height: 0.35rem;
+    width: 0.25rem;
+    background-image: url("$152955050%");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.custom-hotspot_04 {
+    height: 0.35rem;
+    width: 0.25rem;
+    background-image: url("$152955050%");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 地面上的按钮 */
+.custom-hotspot_M7_Ultra {
+    height: 0.45rem;
+    width: 0.6rem;
+    background-image: url($182503166%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+/* 地面上的按钮 */
+.custom-hotspot_M5zhijia {
+    height: 0.45rem;
+    width: 0.7rem;
+    background-image: url($148928693%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_M5chundian {
+    height: 0.45rem;
+    width: 0.5rem;
+    background-image: url($148996872%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_M5biaozhun {
+    height: 0.42rem;
+    width: 0.45rem;
+    background-image: url($176363452%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_M7Wuzuo {
+    height: 0.55rem;
+    width: 0.7rem;
+    background-image: url($148996873%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_zhijiexie {
+    height: 0.55rem;
+    width: 0.5rem;
+    background-image: url($159379494%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_zhijiezheng {
+    height: 0.55rem;
+    width: 0.6rem;
+    background-image: url($159379496%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_wenjie {
+    height: 0.55rem;
+    width: 0.6rem;
+    background-image: url($159379492%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_xiangjie {
+    height: 0.55rem;
+    width: 0.6rem;
+    background-image: url($190838318%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_xiangjiexie {
+    height: 0.55rem;
+    width: 0.6rem;
+    background-image: url($190838317%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_m9 {
+    height: 0.35rem;
+    width: 0.45rem;
+    background-image: url($164584048%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_r7 {
+    height: 0.35rem;
+    width: 0.45rem;
+    background-image: url($197418484%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.custom-hotspot_s7 {
+    height: 0.5rem;
+    width: 0.6rem;
+    background-image: url($197418486%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 1;
+    transition: opacity 0.7s ease-in;
+}
+
+.none {
+    display: none;
+}
+
+.rotateAll {
+    transform: rotate(90deg);
+    transform-origin: 0% 0%;
+
+}
+
+
+/* 加载动画 */
+#loading-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    /* 背景颜色和透明度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* 确保加载动画在最前面 */
+}
+
+#loading-circle {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #cccccc;
+    /* 圆圈的颜色 */
+    border-top: 4px solid #ffffff;
+    /* 圆圈顶部的颜色 */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    /* 动画的属性设置 */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 虚拟按钮 */
+.btn_visual_small {
+    height: 0.6rem;
+    width: 0.8rem;
+}
+
+.btn_visual_middle {
+    height: 0.6rem;
+    width: 1.4rem;
+}
+
+.btn_visual_large {
+    height: 0.6rem;
+    width: 0.8rem;
+}
+
+.virtually_zhijia {
+    display: block;
+}
+
+.virtually_chundian {
+    display: block;
+}
+
+.virtually_biaozhun {
+    display: block;
+}
+
+.virtually_wuzuo {
+    display: block;
+}
+
+
+.site-wrapper {
+    transform: scale(1);
+    /* 初始缩放为1倍 */
+    transition: transform 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.car-hall-blur {
+    background-color: #ffffffcc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
+
+
+}
+
+.VM-navigation {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 125px;
+    margin-top: 61px;
+    margin-left: -256px;
+    border-radius: 1px;
+    z-index: 9;
+    background: url($153723462%) no-repeat center center;
+    background-size: 120px;
+}

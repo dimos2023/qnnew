@@ -1,0 +1,965 @@
+[
+  {
+    "status": "downloaded",
+    "path": "index.html",
+    "bytes": 7526,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/index.html?SN=5008010020201"
+  },
+  {
+    "status": "downloaded",
+    "path": "styles.css",
+    "bytes": 736,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/styles.css"
+  },
+  {
+    "status": "downloaded",
+    "path": "engine.js",
+    "bytes": 1766329,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/engine.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "__settings__.js",
+    "bytes": 2381,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/__settings__.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "custom\\files\\overrideSetting.js",
+    "bytes": 371,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/custom/files/overrideSetting.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "custom\\files\\AssetPreloadMgr.js",
+    "bytes": 6034,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/custom/files/AssetPreloadMgr.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "__modules__.js",
+    "bytes": 1698,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/__modules__.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "__start__.js",
+    "bytes": 8780,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/__start__.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "__loading__.js",
+    "bytes": 36230,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/__loading__.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\139743469\\1\\ammo.wasm.js",
+    "bytes": 391789,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/139743469/1/ammo.wasm.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\151249652\\1\\basis.wasm.js",
+    "bytes": 63014,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/151249652/1/basis.wasm.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\151249650\\1\\basis.wasm.wasm",
+    "bytes": 608505,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/151249650/1/basis.wasm.wasm"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229369978\\1\\x6-pc-load-bg.jpg",
+    "bytes": 226142,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229369978/1/x6-pc-load-bg.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\139743470\\1\\ammo.wasm.wasm",
+    "bytes": 659433,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/139743470/1/ammo.wasm.wasm"
+  },
+  {
+    "status": "downloaded",
+    "path": "config.json",
+    "bytes": 20848065,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/config.json"
+  },
+  {
+    "status": "downloaded",
+    "path": "__game-scripts.js",
+    "bytes": 1701944,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/__game-scripts.js"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\139376235\\1\\VmallCss.css",
+    "bytes": 82391,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/139376235/1/VmallCss.css?t=8dc378a2c5dd3bb3dbbcf904b0fbd242"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\139376239\\1\\VMallHtml.html",
+    "bytes": 9493,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/139376239/1/VMallHtml.html?t=dc57311b8df81892b9757ec2dadf22dd"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\139376242\\1\\general.css",
+    "bytes": 1883,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/139376242/1/general.css?t=0d7006fbfa874056622bd2e9b3b871e7"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\140598571\\1\\video.css",
+    "bytes": 54010,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/140598571/1/video.css?t=d477603e6f1148116a4df62cd6e20a2b"
+  },
+  {
+    "status": "failed",
+    "path": "files\\assets\\141236889\\1\\houbeixiangkongjian.basis",
+    "bytes": 0,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/141236889/1/houbeixiangkongjian.basis?t=bc841db0db12edd476b277c5f25f560d",
+    "error": "Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\138170757\\1\\2.png",
+    "bytes": 128897,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/138170757/1/2.png?t=6f0d5aac9b9800621053ac02ee2c4461"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\142056639\\1\\CarConfig.json",
+    "bytes": 6166,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/142056639/1/CarConfig.json?t=0e3d16493a436cdc5cb4ca8e6e9ebc17"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\142194782\\1\\CarHallHtml.html",
+    "bytes": 4290,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/142194782/1/CarHallHtml.html?t=e00ba6289ffc29e60d5cee4fa568a40f"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\142198566\\1\\CarHallCss.css",
+    "bytes": 13412,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/142198566/1/CarHallCss.css?t=96c1bf560478b46c015f5ba8060677a8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\144121866\\1\\assetsConfig.json",
+    "bytes": 6523,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/144121866/1/assetsConfig.json?t=3c7eea61c20ae63a25547c80668deaf8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\145118545\\1\\pannellum.css",
+    "bytes": 11795,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/145118545/1/pannellum.css?t=95998c605ae81f2597b501ad9e655e23"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\145121036\\1\\pannellumHtml.html",
+    "bytes": 213,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/145121036/1/pannellumHtml.html?t=a0adff9ba8cf8cebbeb90c0e73bc7675"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\146645469\\1\\UIConfig.json",
+    "bytes": 116822,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/146645469/1/UIConfig.json?t=68ef1b8dbad5c11238fe77bc81c4a08e"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\148558511\\1\\Custom-hot-spots.css",
+    "bytes": 5590,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/148558511/1/Custom-hot-spots.css?t=a046f75180fde829236a1199c2c7d4af"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\155997976\\1\\MultiCarHallData.josn.json",
+    "bytes": 970,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/155997976/1/MultiCarHallData.josn.json?t=8306d221de8c85deaa629fc20fb3e273"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\162246824\\1\\runTimeAssetsConfig.json",
+    "bytes": 18769,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/162246824/1/runTimeAssetsConfig.json?t=23f6cc0a730b505533eaa5b1a4ade202"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\231794225\\1\\open_2.mp3",
+    "bytes": 17186,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/231794225/1/open_2.mp3?t=948838314f2bf70e51938dae1c6ad24d"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\141097530\\1\\img-3d-ui.png",
+    "bytes": 3049,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/141097530/1/img-3d-ui.png?t=daab372419602aefee595c02587e81d2"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\282548898\\1\\mirror.vert.glsl",
+    "bytes": 622,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/282548898/1/mirror.vert.glsl?t=f8d411d2715824c503ed3c5cf46dd753"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\282548899\\1\\mirror.frag.glsl",
+    "bytes": 5693,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/282548899/1/mirror.frag.glsl?t=d336be11670a08a9b0decf65f63450c4"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223283840\\1\\X6_S800_WK_C.glb",
+    "bytes": 512312,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223283840/1/X6_S800_WK_C.glb?t=e05eecc4345212787699a13c19b6b134"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223271599\\1\\X6_S800_WK_A.glb",
+    "bytes": 1608960,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223271599/1/X6_S800_WK_A.glb?t=05c45647748ca62a6dbb07052bf482fa"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223277281\\1\\X6_S800_WK_B.glb",
+    "bytes": 1861648,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223277281/1/X6_S800_WK_B.glb?t=d84f754fc0741296734df9974090ddbc"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223285270\\1\\X6_S800_waigai.glb",
+    "bytes": 771668,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223285270/1/X6_S800_waigai.glb?t=0ee05040ba22cfee38e5c88874b5f321"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223311602\\1\\X6_S800_houmen_w.glb",
+    "bytes": 373384,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223311602/1/X6_S800_houmen_w.glb?t=98a9d6839718e5a3ce6536fb312ab27e"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223311587\\1\\X6_S800_qianmen_w.glb",
+    "bytes": 398628,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223311587/1/X6_S800_qianmen_w.glb?t=b8a1e2350f03f3698e7fdb8d8a8407d5"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223313688\\1\\X6_S800_luntai.glb",
+    "bytes": 406792,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223313688/1/X6_S800_luntai.glb?t=c7940215cdedea56d258e77b7eed5b66"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223318499\\1\\X6_S800_lungu_A1.glb",
+    "bytes": 246320,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223318499/1/X6_S800_lungu_A1.glb?t=1a6b321c71b2858282423ab2d04179a1"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223318518\\1\\X6_S800_lungu_B1.glb",
+    "bytes": 765268,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223318518/1/X6_S800_lungu_B1.glb?t=9f7abc7edada638c52110b1802bf1ac8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223714683\\1\\X6_S800_YZ.glb",
+    "bytes": 1108,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223714683/1/X6_S800_YZ.glb?t=250d80af680b898ce32fae87def5d6dd"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233087945\\1\\X6_S800_NS_AO1.webp",
+    "bytes": 2153902,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233087945/1/X6_S800_NS_AO1.webp?t=53562c30fbc87c8dde360c306ddee007"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274544\\1\\X6_S800_pige.webp",
+    "bytes": 98620,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274544/1/X6_S800_pige.webp?t=a91eea255fcd0fac45dc2be2adcb61dc"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233499941\\1\\X6_S800_muwenC.webp",
+    "bytes": 127142,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233499941/1/X6_S800_muwenC.webp?t=83a5730bff9e71311cf18cbf9a233ed2"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230254307\\1\\GY.png",
+    "bytes": 122318,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230254307/1/GY.png?t=21614e4ee1b843ac0190fe4746aeff40"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274546\\1\\X6_S800_biaozhi.png",
+    "bytes": 345038,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274546/1/X6_S800_biaozhi.png?t=f5a7ebe88676c9217a25266a0defd1e7"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274541\\1\\X6_S800_D.webp",
+    "bytes": 2012,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274541/1/X6_S800_D.webp?t=187bc913f7dc3208d1e4b1f6d5419acc"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274553\\1\\X6_S800_fm.webp",
+    "bytes": 775368,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274553/1/X6_S800_fm.webp?t=4f234c3a9ba46d47943bb583f33decdc"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233088340\\1\\X6_FM.webp",
+    "bytes": 138222,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233088340/1/X6_FM.webp?t=90b181ad3da8581dfc39f3de98abf826"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233112405\\1\\X6_S800_xingkong.webp",
+    "bytes": 5206,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233112405/1/X6_S800_xingkong.webp?t=ffcf1736b74b9be9a55c1995b1b0e83c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\225615992\\1\\X6_S800_zuoyi.glb",
+    "bytes": 840764,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/225615992/1/X6_S800_zuoyi.glb?t=45a527226ea6978d28c4cc44f0945697"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\234175201\\1\\X6_S800_zuoyi_AO.webp",
+    "bytes": 546878,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/234175201/1/X6_S800_zuoyi_AO.webp?t=583b98470d923744eddfc6af0d266ce8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274542\\1\\X6_S800_feng.png",
+    "bytes": 18668,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274542/1/X6_S800_feng.png?t=73dd0cef88f5839b19f392badaa433a2"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\232617783\\1\\X6_WK_AO.webp",
+    "bytes": 1578342,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/232617783/1/X6_WK_AO.webp?t=63d2f64a5693f70c967ac3e73e8b5e3c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233499942\\1\\X6_muwen_d.webp",
+    "bytes": 118100,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233499942/1/X6_muwen_d.webp?t=a1723dc0c45d85b590283394a3f8bc0e"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\236408402\\1\\x6_lg_logo.glb",
+    "bytes": 11180,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/236408402/1/x6_lg_logo.glb?t=4c9b55be8d4c270fa102d577e1a218e2"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\141222859\\1\\CJ_dan2.glb",
+    "bytes": 217184,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/141222859/1/CJ_dan2.glb?t=240bfbdcae708f2860f6da2e17ea345b"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\141223142\\1\\CJ_dan_qiangmian_AO.jpg",
+    "bytes": 105336,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/141223142/1/CJ_dan_qiangmian_AO.jpg?t=960e99a55f6ce0b60cfe21f6943333e7"
+  },
+  {
+    "status": "failed",
+    "path": "files\\assets\\149491278\\1\\DM_d.basis",
+    "bytes": 0,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/149491278/1/DM_d.basis?t=b0c7bb049344cf4f9fefe706c7495bb0",
+    "error": "Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\149489330\\1\\CJ_dan_dimian_HP.png",
+    "bytes": 230926,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/149489330/1/CJ_dan_dimian_HP.png?t=ce2cb2d02de81929dcb0427c89ab9525"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228242775\\1\\stepDataForFoldX6.json",
+    "bytes": 18990,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228242775/1/stepDataForFoldX6.json?t=f6cb0b0a2ab5a4b9d9dfd392d2482756"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228242792\\1\\stepDataMagicWindowX6.json",
+    "bytes": 18989,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228242792/1/stepDataMagicWindowX6.json?t=f962ea14520b855a799fa179e1c283c3"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228242843\\1\\stepDataPortraitX6.json",
+    "bytes": 18986,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228242843/1/stepDataPortraitX6.json?t=f6ed4612fc9e0675d23b30cf94258cec"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228242844\\1\\stepDataX6.josn.json",
+    "bytes": 18986,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228242844/1/stepDataX6.josn.json?t=3ac750b19f46553f9f560dfa72f0abba"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\142936189\\1\\opendoor.mp3",
+    "bytes": 6195,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/142936189/1/opendoor.mp3?t=0fd377ae429b02b1387995d498b5262b"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\231794916\\1\\close_2.mp3",
+    "bytes": 8827,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/231794916/1/close_2.mp3?t=e3fd090ad44094c3af4bc31cff45b8ae"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223734086\\1\\X6_S800_YZ.png",
+    "bytes": 28123,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223734086/1/X6_S800_YZ.png?t=1a100ea3cc6b55f932d224942b0a120a"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230221878\\1\\CS.png",
+    "bytes": 82347,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230221878/1/CS.png?t=2e1686c38d9dba334e1f53e689b3dfc3"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274547\\1\\X6_S800_noise.webp",
+    "bytes": 97162,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274547/1/X6_S800_noise.webp?t=2d9a16b6d4f94fe621985ea5f9cb334c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\232622914\\1\\X6_S800_xingkong1.webp",
+    "bytes": 9138,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/232622914/1/X6_S800_xingkong1.webp?t=c65c0fe172a259efa239bf842e663ae2"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\138173084\\1\\4.png",
+    "bytes": 45990,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/138173084/1/4.png?t=010db51693a93a6211dcc10ef96c3a19"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\232617888\\1\\X6_S800_tex.webp",
+    "bytes": 288280,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/232617888/1/X6_S800_tex.webp?t=2240b28bc35d531c57aa9f2ea2fccd04"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\162968480\\1\\WK.png",
+    "bytes": 50619,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/162968480/1/WK.png?t=2926fdca354ed457d97975308db504ec"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274548\\1\\X6_S800_luntai.webp",
+    "bytes": 368512,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274548/1/X6_S800_luntai.webp?t=48764b9f8858a73d585485f0140474e8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\224775673\\1\\S.png",
+    "bytes": 85974,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/224775673/1/S.png?t=1eb1ad8d9fd8633dc8b39a13ad22d8a5"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230970465\\1\\sj.png",
+    "bytes": 91126,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230970465/1/sj.png?t=3506187a47781bff3ee6a77035424bc5"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\232623321\\1\\X6_S800_xingkong2.webp",
+    "bytes": 238770,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/232623321/1/X6_S800_xingkong2.webp?t=3081955bbfb5b2859b485bf74eeeabc3"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223274540\\1\\X6_S800_anjian_n.webp",
+    "bytes": 96266,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223274540/1/X6_S800_anjian_n.webp?t=732159b6caa2c9bf1392e47085c497ba"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230950971\\1\\YP_f.png",
+    "bytes": 84325,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230950971/1/YP_f.png?t=9c926abb0c5e19e47c1f3fd3be4e9e1c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\235106765\\1\\js8.png",
+    "bytes": 175909,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/235106765/1/js8.png?t=71412ef39138d9832c632a011a8fbf7c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233111999\\1\\X6_S800_anquandai.webp",
+    "bytes": 138494,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233111999/1/X6_S800_anquandai.webp?t=7fccb3352c1bdfa6ab852fb1c8f0fd1a"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233129660\\1\\X6_S800_lx_zuoyi.webp",
+    "bytes": 243074,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233129660/1/X6_S800_lx_zuoyi.webp?t=c29227cbacebe2699e504d72a31454ff"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233088194\\1\\X6_FWD.webp",
+    "bytes": 77546,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233088194/1/X6_FWD.webp?t=1939e9df09234773ec72f1a88a524c09"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\236369767\\1\\x6_deng_xk.webp",
+    "bytes": 30854,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/236369767/1/x6_deng_xk.webp?t=8876016cbac6eb55712eb8b0bc8d4613"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\142906952\\1\\jingmian_wk.png",
+    "bytes": 65284,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/142906952/1/jingmian_wk.png?t=96b21385d5386851ccecac8a11fc4420"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\232032561\\1\\YP_e.png",
+    "bytes": 97885,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/232032561/1/YP_e.png?t=b6eae966e042fd76064862275efd7ba7"
+  },
+  {
+    "status": "downloaded",
+    "path": "2217625.json",
+    "bytes": 232026,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/2217625.json"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\225574236\\1\\X6_S800_qianmen_n.glb",
+    "bytes": 389696,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/225574236/1/X6_S800_qianmen_n.glb?t=3d156b6f2ee6de57df722855a00214fe"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\225574505\\1\\X6_S800_qianmen_n_a.glb",
+    "bytes": 221200,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/225574505/1/X6_S800_qianmen_n_a.glb?t=2adc3d7752e2f7606940c2a300712c14"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\231716393\\1\\X6_S800_cm_logo.glb",
+    "bytes": 2944,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/231716393/1/X6_S800_cm_logo.glb?t=9190630a9ad654e5d2c5375cf88c3d46"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\225574901\\1\\X6_S800_qianmen_n_b.glb",
+    "bytes": 147876,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/225574901/1/X6_S800_qianmen_n_b.glb?t=0cf538952d55f8d6d6761a58d9ac4330"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\225575525\\1\\X6_S800_houmen_n.glb",
+    "bytes": 677576,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/225575525/1/X6_S800_houmen_n.glb?t=31ca2c957d74d7b07c45940a12990957"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230282203\\1\\X6_S800_houmen_n_a.glb",
+    "bytes": 64340,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230282203/1/X6_S800_houmen_n_a.glb?t=574bb81c9b71bad3cf2f2a8b13a6a4bd"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230282205\\1\\X6_S800_houmen_n_b.glb",
+    "bytes": 64336,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230282205/1/X6_S800_houmen_n_b.glb?t=2844159dbf8a7c07286688ea89b51a2b"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243008243\\1\\X6_S800_zhongkong.glb",
+    "bytes": 7104,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243008243/1/X6_S800_zhongkong.glb?t=39336e46919d22398f7a6dae9e25b981"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\234175042\\1\\x6_zhujia.webp",
+    "bytes": 50838,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/234175042/1/x6_zhujia.webp?t=6f388f6d82d408a84f0781c2ef70056c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243150104\\1\\X6_S800_NS_A.glb",
+    "bytes": 5272,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243150104/1/X6_S800_NS_A.glb?t=53d055c67e39cf89e862cec07ebed3e9"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233106577\\1\\X6_hpmu.webp",
+    "bytes": 54778,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233106577/1/X6_hpmu.webp?t=9fe05eca2415eb0f25426bbecd3147a1"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243244667\\1\\X6_S800_NS_C.glb",
+    "bytes": 3892,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243244667/1/X6_S800_NS_C.glb?t=0cf503b53f7ed4047511f521b18b35a2"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243295112\\1\\X6_S800_NS_D.glb",
+    "bytes": 3536,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243295112/1/X6_S800_NS_D.glb?t=da2c2a8c524faf80f528e6b610e06de7"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243244668\\1\\X6_S800_NS_C.glb",
+    "bytes": 263256,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243244668/1/X6_S800_NS_C.glb?t=0c678f8f4e7600f859241a7a494a79b0"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243295113\\1\\X6_S800_NS_D.glb",
+    "bytes": 315164,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243295113/1/X6_S800_NS_D.glb?t=409e8b55ceaa2a50c951ebd646ec9237"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243387164\\1\\X6_S800_NS_E.glb",
+    "bytes": 10092,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243387164/1/X6_S800_NS_E.glb?t=941e572292886bdb90fa31bc5f82ef1e"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243349960\\1\\X6_S800_zuoyi_B.glb",
+    "bytes": 7896,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243349960/1/X6_S800_zuoyi_B.glb?t=d5679b6b3613d3c529cd9991f1e2c07f"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\243382371\\1\\X6_S800_zuoyi_C.glb",
+    "bytes": 10744,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/243382371/1/X6_S800_zuoyi_C.glb?t=66827d5a8940175ee56a15f67b018550"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223318503\\1\\X6_S800_lungu_A3.glb",
+    "bytes": 324444,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223318503/1/X6_S800_lungu_A3.glb?t=c0a6b67fe20a360e427671a0942f6e02"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\162498710\\1\\JiaZaiQuan.glb",
+    "bytes": 2716,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/162498710/1/JiaZaiQuan.glb?t=a286dad7efbc7bc00e4c0e33cb069143"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\160126645\\1\\JiaZaiQuan.glb",
+    "bytes": 15952,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/160126645/1/JiaZaiQuan.glb?t=f0d3fb73287f92a1e67d212728819dda"
+  },
+  {
+    "status": "failed",
+    "path": "files\\assets\\140706711\\1\\LeiDa.basis",
+    "bytes": 0,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/140706711/1/LeiDa.basis?t=f5c4a329601316f62dcbc72c21f60bcc",
+    "error": "Response status code does not indicate success: 404 (Not Found)."
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\140375835\\1\\img-3d-ui1.png",
+    "bytes": 2245,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/140375835/1/img-3d-ui1.png?t=a4ba2d1ca9758eb32f0b92de5608b07a"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\141422353\\1\\flare-long.png",
+    "bytes": 4338,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/141422353/1/flare-long.png?t=d7583ec3049213779a9e83eab33a20b8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223825089\\1\\X6_S800_LeiDa.glb",
+    "bytes": 25520,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223825089/1/X6_S800_LeiDa.glb?t=ee3a59908d6a5051e5b37b31ab474e1e"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228228355\\1\\X6_S800_GL.glb",
+    "bytes": 13836,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228228355/1/X6_S800_GL.glb?t=d46baed58611759e1f32ad2da5ba3e40"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\227526266\\1\\X6_S800_gaoerfu.glb",
+    "bytes": 61772,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/227526266/1/X6_S800_gaoerfu.glb?t=9f34a96b00be5196ef6e825c3edc035f"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\227526264\\1\\X6_S800_xlx1.glb",
+    "bytes": 93340,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/227526264/1/X6_S800_xlx1.glb?t=8f25ea15760b4e8321b68eb7a595cfa8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\227526260\\1\\X6_S800_xlx2.glb",
+    "bytes": 85724,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/227526260/1/X6_S800_xlx2.glb?t=e82fa1617011bc8e633ce3fc465ab71c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223318507\\1\\X6_S800_lungu_A2.glb",
+    "bytes": 344416,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223318507/1/X6_S800_lungu_A2.glb?t=a2bbec016e7d40b4b7c31358ee09dcee"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\227521110\\1\\X6_S800_jiaren.glb",
+    "bytes": 374332,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/227521110/1/X6_S800_jiaren.glb?t=ccba3a7c3f21ddb3f6ead9f16f1ade43"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\140177319\\1\\vm-icon-close.png",
+    "bytes": 739,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/140177319/1/vm-icon-close.png?t=40c282172f289dff07151172aadbbf1c"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370118\\1\\selectCarX6.jpg",
+    "bytes": 9622,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370118/1/selectCarX6.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\220596553\\1\\selectCarM9.jpg",
+    "bytes": 11357,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/220596553/1/selectCarM9.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\223116189\\1\\selectCarf3.jpg",
+    "bytes": 12237,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/223116189/1/selectCarf3.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\251437282\\1\\selectCarF1l.jpg",
+    "bytes": 11687,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/251437282/1/selectCarF1l.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\215819229\\1\\selectCarX1C.jpg",
+    "bytes": 23142,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/215819229/1/selectCarX1C.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\244741208\\1\\selectCarEhyn.jpg",
+    "bytes": 24168,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/244741208/1/selectCarEhyn.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\244741222\\1\\selectCarEh3n.jpg",
+    "bytes": 8977,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/244741222/1/selectCarEh3n.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\266531615\\1\\selectCarx4a.jpg",
+    "bytes": 9286,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/266531615/1/selectCarx4a.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\252707809\\1\\selectCarS9T.jpg",
+    "bytes": 9516,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/252707809/1/selectCarS9T.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\247883040\\1\\selectSHA.jpg",
+    "bytes": 25445,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/247883040/1/selectSHA.jpg"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370277\\1\\x6Tire1.png",
+    "bytes": 19299,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370277/1/x6Tire1.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370278\\1\\x6Tire2.png",
+    "bytes": 25155,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370278/1/x6Tire2.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370275\\1\\x6Tire3.png",
+    "bytes": 20245,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370275/1/x6Tire3.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370428\\1\\vm-icon-color93.png",
+    "bytes": 1581,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370428/1/vm-icon-color93.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370427\\1\\vm-icon-color91.png",
+    "bytes": 1622,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370427/1/vm-icon-color91.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370432\\1\\vm-icon-color95.png",
+    "bytes": 1577,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370432/1/vm-icon-color95.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370429\\1\\vm-icon-color92.png",
+    "bytes": 1545,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370429/1/vm-icon-color92.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370430\\1\\vm-icon-color90.png",
+    "bytes": 1663,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370430/1/vm-icon-color90.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370431\\1\\vm-icon-color94.png",
+    "bytes": 1350,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370431/1/vm-icon-color94.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370493\\1\\vm-icon-color96.png",
+    "bytes": 1621,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370493/1/vm-icon-color96.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370496\\1\\vm-icon-color98.png",
+    "bytes": 1684,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370496/1/vm-icon-color98.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370497\\1\\vm-icon-color97.png",
+    "bytes": 1547,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370497/1/vm-icon-color97.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370494\\1\\vm-icon-color99.png",
+    "bytes": 1526,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370494/1/vm-icon-color99.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\229370495\\1\\vm-icon-color100.png",
+    "bytes": 1639,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/229370495/1/vm-icon-color100.png"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\230951183\\1\\yp_d.png",
+    "bytes": 213614,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/230951183/1/yp_d.png?t=45349d06c6c6f85ad3a76badce987e8a"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233389803\\1\\PK.png",
+    "bytes": 198872,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233389803/1/PK.png?t=67aff0449311272fb0e4f7e55a707b94"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\233853078\\1\\X6_yx1.png",
+    "bytes": 78448,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/233853078/1/X6_yx1.png?t=5e4561c273b4f7e16bd1799c078b1a47"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228251208\\1\\X6_S800_chicun_C.glb",
+    "bytes": 2988,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228251208/1/X6_S800_chicun_C.glb?t=6a58c5326d134f9561a61198f20080e8"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228253207\\1\\X6_S800_chicun_K.glb",
+    "bytes": 2624,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228253207/1/X6_S800_chicun_K.glb?t=afcee69b593e9ac81235fc73facf46cc"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228261025\\1\\X6_S800_chicun_G.glb",
+    "bytes": 4632,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228261025/1/X6_S800_chicun_G.glb?t=8c41ec61d7e2f632fa3befc3cfc8c001"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228261028\\1\\X6_S800_chicun_zhouju.glb",
+    "bytes": 2580,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228261028/1/X6_S800_chicun_zhouju.glb?t=c3f204b258a58e337a63ff0889eea824"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228263502\\1\\X6_S800_chicun_hbx.glb",
+    "bytes": 11248,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228263502/1/X6_S800_chicun_hbx.glb?t=b3b8af68349f14ff9d9589a17a071e2f"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228251804\\1\\X6_S800_chicun_C_shuzi.glb",
+    "bytes": 1600,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228251804/1/X6_S800_chicun_C_shuzi.glb?t=374fdd8194b97600acbf78e08d700ef7"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228253235\\1\\X6_S800_chicun_K_shuzi.glb",
+    "bytes": 1620,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228253235/1/X6_S800_chicun_K_shuzi.glb?t=9c9006d547d7ec1399a9f85555a6a4e7"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228261022\\1\\X6_S800_chicun_G_shuzi.glb",
+    "bytes": 1616,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228261022/1/X6_S800_chicun_G_shuzi.glb?t=a4ee755ce70ef43dcb48ab6f260d129d"
+  },
+  {
+    "status": "downloaded",
+    "path": "files\\assets\\228261019\\1\\X6_S800_chicun_zhouju_shuzi.glb",
+    "bytes": 1580,
+    "url": "https://s3.auto-china.com/auto-china/maextro-s800/3d/files/assets/228261019/1/X6_S800_chicun_zhouju_shuzi.glb?t=36dd1efa2047bb3a73893f085d34f696"
+  }
+]

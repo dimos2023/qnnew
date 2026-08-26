@@ -1,0 +1,2848 @@
+{
+    "SN": [
+        "5008010020201",
+        "5008010020301",
+        "5008010004501",
+        "5008010007101",
+        "5008010023501",
+        "5008010013301",
+        "5008010015901",
+        "5008010010601",
+        "50080100157",
+        "5008010029801",
+        "5008010028001",
+        "M6"
+    ],
+    "carConfigIndex": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        10,
+        12
+    ],
+    "list": [
+        {
+            "index": 12,
+            "name": "尊界 S800 星耀行政增程版",
+            "price": "101.8",
+            "carImageNumber": "229370118",
+            "carImageName": "selectCarX6.jpg",
+            "sceneId": "2217625",
+            "weshapeCloudId": "4518",
+            "weshapeCloudBetaId": "4519",
+            "sn": "5008010020201",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "229370277",
+                    "wheelImgName": "x6Tire1.png",
+                    "tireSize": "20",
+                    "wheelName": "12孔晖月轮毂"
+                },
+                {
+                    "wheelImg": "229370278",
+                    "wheelImgName": "x6Tire2.png",
+                    "tireSize": "20",
+                    "wheelName": "30辐星辉轮毂"
+                },
+                {
+                    "wheelImg": "229370275",
+                    "wheelImgName": "x6Tire3.png",
+                    "tireSize": "21",
+                    "wheelName": "25孔日耀轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "高尔夫球包"
+                },
+                {
+                    "trunkCombination": "1*28行李箱，1*24行李箱"
+                },
+                {
+                    "trunkCombination": "20*4行李箱"
+                }
+            ],
+            "cardList": [
+                [
+                    102,
+                    103,
+                    104,
+                    105,
+                    106,
+                    107,
+                    110
+                ],
+                []
+            ],
+            "colorIndexList": [
+                "4,2,6,3,1,5",
+                "1,2,3,4,5"
+            ],
+            "colorList": [
+                "99,97,101,98,96,100",
+                "102,104,103,105,106"
+            ],
+            "defaultColor": "1,4"
+        },
+        {
+            "index": 13,
+            "name": "尊界 S800 星耀尊享增程版",
+            "price": "78.8",
+            "carImageNumber": "229370118",
+            "carImageName": "selectCarX6.jpg",
+            "sceneId": "2274248",
+            "weshapeCloudId": "4522",
+            "weshapeCloudBetaId": "4523",
+            "sn": "5008010020301",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "229370277",
+                    "wheelImgName": "x6Tire1.png",
+                    "tireSize": "20",
+                    "wheelName": "12孔晖月轮毂"
+                },
+                {
+                    "wheelImg": "229370278",
+                    "wheelImgName": "x6Tire2.png",
+                    "tireSize": "20",
+                    "wheelName": "30辐星辉轮毂"
+                },
+                {
+                    "wheelImg": "229370275",
+                    "wheelImgName": "x6Tire3.png",
+                    "tireSize": "21",
+                    "wheelName": "25孔日耀轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "高尔夫球包"
+                },
+                {
+                    "trunkCombination": "1*28行李箱，1*24行李箱"
+                },
+                {
+                    "trunkCombination": "20*4行李箱"
+                }
+            ],
+            "cardList": [
+                [
+                    102,
+                    103,
+                    104,
+                    105,
+                    107,
+                    110
+                ],
+                []
+            ],
+            "colorIndexList": [
+                "4,2,6,3,1,5",
+                "1,2,3,4,5"
+            ],
+            "colorList": [
+                "99,97,101,98,96,100",
+                "102,104,103,105,106"
+            ],
+            "defaultColor": "1,4"
+        },
+        {
+            "index": 10,
+            "name": "问界 M9 纯电 Ultra 六座版",
+            "price": "57.98",
+            "carImageNumber": "220596553",
+            "carImageName": "selectCarM9.jpg",
+            "sceneId": "2197651",
+            "weshapeCloudId": "4513",
+            "weshapeCloudBetaId": "4514",
+            "sn": "5008010004501",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "219529479",
+                    "wheelImgName": "f2aTire1.png",
+                    "tireSize": "21",
+                    "wheelName": "多辐星辉轮毂"
+                },
+                {
+                    "wheelImg": "219529483",
+                    "wheelImgName": "f2aTire2.png",
+                    "tireSize": "21",
+                    "wheelName": "多辐星耀轮毂"
+                },
+                {
+                    "wheelImg": "219529485",
+                    "wheelImgName": "f2aTire3.png",
+                    "tireSize": "21",
+                    "wheelName": "空气动力学轮毂"
+                },
+                {
+                    "wheelImg": "219529480",
+                    "wheelImgName": "f2aTire4.png",
+                    "tireSize": "22",
+                    "wheelName": "双十辐运动轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "24寸行李箱一个，20寸行李箱两个"
+                },
+                {
+                    "trunkCombination": "24寸行李箱一个，28寸行李箱一个"
+                },
+                {
+                    "trunkCombination": "高尔夫球杆一套，滑雪板一套，20寸行李箱一个"
+                }
+            ],
+            "cardList": [
+                [
+                    77,
+                    78,
+                    82,
+                    79,
+                    81,
+                    80
+                ],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,5,3,4,6",
+                "1,5,4,2,3"
+            ],
+            "colorList": [
+                "71,72,75,73,74,125",
+                "76,80,79,77,78"
+            ],
+            "defaultColor": "2,3"
+        },
+        {
+            "index": 11,
+            "name": "问界 M8 增程 UItra 六座版",
+            "price": "45.98",
+            "carImageNumber": "223116189",
+            "carImageName": "selectCarf3.jpg",
+            "sceneId": "2204952",
+            "weshapeCloudId": "4516",
+            "weshapeCloudBetaId": "4517",
+            "sn": "5008010007101",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "223117052",
+                    "wheelImgName": "f3Tire1.png",
+                    "tireSize": "20",
+                    "wheelName": "十辐运动轮毂"
+                },
+                {
+                    "wheelImg": "223117048",
+                    "wheelImgName": "f3Tire3.png",
+                    "tireSize": "21",
+                    "wheelName": "多辐星辉轮毂"
+                },
+                {
+                    "wheelImg": "223117051",
+                    "wheelImgName": "f3Tire2.png",
+                    "tireSize": "21",
+                    "wheelName": "空气动力学轮毂"
+                },
+                {
+                    "wheelImg": "282564251",
+                    "wheelImgName": "f3Tire6.png",
+                    "tireSize": "21",
+                    "wheelName": "曜影运动轮轂"
+                },
+                {
+                    "wheelImg": "242054782",
+                    "wheelImgName": "f3Tire5.png",
+                    "tireSize": "21",
+                    "wheelName": "玄曜运动轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "高尔夫球包"
+                },
+                {
+                    "trunkCombination": "2*24行李箱"
+                },
+                {
+                    "trunkCombination": "20*4行李箱"
+                }
+            ],
+            "cardList": [
+                [
+                    83,
+                    84,
+                    85,
+                    86,
+                    87,
+                    89,
+                    90,
+                    88,
+                    92
+                ],
+                []
+            ],
+            "colorIndexList": [
+                "1,3,5,2,6,7,8,9",
+                "1,2,3,4,5"
+            ],
+            "colorList": [
+                "81,83,85,82,86,110,132,133",
+                "87,88,89,90,45"
+            ],
+            "defaultColor": "7,0"
+        },
+        {
+            "index": 17,
+            "name": "问界 M7 增程 Ultra 五座版",
+            "price": "34.98",
+            "carImageNumber": "251437282",
+            "carImageName": "selectCarF1l.jpg",
+            "sceneId": "2303635",
+            "weshapeCloudId": "4526",
+            "weshapeCloudBetaId": "4527",
+            "sn": "5008010023501",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "251426442",
+                    "wheelImgName": "f1lTire1.png",
+                    "tireSize": "20",
+                    "wheelName": "运动轮毂"
+                },
+                {
+                    "wheelImg": "251426443",
+                    "wheelImgName": "f1lTire4.png",
+                    "tireSize": "21",
+                    "wheelName": "运动轮毂"
+                },
+                {
+                    "wheelImg": "251426441",
+                    "wheelImgName": "f1lTire2.png",
+                    "tireSize": "21",
+                    "wheelName": "低风阻星辉轮毂"
+                },
+                {
+                    "wheelImg": "280976764",
+                    "wheelImgName": "f1lTire5.png",
+                    "tireSize": "21",
+                    "wheelName": "星芒轮毂"
+                },
+                {
+                    "wheelImg": "251426440",
+                    "wheelImgName": "f1lTire3.png",
+                    "tireSize": "21",
+                    "wheelName": "玄曜运动轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "28英寸行李箱四个"
+                },
+                {
+                    "trunkCombination": "20英寸行李箱十二个"
+                }
+            ],
+            "cardList": [
+                [],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,3,4,5,6,7",
+                "1,2,3,4,5"
+            ],
+            "colorList": [
+                "120,71,83,121,72,122,110",
+                "58,60,78,90"
+            ],
+            "defaultColor": "3,2"
+        },
+        {
+            "index": 2,
+            "name": "问界 新M5 增程 Ultra 四驱版",
+            "price": "24.98",
+            "carImageNumber": "215819229",
+            "carImageName": "selectCarX1C.jpg",
+            "sceneId": "2171955",
+            "weshapeCloudId": "4511",
+            "weshapeCloudBetaId": "4512",
+            "sn": "5008010013301",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "175222672",
+                    "wheelImgName": "x1aTire1.png",
+                    "tireSize": "19",
+                    "wheelName": "双五辐运动轮毂"
+                },
+                {
+                    "wheelImg": "140246049",
+                    "wheelImgName": "frontWheel.png",
+                    "tireSize": "20",
+                    "wheelName": "双五辐运动轮毂"
+                },
+                {
+                    "wheelImg": "175222684",
+                    "wheelImgName": "x1aTire2.png",
+                    "tireSize": "20",
+                    "wheelName": "黑曜运动轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "24寸行李箱一个，20寸行李箱两个"
+                },
+                {
+                    "trunkCombination": "28寸行李箱两个"
+                },
+                {
+                    "trunkCombination": "高尔夫球杆一套，滑雪板一套，20寸行李箱两个"
+                }
+            ],
+            "cardList": [
+                [
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    70
+                ],
+                []
+            ],
+            "colorIndexList": [
+                "3,2,4,5,1,6",
+                "3,2,1"
+            ],
+            "colorList": [
+                "50,113,55,54,52,127",
+                "60,59,58"
+            ],
+            "defaultColor": "3,2"
+        },
+        {
+            "index": 15,
+            "name": "智界 R7 纯电 Ultra",
+            "price": "31.98",
+            "carImageNumber": "244741208",
+            "carImageName": "selectCarEhyn.jpg",
+            "sceneId": "2063146",
+            "weshapeCloudId": "4534",
+            "weshapeCloudBetaId": "4535",
+            "sn": "5008010015901",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "195120724",
+                    "wheelImgName": "r7Tire20.png",
+                    "tireSize": "20",
+                    "wheelName": "双五辐低风阻轮毂"
+                },
+                {
+                    "wheelImg": "195120723",
+                    "wheelImgName": "r7Tire21.png",
+                    "tireSize": "21",
+                    "wheelName": "双十辐高性能轮毂"
+                },
+                {
+                    "wheelImg": "244729479",
+                    "wheelImgName": "ehynTire1.png",
+                    "tireSize": "20",
+                    "wheelName": "黑曜双五辐低风阻轮毂"
+                },
+                {
+                    "wheelImg": "244729478",
+                    "wheelImgName": "ehynTire2.png",
+                    "tireSize": "21",
+                    "wheelName": "黑曜双十辐高性能轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "28寸行李箱三个，22寸行李箱两个"
+                },
+                {
+                    "trunkCombination": "18寸儿童自行车两个"
+                },
+                {
+                    "trunkCombination": "2.1m * 1.4m 床垫一个"
+                }
+            ],
+            "cardList": [
+                [],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,3,10,11,4,5,6,8",
+                "6,3,1,2,4,5"
+            ],
+            "colorList": [
+                "29,37,38,131,129,111,130,65,64",
+                "20,112,8,32,69,78"
+            ],
+            "defaultColor": "5,1"
+        },
+        {
+            "index": 14,
+            "name": "智界 新S7 Ultra",
+            "price": "29.98",
+            "carImageNumber": "244741222",
+            "carImageName": "selectCarEh3n.jpg",
+            "sceneId": "2285541",
+            "weshapeCloudId": "4532",
+            "weshapeCloudBetaId": "4533",
+            "sn": "5008010010601",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "217478867",
+                    "wheelImgName": "2025-s7Tire2.png",
+                    "tireSize": "20",
+                    "wheelName": "双五辐低风阻轮毂"
+                },
+                {
+                    "wheelImg": "217478865",
+                    "wheelImgName": "2025-s7Tire3.png",
+                    "tireSize": "21",
+                    "wheelName": "锻造轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "24寸行李箱一个，20寸行李箱两个"
+                },
+                {
+                    "trunkCombination": "24寸行李箱一个，28寸行李箱一个"
+                },
+                {
+                    "trunkCombination": "高尔夫球杆一套，滑雪板一套，20寸行李箱一个"
+                }
+            ],
+            "cardList": [
+                [],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,3,10,11,4,5,6,8",
+                "5,3,1,2,4"
+            ],
+            "colorList": [
+                "64,63,57,131,129,95,111,130,65",
+                "20,112,70,32,7"
+            ],
+            "defaultColor": "5,4"
+        },
+        {
+            "index": 19,
+            "name": "享界 S9 增程 Ultra",
+            "price": "35.98",
+            "carImageNumber": "266531615",
+            "carImageName": "selectCarx4a.jpg",
+            "sceneId": "2369967",
+            "weshapeCloudId": "4549",
+            "weshapeCloudBetaId": "4550",
+            "sn": "50080100157",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "189278468",
+                    "wheelImgName": "x4aTire1.png",
+                    "tireSize": "21",
+                    "wheelName": "星辉锻铣轮毂"
+                },
+                {
+                    "wheelImg": "266531515",
+                    "wheelImgName": "x4aTire2.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐星炫轮毂"
+                },
+                {
+                    "wheelImg": "223849005",
+                    "wheelImgName": "x4Tire1.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐星辉轮毂"
+                },
+                {
+                    "wheelImg": "282818401",
+                    "wheelImgName": "x4aTire6.png",
+                    "tireSize": "20",
+                    "wheelName": "双十辐星熠轮轂"
+                },
+                {
+                    "wheelImg": "266533447",
+                    "wheelImgName": "x4aTire4.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐黑曜星炫轮毂"
+                },
+                {
+                    "wheelImg": "266533446",
+                    "wheelImgName": "x4aTire5.png",
+                    "tireSize": "21",
+                    "wheelName": "黑曜星辉锻铣轮毂"
+                },
+                {
+                    "wheelImg": "282818404",
+                    "wheelImgName": "x4aTire7.png",
+                    "tireSize": "20",
+                    "wheelName": "黑曜双十辐星熠轮轂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "28寸行李箱一个，24寸行李箱一个，双肩包一个"
+                },
+                {
+                    "trunkCombination": "28寸行李箱一个，20寸行李箱三个"
+                },
+                {
+                    "trunkCombination": "高尔夫球杆一套"
+                }
+            ],
+            "cardList": [
+                [
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    100,
+                    101
+                ],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,3,4,5,7",
+                "1,2,3,4,6"
+            ],
+            "colorList": [
+                "93,27,123,124,28,134",
+                "94,126,33,20,90"
+            ],
+            "defaultColor": "1,1"
+        },
+        {
+            "index": 18,
+            "name": "享界 S9T 纯电 Ultra",
+            "price": "37.98",
+            "carImageNumber": "252707809",
+            "carImageName": "selectCarS9T.jpg",
+            "sceneId": "2316650",
+            "weshapeCloudId": "4528",
+            "weshapeCloudBetaId": "4529",
+            "sn": "5008010029801",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "252707874",
+                    "wheelImgName": "s9tTire1.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐星辉轮毂"
+                },
+                {
+                    "wheelImg": "252707875",
+                    "wheelImgName": "s9tTire2.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐星炫轮毂"
+                },
+                {
+                    "wheelImg": "252707873",
+                    "wheelImgName": "s9tTire3.png",
+                    "tireSize": "21",
+                    "wheelName": "星辉锻铣轮毂"
+                },
+                {
+                    "wheelImg": "282823049",
+                    "wheelImgName": "s9tTire6.png",
+                    "tireSize": "20",
+                    "wheelName": "双五辐星环轮毅"
+                },
+                {
+                    "wheelImg": "253217793",
+                    "wheelImgName": "s9tTire4.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐黑曜星炫轮毂"
+                },
+                {
+                    "wheelImg": "253217794",
+                    "wheelImgName": "s9tTire5.png",
+                    "tireSize": "21",
+                    "wheelName": "黑曜星辉锻铣轮毂"
+                },
+                {
+                    "wheelImg": "282825262",
+                    "wheelImgName": "s9tTire7.png",
+                    "tireSize": "20",
+                    "wheelName": "黑曜双五辐星环轮毅"
+                },
+                {
+                    "wheelImg": "282823050",
+                    "wheelImgName": "s9tTire8.png",
+                    "tireSize": "20",
+                    "wheelName": "黑曜双五辐星环轮毅"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "28寸行李箱三个，20寸行李箱一个"
+                },
+                {
+                    "trunkCombination": "20寸行李箱九个"
+                },
+                {
+                    "trunkCombination": "全尺寸自行车一辆"
+                }
+            ],
+            "cardList": [
+                [],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,3,5,6,7",
+                "1,3,4,5,6"
+            ],
+            "colorList": [
+                "124,27,28,93,123,135",
+                "20,45,89,90,126"
+            ],
+            "defaultColor": "0,2"
+        },
+        {
+            "index": 16,
+            "name": "尚界 H5 增程 Max",
+            "price": "17.98",
+            "carImageNumber": "247883040",
+            "carImageName": "selectSHA.jpg",
+            "sceneId": "2287870",
+            "weshapeCloudId": "4530",
+            "weshapeCloudBetaId": "4531",
+            "sn": "5008010028001",
+            "wheelBtnData": [
+                {
+                    "wheelImg": "247883417",
+                    "wheelImgName": "shaTire1.png",
+                    "tireSize": "19",
+                    "wheelName": "低风阻轮毂"
+                },
+                {
+                    "wheelImg": "247883415",
+                    "wheelImgName": "shaTire2.png",
+                    "tireSize": "20",
+                    "wheelName": "多辐轮毂"
+                },
+                {
+                    "wheelImg": "247883416",
+                    "wheelImgName": "shaTire3.png",
+                    "tireSize": "20",
+                    "wheelName": "黑曜多辐轮毂"
+                }
+            ],
+            "trunkData": [
+                {
+                    "trunkCombination": "28寸行李箱三个"
+                },
+                {
+                    "trunkCombination": "28寸行李箱一个，26寸行李箱一个，20寸行李箱两个，手提包两个"
+                }
+            ],
+            "cardList": [
+                [],
+                []
+            ],
+            "colorIndexList": [
+                "1,2,3,4,5,6",
+                "1,2,3,4"
+            ],
+            "colorList": [
+                "114,115,37,38,117,116",
+                "118,18,119,20"
+            ],
+            "defaultColor": "5,1"
+        }
+    ],
+    "cardData": [
+        {
+            "id": 0,
+            "type": 1,
+            "imgUrl": 159497948,
+            "imgUrlName": "vm-swiper2.jpg",
+            "title": "百万豪车级全铝底盘",
+            "content": "百万豪车级的全铝合金底盘¹ ，配合前双叉臂后多连杆独立悬架，带给你畅快尽兴的驾乘体验，麋鹿测试高达72.9 km/h² 。第二代 IBOOSTER + ESPhev 制动系统，兼顾能量回收与制动停车，制动距离仅36.6 米³ ",
+            "hint": [
+                "1.全铝合金底盘是指副车架、悬架拉杆和摆臂、转向节等底盘全部结构件为铝合金材质。",
+                "2.麋鹿测试 72.9 km/h 为问界 M5 后驱智驾版的测试数据。该数据来自赛力斯集团股份有限公司测试中心。",
+                "3.制动距离 36.6 米为问界M5后驱智驾版的测试数据。该数据来自赛力斯集团股份有限公司测试中心。车辆实际制动距离在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差异。"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 1,
+            "type": 1,
+            "imgUrl": 159497951,
+            "imgUrlName": "vm-swiper4.jpg",
+            "title": "1400+ 公里长续航¹",
+            "content": "",
+            "hint": [
+                "1.综合续航里程为问界 M5 后驱智驾版在满油满电状态下 CLTC 综合工况续航里程，纯电续航里程为问界 M5 后驱智驾版电池组的 CLTC 综合工况续航里程。该数据来自招商局检测车辆技术研究院有限公司，另有四驱智驾版可选。车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命、轮毂/轮胎选装等因素影响而有差异。"
+            ],
+            "angle": 5
+        },
+        {
+            "id": 2,
+            "type": 1,
+            "imgUrl": 159497944,
+            "imgUrlName": "vm-swiper4-23.jpg",
+            "title": "智能增程",
+            "content": "智能识别使用工况与环境，合理分配增程器与电机之间的最佳使用策略，使增程器能在高效工况下运转，油耗更低，行驶更安静；低温行驶时，动力更强劲。",
+            "hint": [],
+            "angle": 5
+        },
+        {
+            "id": 3,
+            "type": 1,
+            "imgUrl": 159497949,
+            "imgUrlName": "vm-swiper4-ev.jpg",
+            "title": "HUAWEI DriveONE",
+            "content": "HUAWEI DriveONE 纯电驱智能平台，采用先进智能油冷技术动力系统更加安全可靠。纯电四驱智驾版前后驱峰值功率达365 kw.峰值扭矩达 675 Nm，整车 0-100 m/h加速可达 4.5秒¹澎湃动力，随踩随有。",
+            "hint": [
+                "1.4.5 秒百公里加速为问界 M5 纯电四驱智驾版测试数据，7.1 秒百公里加速为问界 M5 纯电后驱智驾版测试数据，该数据来自赛力斯集团股份有限公司测试中心。车辆实际性能在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差⁠异⁠。"
+            ],
+            "angle": 5
+        },
+        {
+            "id": 4,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/aito-m5-ads-huaweisound-video.mp4",
+            "posterImg": 159502138,
+            "posterImgName": "vm-poster2.jpg",
+            "angle": 17
+        },
+        {
+            "id": 5,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/aito-m5-ads-superhome-video.mp4",
+            "posterImg": 159502137,
+            "posterImgName": "vm-poster1.jpg",
+            "angle": 16
+        },
+        {
+            "id": 6,
+            "type": 1,
+            "imgUrl": 159497947,
+            "imgUrlName": "vm-swiper1.jpg",
+            "title": "车载超级快充¹",
+            "content": "两个40 W无线超级快充，创新双风扇散热，兼顾效率与安全；三个66 W有线超级快充，一个60 W有线快充，有线及无线可同时充电，让你轻松满电出行。",
+            "hint": [
+                "1.实际充电功率会随设备支持的充电协议和环境温度等因素变化，请以实际使用情况为准。主驾侧：2个Type C（60 W + 66 W）、副驾侧：1个Type A（66 W）、后排：2个Type C（18 W、66 W），有线充电中的充电线需单独购买。"
+            ],
+            "angle": 18
+        },
+        {
+            "id": 7,
+            "type": 1,
+            "imgUrl": 159497945,
+            "imgUrlName": "vm-swiper3.jpg",
+            "title": "HUAWEI MagLinkᵀᴹ魔吸车载接口",
+            "content": "HUAWEI MagLinkᵀᴹ车内拓展新玩法，支持将平板吸附在座椅后背，27 W快充¹，一碰即合，一拆即走，车上看的精彩剧情，下车接着看。",
+            "hint": [
+                "1.实际充电功率会随设备支持的充电协议和环境温度等因素变化，请以实际使用情况为准，磁吸快充配件需单独购买。"
+            ],
+            "angle": 23
+        },
+        {
+            "id": 8,
+            "type": 1,
+            "imgUrl": 159497946,
+            "imgUrlName": "vm-swiper5.jpg",
+            "title": "Studio 级柔光女王镜",
+            "content": "大面积化妆镜，配合柔光灯，轻松打造适合自己的妆容，亮出你的美。",
+            "hint": [],
+            "angle": 30
+        },
+        {
+            "id": 9,
+            "type": 1,
+            "imgUrl": 159497943,
+            "imgUrlName": "vm-swiper8.jpg",
+            "title": "车身安全",
+            "content": "车身安全持续升级，部分车身结构采用潜艇级超高强度热成型钢，相当于每平方厘米可承受 17 吨重量。标配八个安全气囊，双预紧安全带，外刚内柔，守护全家安全。<br/>80.6%¹ 高强度钢和铝合金占比；24.4%¹ 潜艇级热成型钢占比。",
+            "hint": [
+                "1.热成型钢指抗拉强度 ≧ 1300MPa 钢材。24.4% 为热成型钢总重/白车身骨架重量（不含开闭件）占比。",
+                "高强度钢涵盖高强度钢、先进高强钢、超高强度钢、热成型钢等钢种；抗拉强度为 300MPa-2000MPa；80.6% 为高强度钢和铝合金总重/白车身骨架重量（不含开闭件）占比。"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 10,
+            "type": 1,
+            "imgUrl": 159497942,
+            "imgUrlName": "vm-swiper6.jpg",
+            "title": "超宽敞¹",
+            "content": "前排空间² 937 毫米，二排空间² 960 毫米（最大空间可达 1220 毫米），后备箱深度² 1100 毫米（容积 686 升³ ，相当于可同时容纳 12 个 20 英寸行李箱），全家轻松出行，舒展自在。",
+            "hint": [
+                "1.为五座版配置和数据。</br>&nbsp;",
+                "2.前排空间为驾驶员踏点到驾驶员 R 点长度，二排空间为一排 R 点到二排 R 点长度，后备箱深度为座椅背板根部到行李箱门槛长度。</br>&nbsp;",
+                "3.后备箱容积测量方法符合 GB/T19514-2004/ISO3832。仅适用于五座版。"
+            ],
+            "angle": 5
+        },
+        {
+            "id": 11,
+            "type": 1,
+            "imgUrl": 159497941,
+            "imgUrlName": "vm-swiper7.jpg",
+            "title": "HUAWEI DATS<sup>®</sup> 2.0",
+            "content": "华为动态自适应扭矩系统，智能调节扭矩，有效减弱颠簸感及冲击感。过弯或湿滑路面行驶时，车辆更稳定，乘坐更舒适。<br/>降低 13.8%¹ 乘员横向冲击感，提升 35.9%¹ 车辆转向灵敏度。",
+            "hint": [
+                "1.13.8% 与 35.9% 为 HUAWEI DATS<sup>®</sup> 2.0 与 HUAWEI DATS<sup>®</sup> 1.0 对比优化百分比。"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 12,
+            "type": 1,
+            "imgUrl": 159497940,
+            "imgUrlName": "vm-swiper9.jpg",
+            "title": "前后双 FSD 可变阻尼悬挂系统",
+            "content": "可根据路况自动调节悬架阻尼，路况较好时悬架自动变硬，提升操控性；路况较差时悬架自动变软，提升舒适性。城市代步更舒适，高速行驶更稳定。提升 38%¹ 铺装路面车辆操控性，提升35%¹ 颠簸路面车身平稳性。",
+            "hint": [
+                "1.38% 与 35% 为问界 新M7 与 M7 2022 款相比提升百分比。铺装路面的舒适性提升指车辆 60km/h 速度通过光滑沥青路的主驾综合加权加速度均方根值减少百分比；颠簸路面的舒适性提升指车辆以 60km/h 速度通过前方高度为 40mm 的三角形物体时前排座椅最大加速度减少百分比；部分功能需 OTA 升级支持，请以实际产品交付为准。"
+            ],
+            "angle": 31
+        },
+        {
+            "id": 13,
+            "type": 1,
+            "imgUrl": 159497931,
+            "imgUrlName": "vm-swiper10.jpg",
+            "title": "全新一体化 穹顶设计",
+            "content": "2.6m² 全景大天幕，100%¹ 双层镀银隔热玻璃全覆盖，98.3% 隔热率。",
+            "hint": [
+                "1.“100%”指智界S7天幕玻璃以及后挡风玻璃为双层镀银隔热玻璃。<br/>⁠",
+                "2.隔热率是指红外线阻隔率。"
+            ],
+            "angle": 30
+        },
+        {
+            "id": 14,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/x2-card.mp4",
+            "posterImg": 159502174,
+            "posterImgName": "vm-poster3.jpg",
+            "angle": 31
+        },
+        {
+            "id": 15,
+            "type": 1,
+            "imgUrl": 159497933,
+            "imgUrlName": "vm-swiper11.jpg",
+            "title": "女王副驾 零重力享受",
+            "content": "18向调节·10点式按摩·通风·加热",
+            "hint": [],
+            "angle": 36
+        },
+        {
+            "id": 16,
+            "type": 1,
+            "imgUrl": 159497937,
+            "imgUrlName": "vm-swiper12.jpg",
+            "title": "创新游艇驾舱设计",
+            "content": "远距离高精度检测，不惧暗光，提升驾驶安全",
+            "hint": [],
+            "angle": 16
+        },
+        {
+            "id": 17,
+            "type": 1,
+            "imgUrl": 159497936,
+            "imgUrlName": "vm-swiper13.jpg",
+            "title": "后排大空间",
+            "content": "后排横向空间 1537mm¹ ，后排腿部空间 945mm²。",
+            "hint": [
+                "1.后排腿部空间指 L50-2。",
+                "2.后排横向空间指肘部空间 W31-2。"
+            ],
+            "angle": 17
+        },
+        {
+            "id": 18,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/x2-card-2.mp4",
+            "posterImg": 159497935,
+            "posterImgName": "vm-swiper14.jpg",
+            "angle": 32
+        },
+        {
+            "id": 19,
+            "type": 1,
+            "imgUrl": 159497938,
+            "imgUrlName": "vm-swiper15.jpg",
+            "title": "0-100km/h 加速 3.3秒¹",
+            "content": "全新一代DriveONE 800V高压碳化硅黄金动力平台。",
+            "hint": [
+                "1.测试数据为智界S7 Max RS。"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 20,
+            "type": 1,
+            "imgUrl": 159497932,
+            "imgUrlName": "vm-swiper16.jpg",
+            "title": "全向防碰撞系统",
+            "content": "高强钢¹和铝合金占比 85.4%² ，潜艇级热成型钢³占比 18.5%⁴ ，全向防碰撞系统，主动安全再进化。",
+            "hint": [
+                "1.高强度钢涵盖高强度钢、先进高强钢、超高强度钢、热成型钢等钢种;抗拉强度300MPa-2000MPa。",
+                "2.85.4%为高强度钢和铝合金总重/白车身骨架重量(不含开闭件)占比。",
+                "3.热成型钢指抗拉强度≥1300mPa 钢材。",
+                "4.18.5%为热成型钢总重/白车身骨架重量(不含开闭件)占比。"
+            ],
+            "angle": 34
+        },
+        {
+            "id": 21,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/x2-card-3.mp4",
+            "posterImg": 159497934,
+            "posterImgName": "vm-swiper17.jpg",
+            "angle": 35
+        },
+        {
+            "id": 22,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f2-card.mp4",
+            "posterImg": 162540062,
+            "posterImgName": "vm-swiper25.jpg",
+            "angle": 32
+        },
+        {
+            "id": 23,
+            "type": 1,
+            "imgUrl": 162540057,
+            "imgUrlName": "vm-swiper18.jpg",
+            "title": "道法自然，游弋天地",
+            "content": "一体纯净，无垠天际设计，采纳天光；流畅空气动力学线条，¹风阻 0.264 cd，御风疾驰，一马当先¹。",
+            "hint": [
+                "1.基于问界 M9 纯电版测试，数据来源于赛力斯集团股份有限公司测试中心。车辆实际性能在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作等客观因素影响而有差⁠异。"
+            ],
+            "angle": 12
+        },
+        {
+            "id": 24,
+            "type": 1,
+            "imgUrl": 162540058,
+            "imgUrlName": "vm-swiper19.jpg",
+            "title": "日月同辉，人间星河",
+            "content": "标志性星河灯组设计前后呼应，光影游弋，如汇川入海，奔流不息。多场景智慧灯语¹，满载仪式感，点亮璀璨星途。",
+            "hint": [
+                "1.部分灯语需通过 OTA 升级，升级时间请以官方公布的信息为准。"
+            ],
+            "angle": 18
+        },
+        {
+            "id": 25,
+            "type": 1,
+            "imgUrl": 162540064,
+            "imgUrlName": "vm-swiper20.jpg",
+            "title": "玄武车身",
+            "content": "一体化压铸工艺，大幅提高扭转刚度。核潜艇级热成型钢，强度超过 2000 MPa¹，不易变形，固若金汤，防护高危意外。",
+            "hint": [
+                "1.核潜艇级热成型钢指抗拉强度 ≧ 2000 MPa 钢材。"
+            ],
+            "angle": 19
+        },
+        {
+            "id": 26,
+            "type": 1,
+            "imgUrl": 162540059,
+            "imgUrlName": "vm-swiper21.jpg",
+            "title": "纯电版 800 V ⾼压碳化硅平台",
+            "content": "路况⾃动识别，智能匹配增程，加速平稳⾼效，能耗更低，实现满油满电超⻓续航 CLTC 1402 公⾥¹。",
+            "hint": [
+                "1.充电 5 分钟续航 150 公里为问界 M9 纯电版在 600 kW 充电桩下的 CLTC 工况数据。数据来源于赛力斯集团股份有限公司测试中心。"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 27,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f2-card-2.mp4",
+            "posterImg": 162540061,
+            "posterImgName": "vm-swiper23.jpg",
+            "angle": 16
+        },
+        {
+            "id": 28,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f2-card-3.mp4",
+            "posterImg": 162540063,
+            "posterImgName": "vm-swiper22.jpg",
+            "angle": 33
+        },
+        {
+            "id": 29,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f2-card-4.mp4",
+            "posterImg": 162540062,
+            "posterImgName": "vm-swiper25.jpg",
+            "angle": 17
+        },
+        {
+            "id": 30,
+            "type": 1,
+            "imgUrl": 175954334,
+            "imgUrlName": "vm-swiper26.jpg",
+            "title": "驰骋千里，超好开",
+            "content": "1440 公里¹，CLTC 综合续航里程；255 公里²，CLTC 纯电续航里程；智能增程器，热效率最高达 41%；智能增程，智能识别路况，动态分配增程器与电机之间的使用策略，行驶更安静，油耗更低；智能混风系统，制冷制热更高效节能。",
+            "hint": [
+                "1.1440 公里续航为新M5 增程 MAX 版（后驱）满油满电 CLTC 综合工况总续航里程；车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差异。",
+                "<br/>2.255 公里续航为新M5 增程 MAX 版（后驱）满电 CLTC 综合工况的纯电总续航里程；车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差异。"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 31,
+            "type": 1,
+            "imgUrl": 175954335,
+            "imgUrlName": "vm-swiper29.jpg",
+            "title": "操控，酣畅淋漓",
+            "content": "全铝合金底盘¹，配合前四球头双叉臂、后多连杆独立悬架，带给你无与伦比的驾控体验。新增 Sport+ 模式，让你轻松体验弹射起步，于驾驶中释放天性，好开更好玩。",
+            "hint": [
+                "1.全铝合金底盘是指副车架、悬架拉杆和摆臂、转向节等底盘全部结构件为铝合金材质。"
+            ],
+            "angle": 5
+        },
+        {
+            "id": 32,
+            "type": 1,
+            "imgUrl": 175954339,
+            "imgUrlName": "vm-swiper27.jpg",
+            "title": "华为 ADS 智能辅助驾驶，超智能",
+            "content": "全国都能开，有路就能开¹，全系标配 1 个激光雷达，3 个毫米波雷达，11 个侧向与前后向视觉感知高清摄像头，12 个超声波雷达融合的感知系统。不依赖高精地图，智能学习日常通勤路线，全国都能开，越开越好开。更有 GOD 通用障碍物检测网络、RCR 道路拓扑推理网络，让问界新M5 看得懂物，也看得懂路，日常上下班更安心舒心。<br/>智能泊车，有位就能停。停车场拥挤，车位难停，轻松应对。支持泊车代驾及一键召唤（VPD）²，无论是手持重物还是烈日当空，都可以让车自动过来接你；支持遥控泊车辅助（RPA），支持跨楼层代客泊车辅助（AVP）²，可一键自动行驶到任意楼层的停车位。",
+            "hint": [
+                "1.华为 ADS 智能辅助驾驶支持全国的高速、高架、快速路，城市所有道路（主干路/次干路/支路等）、国道、县道、乡道等公开道路。<br/>⁠",
+                "2.255 公里续航为新M5 增程 MAX 版（后驱）满电 CLTC 综合工况的纯电总续航里程；华为 ADS 智能辅助驾驶部分功能需付费开通，如一键召唤（VPD）、代客泊车辅助（AVP）等，详情请咨询客服或门店工作人⁠⁠员。部分功能需 OTA 升级支持，请以实际产品交付为准。"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 33,
+            "type": 1,
+            "imgUrl": 175954338,
+            "imgUrlName": "vm-swiper30.jpg",
+            "title": "全维安全再升级，超安全",
+            "content": "由前向、侧向、后向主动安全组成的全向防碰撞系统¹，多种路况都支持自动紧急制动、主动纠偏避险，让行车更安全。",
+            "hint": [
+                "1.HUAWEI ADS<sup>®</sup> 在一定速度下支持对行人、汽车、骑行人等白名单、以及白名单以外的一定尺寸异形障碍物的识别和紧急制动。主动安全功能仅起到辅助作用，不能代替驾驶员操控，驾驶员需时刻保持必要的注意义务，并根据周边环境及时予以干预。"
+            ],
+            "angle": 31
+        },
+        {
+            "id": 34,
+            "type": 1,
+            "imgUrl": 175954337,
+            "imgUrlName": "vm-swiper28.jpg",
+            "title": "HUAWEI SOUND<sup>®</sup> 超感空间音™",
+            "content": "首创 AI 空间音解析和重混技术，支持将华为音乐百万级新歌热歌转化为更具空间感、流动感和临场感的三维空间音。沉浸音乐，全方位萦绕，每个座位都是绝佳听音位。",
+            "hint": [],
+            "angle": 30
+        },
+        {
+            "id": 35,
+            "type": 1,
+            "imgUrl": 175954336,
+            "imgUrlName": "vm-swiper31.jpg",
+            "title": "星环散射体",
+            "content": "HUAWEI SOUND<sup>®</sup> 引入施罗德散射技术，让声音更均匀地覆盖全舱。标志星环包裹水晶质感的声学散射凹槽，配合动感灯光设计，深邃精致，声型色兼具。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 36,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/x1a-card.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "vm-swiper32.jpg",
+            "angle": 16
+        },
+        {
+            "id": 37,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f1a-card.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 31
+        },
+        {
+            "id": 38,
+            "type": 1,
+            "imgUrl": 182848726,
+            "imgUrlName": "vm-swiper37.jpg",
+            "title": "ADS 预瞄 + 连续可变阻尼减振器",
+            "content": "10 ms 信息实时传递¹；悬架调节频率 100次/秒¹；俯仰抑制效果提升 29.3%¹；滤振效果提升 19.2%¹。通过摄像头、激光雷达提前识别路面信息，配⁠合悬架中的连续可变阻尼减振器调节，以及前后轴扭矩智⁠能转移，过减速带时舒适安稳，如履平地。",
+            "hint": [
+                "2.数据来源于赛力斯集团股份有限公司测试中心，对比车型为问界 新M7 Max。<br/>⁠"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 39,
+            "type": 1,
+            "imgUrl": 182848279,
+            "imgUrlName": "vm-swiper33.jpg",
+            "title": "HUAWEI DATS<sup>®</sup> 2.0",
+            "content": "华为动态自适应扭矩系统，智能调节扭矩，有效减弱颠簸感及冲击感。过弯或湿滑路面行驶时，车辆更稳定，乘坐更舒适。降低 13.8%¹ 横向冲击感，提升 36%¹ 转向灵敏度。",
+            "hint": [
+                "1.数据来源于赛力斯集团股份有限公司测试中心，对比车型为问界 新M7 Max。"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 40,
+            "type": 1,
+            "imgUrl": 182848281,
+            "imgUrlName": "vm-swiper34.jpg",
+            "title": "全维超强车身",
+            "content": "高强度钢和铝合金占比 80.6%¹；潜艇级热成型钢占比 24.4%¹。车身安全持续升级，部分车身结构采用潜艇级超高强度热成型钢¹，相当于每平方厘米可承受 17 吨重量。标配八个安全气囊，双预紧安全带，外刚内柔，守护全家安全。",
+            "hint": [
+                "1.热成型钢指抗拉强度 ≧ 1300MPa 钢材。24.4% 为热成型钢总重/白车身骨架重量（不含开闭件）占比。高强度钢涵盖高强度钢、先进高强钢、超高强度钢、热成型钢等钢种；抗拉强度为 300MPa-2000MPa；80.6% 为高强度钢和铝合金总重/白车身骨架重量（不含开闭件）占比。"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 41,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f1a-card-2.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 20
+        },
+        {
+            "id": 42,
+            "type": 1,
+            "imgUrl": 182848278,
+            "imgUrlName": "vm-swiper35.jpg",
+            "title": "全新舒云座椅",
+            "content": "座椅柔软度提升 9.7%¹；座椅支撑性提升 29.3%¹；座椅贴合度提升 18.5%¹；头枕舒适度提升 18.6%¹。多达 10 层的舒适性结构，发泡厚度大于 100 毫米。基于人体工学脊椎线设计，精密贴合，配合座椅电动通风、加热、按摩及可调节腰托，提供如头等舱座椅般舒适乘坐感受。",
+            "hint": [
+                "1.数据来源于赛力斯集团股份有限公司测试中心，座椅柔软度为皮革柔软度。"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 43,
+            "type": 1,
+            "imgUrl": 182848280,
+            "imgUrlName": "vm-swiper36.jpg",
+            "title": "HarmonyOS × HUAWEI MagLink<sup>®</sup>",
+            "content": "前后三屏，满配大屏*",
+            "hint": [
+                "1.*HUAWEI MagLink<sup>®</sup> 产品及其所连接的平板电脑非购车标配，需要单独购买。仅限部分型号平板支持，具体型号请咨询客服。所展现产品和界面仅供示意，具体支持的功能和界面以实际产品为准。PC、平板、键盘、手写笔等配件需单独购买。为了您的安全，请勿在车辆行驶的过程中使用平板电脑。"
+            ],
+            "angle": 23
+        },
+        {
+            "id": 44,
+            "type": 1,
+            "imgUrl": 192790461,
+            "imgUrlName": "vm-swiper38.jpg",
+            "title": "HUAWEI ADS 3.0 华为 ADS 智能辅助驾驶",
+            "content": "搭载华为 ADS 智能辅助驾驶系统，采用端到端类人架构。1 个激光雷达、3 个毫米波雷达、12 个超声波雷达和 11 个高清摄像头全行程感知，实现 360° 全范围覆盖，助你从容应对各类路况¹。",
+            "hint": [
+                "1.部分功能需 OTA 升级支持，请以实际产品交付为准。华为 ADS 智能辅助驾驶仅为辅助驾驶目的，不能完全代替驾驶员操控，无法应对所有交通、天气和路况，驾驶员需时刻保持对车辆的主动控制，并根据周边环境及时予以干预或接管，驾驶员依然是驾驶主体并对车辆行驶过程中的一切行为负责。华为 ADS 智能辅助驾驶系统全系标配，部分功能需付费开通，详见参数配置表。"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 45,
+            "type": 1,
+            "imgUrl": 192790465,
+            "imgUrlName": "vm-swiper39.jpg",
+            "title": "D级轿车 专属途灵平台",
+            "content": "豪华底盘架构与全维感知系统软硬兼施，自动调节悬架，准确控制车身姿态，让你在不同路况都能随心驾控，享受平稳与舒适¹。",
+            "hint": [
+                "1.华为途灵平台的能力与车型配置相关，详情请咨询客服或门店工作人员。"
+            ],
+            "angle": 31
+        },
+        {
+            "id": 46,
+            "type": 1,
+            "imgUrl": 192790462,
+            "imgUrlName": "vm-swiper40.jpg",
+            "title": "华为“巨鲸” 800 V 高压电池平台",
+            "content": "CLTC 综合续航¹ 816 km，充电 5 分钟，续航增加 200 km²。<br />新一代高压碳化硅动力总成，22000 rpm 的大爆发力；全系标配 100 kWh 三元锂电池。更高效的动力分配策略，配合低风阻设计和低功耗元器件，造就更低能耗与更长续⁠航。",
+            "hint": [
+                "1.续航里程为满电条件下享界 S9 Max 的 CLTC 综合工况续航里程，车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、 驾驶习惯及操作、电池使用寿命等客观因素影响而有差异。数据来源于享界 S9 官方测试机⁠构。",
+                "<br />2.充电 5 分钟续航增加 200 公里为享界 S9 Max 在 480 kW 充电桩下的 CLTC 工况数据。数据来源于享界 S9 官方测试机⁠构。"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 47,
+            "type": 1,
+            "imgUrl": 192790459,
+            "imgUrlName": "vm-swiper41.jpg",
+            "title": "强悍车身",
+            "content": "创新一体式硼钢门环与双腔双管架构。上部乘员舱保护区热成型钢占比达 40.7%，达到潜艇级 2000 MPa 抗压性能¹。按 CNCAP 2024 严苛标准设计，车身坚如磐石。",
+            "hint": [
+                "1.热成型钢指抗拉强度大于 2000 MPa 的钢材。40.7% 为高强度钢和铝合金总重/白车身骨架重量（不含开闭件）占比。数据来源于享界 S9 官方测试机构。"
+            ],
+            "angle": 30
+        },
+        {
+            "id": 48,
+            "type": 1,
+            "imgUrl": 192790463,
+            "imgUrlName": "vm-swiper42.jpg",
+            "title": "全向电动遮阳帘",
+            "content": "顶棚、后窗电动遮阳帘，一键开启，轻松享受投影与行车隐⁠私。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 49,
+            "type": 1,
+            "imgUrl": 192790464,
+            "imgUrlName": "vm-swiper43.jpg",
+            "title": "舒享奢华",
+            "content": "以人为本的座舱设计，将豪华内饰融入奢适大空间，缔造尊贵舒适的驾乘体⁠验。",
+            "hint": [],
+            "angle": 18
+        },
+        {
+            "id": 50,
+            "type": 1,
+            "imgUrl": 192790460,
+            "imgUrlName": "vm-swiper44.jpg",
+            "title": "乐享悦耳",
+            "content": "23 个发声单元、2 个主驾头枕扬声器，2080 W 功放，7.1.4 环绕声¹，缔造殿堂级声乐。整车静谧设计，带来超沉浸听感。HUAWEI SOUND<sup>®</sup> 星环散射体，实现 360° 声学全包裹。配合主动式流水氛围灯，打造有声有色的音乐舞台。",
+            "hint": [
+                "1. 7.1.4 环绕声场由 25 个发声单元组成"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 51,
+            "type": 1,
+            "imgUrl": 199181945,
+            "imgUrlName": "vm-swiper45.jpg",
+            "title": "环抱式游艇座舱",
+            "content": "环抱式游艇座舱，不一样的大空间。纯平前眺甲板仪表台，全景视野一览无遗。超大“得房率”，前后排都宽敞，驾乘收纳任你施⁠展。",
+            "hint": [],
+            "angle": 16
+        },
+        {
+            "id": 52,
+            "type": 1,
+            "imgUrl": 199181949,
+            "imgUrlName": "vm-swiper46.jpg",
+            "title": "舒适体验 感坐，感享",
+            "content": "主驾前眺领航屏，信息在前，更贴近视⁠线。橄榄型方向盘，灵感源自 F1 赛车，转向灵巧，不蔽视野。电⁠动腿托，支撑到位，时刻舒⁠适。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 53,
+            "type": 1,
+            "imgUrl": 199181948,
+            "imgUrlName": "vm-swiper47.jpg",
+            "title": "华为途灵平台 驾驭自如",
+            "content": "智界 R7 全系标配连续可变阻尼减振器加空簧，前虚拟球销双叉臂、后五连杆悬架，配合智能路面感知，智能道路预瞄。HUAWEI DATS 动态自适应扭矩控制和 HUAWEI xMotion 智能车身协同控制，由华为德研所精心调校，再加上 HUAWEI DriveONE 800V 碳化硅动力平台提供高能动力，不同路况，如履平⁠地。",
+            "hint": [],
+            "angle": 31
+        },
+        {
+            "id": 54,
+            "type": 1,
+            "imgUrl": 199181946,
+            "imgUrlName": "vm-swiper48.jpg",
+            "title": "HUAWEI ADS 快意远方",
+            "content": "智界 R7 Max 和 Ultra 搭载华为 ADS 智能辅助驾驶系⁠统，通过 1 个激光雷⁠达、3 个毫米波雷达、12 个超声波雷达和 11 个高清摄像头全行程感知，实现 360° 全范⁠围⁠覆⁠盖，从⁠容应对各类路⁠况¹。",
+            "hint": [
+                "1.  部分功能需 OTA 升级支持，请以实际产品交付为准。华为高阶智能驾驶仅为辅助驾驶目的，不能完全代替驾驶员操控，无法应对所有交通、天气和路况，驾驶员需时刻保持对车辆的主动控制，并根据周边环境及时予以干预或接管，驾驶员依然是驾驶主体并对车辆行驶过程中的一切行为负责。华为高阶智能驾驶系统全系标配，部分智驾功能需付费开通，详见参数配置⁠表。"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 55,
+            "type": 1,
+            "imgUrl": 199181950,
+            "imgUrlName": "vm-swiper49.jpg",
+            "title": "强悍车身",
+            "content": "高强钢、潜艇级热成形钢、铝合金占比高达 86.7%¹。铝合金双防撞横梁、超大型腔加厚加强实心 A 柱、100% 热成型钢加厚一体式门环、铝合金门槛加强梁、铝合金后防撞梁，成就全维强悍车⁠身。",
+            "hint": [
+                "1.  热成型钢指抗拉强度 ≧ 1300 MPa 钢材。高强度钢涵盖高强度钢、先进高强钢、超高强度钢、热成型钢等钢种；抗拉强度 300 MPa-2000 MPa。86.7% 为高强度钢和铝合金总重/白车身骨架重量（不含开闭件）占比。数据来源于智界 R7 官方测试机⁠构。"
+            ],
+            "angle": 30
+        },
+        {
+            "id": 56,
+            "type": 1,
+            "imgUrl": 199181947,
+            "imgUrlName": "vm-swiper50.jpg",
+            "title": "副驾零重力座椅¹",
+            "content": "一键享受零感悬浮躺姿。支持18向调节，配备340 毫米超长腿托和加热功能，让你舒躺一路。纯平仪表台，办公化妆，都放得自⁠在²。",
+            "hint": [
+                "1.  部分配置需选装，详情请咨询客服或门店工作人⁠员。<br/>⁠",
+                "2.  该功能应在驻车状态下使用，使用时请留意周围安全。"
+            ],
+            "angle": 18
+        },
+        {
+            "id": 57,
+            "type": 1,
+            "imgUrl": 218464566,
+            "imgUrlName": "vm-swiper51.jpg",
+            "title": "华为 ADS 智能辅助驾驶系统¹",
+            "content": "智界 新S7 Max 和 Ultra 搭载华为 ADS 智能辅助驾驶系统，通过 1 个激光雷⁠达、3 个毫米波雷达、12 个超声波雷达和 11 个高清摄像头全行程感知，实现 360° 全范⁠围⁠覆⁠盖，从⁠容应对各类路⁠况²。",
+            "hint": [
+                "1.  华为 ADS 智能辅助驾驶系统仅为辅助驾驶而设计，并非自动驾驶，不能取代驾驶员的专注驾驶和准确判断。该系统无法完全应对在驾驶过程中因交通、路况、天气等环境变化可能出现的所有情况（详见用户手册关于 ADS 的章节），驾驶员应时刻保持对车辆的主动控制并做好随时干预车辆的准备，驾驶员始终是驾驶车辆行为的完全责任人。部分功能需 OTA 升级支持或付费开通，请以车辆实际配置为⁠准。<br/>⁠",
+                "2.  部分功能需 OTA 升级支持，请以实际产品交付为准。华为 ADS 智能辅助驾驶系统仅为辅助驾驶目的，不能完全代替驾驶员操控，无法应对所有交通、天气和路况，驾驶员需时刻保持对车辆的主动控制，并根据周边环境及时予以干预或接管，驾驶员依然是驾驶主体并对车辆行驶过程中的一切行为负责。华为 ADS 智能辅助驾驶系统全系标配，部分智能驾驶辅助功能需付费开通，详见参数配置⁠⁠表。<br/>⁠"
+            ],
+            "angle": 31
+        },
+        {
+            "id": 58,
+            "type": 1,
+            "imgUrl": 218464568,
+            "imgUrlName": "vm-swiper52.jpg",
+            "title": "2.6 ㎡ 全景大天幕¹",
+            "content": "全新一体化穹顶设计，航空级双层镀银隔热玻⁠璃²，隔热率 98.3%¹，可阻隔 99.9% 的紫外线³。白天看沿途风景，头顶一片蔚蓝；夜⁠晚看璀璨星空，欣赏最纯粹真实的“星空顶”。",
+            "hint": [
+                "1.  隔热率指红外线阻隔率，数据来源于智界官方测试机⁠构。<br/>⁠",
+                "2.  天幕和后挡风玻璃采用航空级双层镀银隔热玻⁠璃。<br/>⁠",
+                "3.  数据来源于智界官方测试机⁠构。"
+            ],
+            "angle": 30
+        },
+        {
+            "id": 59,
+            "type": 1,
+            "imgUrl": 218464570,
+            "imgUrlName": "vm-swiper53.jpg",
+            "title": "女王零重力副驾",
+            "content": "10 层舒适叠层的丝云座椅¹，触感如丝，坐感如云；支持 18 向角度调节，10 点式按摩，自带通风及加热。小憩时，一键变换零重力悬浮姿态²，支持四向调节的 280 mm 腿托，带来云端漂浮般的舒适惬意。还有宽阔平整的仪表台，配合女王化妆镜，秒变专属化妆台²。",
+            "hint": [
+                "1.  10 层叠层为前排座椅数据，数据来源于智界官方测试机⁠构。<br/>⁠",
+                "2.  该功能应在驻车状态下使用，使用时请留意周围安⁠全。"
+            ],
+            "angle": 36
+        },
+        {
+            "id": 60,
+            "type": 1,
+            "imgUrl": 218464572,
+            "imgUrlName": "vm-swiper54.jpg",
+            "title": "环抱式游艇座舱",
+            "content": "纯平前眺甲板仪表台，空间更舒展，视野更开⁠阔。分区融合座舱，分区功能设计，让驾与⁠乘各有享受。Nappa 纹亲肤软包，超纤麂皮绒顶棚¹，所见皆豪华，所触皆柔⁠软。",
+            "hint": [
+                "1.  部分配置需选装。<br/>⁠"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 61,
+            "type": 1,
+            "imgUrl": 218464573,
+            "imgUrlName": "vm-swiper55.jpg",
+            "title": "越级大空间",
+            "content": "945 mm 后排腿部空间¹，让双腿恣意舒展。后排丝云座椅支持通风、加热，27°/32° 两⁠档坐姿可调，支撑饱满，久坐不⁠累。",
+            "hint": [
+                "1.  后排腿部空间指 L50-2，数据来源于智界官方测试机⁠构。<br/>⁠"
+            ],
+            "angle": 17
+        },
+        {
+            "id": 62,
+            "type": 1,
+            "imgUrl": 218464574,
+            "imgUrlName": "vm-swiper56.jpg",
+            "title": "华为“巨鲸”800 V 高压电池平台",
+            "content": "全新华为“巨鲸”800 V 高压电池平台。充电 5 分钟，续航增加 215 公里¹。长途出行，轻松补能。",
+            "hint": [
+                "1.  充电 5 分钟续航增加 215 公里为智界 新S7 Max 在 480 kW 充电桩下的 CLTC 工况数据。数据来源于智界官方测试机⁠构。⁠"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 63,
+            "type": 1,
+            "imgUrl": 218464571,
+            "imgUrlName": "vm-swiper57.jpg",
+            "title": "一登场 便惊艳全场",
+            "content": "3 秒级超跑性能，奢华级悬架系统用料。华为途灵平台¹，众多驾驶黑科技，造就既快又稳的驾乘体验，让智界 新S7 成为外在优雅、内在强悍的“硬核绅⁠士”。",
+            "hint": [
+                "1.  华为途灵平台的能力与车型配置相关，详情请咨询客⁠服或门店工作人⁠⁠员。<br/>⁠"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 64,
+            "type": 1,
+            "imgUrl": 218464569,
+            "imgUrlName": "vm-swiper58.jpg",
+            "title": "华为途灵平台¹",
+            "content": "路面感知、智能车辆状态感知、动态自适应扭⁠矩系统、智能车身协同控制系统相互协同，在动态驾驶过程中从容应对各种路况和突发情⁠况，有效提升驾乘舒适性以及安全⁠性。",
+            "hint": [
+                "1.  华为途灵平台的能力与车型配置相关，详情请咨询客⁠服或门店工作人⁠⁠员。<br/>⁠"
+            ],
+            "angle": 35
+        },
+        {
+            "id": 65,
+            "type": 1,
+            "imgUrl": 233095930,
+            "imgUrlName": "vm-swiper59.jpg",
+            "title": "续航出色",
+            "content": "1275 公里¹ CLTC 综合续航里程；230 公里² CLTC 纯电续航里程；智能增程器，热效率最高达 41%；智能增程，智能识别路况，动态分配增程器与电机之间的使用策略，行驶更安静，油耗更低；智能混风系统，制冷制热更高效节能。",
+            "hint": [
+                "1.  1275 公里续航为问界 新M5 增程 Ultra 四驱版满油满电 CLTC 综合工况总续航里程；车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差⁠异。<br/>⁠",
+                "2.  230 公里续航为问界 新M5 增程 Ultra 四驱版满电 CLTC 综合工况的纯电总续航里程；车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差⁠异。"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 66,
+            "type": 1,
+            "imgUrl": 233095933,
+            "imgUrlName": "vm-swiper60.jpg",
+            "title": "驾控出色，酣畅淋漓",
+            "content": "全铝合金底盘¹，配合前四球头双叉臂、后多连杆独立悬架，带给你无与伦比的驾控体⁠验。Sport+ 模式，让你轻松体验弹射起步，于驾驶中释放天性，好开更好玩。新升级舒适制动²，开启后刹车平顺性提升 81%，制动更丝滑，乘坐更舒⁠适。",
+            "hint": [
+                "1.  全铝合金底盘是指副车架、悬架拉杆和摆臂、转向节等底盘全部结构件为铝合金材⁠质。<br/>⁠",
+                "2.  为问界 新M5 增程 Ultra 四驱版开启舒适制动与关闭舒适制动的刹停平顺性数据对⁠比。"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 67,
+            "type": 1,
+            "imgUrl": 233095932,
+            "imgUrlName": "vm-swiper61.jpg",
+            "title": "全国都能开，有路就能开¹",
+            "content": "全系搭载华为 ADS 智能辅助驾驶系统²，新升级 192 线激光雷达和 4D 毫米波雷达，与 11 个前后向、侧向视觉感知高清摄像头，12 个超声波雷达组成融合感知系统。不依赖高精地图，智能学习日常通勤路线，车位到车位，日常上下班更安心舒心。",
+            "hint": [
+                "1.  华为 ADS 智能辅助驾驶系统支持全国的高速、高架、快速路，城市所有道路（主干路/次干路/支路等）、国道、县道、乡道等公开道路。需行驶在有清晰道路边界的结构化道路上。华为 ADS 智能辅助驾驶系统仅作为驾驶辅助，无法取代驾驶员的目视检查，驾驶员依然是驾驶主体并对车辆行驶过程中的一切行为负责。系统不能完全应对所有交通、天气和路况，驾驶员需随时准备接管车辆，在交通情况复杂、天气恶劣、特殊场景下不建议使用智能驾驶辅助功能。详情请咨询客服或⻔店⼯作⼈员。部分功能需通过 OTA 升级获得，具体以实际产品交付为⁠准。<br/>⁠",
+                "2.  华为 ADS 智能辅助驾驶系统仅为辅助驾驶而设计，并非自动驾驶，不能取代驾驶员的专注驾驶和准确判断。该系统无法完全应对在驾驶过程中因交通、路况、天气等环境变化可能出现的所有情况（详见用户手册关于 ADS 的章节），驾驶员应时刻保持对车辆的主动控制并做好随时干预车辆的准备，驾驶员始终是驾驶车辆行为的完全责任人。部分功能需 OTA 升级支持或付费开通，请以车辆实际配置为⁠准。"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 68,
+            "type": 1,
+            "imgUrl": 233095934,
+            "imgUrlName": "vm-swiper62.jpg",
+            "title": "智能泊车辅助，有位就能停",
+            "content": "支持离车泊入辅助、泊车代驾辅助、极窄车位泊车辅助等，泊车更省心。点点手机，远程召⁠唤车辆从停车位开到面前，用车更便⁠捷。",
+            "hint": [],
+            "angle": 31
+        },
+        {
+            "id": 69,
+            "type": 1,
+            "imgUrl": 233095931,
+            "imgUrlName": "vm-swiper63.jpg",
+            "title": "星环散射体",
+            "content": "HUAWEI SOUND<sup>®</sup> 引入施罗德散射技⁠术，让声音更均匀地覆盖全舱。标志星环包⁠裹水晶质感的声学散射凹槽，配合动感灯⁠光设计，深邃精致，声型色兼具。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 70,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/m5-card.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 16
+        },
+        {
+            "id": 71,
+            "type": 1,
+            "imgUrl": 233141403,
+            "imgUrlName": "vm-swiper64.jpg",
+            "title": "ADS 预瞄 + 连续可变阻尼减振器",
+            "content": "10 ms 信息实时传递¹；悬架调节频率 100 次 / 秒¹；俯仰抑制效果提升 29.3%¹；滤振效果提升 19.2%¹。通过摄像头、激光雷达提前识别路面信息，配⁠合悬架中的连续可变阻尼减振器调节，以及前后轴扭矩智⁠能转移，过减速带时舒适安稳，如履平地。",
+            "hint": [
+                "1.  数据来源于赛力斯集团股份有限公司测试中心，对比车型为问界 新M7 Max。<br/>⁠"
+            ],
+            "angle": 20
+        },
+        {
+            "id": 72,
+            "type": 1,
+            "imgUrl": 233141405,
+            "imgUrlName": "vm-swiper65.jpg",
+            "title": "192 线激光雷达",
+            "content": "问界 M7 Ultra 搭载进阶的融合感知系统，1 个激光雷达、3 个毫米波雷达、12 个超声波雷达和 11 个高清摄像头组全行程感知，实现 360° 全范围覆盖，192 线雷达实时扫描，影像更清晰，反应更疾速，助你从容面对多种复杂路况。",
+            "hint": [],
+            "angle": 32
+        },
+        {
+            "id": 73,
+            "type": 1,
+            "imgUrl": 233141407,
+            "imgUrlName": "vm-swiper66.jpg",
+            "title": "全维超强车身",
+            "content": "高强度钢和铝合金占比 80.6%¹；潜艇级热成型钢占比 24.4%¹。车身安全持续升级，部分车身结构采用潜艇级超高强度热成型钢¹，相当于每平方厘米可承受 17 吨重量。标配八个安全气囊，双预紧安全带，外刚内柔，守护全家安全。",
+            "hint": [
+                "1.  热成型钢指抗拉强度 ≧ 1300MPa 钢材。24.4% 为热成型钢总重/白车身骨架重量（不含开闭件）占比。 高强度钢涵盖高强度钢、先进高强钢、超高强度钢、热成型钢等钢种；抗拉强度为 300MPa-2000MPa；80.6% 为高强度钢和铝合金总重/白车身骨架重量（不含开闭件）占比。<br/>⁠"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 74,
+            "type": 1,
+            "imgUrl": 233141406,
+            "imgUrlName": "vm-swiper67.jpg",
+            "title": "全新舒云座椅",
+            "content": "座椅柔软度提升 9.7%¹；座椅支撑性提升 29.3%¹；座椅贴合度提升 18.5%¹；头枕舒适度提升 18.6%¹。多达 10 层的舒适性结构，发泡厚度大于 100 毫米。基于人体工学脊椎线设计，精密贴合，配合座椅电动通风、加热、按摩及可调节腰托，提供如头等舱座椅般舒适乘坐感受。",
+            "hint": [
+                "1.  数据来源于赛力斯集团股份有限公司测试中心，座椅柔软度为皮革柔软度。<br/>⁠"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 75,
+            "type": 1,
+            "imgUrl": 233141404,
+            "imgUrlName": "vm-swiper68.jpg",
+            "title": "HUAWEI ADS<sup>®</sup>",
+            "content": "问界 M7 Ultra 搭载华为 ADS 智能辅助驾驶系⁠统¹，全国都能开¹，为旅途增添一份舒心，让每次出行更轻松惬意。",
+            "hint": [
+                "1.  仅问界 M7 Ultra 搭载华为 ADS 智能辅助驾驶系统 高阶版，问界 新M7 Pro 搭载华为 ADS 智能辅助驾驶系统 基础版。华为 ADS 智能辅助驾驶系统仅为辅助驾驶而设计，并非自动驾驶，不能取代驾驶员的专注驾驶和准确判断。该系统无法完全应对在驾驶过程中因交通、路况、天气等环境变化可能出现的所有情况（详见用户手册关于 ADS 的章节），驾驶员应时刻保持对车辆的主动控制并做好随时干预车辆的准备，驾驶员始终是驾驶车辆行为的完全责任人。部分功能需 OTA 升级支持或付费开通，请以车辆实际配置为准。<br/>⁠"
+            ],
+            "angle": 34
+        },
+        {
+            "id": 76,
+            "type": 1,
+            "imgUrl": 233143696,
+            "imgUrlName": "vm-swiper69.jpg",
+            "title": "全向立体融合感知系统",
+            "content": "1 个 192 线激光雷达、3 个高精度固态激光雷达、3 分布式 4D 毫米波雷达矩阵、2 个 4D 毫米波角雷达、12 个超声波雷达、11 个高清摄像头、4 个车外麦克风，全行程感知，影像更清晰，反应更疾速，助您自信面对多种复杂路⁠况。",
+            "hint": [],
+            "angle": 12
+        },
+        {
+            "id": 77,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/m9-card-1.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 18
+        },
+        {
+            "id": 78,
+            "type": 1,
+            "imgUrl": 233143700,
+            "imgUrlName": "vm-swiper71.jpg",
+            "title": "分布式车载卫星通信",
+            "content": "常规手机可通过分布式通信技术，获得车载卫星通信能力，无需手动寻星、锁星，亦可支持双向卫星通话、双向短信、紧急救援，离车 30 米卫星通话不中断，实现比手机卫星通信更强大的功⁠能。",
+            "hint": [],
+            "angle": 19
+        },
+        {
+            "id": 79,
+            "type": 1,
+            "imgUrl": 233143697,
+            "imgUrlName": "vm-swiper72.jpg",
+            "title": "一体环宇屏",
+            "content": "超长视界，豪华呈现。主驾仪表数据显示，中控操作，驾驶无忧；副驾屏新增手机车机一碰流转¹，三指上滑可流转至车外大灯投影，支持独立账号与控制权限，随心娱乐，互不干⁠扰。",
+            "hint": [
+                "1.  此功能需 OTA 升级，具体升级时间待官方通⁠知。<br/>⁠"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 80,
+            "type": 1,
+            "imgUrl": 233143698,
+            "imgUrlName": "vm-swiper73.jpg",
+            "title": "智能激光投影巨幕系统 2.0",
+            "content": "32 英寸车载巨幕，分辨率提升 200%，亮度提升 63%，画面更清晰，色彩更明亮；新升级隐藏式投影光机，外观更平整，造型更美观。",
+            "hint": [],
+            "angle": 36
+        },
+        {
+            "id": 81,
+            "type": 1,
+            "imgUrl": 233143699,
+            "imgUrlName": "vm-swiper70.jpg",
+            "title": "舒享主驾座椅",
+            "content": "升级电动可伸缩坐垫，14 向电动调节，找到专属于你的舒适姿势；配合 8 点按摩与座椅通风加热，驱散旅途疲惫，一路心情舒⁠畅。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 82,
+            "type": 1,
+            "imgUrl": 233577377,
+            "imgUrlName": "vm-swiper101.jpg",
+            "title": "双网双待",
+            "content": "主动智能切换最优网络，信号覆盖更全面，在高速或隧道中信号更稳定，网络更流⁠畅。",
+            "hint": [],
+            "angle": 32
+        },
+        {
+            "id": 83,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f3-card-1.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 12
+        },
+        {
+            "id": 84,
+            "type": 1,
+            "imgUrl": 233357976,
+            "imgUrlName": "vm-swiper75.jpg",
+            "title": "硬核底盘，一路有底气",
+            "content": "豪华底盘配置，增强型前双叉臂前⁠悬，后五连杆独立悬架，轻松应对各式复杂路面。双腔闭式空气悬架，五档高度调节，快速响应，支持连续操⁠控，方便上下车、装载物品，助力越野脱困。配合连续可变阻尼减⁠振⁠器，自动调节阻尼，平稳通过崎⁠岖路⁠面。",
+            "hint": [],
+            "angle": 18
+        },
+        {
+            "id": 85,
+            "type": 1,
+            "imgUrl": 233357979,
+            "imgUrlName": "vm-swiper76.jpg",
+            "title": "硬核车身",
+            "content": "超五星安全设计，全车 12 处采用 2000 Mpa 潜艇级热成型钢，多重结⁠构防护，固若金汤；前乘员舱核心骨架采用 100% 潜艇级热成型钢，硬⁠核保护主副驾安全；9800 吨一体压铸后地板，保护三排乘员安⁠全。",
+            "hint": [],
+            "angle": 19
+        },
+        {
+            "id": 86,
+            "type": 1,
+            "imgUrl": 233357980,
+            "imgUrlName": "vm-swiper77.jpg",
+            "title": "后向高精度固态激光雷达",
+            "content": "配合两个后向 4D 毫米波角雷达，倒⁠车时，准确识别异形路障、低矮台阶沟⁠渠、悬⁠空⁠物、邻车打开的车门，减⁠少卡死与盲区剐蹭，泊车超安⁠心。",
+            "hint": [],
+            "angle": 20
+        },
+        {
+            "id": 87,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/f3-card-2.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 32
+        },
+        {
+            "id": 88,
+            "type": 1,
+            "imgUrl": 233357977,
+            "imgUrlName": "vm-swiper83.jpg",
+            "title": "零重力座椅¹",
+            "content": "一键开启奢适坐姿，享 10 点式按⁠摩，腰、腿部零压悬浮感。副驾座⁠椅折⁠叠，二排展开腿托，给长途午⁠休一个慵懒支脚⁠点。",
+            "hint": [
+                "1.  仅六座支持二排零重力座椅。部分配置需单独购买，具体以实际产品交付为⁠准。<br/>⁠"
+            ],
+            "angle": 37
+        },
+        {
+            "id": 89,
+            "type": 1,
+            "imgUrl": 233357978,
+            "imgUrlName": "vm-swiper80.jpg",
+            "title": "华为临境抬头显示系统",
+            "content": "前方驾驶行进路线、路况操作都有显⁠著示意，红绿灯读秒、减速动效、变⁠道确认、变道受阻、人为干预加速踏板，均有蓝带闪烁动效，信息反⁠馈一清二楚，人驾和智驾辅助状态均支⁠持。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 90,
+            "type": 1,
+            "imgUrl": 233357974,
+            "imgUrlName": "vm-swiper81.jpg",
+            "title": "超视距预警",
+            "content": "夜景也清晰，支持行人、机动车和非机动车横穿预警，显著告警标识与提⁠示音，助力驾驶员从容应对突发事⁠况。",
+            "hint": [],
+            "angle": 16
+        },
+        {
+            "id": 91,
+            "type": 1,
+            "imgUrl": 233357973,
+            "imgUrlName": "vm-swiper82.jpg",
+            "title": "半隐藏式机械拉手",
+            "content": "应急操作更安全。",
+            "hint": [],
+            "angle": 33
+        },
+        {
+            "id": 92,
+            "type": 1,
+            "imgUrl": 233357975,
+            "imgUrlName": "vm-swiper79.jpg",
+            "title": "全车舒云座椅",
+            "content": "舒适型面设计，贴合人体轮⁠廓，压力分布均匀，乘坐放⁠松得当。材质柔软亲肤，缓⁠震效果强，不惧颠簸，对⁠老⁠人小孩都友⁠好。",
+            "hint": [],
+            "angle": 36
+        },
+        {
+            "id": 93,
+            "type": 1,
+            "imgUrl": 233385725,
+            "imgUrlName": "vm-swiper84.jpg",
+            "title": "丝云座椅",
+            "content": "丝云座椅全面升级。10 层材料与慢回弹海绵堆叠，绵软如坐云端。前后排座椅支持通风、加热、按摩，后排支持 27°-37° 无级电动角度调节，星光黑带，一触即控，每一位都自如坐⁠享¹。",
+            "hint": [
+                "1.  部分配置需选装，详情请咨询客服或门店工作人⁠员。<br/>⁠"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 94,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/r7-card.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 17
+        },
+        {
+            "id": 95,
+            "type": 1,
+            "imgUrl": 233533570,
+            "imgUrlName": "vm-swiper85.jpg",
+            "title": "华为 ADS 智能辅助驾驶系统¹",
+            "content": "搭载华为 ADS 智能辅助驾驶系统。升级 3 颗高精度固态激光雷达²，可识别石墩、钢筋和负向台阶等异形障碍物。192 线激光雷达、3 个 4D 毫米波雷达²、12 个超声波雷达和 11 个高清摄像头全行程感知，为用户带来超远距离、超高精度、全场景、全天候的全向安全体验³。",
+            "hint": [
+                "1.  华为 ADS 智能辅助驾驶系统仅为辅助驾驶而设计，并非自动驾驶，不能取代驾驶员的专注驾驶和准确判断。该系统无法完全应对在驾驶过程中因交通、路况、天气等环境变化可能出现的所有情况（详见用户手册关于 ADS 的章节），驾驶员应时刻保持对车辆的主动控制并做好随时干预车辆的准备，驾驶员始终是驾驶车辆行为的完全责任人。部分功能需 OTA 升级支持或付费开通，请以车辆实际配置为准。<br/>⁠",
+                "2.  仅享界 S9 增程版搭载，其他版本详情请见参数页或咨询客服。<br/>⁠",
+                "3.  部分功能需 OTA 升级支持，请以实际产品交付为准。华为 ADS 智能辅助驾驶系统仅为辅助驾驶目的，不能完全代替驾驶员操控，无法应对所有交通、天气和路况，驾驶员需时刻保持对车辆的主动控制，并根据周边环境及时予以干预或接管，驾驶员依然是驾驶主体并对车辆行驶过程中的一切行为负责。华为 ADS 智能辅助驾驶系统全系标配，部分智能驾驶辅助功能需付费开通，详见参数配置表。"
+            ],
+            "angle": 33
+        },
+        {
+            "id": 96,
+            "type": 1,
+            "imgUrl": 233533572,
+            "imgUrlName": "vm-swiper86.jpg",
+            "title": "大师调校 华为途灵平台",
+            "content": "前双叉臂、后多连杆独立悬架，打造弹减一体豪华底盘架构。连续可变阻尼减振器、5 档高度空气弹簧与全维感知系统，软硬兼施，自动调节悬架，准确控制车身姿态，让你在不同路况都能随心驾⁠控，享受平稳与舒适¹。",
+            "hint": [
+                "1.  华为途灵平台的能力与车型配置相关，详情请咨询客⁠服或门店工作人⁠⁠员。<br/>⁠"
+            ],
+            "angle": 30
+        },
+        {
+            "id": 97,
+            "type": 1,
+            "imgUrl": 233533571,
+            "imgUrlName": "vm-swiper87.jpg",
+            "title": "华为雪鸮智能增程系统",
+            "content": "CLTC 纯电续航里程¹ 365 km；CLTC 综合续航里程² 1355 km；<br/>华为“巨鲸”增程电池平台，从 20% 充电至 80% 仅需 15 分钟³，配合华为智能静音节能增程技术，增程器启停更安静，实现更低电耗、油⁠耗。",
+            "hint": [
+                "1. 续航里程为享界 S9 增程 Max+、增程 Ultra 在满电 CLTC 工况测试标准下的续航，车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、 驾驶习惯及操作、电池使用寿命等客观因素影响而有差异。数据来源于享界 S9 官方测试机⁠构。<br/>⁠",
+                "2. 续航里程为享界 S9 增程 Max+、增程 Ultra 在满油满电 CLTC 工况测试标准下的续航，该数据来源于享界官方测试机构。车辆实际续航在实际道路行驶中，受不同环境温度、行驶路况、驾驶习惯及操作、电池使用寿命等客观因素影响而有差异。<br/>⁠",
+                "3. 数据来源于享界官方测试机⁠构。<br/>⁠"
+            ],
+            "angle": 32
+        },
+        {
+            "id": 98,
+            "type": 1,
+            "imgUrl": 233533574,
+            "imgUrlName": "vm-swiper88.jpg",
+            "title": "安享洁净",
+            "content": "鸿蒙 ALPS 健康座舱，全天全程，全新空气，一路沐于春⁠风。",
+            "hint": [],
+            "angle": 17
+        },
+        {
+            "id": 99,
+            "type": 1,
+            "imgUrl": 233533573,
+            "imgUrlName": "vm-swiper89.jpg",
+            "title": "舒享奢华",
+            "content": "以人为本的座舱设计，将豪华内饰融入奢适大空间，缔造尊贵舒适的驾乘体⁠验。",
+            "hint": [],
+            "angle": 18
+        },
+        {
+            "id": 100,
+            "type": 1,
+            "imgUrl": 233533575,
+            "imgUrlName": "vm-swiper90.jpg",
+            "title": "乐享悦耳",
+            "content": "23 个发声单元、2 个主驾头枕扬声器，2080 W 功放，7.1.4 环绕声¹，缔造殿堂级声乐。整车静谧设计，带来超沉浸听感。HUAWEI SOUND<sup>®</sup> 星环散射体，实现 360° 声学全包裹。配合主动式流水氛围灯，打造有声有色的音乐舞⁠台。",
+            "hint": [
+                "1.  7.1.4 环绕声场由 25 个发声单元组⁠成<br/>⁠"
+            ],
+            "angle": 16
+        },
+        {
+            "id": 101,
+            "type": 2,
+            "videoUrl": "https://cdn.weshape3d.com/publish/assets/video/s9-card.mp4",
+            "posterImg": 175955580,
+            "posterImgName": "",
+            "angle": 34
+        },
+        {
+            "id": 102,
+            "type": 1,
+            "imgUrl": 236572868,
+            "imgUrlName": "vm-swiper91.jpg",
+            "title": "携星河之辉",
+            "content": "双百万像素车语大灯¹，携繁星而聚的满天星辅灯以及 96 切面水晶大灯，华丽闪耀如银河落天。",
+            "hint": [
+                "1.  部分功能为选配或部分产品配置支持。特定功能需 OTA 升级或需搭配华为终端产品使用支持。功能详情请以后续官方公布为准。安全出行，请遵守交通规则。<br/>⁠"
+            ],
+            "angle": 30
+        },
+        {
+            "id": 103,
+            "type": 1,
+            "imgUrl": 236572872,
+            "imgUrlName": "vm-swiper92.jpg",
+            "title": "摘九天星辰",
+            "content": "一抹繁星藏于门把手内，轻启点亮，顿感宇宙星辰映射于掌中。",
+            "hint": [],
+            "angle": 31
+        },
+        {
+            "id": 104,
+            "type": 1,
+            "imgUrl": 236572869,
+            "imgUrlName": "vm-swiper93.jpg",
+            "title": "展星云画卷",
+            "content": "1785 点星光，随移步而变化无穷，一步一星河。",
+            "hint": [],
+            "angle": 32
+        },
+        {
+            "id": 105,
+            "type": 1,
+            "imgUrl": 236572871,
+            "imgUrlName": "vm-swiper94.jpg",
+            "title": "中正奢阔，一览山河",
+            "content": "一体环宇屏¹之上，1448 毫米超开阔前视宽²，成就环视豪景。",
+            "hint": [
+                "1.  部分功能为选配或部分产品配置支持。特定功能需 OTA 升级或需搭配华为终端产品使用支持。功能详情请以后续官方公布为准。安全出行，请遵守交通规则。<br/>⁠",
+                "2.  数据来源于江淮汽车。<br/>⁠"
+            ],
+            "angle": 17
+        },
+        {
+            "id": 106,
+            "type": 1,
+            "imgUrl": 236572876,
+            "imgUrlName": "vm-swiper95.jpg",
+            "title": "行政四座，阔朗有致",
+            "content": "重构空间格局，搭载后排双零重力座椅。宽绰纯平后排，铺设纯天然羊毛地毯¹。处处悉心布置，打造仪式感第二会客厅。",
+            "hint": [
+                "1.  羊毛地毯为选配项，需单独购买。<br/>⁠"
+            ],
+            "angle": 18
+        },
+        {
+            "id": 107,
+            "type": 1,
+            "imgUrl": 236572870,
+            "imgUrlName": "vm-swiper96.jpg",
+            "title": "智能星空顶",
+            "content": "私享智能可变星空，抬头即见漫天星光、流星划过¹。",
+            "hint": [
+                "1.  部分功能为选配或部分产品配置支持。特定功能需 OTA 升级或需搭配华为终端产品使用支持。功能详情请以后续官方公布为准。安全出行，请遵守交通规则。<br/>⁠"
+            ],
+            "angle": 36
+        },
+        {
+            "id": 108,
+            "type": 1,
+            "imgUrl": 236572875,
+            "imgUrlName": "vm-swiper97.jpg",
+            "title": "双温控车载冰箱¹",
+            "content": "支持 -6~10℃ 制冷和 35-50℃ 制热。紫外线抑菌和隐格空间，珍藏你的私人品味。",
+            "hint": [
+                "1.  部分功能为选配或部分产品配置支持。特定功能需 OTA 升级或需搭配华为终端产品使用支持。功能详情请以后续官方公布为准。安全出行，请遵守交通规则。<br/>⁠"
+            ],
+            "angle": 34
+        },
+        {
+            "id": 109,
+            "type": 1,
+            "imgUrl": 236572874,
+            "imgUrlName": "vm-swiper98.jpg",
+            "title": "一方天地，精致百变",
+            "content": "航空铝合金小桌板¹，灵活双折，磁吸加稳，百变多用。",
+            "hint": [
+                "1.  仅四座版支持。<br/>⁠"
+            ],
+            "angle": 35
+        },
+        {
+            "id": 110,
+            "type": 1,
+            "imgUrl": 236572873,
+            "imgUrlName": "vm-swiper99.jpg",
+            "title": "华为悦彰非凡系列",
+            "content": "HUAWEI SOUND<sup>®</sup> ULTIMATE，豪华音质与智慧声场，上演非同凡响的声音艺术。",
+            "hint": [],
+            "angle": 16
+        }
+    ],
+    "colorList": [
+        {
+            "id": 0,
+            "colorName": "vm-icon-color1.png",
+            "colorNumber": "140178014",
+            "name": "天青蓝"
+        },
+        {
+            "id": 1,
+            "colorName": "vm-icon-color2.png",
+            "colorNumber": "140178013",
+            "name": "冰晶银"
+        },
+        {
+            "id": 2,
+            "colorName": "vm-icon-color3.png",
+            "colorNumber": "139578167"
+        },
+        {
+            "id": 3,
+            "colorName": "vm-icon-color4.png",
+            "colorNumber": "140178015",
+            "name": "暖星云"
+        },
+        {
+            "id": 4,
+            "colorName": "vm-icon-color5.png",
+            "colorNumber": "140178012",
+            "name": "深空灰"
+        },
+        {
+            "id": 5,
+            "colorName": "vm-icon-color6.png",
+            "colorNumber": "140178036",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 6,
+            "colorName": "vm-icon-in-car-color4.png",
+            "colorNumber": "140181298",
+            "name": "韶华杏"
+        },
+        {
+            "id": 7,
+            "colorName": "vm-icon-in-car-color3.png",
+            "colorNumber": "140181299",
+            "name": "雀羽红"
+        },
+        {
+            "id": 8,
+            "colorName": "vm-icon-in-car-color2.png",
+            "colorNumber": "140181297",
+            "name": "琥珀棕"
+        },
+        {
+            "id": 9,
+            "colorName": "EV-icon-color4.png",
+            "colorNumber": "141839735"
+        },
+        {
+            "id": 10,
+            "colorName": "f1-color1.png",
+            "colorNumber": "146802651",
+            "name": "深空灰"
+        },
+        {
+            "id": 11,
+            "colorName": "f1-color2.png",
+            "colorNumber": "146802649",
+            "name": "牧野青"
+        },
+        {
+            "id": 12,
+            "colorName": "vm-icon-in-car-color5.png",
+            "colorNumber": "154961006",
+            "name": "月影灰"
+        },
+        {
+            "id": 13,
+            "colorName": "vm-icon-color7.png",
+            "colorNumber": "161642817",
+            "name": "星河蓝"
+        },
+        {
+            "id": 14,
+            "colorName": "vm-icon-color8.png",
+            "colorNumber": "161642816",
+            "name": "牧野青"
+        },
+        {
+            "id": 15,
+            "colorName": "vm-icon-color9.png",
+            "colorNumber": "161644920"
+        },
+        {
+            "id": 16,
+            "colorName": "vm-icon-color10.png",
+            "colorNumber": "161667272",
+            "name": "雅丹黑"
+        },
+        {
+            "id": 17,
+            "colorName": "vm-icon-color11.png",
+            "colorNumber": "162173200",
+            "name": "丹霞橙"
+        },
+        {
+            "id": 18,
+            "colorName": "vm-icon-color12.png",
+            "colorNumber": "162620079",
+            "name": "韶华杏"
+        },
+        {
+            "id": 19,
+            "colorName": "vm-icon-color13.png",
+            "colorNumber": "162620144",
+            "name": "月影灰"
+        },
+        {
+            "id": 20,
+            "colorName": "vm-icon-color14.png",
+            "colorNumber": "162620145",
+            "name": "赤茶橘"
+        },
+        {
+            "id": 21,
+            "colorName": "vm-icon-color15.png",
+            "colorNumber": "175141010",
+            "name": "大都会红"
+        },
+        {
+            "id": 22,
+            "colorName": "vm-icon-color16.png",
+            "colorNumber": "175141011",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 23,
+            "colorName": "vm-icon-color17.png",
+            "colorNumber": "175425250",
+            "name": "琥珀棕"
+        },
+        {
+            "id": 24,
+            "colorName": "vm-icon-color18.png",
+            "colorNumber": "175425948",
+            "name": "雀羽红"
+        },
+        {
+            "id": 25,
+            "colorName": "vm-icon-color19.png",
+            "colorNumber": "175425949",
+            "name": "韶华杏"
+        },
+        {
+            "id": 26,
+            "colorName": "vm-icon-color20.png",
+            "colorNumber": "179779904",
+            "name": "星际蓝"
+        },
+        {
+            "id": 27,
+            "colorName": "vm-icon-color21.png",
+            "colorNumber": "189280760",
+            "name": "寰宇红"
+        },
+        {
+            "id": 28,
+            "colorName": "vm-icon-color22.png",
+            "colorNumber": "189280761",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 29,
+            "colorName": "vm-icon-color23.png",
+            "colorNumber": "189280762",
+            "name": "深空灰"
+        },
+        {
+            "id": 30,
+            "colorName": "vm-icon-color24.png",
+            "colorNumber": "189280763"
+        },
+        {
+            "id": 31,
+            "colorName": "vm-icon-color25.png",
+            "colorNumber": "189280759"
+        },
+        {
+            "id": 32,
+            "colorName": "vm-icon-color26.png",
+            "colorNumber": "189280813",
+            "name": "白沙杏"
+        },
+        {
+            "id": 33,
+            "colorName": "vm-icon-color27.png",
+            "colorNumber": "189280814",
+            "name": "琥珀棕"
+        },
+        {
+            "id": 34,
+            "colorName": "vm-icon-color28.png",
+            "colorNumber": "189280815",
+            "name": "极夜黑"
+        },
+        {
+            "id": 35,
+            "colorName": "vm-icon-color29.png",
+            "colorNumber": "189280816",
+            "name": "凝脂白"
+        },
+        {
+            "id": 36,
+            "colorName": "vm-icon-color30.png",
+            "colorNumber": "195129492",
+            "name": "大都会红"
+        },
+        {
+            "id": 37,
+            "colorName": "vm-icon-color31.png",
+            "colorNumber": "195129498",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 38,
+            "colorName": "vm-icon-color32.png",
+            "colorNumber": "195129490",
+            "name": "陶瓷白"
+        },
+        {
+            "id": 39,
+            "colorName": "vm-icon-color33.png",
+            "colorNumber": "195129495",
+            "name": "幻影紫"
+        },
+        {
+            "id": 40,
+            "colorName": "vm-icon-color34.png",
+            "colorNumber": "195129497",
+            "name": "晴光蓝"
+        },
+        {
+            "id": 41,
+            "colorName": "vm-icon-color35.png",
+            "colorNumber": "195129496",
+            "name": "深空灰"
+        },
+        {
+            "id": 42,
+            "colorName": "vm-icon-color36.png",
+            "colorNumber": "195130160",
+            "name": "白沙杏"
+        },
+        {
+            "id": 43,
+            "colorName": "vm-icon-color37.png",
+            "colorNumber": "195130162",
+            "name": "琥珀棕"
+        },
+        {
+            "id": 44,
+            "colorName": "vm-icon-color38.png",
+            "colorNumber": "195130163",
+            "name": "雀羽红"
+        },
+        {
+            "id": 45,
+            "colorName": "vm-icon-color39.png",
+            "colorNumber": "195130161",
+            "name": "松露棕"
+        },
+        {
+            "id": 46,
+            "colorName": "vm-icon-color40.png",
+            "colorNumber": "207438540",
+            "name": "碧波青"
+        },
+        {
+            "id": 47,
+            "colorName": "vm-icon-color41.png",
+            "colorNumber": "207438541",
+            "name": "暖星云"
+        },
+        {
+            "id": 48,
+            "colorName": "vm-icon-color42.png",
+            "colorNumber": "215474235",
+            "name": "大都会红"
+        },
+        {
+            "id": 49,
+            "colorName": "vm-icon-color43.png",
+            "colorNumber": "215474236"
+        },
+        {
+            "id": 50,
+            "colorName": "vm-icon-color44.png",
+            "colorNumber": "215474229",
+            "name": "大溪地灰"
+        },
+        {
+            "id": 51,
+            "colorName": "vm-icon-color45.png",
+            "colorNumber": "215474230"
+        },
+        {
+            "id": 52,
+            "colorName": "vm-icon-color46.png",
+            "colorNumber": "215474234",
+            "name": "幻影紫"
+        },
+        {
+            "id": 53,
+            "colorName": "vm-icon-color47.png",
+            "colorNumber": "215474231"
+        },
+        {
+            "id": 54,
+            "colorName": "vm-icon-color48.png",
+            "colorNumber": "215474238",
+            "name": "零度白"
+        },
+        {
+            "id": 55,
+            "colorName": "vm-icon-color49.png",
+            "colorNumber": "215474232",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 56,
+            "colorName": "vm-icon-color50.png",
+            "colorNumber": "215474233"
+        },
+        {
+            "id": 57,
+            "colorName": "vm-icon-color51.png",
+            "colorNumber": "215474237",
+            "name": "陶瓷白"
+        },
+        {
+            "id": 58,
+            "colorName": "vm-icon-color52.png",
+            "colorNumber": "215474509",
+            "name": "赤茶橘"
+        },
+        {
+            "id": 59,
+            "colorName": "vm-icon-color53.png",
+            "colorNumber": "215474508",
+            "name": "雀羽红"
+        },
+        {
+            "id": 60,
+            "colorName": "vm-icon-color54.png",
+            "colorNumber": "215474507",
+            "name": "韶华杏"
+        },
+        {
+            "id": 61,
+            "colorName": "vm-icon-color55.png",
+            "colorNumber": "217543575",
+            "name": "碧波青"
+        },
+        {
+            "id": 62,
+            "colorName": "vm-icon-color56.png",
+            "colorNumber": "217543580",
+            "name": "大都会红"
+        },
+        {
+            "id": 63,
+            "colorName": "vm-icon-color57.png",
+            "colorNumber": "217543579",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 64,
+            "colorName": "vm-icon-color58.png",
+            "colorNumber": "217543577",
+            "name": "暖星云"
+        },
+        {
+            "id": 65,
+            "colorName": "vm-icon-color59.png",
+            "colorNumber": "217543576",
+            "name": "晴光蓝"
+        },
+        {
+            "id": 66,
+            "colorName": "vm-icon-color60.png",
+            "colorNumber": "217543581",
+            "name": "陶瓷白"
+        },
+        {
+            "id": 67,
+            "colorName": "vm-icon-color61.png",
+            "colorNumber": "217543578",
+            "name": "幻影紫"
+        },
+        {
+            "id": 68,
+            "colorName": "vm-icon-color62.png",
+            "colorNumber": "217543590",
+            "name": "白沙杏"
+        },
+        {
+            "id": 69,
+            "colorName": "vm-icon-color63.png",
+            "colorNumber": "217543588",
+            "name": "雀羽红"
+        },
+        {
+            "id": 70,
+            "colorName": "vm-icon-color64.png",
+            "colorNumber": "217543589",
+            "name": "月影灰"
+        },
+        {
+            "id": 71,
+            "colorName": "vm-icon-color65.png",
+            "colorNumber": "219530028",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 72,
+            "colorName": "vm-icon-color66.png",
+            "colorNumber": "219530029",
+            "name": "牧野青"
+        },
+        {
+            "id": 73,
+            "colorName": "vm-icon-color67.png",
+            "colorNumber": "219530027",
+            "name": "星河蓝"
+        },
+        {
+            "id": 74,
+            "colorName": "vm-icon-color68.png",
+            "colorNumber": "219530026",
+            "name": "雅丹黑"
+        },
+        {
+            "id": 75,
+            "colorName": "vm-icon-color69.png",
+            "colorNumber": "219530025",
+            "name": "金瑞红"
+        },
+        {
+            "id": 76,
+            "colorName": "vm-icon-color70.png",
+            "colorNumber": "219530180",
+            "name": "赤茶橘"
+        },
+        {
+            "id": 77,
+            "colorName": "vm-icon-color71.png",
+            "colorNumber": "219530179",
+            "name": "琥珀棕"
+        },
+        {
+            "id": 78,
+            "colorName": "vm-icon-color72.png",
+            "colorNumber": "219530177",
+            "name": "松露棕"
+        },
+        {
+            "id": 79,
+            "colorName": "vm-icon-color73.png",
+            "colorNumber": "219530178",
+            "name": "望舒杏"
+        },
+        {
+            "id": 80,
+            "colorName": "vm-icon-color74.png",
+            "colorNumber": "219530181",
+            "name": "月影灰"
+        },
+        {
+            "id": 81,
+            "colorName": "vm-icon-color75.png",
+            "colorNumber": "223115660",
+            "name": "鎏金黑"
+        },
+        {
+            "id": 82,
+            "colorName": "vm-icon-color76.png",
+            "colorNumber": "223115661",
+            "name": "牧野青"
+        },
+        {
+            "id": 83,
+            "colorName": "vm-icon-color77.png",
+            "colorNumber": "223115663",
+            "name": "暖云白"
+        },
+        {
+            "id": 84,
+            "colorName": "vm-icon-color78.png",
+            "colorNumber": "223115658",
+            "name": "霞光"
+        },
+        {
+            "id": 85,
+            "colorName": "vm-icon-color79.png",
+            "colorNumber": "223115659",
+            "name": "星际蓝"
+        },
+        {
+            "id": 86,
+            "colorName": "vm-icon-color80.png",
+            "colorNumber": "223115662",
+            "name": "银河"
+        },
+        {
+            "id": 87,
+            "colorName": "vm-icon-color81.png",
+            "colorNumber": "223115955",
+            "name": "白沙杏"
+        },
+        {
+            "id": 88,
+            "colorName": "vm-icon-color82.png",
+            "colorNumber": "223115957",
+            "name": "赤茶橘"
+        },
+        {
+            "id": 89,
+            "colorName": "vm-icon-color83.png",
+            "colorNumber": "223115956",
+            "name": "琥珀棕"
+        },
+        {
+            "id": 90,
+            "colorName": "vm-icon-color84.png",
+            "colorNumber": "223115954",
+            "name": "星云红"
+        },
+        {
+            "id": 91,
+            "colorName": "vm-icon-color85.png",
+            "colorNumber": "223237912",
+            "name": "牧野青"
+        },
+        {
+            "id": 92,
+            "colorName": "vm-icon-color86.png",
+            "colorNumber": "223237913",
+            "name": "松露棕"
+        },
+        {
+            "id": 93,
+            "colorName": "vm-icon-color87.png",
+            "colorNumber": "223854471",
+            "name": "浩宇蓝"
+        },
+        {
+            "id": 94,
+            "colorName": "vm-icon-color88.png",
+            "colorNumber": "223854469",
+            "name": "松露棕"
+        },
+        {
+            "id": 95,
+            "colorName": "vm-icon-color89.png",
+            "colorNumber": "227166845",
+            "name": "霜月银"
+        },
+        {
+            "id": 96,
+            "colorName": "vm-icon-color90.png",
+            "colorNumber": "229370430",
+            "name": "星耀黑"
+        },
+        {
+            "id": 97,
+            "colorName": "vm-icon-color91.png",
+            "colorNumber": "229370427",
+            "name": "破晓金黑"
+        },
+        {
+            "id": 98,
+            "colorName": "vm-icon-color92.png",
+            "colorNumber": "229370429",
+            "name": "凌云墨白"
+        },
+        {
+            "id": 99,
+            "colorName": "vm-icon-color93.png",
+            "colorNumber": "229370428",
+            "name": "云镜银紫"
+        },
+        {
+            "id": 100,
+            "colorName": "vm-icon-color94.png",
+            "colorNumber": "229370431",
+            "name": "云霞晖"
+        },
+        {
+            "id": 101,
+            "colorName": "vm-icon-color95.png",
+            "colorNumber": "229370432",
+            "name": "旷野棕金"
+        },
+        {
+            "id": 102,
+            "colorName": "vm-icon-color96.png",
+            "colorNumber": "229370493",
+            "name": "霞光白紫"
+        },
+        {
+            "id": 103,
+            "colorName": "vm-icon-color97.png",
+            "colorNumber": "229370497",
+            "name": "晨夕白棕"
+        },
+        {
+            "id": 104,
+            "colorName": "vm-icon-color98.png",
+            "colorNumber": "229370496",
+            "name": "夜阑墨棕"
+        },
+        {
+            "id": 105,
+            "colorName": "vm-icon-color99.png",
+            "colorNumber": "229370494",
+            "name": "云雾雅白"
+        },
+        {
+            "id": 106,
+            "colorName": "vm-icon-color100.png",
+            "colorNumber": "229370495",
+            "name": "煦日浅棕"
+        },
+        {
+            "id": 107,
+            "colorName": "vm-icon-color12.png",
+            "colorNumber": "162620079",
+            "name": "望舒杏"
+        },
+        {
+            "id": 108,
+            "colorName": "vm-icon-color5.png",
+            "colorNumber": "140178012",
+            "name": "大溪地灰"
+        },
+        {
+            "id": 109,
+            "colorName": "vm-icon-color101.png",
+            "colorNumber": "234890954",
+            "name": "松霜绿"
+        },
+        {
+            "id": 110,
+            "colorName": "vm-icon-color102.png",
+            "colorNumber": "242052372",
+            "name": "夜紫"
+        },
+        {
+            "id": 111,
+            "colorName": "vm-icon-color103.png",
+            "colorNumber": "244726705",
+            "name": "极光绿"
+        },
+        {
+            "id": 112,
+            "colorName": "vm-icon-color104.png",
+            "colorNumber": "244726719",
+            "name": "罗兰紫"
+        },
+        {
+            "id": 113,
+            "colorName": "vm-icon-color105.png",
+            "colorNumber": "247022497",
+            "name": "跃影红"
+        },
+        {
+            "id": 114,
+            "colorName": "vm-icon-color106.png",
+            "colorNumber": "247883762",
+            "name": "云水蓝"
+        },
+        {
+            "id": 115,
+            "colorName": "vm-icon-color107.png",
+            "colorNumber": "247883763",
+            "name": "月岩灰"
+        },
+        {
+            "id": 116,
+            "colorName": "vm-icon-color108.png",
+            "colorNumber": "247883761",
+            "name": "雅川青"
+        },
+        {
+            "id": 117,
+            "colorName": "vm-icon-color109.png",
+            "colorNumber": "247883760",
+            "name": "仲夏紫"
+        },
+        {
+            "id": 118,
+            "colorName": "vm-icon-color110.png",
+            "colorNumber": "247884178",
+            "name": "凝夜紫"
+        },
+        {
+            "id": 119,
+            "colorName": "vm-icon-color111.png",
+            "colorNumber": "247884177",
+            "name": "夜阑灰"
+        },
+        {
+            "id": 120,
+            "colorName": "vm-icon-color112.png",
+            "colorNumber": "251426724",
+            "name": "海岛蓝"
+        },
+        {
+            "id": 121,
+            "colorName": "vm-icon-color113.png",
+            "colorNumber": "251426725",
+            "name": "珊瑚红"
+        },
+        {
+            "id": 122,
+            "colorName": "vm-icon-color114.png",
+            "colorNumber": "251426726",
+            "name": "星际蓝"
+        },
+        {
+            "id": 123,
+            "colorName": "vm-icon-color115.png",
+            "colorNumber": "252708018",
+            "name": "流光银"
+        },
+        {
+            "id": 124,
+            "colorName": "vm-icon-color116.png",
+            "colorNumber": "252708019",
+            "name": "仙踪绿"
+        },
+        {
+            "id": 125,
+            "colorName": "vm-icon-color117.png",
+            "colorNumber": "256924047",
+            "name": "银境紫"
+        },
+        {
+            "id": 126,
+            "colorName": "vm-icon-color118.png",
+            "colorNumber": "266347733",
+            "meta": "(双绗缝版)",
+            "name": "白沙杏(双绗缝版)"
+        },
+        {
+            "id": 127,
+            "colorName": "vm-icon-color32.png",
+            "colorNumber": "195129490",
+            "name": "暖云白"
+        },
+        {
+            "id": 128,
+            "colorName": "vm-icon-color119.png",
+            "colorNumber": "281638330",
+            "name": "暗夜紫"
+        },
+        {
+            "id": 129,
+            "colorName": "vm-icon-color120.png",
+            "colorNumber": "281638329",
+            "name": "活力橙"
+        },
+        {
+            "id": 130,
+            "colorName": "vm-icon-color121.png",
+            "colorNumber": "282496104",
+            "meta": "2026新版",
+            "name": "幻影紫"
+        },
+        {
+            "id": 131,
+            "colorName": "vm-icon-color122.png",
+            "colorNumber": "282496930",
+            "meta": "2026新版",
+            "name": "暗夜紫"
+        },
+        {
+            "id": 132,
+            "colorName": "vm-icon-color123.png",
+            "colorNumber": "282501573",
+            "name": "瑞红"
+        },
+        {
+            "id": 133,
+            "colorName": "vm-icon-color124.png",
+            "colorNumber": "282501574",
+            "name": "湛蓝"
+        },
+        {
+            "id": 134,
+            "colorName": "vm-icon-color125.png",
+            "colorNumber": "282818070",
+            "name": "月绒白"
+        },
+        {
+            "id": 135,
+            "colorName": "vm-icon-color126.png",
+            "colorNumber": "282821943",
+            "name": "星玫粉"
+        },
+        {
+            "id": 136,
+            "colorName": "vm-icon-color127.png",
+            "colorNumber": "282937876",
+            "name": "脉冲蓝"
+        },
+        {
+            "id": 137,
+            "colorName": "vm-icon-color128.png",
+            "colorNumber": "282937873",
+            "name": "曜石黑"
+        },
+        {
+            "id": 138,
+            "colorName": "vm-icon-color129.png",
+            "colorNumber": "282937874",
+            "name": "钛空银"
+        },
+        {
+            "id": 139,
+            "colorName": "vm-icon-color130.png",
+            "colorNumber": "282937872",
+            "name": "星夜紫"
+        },
+        {
+            "id": 140,
+            "colorName": "vm-icon-color131.png",
+            "colorNumber": "282937875",
+            "name": "流光青"
+        },
+        {
+            "id": 141,
+            "colorName": "vm-icon-color132.png",
+            "colorNumber": "282938225",
+            "name": "电光橙"
+        },
+        {
+            "id": 142,
+            "colorName": "vm-icon-color133.png",
+            "colorNumber": "282938226",
+            "name": "紫慕白"
+        },
+        {
+            "id": 143,
+            "colorName": "vm-icon-color134.png",
+            "colorNumber": "282938227",
+            "name": "引力红"
+        }
+    ]
+}

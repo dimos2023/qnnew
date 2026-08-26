@@ -1,0 +1,44 @@
+[
+    {
+        "carName": "问界 M5 纯电智驾",
+        "sceneName": "50080100041",
+        "minTime": 0,
+        "maxTime": 8
+    },
+    {
+        "carName": "问界 M5 智驾版",
+        "sceneName": "50080100039",
+        "minTime": 0,
+        "maxTime": 8
+    },
+    {
+        "carName": "问界 新M5 增程 Max RS",
+        "sceneName": "50080100137",
+        "minTime": 0,
+        "maxTime": 8
+    },
+    {
+        "carName": "问界 新M7 大五座",
+        "sceneName": "50080100057",
+        "minTime": 0,
+        "maxTime": 8
+    },
+    {
+        "carName": "问界 新M9 全景智慧旗舰SUV",
+        "sceneName": "50080100121",
+        "minTime": 0,
+        "maxTime": 8
+    },
+    {
+        "carName": "S1 智慧轿车 新形态",
+        "sceneName": "50080100109",
+        "minTime": 0,
+        "maxTime": 8
+    },
+    {
+        "carName": "享界 S9 Ultra",
+        "sceneName": "50080100157",
+        "minTime": 0,
+        "maxTime": 8
+    }
+]

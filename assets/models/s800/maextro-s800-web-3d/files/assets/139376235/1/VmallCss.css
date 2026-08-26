@@ -1,0 +1,4067 @@
+/* html {width: 100vw;overflow: auto;}
+body {min-width: 650px;}
+.embedding-container {min-width: 320px;} */
+:root {
+    color-scheme: dark;
+    --text-color: #333;
+    --text2-color: rgba(51, 51, 51, .8);
+    --text3-color: rgba(51, 51, 51, .6);
+    --bg-color: rgba(255, 255, 255, 0.7);
+    --bg2-color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] {
+    --text-color: #fff;
+    --text2-color: #fff;
+    --text3-color: #fff;
+    --bg-color: rgba(255, 255, 255, 0.2);
+    --bg2-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+video::-webkit-media-controls-enclosure {
+    display: none
+}
+
+video::-webkit-media-controls {
+    display: none
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-text-size-adjust: none
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1;
+    font-family: HarmonyOS Sans SC, Harmony-Medium, 'HarmonyHeiTi-Medium', 'HarmonyHeiTi', 'PingFang SC', "Source Han Sans", "思源黑体", 'Microsoft YaHei', '微软雅黑', Arial, sans-serif
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+button {
+    border: 0;
+    background-color: transparent
+}
+
+.display_none {
+    display: none !important
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+.no-margin {
+    margin-right: 0 !important;
+}
+
+.VM-main-root,
+.VM-null-root {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    pointer-events: none
+}
+
+.VM-main.dynamic-island-main {
+    display: block
+}
+
+.VM-main {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-size: 0;
+    z-index: 10
+}
+
+.VM-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    margin-top: 24px;
+    border-radius: 1px;
+    z-index: 9
+}
+
+.VM-header .VM-header-left {
+    display: flex;
+    align-items: center;
+    margin-left: -12px
+}
+
+.VM-main.VM-mask-main::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 52%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    z-index: 8
+}
+
+.VM-header .VM-icon {
+    display: inline-block
+}
+
+.VM-header .VM-icon-back {
+    width: 36px;
+    height: 36px;
+    padding-left: 24px;
+    background-image: url("$139433833%");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    cursor: pointer;
+    pointer-events: auto
+}
+
+.VM-header .VM-icon-back.in-car-back {
+    background-image: url($237894000%);
+    background-size: 32px;
+}
+
+.VM-header .select-box {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 36px;
+    cursor: pointer;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    pointer-events: auto
+}
+
+.VM-header .VM-icon-arrow {
+    width: 12px;
+    height: 36px;
+    margin-left: 6px;
+    background: url("$140853184%") no-repeat center center;
+    background-size: 100%;
+    cursor: pointer;
+    vertical-align: top
+}
+
+.VM-header .VM-icon-back.back-white-box {
+    background: url("$141007396%") no-repeat center center;
+    background-size: 20px
+}
+
+.VM-header button {
+    line-height: 56px
+}
+
+.VM-header .VM-btn-box,
+.VM-header .VM-btn-box ul,
+.VM-footer .VM-btn-box,
+.VM-footer .VM-btn-box ul {
+    height: 100%
+}
+
+.VM-header .VM-header-btn,
+.VM-footer .VM-footer-btn {
+    display: inline-block;
+    height: 100%;
+    margin-left: 24px
+}
+
+.VM-footer .VM-footer-btn:active {
+    opacity: 1
+}
+
+.VM-header .VM-header-btn.VM-share-btn {
+    margin-left: 0
+}
+
+/* s800导航 */
+.VM-header .tab-car-list {
+
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    /* pointer-events: auto; */
+    /* display: none !important; */
+}
+
+.VM-header .tab-car-item {
+    display: inline-block;
+    margin-right: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-color);
+    opacity: .5;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.VM-header .tab-car-item:nth-of-type(2) {
+    margin-right: 0;
+}
+
+.VM-header .tab-car-item.tab-car-active {
+    opacity: 1;
+}
+
+.VM-header .tab-car-animate {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(68, 68, 68, .3);
+    border-radius: 1px;
+}
+
+.VM-header .tab-car-animate::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% - 8px);
+    height: 100%;
+    background-color: #444;
+    border-radius: 1px;
+    transition: left .3s;
+    content: "";
+}
+
+.VM-header .tab-car-animate.tab-car-1::after {
+    left: 0;
+}
+
+.VM-header .tab-car-animate.tab-car-2::after {
+    left: calc(50% + 8px);
+}
+
+
+.VM-hide-btn {
+    display: none
+}
+
+.VM-show-btn {
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.VM-header button,
+.VM-footer button {
+    font-size: 14px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: var(--text-color);
+    vertical-align: top;
+    cursor: pointer;
+    pointer-events: auto
+}
+
+.VM-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 90px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 11;
+    pointer-events: none
+}
+
+.VM-footer .VM-3D-maps {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 0;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 54px;
+    pointer-events: auto;
+    background: url($140182271%) no-repeat center center;
+    background-size: 100%
+}
+
+.VM-footer .VM-3D-maps-none {
+    display: none
+}
+
+.VM-footer button {
+    margin-top: 61px;
+    line-height: 17px;
+    pointer-events: auto
+}
+
+.dynamic-island-main.VM-hub-main .VM-3D-maps {
+    visibility: hidden
+}
+
+.dynamic-island-main.VM-hub-main .VM-footer-btn {
+    visibility: hidden
+}
+
+.dynamic-island-main.in-car-main::after {
+    display: none
+}
+
+.dynamic-island-box>.animation-box,
+.PK-box>.animation-box {
+    position: relative;
+    /* top: -45px; */
+    max-width: 0;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    /* overflow: hidden */
+}
+
+.dynamic-island-btn.open-nav .dynamic-island-box>.animation-box,
+.PK-btn.open-nav .PK-box>.animation-box {
+    animation: openNavAni .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-btn.close-nav .dynamic-island-box>.animation-box,
+.PK-btn.close-nav .PK-box>.animation-box {
+    animation: closeNavAni .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-btn,
+.PK-btn {
+    display: none;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    /* height: 40px; */
+    box-sizing: border-box;
+    z-index: 10
+}
+
+.dynamic-island-box,
+.PK-box {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.dynamic-island-btn .hint,
+.PK-btn .hint {
+    margin-top: 14px;
+    padding: 0 16px;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text3-color);
+    line-height: 16px;
+    text-align: center;
+}
+
+.dynamic-island-box .dynamic-island-list,
+.PK-box .PK-list {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    width: 259px;
+    min-width: 259px;
+    padding: 0 6px 0 6px;
+    box-sizing: border-box;
+    background: var(--bg2-color);
+    border-radius: 100px;
+    pointer-events: auto
+}
+
+.dynamic-island-box .dynamic-island-item,
+.PK-box .PK-item {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    height: 40px;
+    /* display: inline-block !important; */
+    font-size: 0;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    cursor: pointer;
+    pointer-events: auto;
+    white-space: nowrap
+}
+
+.dynamic-island-box .dynamic-island-text,
+.PK-box .PK-text {
+    display: inline-block;
+    padding: 0 18px;
+    font-weight: 500;
+    color: var(--text2-color);
+    line-height: 40px;
+    font-size: 14px
+}
+
+.dynamic-island-box .dynamic-island-text:active,
+.PK-box .PK-text:active {
+    opacity: 1
+}
+
+.dynamic-island-box .dynamic-island-list .nav-animation-box,
+.PK-box .PK-list .nav-animation-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    overflow: hidden
+}
+
+.dynamic-island-box .dynamic-island-list .nav-animation-box::after,
+.PK-box .PK-list .nav-animation-box::after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .2s;
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    content: ""
+}
+
+.dynamic-island-box .dynamic-island-list {
+    width: 332px;
+    min-width: 332px
+}
+
+.dynamic-island-box.no-card .dynamic-island-list {
+    width: 268px;
+    min-width: 268px
+}
+
+.dynamic-island-box .dynamic-island-item:nth-of-type(6) {
+    display: none;
+}
+
+.dynamic-island-box.s800 .dynamic-island-item:nth-of-type(6) {
+    display: inline-block;
+}
+
+.dynamic-island-box.s800 .dynamic-island-list {
+    /* width: 204px;
+    min-width: 204px */
+    /* width: 268px;
+    min-width: 268px */
+    width: 332px;
+    min-width: 332px;
+}
+
+.dynamic-island-box.s800.no-card .dynamic-island-list {
+    /* width: 204px;
+    min-width: 204px */
+    width: 268px;
+    min-width: 268px;
+}
+
+.dynamic-island-box .dynamic-island-list.active1 .dynamic-island-item:nth-of-type(1) .dynamic-island-text {
+    color: #333;
+}
+
+
+.dynamic-island-box .dynamic-island-list.active1 .nav-animation-box::after {
+    left: 0;
+    width: 76px;
+}
+
+.dynamic-island-box .dynamic-island-list.active2 .nav-animation-box::after {
+    /* left: 64px; */
+    left: 192px;
+    width: 184px
+}
+
+.dynamic-island-box .dynamic-island-list.active3 .nav-animation-box::after {
+    /* left: 128px; */
+    left: 128px;
+    width: 128px
+}
+
+.dynamic-island-box .dynamic-island-list.active4 .nav-animation-box::after {
+    /* left: 190px; */
+    left: 254px;
+    width: 76px
+}
+
+.dynamic-island-box .dynamic-island-list.active5 .nav-animation-box::after {
+    /* left: 260px; */
+    left: 324px;
+    width: 76px
+}
+
+.dynamic-island-box .dynamic-island-list.active6 .nav-animation-box::after {
+    /* left: 260px; */
+    left: 64px;
+    width: 76px
+}
+
+.dynamic-island-box .dynamic-island-item .animation-box,
+.PK-box .PK-item .animation-box {
+    position: relative;
+    max-width: 64px;
+    max-height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 100px;
+    justify-content: center
+}
+
+.dynamic-island-item.open-nav .animation-box,
+.PK-item.open-nav .animation-box {
+    animation: openNavAni .2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-item.open-nav .dynamic-island-text,
+.PK-item.open-nav .PK-text {
+    opacity: 1;
+    animation: opacityhide .05s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-item.open-nav .dynamic-island-item-children-item,
+.dynamic-island-item.open-nav .dynamic-island-item-children::after,
+.PK-item.open-nav .PK-item-children-item,
+.PK-item.open-nav .PK-list-children::after {
+    visibility: visible;
+    opacity: 0;
+    animation: opacityShow .05s;
+    animation-fill-mode: forwards;
+    animation-delay: .1s;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-item.close-nav .animation-box,
+.PK-item.close-nav .animation-box {
+    animation: closeNavAni2 .2s;
+    animation-fill-mode: forwards;
+    animation-delay: .1s;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-item.close-nav .dynamic-island-text,
+.PK-item.close-nav .PK-text {
+    opacity: 0;
+    animation: opacityShow .1s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-item.close-nav .dynamic-island-item-children-item,
+.dynamic-island-item.close-nav .dynamic-island-item-children::after,
+.PK-item.close-nav .PK-item-children-item,
+.PK-item.close-nav .PK-list-children::after {
+    opacity: 1;
+    animation: opacityhide .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-box .dynamic-island-item-box,
+.PK-box .PK-list-children {
+    height: 100%
+}
+
+.dynamic-island-box .dynamic-island-item-children,
+.PK-box .PK-list-children {
+    position: relative;
+    display: none;
+    height: 100%
+}
+
+.dynamic-island-box .dynamic-island-item-children-item,
+.PK-box .PK-item-children-item {
+    min-width: 28px;
+    position: relative;
+    font-size: 14px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    /* color: #444444; */
+    color: var(--text2-color);
+    line-height: 40px;
+    opacity: 0
+}
+
+.dynamic-island-box .dynamic-island-item-children::after,
+.PK-box .PK-list-children::after {
+    position: absolute;
+    bottom: 7px;
+    left: calc(25% - 7px);
+    right: calc(75% - 14px);
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background: #444444;
+    border-radius: 1px 1px 1px 1px;
+    transition: left .2s, right .2s;
+    visibility: hidden;
+    content: ""
+}
+
+.dynamic-island-box .car-space.open-nav .active-t-1.animation-box::after,
+.PK-box .car-space.open-nav .active-t-1.animation-box::after {
+    animation: hxRightToLeft .5s;
+    animation-fill-mode: forwards
+}
+
+.dynamic-island-box .car-space.open-nav .active-t-2.animation-box::after,
+.PK-box .car-space.open-nav .active-t-2.animation-box::after {
+    animation: hxLeftToRight .5s;
+    animation-fill-mode: forwards
+}
+
+.dynamic-island-box .car-space.open-nav .dynamic-island-item-children.active-t-1::after,
+.PK-box .car-space.open-nav .PK-list-children.active-t-1::after {
+    width: 56px;
+    opacity: 1;
+    right: auto;
+    left: 18px
+}
+
+.dynamic-island-box .dynamic-island-item-children.active-t-2::after,
+.PK-box .PK-list-children.active-t-2::after {
+    opacity: 1;
+    width: 70px;
+    left: auto;
+    right: 18px
+}
+
+.dynamic-island-box .car-interior .dynamic-island-item-children.active-t-1::after,
+.PK-box .car-interior .PK-list-children.active-t-1::after {
+    width: 20px;
+    opacity: 1;
+    right: auto;
+    left: calc(25% - 7px)
+}
+
+.dynamic-island-box .car-interior .dynamic-island-item-children.active-t-2::after,
+.PK-box .car-interior .PK-list-children.active-t-2::after {
+    width: 20px;
+    opacity: 1;
+    right: calc(25% - 7px);
+    left: auto;
+}
+
+.dynamic-island-box .car-interior.open-nav .active-t-1.animation-box::after,
+.PK-box .car-interior.open-nav .active-t-1.animation-box::after {
+    animation: hxRightToLeftInterior .5s;
+    animation-fill-mode: forwards
+}
+
+.dynamic-island-box .car-interior.open-nav .active-t-2.animation-box::after,
+.PK-box .car-interior.open-nav .active-t-2.animation-box::after {
+    animation: hxLeftToRightInterior .5s;
+    animation-fill-mode: forwards
+}
+
+.dynamic-island-btn {
+    display: block
+}
+
+.dynamic-island-box .active2 {
+    width: 440px;
+    min-width: 440px
+}
+
+.dynamic-island-box .active3 {
+    width: 384px;
+    min-width: 384px
+}
+
+.dynamic-island-box.no-card .active2 {
+    width: 376px;
+    min-width: 376px
+}
+
+.dynamic-island-box.no-card .active3 {
+    width: 320px;
+    min-width: 320px
+}
+
+.dynamic-island-box.s800 .active2 {
+    /* width: 312px;
+    min-width: 312px */
+    /* width: 376px;
+    min-width: 376px; */
+    width: 440px;
+    min-width: 440px;
+}
+
+.dynamic-island-box.s800.no-card .active2 {
+    /* width: 312px;
+    min-width: 312px; */
+    width: 376px;
+    min-width: 376px;
+}
+
+.dynamic-island-box.s800 .active3 {
+    /* width: 256px;
+    min-width: 256px */
+    /* width: 320px;
+    min-width: 320px */
+    width: 384px;
+    min-width: 384px;
+}
+
+.dynamic-island-box.s800.no-card .active3 {
+    /* width: 256px;
+    min-width: 256px; */
+    width: 320px;
+    min-width: 320px;
+}
+
+.dynamic-island-box .car-space .dynamic-island-item-children {
+    min-width: 172px;
+    box-sizing: border-box
+}
+
+.dynamic-island-box .active2 .car-space.open-nav .dynamic-island-text,
+.dynamic-island-box .active3 .car-interior.open-nav .dynamic-island-text {
+    width: 64px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 32px);
+    box-sizing: border-box
+}
+
+.dynamic-island-box .active2 .car-space.open-nav .dynamic-island-item-children,
+.dynamic-island-box .active3 .car-interior.open-nav .dynamic-island-item-children {
+    display: inline-flex
+}
+
+.dynamic-island-box .active2 .car-space.open-nav .dynamic-island-item-children-item,
+.dynamic-island-box .active3 .car-interior.open-nav .dynamic-island-item-children-item {
+    display: inline-block;
+    padding: 0 12px 0 18px
+}
+
+.dynamic-island-box .active2 .car-space.open-nav .dynamic-island-item-children-item:last-of-type,
+.dynamic-island-box .active3 .car-interior.open-nav .dynamic-island-item-children-item:last-of-type {
+    padding: 0 18px 0 12px
+}
+
+.dynamic-island-children .animation-box,
+.PK-children .animation-box {
+    max-width: 0;
+    height: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 100px
+}
+
+.dynamic-island-children.open-nav .animation-box,
+.PK-children.open-nav .animation-box {
+    max-width: 196px;
+    opacity: 0;
+    animation: opacityShow .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.dynamic-island-children.close-nav .animation-box,
+.PK-children.close-nav .animation-box {
+    max-width: 196px;
+    opacity: 1;
+    animation: opacityhide .2s;
+    animation-fill-mode: forwards
+}
+
+.in-car-box .animation-box,
+.pk-in-car-box .animation-box,
+.pk-color-nav .animation-box,
+.dynamic-island-color-list .animation-box,
+.dynamic-island-in-color-list .animation-box {
+    position: relative;
+    border-radius: 100px;
+    vertical-align: top;
+}
+
+.pk-color-nav .color-animation-box,
+.in-car-box .color-animation-box,
+.pk-in-car-box .color-animation-box,
+.dynamic-island-color-list .color-animation-box,
+.dynamic-island-in-color-list .color-animation-box {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    left: 12px;
+    top: 7px;
+    /* border: 2px solid #fff; */
+    border: 1.5px solid var(--text-color);
+    border-radius: 100px;
+    box-sizing: border-box;
+    content: ""
+}
+
+.in-car-box .color-animation-box,
+.pk-in-car-box .color-animation-box {
+    left: 48px
+}
+
+.pk-color-nav.open-nav .color-animation-box,
+.in-car-nav.open-nav .color-animation-box,
+.pk-in-car-nav.open-nav .color-animation-box,
+.dynamic-island-color-list.open-nav .color-animation-box,
+.dynamic-island-in-color-list.open-nav .color-animation-box {
+    opacity: 0;
+    animation: opacityShow .2s;
+    animation-fill-mode: forwards;
+    animation-delay: .6s
+}
+
+.pk-color-nav.close-nav .color-animation-box,
+.in-car-nav.close-nav .color-animation-box,
+.pk-in-car-nav.close-nav .color-animation-box,
+.dynamic-island-color-list.close-nav .color-animation-box,
+.dynamic-island-in-color-list.close-nav .color-animation-box {
+    opacity: 0;
+    animation: opacityhide .2s;
+    animation-fill-mode: forwards
+}
+
+.pk-color-nav .color-animation-box {
+    left: 7px;
+    top: 12px
+}
+
+.dynamic-island-color-list.open-nav .animation-box,
+.dynamic-island-in-color-list.open-nav .animation-box {
+    vertical-align: top;
+    max-width: 458px;
+    opacity: 0;
+    animation: opacityShow .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.dynamic-island-color-list.close-nav .animation-box,
+.dynamic-island-in-color-list.close-nav .animation-box {
+    max-width: 458px;
+    opacity: 1;
+    animation: opacityhide .2s;
+    animation-delay: .4s;
+    animation-fill-mode: forwards
+}
+
+.dynamic-island-children,
+.PK-children {
+    display: block !important;
+    position: absolute;
+    left: 50%;
+    top: -44px;
+    width: 458px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--text-color);
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    cursor: pointer;
+    pointer-events: auto;
+    transform: translateX(-50%)
+}
+
+.dynamic-island-children.open-nav {
+    z-index: 20
+}
+
+.dynamic-island-color-list .dynamic-island-color-ol,
+.dynamic-island-in-color-list .dynamic-island-in-color-ol,
+.car-space-list .car-space-ol,
+.car-interior-list .car-interior-ol {
+    display: flex;
+    height: 100%;
+    padding: 0 14px 0 12px;
+    box-sizing: border-box;
+    font-size: 0;
+    z-index: 2;
+    background-color: var(--bg-color);
+    border-radius: 100px
+}
+
+.dynamic-island-in-color-item,
+.dynamic-island-color-item,
+.car-space-item,
+.car-interior-item {
+    /* display: inline-block; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    padding: 1px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    margin-top: 7px;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: var(--text2-color);
+    /* background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+.main-car-space-item,
+.pk-car-space-item {
+    min-width: 39px
+}
+
+.dynamic-island-color-item.close-btn,
+.dynamic-island-in-color-item.close-btn {
+    opacity: 1
+}
+
+.dynamic-island-color-item .dynamic-island-color-img,
+.dynamic-island-in-color-item .dynamic-island-in-color-img {
+    width: 20px;
+    height: 20px;
+}
+
+.dynamic-island-color-item.active,
+.dynamic-island-in-color-item.active {
+    /* border: 2px solid #fff*/
+    border: 2px solid var(--text-color);
+}
+
+.dynamic-island-color-item:last-of-type,
+.dynamic-island-in-color-item:last-of-type {
+    margin-right: 0
+}
+
+.dynamic-island-color-name,
+.dynamic-island-in-color-name,
+.in-car-color-name {
+    position: relative;
+    /* top: -28px;
+    left: 50%;
+    transform: translateX(-50%); */
+    top: 50%;
+    left: auto;
+    transform: translateX(0) translateY(-50%);
+    display: inline-block;
+    opacity: 0;
+    height: 29px;
+    padding: 0 10px;
+    margin-left: 4px;
+    background: var(--bg2-color);
+    border-radius: 32px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--text-color);
+    line-height: 29px;
+    text-align: center;
+    /* transition: opacity .1s; */
+    /* transition-delay: .2s; */
+}
+
+.dynamic-island-children.close-nav .dynamic-island-color-name,
+.dynamic-island-children.close-nav .dynamic-island-in-color-name,
+.in-car-nav.close-nav .in-car-color-name {
+    /* display: none; */
+    display: inline-block;
+    opacity: 0;
+}
+
+.dynamic-island-children.open-nav .dynamic-island-color-name,
+.dynamic-island-children.open-nav .dynamic-island-in-color-name,
+.in-car-nav.open-nav .in-car-color-name {
+    display: inline-block;
+    opacity: 1;
+}
+
+.car-space-list {
+    width: 200px;
+    height: 32px;
+    top: -36px
+}
+
+.car-space-list .car-space-ol {
+    position: relative;
+    width: 197px;
+    /* min-width: 200px; */
+    padding: 0 16px;
+    box-sizing: border-box
+}
+
+.car-space-list .car-space-ol::after {
+    position: absolute;
+    left: -70px;
+    top: 1px;
+    width: 33.33%;
+    height: 30px;
+    padding: 7px 16px;
+    border-radius: 614px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    transition: left .3s;
+    content: "";
+}
+
+.car-space-list .car-space-ol.active-1::after {
+    left: 2px;
+}
+
+.car-space-list .car-space-ol.active-2::after {
+    left: calc(33.33% - 2px);
+}
+
+.car-space-list .car-space-ol.active-3::after {
+    left: calc(66.66% - 2px);
+}
+
+.car-space-item {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-right: 24px;
+    border: 0;
+    font-size: 12px;
+    font-weight: 500;
+    /* color: rgba(68, 68, 68, .6); */
+    color: var(--text2-color);
+    line-height: 32px
+}
+
+.car-space-item.active {
+    color: var(--text-color)
+}
+
+.car-space-item:last-of-type {
+    margin-right: 0
+}
+
+.car-interior-list {
+    width: 193px;
+    height: 32px;
+    top: -36px
+}
+
+.car-interior-list .car-interior-ol {
+    position: relative;
+    /* width: 193px; */
+    width: auto;
+    padding: 0 16px;
+    box-sizing: border-box
+}
+
+.car-interior-list .car-interior-ol::after {
+    position: absolute;
+    left: -70px;
+    top: 1px;
+    width: 68px;
+    height: 30px;
+    padding: 7px 16px;
+    border-radius: 614px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    transition: left .3s;
+    content: "";
+}
+
+.car-interior-list .car-interior-ol.active-1::after {
+    left: 1px;
+}
+
+.car-interior-list .car-interior-ol.active-2::after {
+    left: 62px;
+}
+
+.car-interior-list .car-interior-ol.active-3::after {
+    left: 124px;
+}
+
+.car-interior-item {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 26px;
+    border: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text2-color);
+    line-height: 32px
+}
+
+.car-interior-item.active {
+    color: #333;
+}
+
+.car-interior-item:first-of-type {
+    margin-left: 0
+}
+
+.in-car-nav,
+.pk-in-car-nav {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    z-index: 10
+}
+
+.in-car-box {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.in-car-box .animation-box,
+.pk-in-car-box .animation-box {
+    width: 0;
+    height: 100%;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 100px
+}
+
+.in-car-nav.open-nav .animation-box,
+.pk-in-car-nav.open-nav .animation-box {
+    animation: openInCarNavAni .6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards
+}
+
+.in-car-nav.open-nav .in-car-item,
+.pk-in-car-nav.open-nav .pk-in-car-item {
+    position: relative;
+    bottom: -100%;
+    opacity: 0;
+    animation: openColorNavAni .15s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.in-car-nav.open-nav .in-car-item:nth-of-type(1),
+.pk-in-car-nav.open-nav .pk-in-car-item:nth-of-type(1) {
+    animation-delay: .6s
+}
+
+.in-car-nav.open-nav .in-car-item:nth-of-type(2),
+.pk-in-car-nav.open-nav .pk-in-car-item:nth-of-type(2) {
+    animation-delay: .65s
+}
+
+.in-car-nav.open-nav .in-car-item:nth-of-type(3),
+.pk-in-car-nav.open-nav .pk-in-car-item:nth-of-type(3) {
+    animation-delay: .7s
+}
+
+.in-car-nav.open-nav .in-car-item:nth-of-type(4),
+.pk-in-car-nav.open-nav .pk-in-car-item:nth-of-type(4) {
+    animation-delay: .75s
+}
+
+.in-car-nav.close-nav .animation-box,
+.pk-in-car-nav.close-nav .animation-box {
+    /* width: 198px; */
+    width: 298px;
+    animation: closeInCarNavAni .2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .3s
+}
+
+.in-car-nav.close-nav .in-car-item,
+.pk-in-car-nav.close-nav .pk-in-car-item {
+    position: relative;
+    bottom: 0;
+    opacity: 1;
+    animation: closeColorNavAni .15s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.in-car-nav.close-nav .in-car-item:nth-of-type(1),
+.pk-in-car-nav.close-nav .pk-in-car-item:nth-of-type(1) {
+    animation-delay: .15s
+}
+
+.in-car-nav.close-nav .in-car-item:nth-of-type(2),
+.pk-in-car-nav.close-nav .pk-in-car-item:nth-of-type(2) {
+    animation-delay: .1s
+}
+
+.in-car-nav.close-nav .in-car-item:nth-of-type(3),
+.pk-in-car-nav.close-nav .pk-in-car-item:nth-of-type(3) {
+    animation-delay: .05s
+}
+
+.in-car-nav.close-nav .in-car-item:nth-of-type(4),
+.pk-in-car-nav.close-nav .pk-in-car-item:nth-of-type(4) {
+    animation-delay: 0s
+}
+
+.in-car-box .in-car-list,
+.pk-in-car-box .pk-in-car-list {
+    position: relative;
+    height: 100%;
+    padding: 7px 12px;
+    box-sizing: border-box;
+    background: var(--bg2-color);
+    border-radius: 100px;
+    pointer-events: auto
+}
+
+.in-car-box .in-car-item,
+.pk-in-car-box .pk-in-car-item {
+    /* display: inline-block; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    padding: 1px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    /* background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center */
+}
+
+.in-car-box .in-car-img,
+.pk-in-car-box .pk-in-car-img {
+    width: 20px;
+    height: 20px;
+}
+
+.in-car-box .in-car-item:last-of-type,
+.pk-in-car-box .pk-in-car-item:last-of-type {
+    margin-right: 0
+}
+
+.in-car-box .in-car-item.active,
+.pk-in-car-box .pk-in-car-item.active {
+    /* border: 2px solid #fff */
+    border: 2px solid var(--text-color);
+}
+
+.PK-btn {
+    display: none
+}
+
+.PK-box .PK-list {
+    width: 268px;
+    min-width: 268px
+}
+
+.PK-box .PK-list.active1 .PK-item:nth-of-type(1) .PK-text {
+    color: #333;
+}
+
+.PK-box .PK-list.active2 .PK-item:nth-of-type(2) .PK-text {
+    color: #333;
+}
+
+.PK-box .PK-list.active1 .nav-animation-box::after {
+    left: 0;
+    width: 76px
+}
+
+.PK-box .PK-list.active2 .nav-animation-box::after {
+    left: 64px;
+    width: 76px
+}
+
+.PK-box .PK-list.active3 .nav-animation-box::after {
+    left: 128px;
+    width: 184px
+}
+
+.PK-box .active3 {
+    width: 376px;
+    min-width: 376px
+}
+
+.PK-box .active3 .car-space .PK-text {
+    width: 64px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 32px);
+    box-sizing: border-box
+}
+
+.PK-box .active3 .car-space .PK-list-children {
+    display: inline-block
+}
+
+.PK-box .active3 .car-space .PK-item-children-item {
+    display: inline-block;
+    padding: 0 12px 0 18px
+}
+
+.PK-box .active3 .car-space .PK-item-children-item:last-of-type {
+    padding: 0 18px 0 12px
+}
+
+.PK-box .PK-list.active4 .nav-animation-box::after {
+    left: 195px;
+    width: 76px
+}
+
+.pk-color-nav {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 413px;
+    min-height: 413px;
+    align-items: center;
+    font-size: 0;
+    border-radius: 100px;
+    pointer-events: auto;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999
+}
+
+.pk-color-nav .animation-box {
+    width: 100%;
+    margin: auto 0;
+    max-height: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 100px
+}
+
+.pk-color-nav.open-nav .animation-box {
+    max-height: 413px;
+    opacity: 0;
+    animation: opacityShow .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.pk-color-nav.close-nav .animation-box {
+    max-height: 413px;
+    opacity: 1;
+    animation: opacityhide .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out
+}
+
+.pk-color-nav .pk-color-list {
+    width: 100%;
+    padding: 12px 0 14px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 100px;
+    text-align: center;
+}
+
+.pk-color-left-nav {
+    left: 40px
+}
+
+.pk-color-right-nav {
+    right: 40px
+}
+
+.pk-color-nav .pk-color-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto 10px;
+    border: 2px solid transparent;
+    padding: 1px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    /* background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center */
+}
+
+.pk-color-nav .pk-color-img {
+    width: 20px;
+    height: 20px;
+}
+
+.pk-color-nav .pk-color-item:last-of-type {
+    margin-bottom: 0
+}
+
+.pk-color-nav .pk-color-item.active {
+    /* border: 2px solid #fff */
+    border: 1.5px solid var(--text-color);
+}
+
+.PK-main .VM-header-select {
+    position: relative;
+    width: 50%;
+    text-align: center
+}
+
+.PK-main .VM-icon-back {
+    position: absolute;
+    left: 0
+}
+
+.pk-in-car-box {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center
+}
+
+.VM-swiper {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 201
+}
+
+.VM-swiper .VM-swiper-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 649px;
+    height: 302px;
+    overflow: hidden
+}
+
+.VM-swiper .VM-swiper-wrapper {
+    display: flex;
+    width: auto;
+    height: 100%;
+    transform: translateX(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.VM-swiper .VM-swiper-wrapper>div {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.VM-swiper .VM-swiper-slide {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    height: 100%
+}
+
+.VM-swiper .swiper-content-box {
+    position: relative;
+    width: calc(100% - 112px);
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: auto
+}
+
+.VM-swiper .swiper-content-box .swiper-index {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 12px;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .6);
+    line-height: 21px
+}
+
+/* card-bottom-icon icon-show */
+.VM-swiper .swiper-content-box .icon-show {
+    display: block;
+    position: absolute;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+}
+
+.VM-swiper .swiper-content-box .card-top-icon {
+    display: none;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url($224785141%);
+}
+
+.VM-swiper .swiper-content-box .card-bottom-icon {
+    display: block;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url($224785140%);
+}
+
+.VM-swiper .swiper-content-tb.scroll-wrap~.card-top-icon {
+    display: block;
+}
+
+.VM-swiper .swiper-content-tb.scroll-wrap~.card-bottom-icon {
+    display: none;
+}
+
+.VM-swiper .swiper-content .touch-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 2
+}
+
+.VM-swiper .swiper-content.scroll-wrap .touch-area {
+    bottom: auto;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    height: 50px
+}
+
+.VM-swiper .swiper-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    font-size: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.VM-swiper .swiper-button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto
+}
+
+.VM-swiper .swiper-button-prev {
+    left: 0;
+    background: url($140229080%) no-repeat center center;
+    background-size: 100%
+}
+
+.VM-swiper .swiper-button-next {
+    right: 0;
+    background: url($140229077%) no-repeat center center;
+    background-size: 100%
+}
+
+.VM-swiper .swiper-close {
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    right: 72px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url($140177319%) no-repeat center center;
+    background-size: 100%;
+    z-index: 10001
+}
+
+.VM-swiper .swiper-close.swiper-close_white {
+    background: url($140254585%) no-repeat center center;
+    background-size: 100%;
+    pointer-events: auto;
+}
+
+.VM-swiper .swiper-content {
+    pointer-events: auto
+}
+
+.swiper-content .swiper-img img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.swiper-content .swiper-text {
+    box-sizing: border-box;
+    overflow-y: auto;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi
+}
+
+.swiper-content .swiper-text-title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 21px
+}
+
+.swiper-content .swiper-text-content {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .6);
+    line-height: 1.5;
+    /* text-align: justify */
+}
+
+.swiper-content .swiper-text-hint {
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .4);
+    /* text-align: justify */
+}
+
+.swiper-content .swiper-text-hint div {
+    overflow: hidden
+}
+
+.swiper-content-tb .swiper-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.swiper-content-tb .swiper-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover
+}
+
+.swiper-content-tb .swiper-text {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 16px;
+    border-radius: 16px 16px 0 0;
+    overflow: visible
+}
+
+.swiper-content-tb .swiper-text-title-box {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 35px);
+    height: calc(100% - 213px);
+    margin-top: 213px;
+    padding: 0 12px 0 16px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .2s
+}
+
+.swiper-content-tb .swiper-text-title-box.no-content {
+    height: calc(100% - 221px);
+    margin-top: 221px
+}
+
+.swiper-content-tb::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 88px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    content: ""
+}
+
+.swiper-content-tb.scroll-wrap::after {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    transition: background-color .3s
+}
+
+.swiper-content-tb.scroll-wrap .swiper-text-title-box {
+    padding-top: 16px;
+    margin-top: 0;
+    height: 100% !important;
+    overflow-y: auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+    pointer-events: auto;
+    z-index: 999999
+}
+
+.swiper-content-tb .swiper-text-hint {
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.swiper-content-tb .swiper-extra {
+    width: 100%;
+    height: 24px;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.swiper-extra-bottom {
+    width: 360px;
+    height: 12px;
+    background-color: #fff;
+    margin-top: -12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 16px 16px;
+    z-index: 2;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.swiper-content-lr .swiper-img {
+    display: inline-block;
+    width: 200px;
+    height: 100%
+}
+
+.swiper-content-lr .swiper-img img {
+    border-radius: 12px 0 0 12px
+}
+
+.swiper-content-lr .swiper-text {
+    display: inline-block;
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 34px 12px 0 12px
+}
+
+.swiper-videojs-box {
+    height: 100%
+}
+
+.swiper-content-vd video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.swiper-content-vd .video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url($140256919%) no-repeat center center;
+    background-size: 100%
+}
+
+.swiper-content-vd.swiper-content-paused .video-play {
+    display: inline-block
+}
+
+.swiper-content-vd.swiper-content-play .video-play {
+    display: none
+}
+
+.swiper-content-vd.swiper-content-paused .video-control {
+    display: none
+}
+
+.swiper-content-vd.swiper-content-play .video-control {
+    display: block
+}
+
+/* s800 swiper */
+.VM-swiper.s800-swiper {
+    /* display: block; */
+    /* pointer-events: auto; */
+    position: relative;
+    padding: 0 14px;
+    font-family: "HarmonyOS Sans SC";
+}
+
+.VM-swiper.s800-swiper .VM-swiper-box {
+    left: 30px;
+    right: auto;
+    width: 312px;
+    height: 328px;
+    border-radius: 12.8px;
+    background-color: rgba(0, 0, 0, .7);
+    pointer-events: auto;
+    backdrop-filter: blur(6.4px);
+}
+
+.VM-swiper.s800-swiper .swiper-close.swiper-close_white {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 16px;
+    background-image: url($240863728%);
+}
+
+.VM-swiper.s800-swiper .swiper-button {
+    width: 40px;
+    height: 40px;
+    top: auto;
+    bottom: 6px;
+    background-image: url($240863939%);
+}
+
+.VM-swiper.s800-swiper .swiper-button-prev {
+    left: 16px;
+    right: auto;
+    transform: rotate(180deg);
+}
+
+.VM-swiper.s800-swiper .swiper-button-next {
+    left: auto;
+    right: 16px;
+    transform: rotate(0);
+}
+
+.VM-swiper.s800-swiper .VM-swiper-slide {
+    padding: 20px 16px 69px;
+    box-sizing: border-box;
+}
+
+.VM-swiper.s800-swiper .VM-swiper-slide.second-active .card-text {
+    display: none !important;
+}
+
+.VM-swiper.s800-swiper .VM-swiper-slide.second-active .card-explain {
+    display: block !important;
+}
+
+.VM-swiper.s800-swiper .VM-swiper-slide.second-active .card-top-icon {
+    display: none !important;
+}
+
+.VM-swiper.s800-swiper .VM-swiper-slide.second-active .card-bottom-icon {
+    display: block !important;
+}
+
+.VM-swiper.s800-swiper .card-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #fff;
+}
+
+.VM-swiper.s800-swiper .card-text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #fff;
+    text-align: justify;
+}
+
+.VM-swiper.s800-swiper .card-explain {
+    display: none;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    opacity: .5;
+    color: #fff;
+}
+
+.VM-swiper.s800-swiper .text-hint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 69px;
+}
+
+.VM-swiper.s800-swiper .icon-show {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 6px;
+    background-image: url($224785141%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+}
+
+.VM-swiper.s800-swiper .card-top-icon {
+    transform: rotate(180deg);
+}
+
+.VM-swiper.s800-swiper .card-bottom-icon {
+    display: none;
+}
+
+.VM-swiper.s800-swiper .swiper-index {
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    color: #fff;
+}
+
+.video-control {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 12px 12px 12px;
+    box-sizing: border-box
+}
+
+.video-control .video-control-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0
+}
+
+.video-control .video-progress_bar {
+    width: 280px;
+    height: 24px
+}
+
+.video-control .video-progress_outer {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    top: 11px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    cursor: pointer
+}
+
+.video-control .video-progress_inner {
+    position: relative;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transition: width .1s
+}
+
+.video-control .video-progress_btn {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border-radius: 50%
+}
+
+.video-control .video-control-btn {
+    margin-left: 12px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer
+}
+
+.video-control .video-mute {
+    background: url($140257316%) no-repeat center center;
+    background-size: 100%
+}
+
+.video-control .video-all {
+    background: url($140257317%) no-repeat center center;
+    background-size: 100%
+}
+
+.video-control .video-control-time {
+    width: 280px;
+    height: 13px;
+    margin-top: 1px
+}
+
+.video-control .scale-small {
+    position: relative;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: #FFFFFF;
+    width: 200%;
+    font-size: 20px;
+    line-height: 26px;
+    height: 50%;
+    transform: scale(.5);
+    transform-origin: left top
+}
+
+.video-control .video-play-time {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.video-control .video-all-time {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.frame_rate {
+    font-size: 12px;
+    width: 1rem;
+    height: 1rem;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto
+}
+
+.hot_ui,
+.btn_left_ui_3d,
+.btn_right_ui_3d,
+.btn_center_ui_3d,
+.btn_car_seat_rear {
+    width: 0.24rem;
+    pointer-events: auto
+}
+
+.btn_car_seat_front,
+.hot_ui_seat {
+    width: 0.32rem;
+    pointer-events: auto
+}
+
+.wheelhub-panel {
+    width: 0%;
+    height: 1.34rem;
+    bottom: 0.44rem;
+    right: 1.02rem
+}
+
+.wheelhub {
+    width: 100%;
+    right: 0%;
+    top: 0%
+}
+
+.wheelhub_close {
+    width: 0.16rem;
+    top: 0;
+    right: 0.04rem;
+    pointer-events: auto
+}
+
+.VM-ui-3d {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 10
+}
+
+.swiper-videojs-box .swiper-content-vd video,
+.swiper-videojs-box .video-js {
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    cursor: pointer;
+}
+
+.vjs-has-started.vjs-user-inactive .vjs-control-bar {
+    opacity: 1 !important
+}
+
+.swiper-videojs-box .video-js .vjs-fullscreen-control {
+    display: none
+}
+
+.swiper-videojs-box .video-js .vjs-tech {
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.swiper-videojs-box .video-js .vjs-big-play-button {
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    border: 0
+}
+
+.swiper-videojs-box .video-js .vjs-poster {
+    background-size: cover;
+    background-color: transparent
+}
+
+.swiper-videojs-box .video-js .vjs-slider {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.swiper-videojs-box .video-js .vjs-load-progress {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.swiper-videojs-box .video-js.vjs-paused .vjs-big-play-button .vjs-icon-placeholder::before {
+    height: 32px;
+    width: 32px;
+    background: url("$140256919%") no-repeat center center;
+    background-size: 100%;
+    content: ''
+}
+
+.swiper-videojs-box .video-js.vjs-seeking .vjs-big-play-button .vjs-icon-placeholder::before {
+    content: none
+}
+
+.swiper-videojs-box .video-js.vjs-scrubbing .vjs-big-play-button .vjs-icon-placeholder::before {
+    content: none
+}
+
+/* .swiper-videojs-box .video-js.vjs-user-active.vjs-paused .vjs-big-play-button .vjs-icon-placeholder::before{content:none} */
+.swiper-videojs-box .vjs-has-started .vjs-control-bar {
+    width: calc(100% - 36px);
+    background-color: revert;
+    position: absolute;
+    bottom: 22px;
+    align-items: center
+}
+
+.swiper-videojs-box .video-js .vjs-picture-in-picture-control {
+    display: none
+}
+
+.swiper-videojs-box .video-js .vjs-play-progress:before {
+    top: -1px;
+    font-size: 16px
+}
+
+.vjs-paused .vjs-big-play-button,
+.vjs-paused.vjs-has-started .vjs-big-play-button {
+    display: block
+}
+
+.swiper-videojs-box .video-js .vjs-current-time {
+    display: inherit;
+    position: absolute;
+    top: 14px;
+    left: 2px;
+    height: 13px;
+    font-size: 20px;
+    transform: scale(.5);
+    padding: 0
+}
+
+.swiper-videojs-box .video-js .vjs-duration,
+.swiper-videojs-box .vjs-no-flex .vjs-duration {
+    display: inline;
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    height: 13px;
+    font-size: 20px;
+    transform: scale(.5);
+    padding: 0
+}
+
+.swiper-videojs-box .video-js .vjs-progress-control .vjs-progress-holder {
+    margin: 0 0 0 12px;
+    height: 2px;
+    touch-action: auto;
+}
+
+.swiper-videojs-box .video-js .vjs-progress-control {
+    order: 1;
+    touch-action: auto;
+}
+
+.swiper-videojs-box .video-js .vjs-volume-panel {
+    order: 2;
+    max-width: 16px;
+    height: 16px;
+    width: 16px;
+    margin-right: 22px;
+    touch-action: auto;
+}
+
+.vjs-volume-bar.vjs-slider-horizontal {
+    display: none
+}
+
+.video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal,
+.video-js .vjs-volume-panel.vjs-hover .vjs-mute-control~.vjs-volume-control.vjs-volume-horizontal,
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal {
+    display: none
+}
+
+.swiper-videojs-box .swiper-videojs-box .video-js .vjs-volume-panel vjs-hover {
+    display: none
+}
+
+.swiper-videojs-box .swiper-videojs-box .video-js .vjs-volume-panel vjs-hover:hover {
+    display: none
+}
+
+.swiper-videojs-box .video-js .vjs-volume-panel .vjs-volume-control .vjs-volume-horizontal:hover {
+    display: none
+}
+
+.swiper-videojs-box .video-js .vjs-mute-control .vjs-icon-placeholder::before {
+    height: 16px;
+    width: 16px;
+    background: url("$140257316%") no-repeat center center;
+    background-size: 100%;
+    content: '';
+    margin-left: 12px
+}
+
+.swiper-videojs-box .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active {
+    width: 16px
+}
+
+.swiper-videojs-box .video-js.vjs-fullscreen .vjs-tech {
+    object-fit: contain
+}
+
+.swiper-videojs-box .video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before,
+.vjs-icon-volume-mute:before {
+    height: 16px;
+    width: 16px;
+    background: url("$140859258%") no-repeat center center;
+    background-size: 100%;
+    content: '';
+    margin-left: 12px
+}
+
+.swiper-videojs-box .video-js .vjs-fullscreen-control {
+    order: 3;
+    height: 16px;
+    width: 16px;
+    margin-right: 12px
+}
+
+.swiper-videojs-box .video-js .vjs-fullscreen-control .vjs-icon-placeholder::before {
+    height: 16px;
+    width: 16px;
+    background: url("$140257317%") no-repeat center center;
+    background-size: 100%;
+    content: ''
+}
+
+.swiper-videojs-box .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder::before,
+.vjs-icon-fullscreen-exit::before {
+    height: 16px;
+    width: 16px;
+    background: url("$140859259%") no-repeat center center;
+    background-size: 100%;
+    content: ''
+}
+
+.swiper-videojs-box .video-js .close-full-video {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url($140254585%) no-repeat center center;
+    background-size: 100%
+}
+
+.swiper-videojs-box .video-js.vjs-fullscreen .close-full-video {
+    display: block
+}
+
+.tire-information-main-box {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.tire-information-box {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    overflow: hidden
+}
+
+.tire-information-box .tire-information-left {
+    width: auto;
+    height: 100%
+}
+
+.tire-information-box .tire-information-left .horizontal-line {
+    position: absolute;
+    left: 0;
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    border-radius: 1px 1px 1px 1px;
+    animation-name: horizontal-line;
+    animation-duration: .5s;
+    animation-iteration-count: 1
+}
+
+.tire-information-box .tire-information-left .tire-information-horizontal-top-line {
+    top: 0
+}
+
+.tire-information-box .tire-information-left .tire-information-horizontal-bottom-line {
+    bottom: 0
+}
+
+.tire-information-box .tire-information-left .tire-information-vertical-line {
+    position: absolute;
+    left: 122px;
+    width: 0;
+    height: 100%;
+    opacity: 1;
+    border: 1px solid;
+    border-image: linear-gradient(218deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9800000190734863), rgba(255, 255, 255, 1)) 60 1;
+    animation-name: tire-information-vertical-line;
+    animation-duration: .7s;
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+.tire-information-box .tire-information-right {
+    position: relative;
+    top: 50%;
+    margin-top: -22.5px;
+    width: 0;
+    height: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    margin-left: 106px;
+    animation-name: tire-information-right;
+    animation-duration: .7s;
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+@keyframes horizontal-line {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 140px
+    }
+}
+
+@keyframes tire-information-vertical-line {
+    0% {
+        border-image: linear-gradient(218deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9800000190734863), rgba(255, 255, 255, 1)) 60 1
+    }
+
+    100% {
+        border-image: linear-gradient(218deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9800000190734863), rgba(255, 255, 255, 1)) 1 1
+    }
+}
+
+@keyframes tire-information-right {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+.tire-information-box .tire-information-right .tire-information-right-text {
+    height: auto;
+    padding: 0 12px;
+    border-radius: 100px;
+    font-size: 0;
+    margin-top: 18px
+}
+
+.tire-information-box .tire-information-right .tire-information-right-text-title {
+    font-size: 20px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 27px
+}
+
+.tire-information-box .tire-information-right .tire-information-right-text-main {
+    font-size: 14px;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 19px;
+    margin-left: 6px
+}
+
+.tire-information-box .tire-information-right .tire-information-right-close {
+    width: 16px;
+    height: 16px;
+    padding-right: 3px;
+    cursor: pointer
+}
+
+
+
+@keyframes openNavAni {
+    0% {
+        max-width: 0
+    }
+
+    100% {
+        max-width: 440px
+    }
+}
+
+@keyframes closeNavAni {
+    0% {
+        max-width: 440px
+    }
+
+    100% {
+        max-width: 0
+    }
+}
+
+@keyframes closeNavAni2 {
+    0% {
+        max-width: 400px
+    }
+
+    100% {
+        max-width: 64px
+    }
+}
+
+@keyframes opacityShow {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: .2
+    }
+
+    50% {
+        opacity: .3
+    }
+
+    70% {
+        opacity: .5
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes opacityhide {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes openInCarNavAni {
+    0% {
+        width: 0
+    }
+
+    100% {
+        /* width: 198px */
+        width: 298px
+    }
+}
+
+@keyframes closeInCarNavAni {
+    0% {
+        /* width: 198px */
+        width: 298px
+    }
+
+    100% {
+        width: 0
+    }
+}
+
+@keyframes openColorNavAni {
+    0% {
+        position: relative;
+        bottom: -100%;
+        opacit: 0
+    }
+
+    100% {
+        position: relative;
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes closeColorNavAni {
+    0% {
+        position: relative;
+        bottom: 0;
+        opacity: 1
+    }
+
+    100% {
+        position: relative;
+        bottom: -100%;
+        opacity: 0
+    }
+}
+
+@keyframes hxLeftToRight {
+    0% {
+        left: 18px;
+        width: 56px;
+        right: auto
+    }
+
+    30% {
+        left: 18px;
+        width: 150px;
+        right: auto
+    }
+
+    100% {
+        left: 98px;
+        width: 70px;
+        right: auto
+    }
+}
+
+@keyframes hxRightToLeft {
+    0% {
+        right: 18px;
+        width: 70px;
+        left: auto
+    }
+
+    30% {
+        right: 18px;
+        width: 150px;
+        left: auto
+    }
+
+    100% {
+        right: 112px;
+        width: 56px;
+        left: auto
+    }
+}
+
+@keyframes hxLeftToRightInterior {
+    0% {
+        right: auto;
+        left: calc(25% - 7px);
+    }
+
+    100% {
+        right: auto;
+        left: calc(75% - 14px);
+    }
+}
+
+@keyframes hxRightToLeftInterior {
+    0% {
+        right: calc(25% - 7px);
+        left: auto;
+    }
+
+    100% {
+        right: calc(75% - 14px);
+        left: auto;
+    }
+}
+
+@media (any-hover:hover) {
+
+    .dynamic-island-box .dynamic-island-text:hover,
+    .PK-box .PK-text:hover {
+        opacity: .7
+    }
+
+    .VM-footer .VM-footer-btn:hover {
+        opacity: .7
+    }
+
+    .dynamic-island-item.open-nav .dynamic-island-item-children-item:hover,
+    .PK-item.open-nav .PK-item-children-item:hover {
+        color: rgba(68, 68, 68, .7)
+    }
+
+    .car-interior-item.active:hover,
+    .car-space-item.active:hover {
+        color: rgba(51, 51, 51, .7)
+    }
+}
+
+@media screen and (max-width:733px) {
+    .VM-main {
+        padding: 0 24px
+    }
+
+    .VM-footer {
+        padding: 0 24px
+    }
+}
+
+@media screen and (min-width:1366px) {
+    .VM-main {
+        padding: 0 40px
+    }
+
+    .dynamic-island-main.in-car-main::after {
+        display: none
+    }
+
+    .dynamic-island-main .VM-icon-back {
+        display: none
+    }
+
+    .VM-header {
+        height: 64px
+    }
+
+    .VM-footer {
+        padding: 0 40px
+    }
+
+    .VM-header .select-box {
+        font-size: 24px
+    }
+
+    .VM-header button {
+        line-height: 64px
+    }
+
+    .VM-header .VM-header-left {
+        left: 0
+    }
+
+    .VM-header .tab-car-list {
+        top: 15px;
+        bottom: bottom;
+    }
+
+    .VM-swiper .VM-swiper-box {
+        width: 768px;
+        height: 360px
+    }
+
+    .VM-swiper .swiper-content-box {
+        width: calc(100% - 128px)
+    }
+
+    .VM-swiper .swiper-close {
+        right: 80px;
+    }
+
+    .swiper-content-tb .swiper-text-title-box {
+        height: calc(100% - 261px);
+        margin-top: 261px
+    }
+
+    .swiper-content-tb .swiper-text-title-box.no-content {
+        height: calc(100% - 273px);
+        margin-top: 273px
+    }
+
+    .VM-swiper-slide:nth-of-type(1) .swiper-videojs-box .video-js .vjs-poster {
+        background-image: url('$141693399%') !important
+    }
+
+    .VM-swiper-slide:nth-of-type(2) .swiper-videojs-box .video-js .vjs-poster {
+        background-image: url('$141693395%') !important
+    }
+
+    .swiper-content-tb::after {
+        height: 99px
+    }
+
+    .swiper-content-tb .swiper-text-title-box {
+        width: calc(100% - 39px);
+        padding-right: 16px
+    }
+
+    .swiper-content .swiper-text-title {
+        font-size: 20px;
+        line-height: 27px
+    }
+
+    .swiper-content-tb .swiper-text-hint {
+        font-size: 12px
+    }
+
+    .swiper-content .swiper-text-content {
+        font-size: 16px
+    }
+}
+
+/* 合并内容 */
+.VM-main.VM-model {
+    display: block;
+    padding: 0;
+    z-index: 11
+}
+
+.select-vehicle-model {
+    font-size: 16px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 21px
+}
+
+.VM-selectVehicleModel-box {
+    position: relative;
+    left: -100%;
+    height: 100%;
+    transition: left .5s;
+    z-index: 200;
+    pointer-events: auto
+}
+
+/* .VM-selectVehicleModel-box-close{left:-100%;} */
+.VM-selectVehicleModel-box-open {
+    left: 0;
+}
+
+.VM-selectVehicleModel-box-right {
+    position: absolute;
+    right: -100%;
+    height: 100%;
+    z-index: 200;
+    transition: right .5s;
+    pointer-events: auto
+}
+
+/* .VM-selectVehicleModel-box-right-close{right:-100%;} */
+.VM-selectVehicleModel-box-right-open {
+    right: 0;
+
+}
+
+.VM-selectVehicleModel {
+    position: relative;
+    height: 100%;
+    padding-top: 24px;
+    box-sizing: border-box;
+    background: #FFFFFF
+}
+
+.top {
+    margin: 0;
+    padding: 13px 12px 14px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 21px;
+    font-size: 16px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .9)
+}
+
+.close:hover {
+    cursor: pointer
+}
+
+.grey-close {
+    width: 16px;
+    height: 16px;
+    cursor: pointer
+}
+
+.car-select-list {
+    height: calc(100% - 50px);
+    overflow: auto
+}
+
+.main-details {
+    margin: 0 12px 8px 12px;
+    position: relative;
+    height: 112px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    cursor: pointer
+}
+
+.main-details.active {
+    border-color: rgba(51, 51, 51, .9)
+}
+
+.main-details .details-box {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 12px;
+    font-size: 0
+}
+
+.main-details .title {
+    font-size: 12px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.9;
+    line-height: 16px;
+    margin-bottom: 2px;
+    vertical-align: top
+}
+
+.main-details .details {
+    display: inline-block;
+    padding-top: 3px;
+    font-size: 18px;
+    transform: scale(.5);
+    transform-origin: left center;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: #000000;
+    opacity: 0.9;
+    line-height: 12px;
+    width: 45px;
+    white-space: nowrap;
+    vertical-align: top
+}
+
+.main-details .money {
+    margin: 0 4px;
+    font-size: 12px;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: #000000;
+    opacity: 0.9;
+    line-height: 16px
+}
+
+.main-details .car-details {
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
+    height: 112px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 12px
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: #F5F5F5
+}
+
+
+.tire-box {
+    position: absolute;
+    bottom: 20px;
+    left: 69px;
+    z-index: 20;
+    pointer-events: auto
+}
+
+.hide-tire-box {
+    position: absolute;
+    bottom: 20px;
+    left: 33px;
+    display: none;
+    pointer-events: auto
+}
+
+.tire-box-hide {
+    display: flex;
+    justify-content: space-between;
+    position: absolute
+}
+
+.tire-btn {
+    font-size: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tire-btn:last-of-type {
+    margin-right: 0;
+}
+
+.rearWheel-img {
+    margin-bottom: 13px;
+}
+
+.greyRearWheel-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 0px 0px 0px 0px;
+    margin: 0px 0 13px 0px
+}
+
+.greyTireSize {
+    font-size: 14px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 18px;
+    opacity: .5;
+    text-align: center
+}
+
+.tireSize {
+    font-size: 14px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 18px;
+    text-align: center
+}
+
+.tire-box-block {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0
+}
+
+.left-rearWheel-img {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 62px;
+    height: 62px
+}
+
+.right-rearWheel-img {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 62px;
+    height: 62px
+}
+
+.rearWheel-img-outer {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 4px;
+    animation: rotate-ani 4s linear infinite
+}
+
+@keyframes rotate-ani {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(-360deg)
+    }
+}
+
+.AllRearWheel-hide {
+    /* visibility: hidden */
+    opacity: .5;
+}
+
+.car-trunk-box {
+    position: absolute;
+    top: 38%;
+    left: 63%;
+    max-width: 308px;
+    display: block
+}
+
+.car-trunk-box-main {
+    display: inline-block
+}
+
+.car-trunk-box .car-trunk {
+    display: none;
+    color: var(--text-color);
+    background: var(--bg2-color);
+    border-radius: 12px 12px 12px 12px;
+    padding: 12px 16px
+}
+
+.car-trunk-box .car-trunk p:nth-child(1) {
+    font-size: 16px;
+    font-family: Harmony-Medium, HarmonyHeiTi-Medium, HarmonyHeiTi;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 27px;
+    margin-bottom: 8px;
+    text-align: justify;
+}
+
+.car-trunk-box .car-trunk p:nth-child(2) {
+    font-size: 14px;
+    font-family: Harmony-Regular, HarmonyHeiTi-Regular, HarmonyHeiTi;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 24px;
+    opacity: .6;
+    text-align: justify;
+}
+
+@media screen and (max-width:1350px) {
+    .car-trunk-box {
+        left: 63%;
+        max-width: 215px;
+    }
+}
+
+
+@media screen and (max-width:733px) {
+    .hide-tire-box {
+        position: absolute;
+        bottom: 32px;
+        left: 33px;
+        display: none;
+        pointer-events: auto
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .greyWheel {
+        /* width: 62px; */
+        margin-right: 40px
+    }
+
+    .center-greyFrontWheel {
+        /* width: 62px; */
+        margin-right: 40px
+    }
+
+    .showWheel {
+        margin-right: 40px;
+        /* width: 62px */
+    }
+
+    .center-frontWheel {
+        margin-right: 40px
+    }
+
+    .hide-tire-box {
+        left: 40px;
+        bottom: 20px
+    }
+
+    .greyRearWheel-img {
+        width: 62px;
+        height: 62px
+    }
+
+    .rearWheel-img {
+        width: 62px;
+        height: 62px
+    }
+}
+
+@media screen and (min-width:1351px) {
+    .greyWheel {
+        /* width: 70px; */
+        margin-right: 60px
+    }
+
+    .center-greyFrontWheel {
+        /* width: 70px; */
+        margin-right: 60px
+    }
+
+    .showWheel {
+        /* width: 70px; */
+        margin-right: 60px
+    }
+
+    .center-frontWheel {
+        margin-right: 60px
+    }
+
+    .hide-tire-box {
+        left: 141px;
+        bottom: 100px
+    }
+
+    .greyRearWheel-img {
+        width: 70px;
+        height: 70px
+    }
+
+    .rearWheel-img {
+        width: 70px;
+        height: 70px
+    }
+}
+
+@media screen and (min-width:1366px) {
+    .VM-selectVehicleModel-box {
+        width: 316px
+    }
+
+    .top {
+        padding: 16px 40px 16px 40px
+    }
+
+    .main-details {
+        width: 234px;
+        height: 133px;
+        margin: 0 40px 12px 40px
+    }
+
+    .car-details {
+        height: 133px
+    }
+}
+
+@media screen and (max-width:826px) {
+    .VM-selectVehicleModel-box {
+        width: 240px
+    }
+
+    .top {
+        padding: 14px 12px 14px 12px
+    }
+
+    .main-details {
+        width: 214px;
+        height: 112px;
+        margin: 0 12px 8px 12px
+    }
+
+    .car-details {
+        height: 112px
+    }
+
+    .VM-footer {
+        bottom: 36px;
+    }
+
+    .dynamic-island-btn,
+    .PK-btn {
+        bottom: 12px;
+    }
+
+    .dynamic-island-btn .hint,
+    .PK-btn .hint {
+        margin-top: 12px;
+        font-size: 9px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (min-width:827px) and (max-width:1365px) {
+    .VM-selectVehicleModel-box {
+        width: 292px
+    }
+
+    .top {
+        padding: 13px 24px 16px 24px
+    }
+
+    .main-details {
+        width: 243px;
+        height: 112px;
+        margin: 0 24px 8px 24px
+    }
+
+    .car-details {
+        height: 112px
+    }
+
+    .dynamic-island-btn,
+    .PK-btn {
+        bottom: 12px;
+    }
+
+    .dynamic-island-btn .hint,
+    .PK-btn .hint {
+        margin-top: 12px;
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .VM-footer {
+        bottom: 36px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .VM-btn-box-bottom {
+        transform: scale(.8);
+        transform-origin: right bottom;
+    }
+
+    .dynamic-island-main .dynamic-island-list {
+        transform: scale(.8);
+        transform-origin: center bottom;
+    }
+
+    .VM-footer button {
+        margin-top: 42px;
+    }
+}
+
+
+.embedding-container .dynamic-island-btn .hint {
+    margin-top: 57px;
+    font-size: 9px;
+    line-height: 12px;
+}
+
+.embedding-container .VM-footer button {
+    margin-top: 51px;
+}
+
+/* 竖屏样式 */
+.embedding-container .VM-main {
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 16px !important;
+    transform: none !important
+}
+
+.embedding-container .VM-icon-back {
+    padding-left: 0 !important
+}
+
+.embedding-container .VM-main.VM-model {
+    padding: 0 !important
+}
+
+.embedding-container .VM-footer-btn:first-of-type {
+    margin-left: 0
+}
+
+.embedding-container .PK-main .VM-header {
+    position: static;
+    flex-wrap: wrap;
+}
+
+.embedding-container .PK-main .VM-header-select {
+    width: 100%;
+    z-index: 9;
+}
+
+.embedding-container .PK-main .VM-header-select:first-of-type .select-box {
+    position: relative;
+    top: 0px;
+}
+
+.embedding-container .PK-main .VM-header-select:last-of-type {
+    position: absolute;
+    top: calc(50% + 10px);
+}
+
+.embedding-container .PK-main .VM-header-select:last-of-type .select-box {
+    margin-left: 0;
+}
+
+.embedding-container .pk-color-nav {
+    width: 100%;
+    height: 40px;
+    min-height: 0;
+    justify-content: center;
+}
+
+.embedding-container .pk-color-nav .animation-box {
+    width: auto;
+}
+
+.embedding-container .pk-color-nav.open-nav .animation-box {
+    max-width: 458px;
+}
+
+.embedding-container .pk-color-nav .pk-color-list {
+    padding: 7px 12px;
+}
+
+.embedding-container .pk-color-nav .pk-color-item {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.embedding-container .pk-color-left-nav {
+    position: absolute;
+    top: calc(50% - 36px);
+    left: 0;
+}
+
+.embedding-container .pk-color-right-nav {
+    position: absolute;
+    top: calc(100% - 75px);
+    right: 0;
+}
+
+.embedding-container .PK-main .hint {
+    display: none;
+}
+
+.embedding-container .pk-in-car-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.embedding-container .pk-in-car-box {
+    width: 100%;
+    height: 40px;
+}
+
+.embedding-container .pk-in-car-left-box {
+    position: absolute;
+    top: calc(50% - 36px);
+}
+
+.embedding-container .pk-in-car-right-box {
+    position: absolute;
+    top: calc(100% - 36px);
+}
+
+.embedding-container .dynamic-island-main .dynamic-island-list {
+    transform-origin: bottom;
+}
+
+.embedding-container .VM-swiper.s800-swiper .VM-swiper-box {
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: 40px;
+    width: calc(100% - 32px);
+    height: 196px;
+    transform: translate(0);
+}
+
+.embedding-container .VM-swiper.s800-swiper .swiper-close.swiper-close_white {
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 12px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .swiper-button {
+    width: 32px;
+    height: 32px;
+    top: auto;
+    bottom: 4px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .swiper-button-prev {
+    left: 4px;
+    right: auto;
+}
+
+.embedding-container .VM-swiper.s800-swiper .swiper-button-next {
+    left: auto;
+    right: 4px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .VM-swiper-slide {
+    padding: 16px 12px 46px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .card-title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .card-text {
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .card-explain {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .text-hint {
+    height: 46px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .icon-show {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 6px;
+    background-size: 13px;
+}
+
+.embedding-container .VM-swiper.s800-swiper .swiper-index {
+    margin-bottom: 13px;
+    font-size: 10px;
+    line-height: 13px;
+}
+
+
+@media screen and (max-width:650px) {
+    .embedding-container .dynamic-island-main .dynamic-island-list {
+        transform: scale(1);
+        transform-origin: bottom;
+    }
+
+    .embedding-container .dynamic-island-main .VM-btn-box-bottom {
+        transform: scale(1);
+        transform-origin: bottom;
+    }
+
+    .embedding-container .VM-3D-maps {
+        /*display:none!important;*/
+        position: fixed;
+        top: 97px;
+        left: 16px
+    }
+
+    .embedding-container .VM-btn-box-bottom {
+        justify-content: center
+    }
+
+    .embedding-container .VM-swiper .VM-swiper-box {
+        width: 100%;
+        height: 140px;
+    }
+
+    .embedding-container .VM-swiper .swiper-button-next {
+        right: 16px;
+    }
+
+    .embedding-container .VM-swiper .swiper-button-prev {
+        left: 16px;
+    }
+
+    .embedding-container .VM-swiper .swiper-close {
+        top: 0;
+        right: 56px;
+        width: 40px;
+        height: 40px;
+        background-size: 16px;
+        background-position: center;
+    }
+
+    .embedding-container .VM-swiper .swiper-content-box .icon-show {
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background-size: 12px;
+    }
+
+    .embedding-container .VM-swiper .swiper-content-box .card-top-icon {
+        /* top: 16px; */
+        bottom: -12px;
+    }
+
+    .embedding-container .VM-swiper .swiper-content-box .card-bottom-icon {
+        /* bottom: 16px; */
+        bottom: -12px;
+    }
+
+    .embedding-container .VM-swiper .swiper-index {
+        right: 12px;
+        bottom: 12px;
+        line-height: 16px;
+    }
+
+    .embedding-container .swiper-content-tb .swiper-text-title-box {
+        width: calc(100% - 35px);
+        height: 37px;
+        margin-top: 91px;
+        padding: 0 8px 0 12px;
+    }
+
+    .embedding-container .swiper-content-tb.scroll-wrap .swiper-text-title-box {
+        margin-top: 0;
+        padding-top: 8PX;
+    }
+
+    .embedding-container .swiper-content .swiper-text-title {
+        margin-bottom: 2px;
+        line-height: 19px;
+        font-size: 14px;
+    }
+
+    .embedding-container .swiper-content .swiper-text-content {
+        line-height: 16px;
+        font-size: 12px;
+    }
+
+    .embedding-container .dynamic-island-main .VM-btn-box-bottom {
+        width: 100%;
+        transform-origin: bottom;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .car-trunk-box {
+        transform: scale(.8);
+        transform-origin: left top;
+    }
+
+    .embedding-container .dynamic-island-main .dynamic-island-list {
+        transform: scale(.8);
+        transform-origin: bottom;
+    }
+
+    .embedding-container .dynamic-island-main .VM-btn-box-bottom {
+        transform: scale(.8);
+        transform-origin: bottom;
+    }
+
+    .embedding-container .VM-header .select-box {
+        font-size: 16px;
+    }
+
+    .embedding-container .VM-header .VM-icon-back {
+        width: 29px;
+        height: 36px;
+        background-size: 16px;
+    }
+
+    .embedding-container .VM-header .VM-icon-back.in-car-box {
+        background-size: 20px;
+    }
+
+    .embedding-container .VM-header .VM-icon-arrow {
+        width: 9px;
+    }
+
+    .embedding-container .VM-selectVehicleModel-box,
+    .embedding-container .VM-selectVehicleModel-box-right {
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: -100%;
+        transition: top .5s;
+        will-change: top;
+    }
+
+    .embedding-container .top {
+        padding: 13px 16px 14px 16px
+    }
+
+    .embedding-container .main-details {
+        width: auto;
+        margin: 0 16px 8px 16px
+    }
+
+    .embedding-container .VM-selectVehicleModel {
+        /* height: 536px; */
+        height: 70%;
+        overflow: auto
+    }
+
+    .embedding-container .VM-selectVehicleModel-box-open,
+    .embedding-container .VM-selectVehicleModel-box-right-open {
+        top: 0;
+        /* transform: translateY(0); */
+    }
+
+    .embedding-container .car-trunk-box {
+        left: auto;
+        right: 16px;
+    }
+}
+
+.loading_progress {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: red;
+    font-size: 40px;
+    font-weight: 900;
+    background: rgba(0, 0, 0, .95);
+}
+
+.embedding-container .VM-header .tab-car-list {
+    min-width: 144px;
+    top: auto;
+    bottom: -31px;
+}
+
+.embedding-container .dynamic-island-color-name,
+.embedding-container .dynamic-island-in-color-name,
+.embedding-container .in-car-color-name {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    height: 24px;
+    line-height: 24px;
+    font-size: 10px;
+}
+
+.embedding-container .tire-box {
+    max-width: calc(100% - 40px);
+    overflow-x: auto;
+}
+
+.embedding-container .hide-tire-box {
+    left: 20px;
+    bottom: 9px;
+}
+
+.embedding-container .tire-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 62px;
+}
+
+.embedding-container .greyTireSize,
+.embedding-container .tireSize {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    width: 100%;
+    margin-right: 36px;
+}
+
+.embedding-container .greyTireSize:first-of-type,
+.embedding-container .tireSize:first-of-type {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.embedding-container .greyTireSize:last-of-type,
+.embedding-container .tireSize:last-of-type {
+    font-weight: 400;
+    font-size: 10px;
+}
+
+/* 横屏 */
+@media screen and (min-aspect-ratio: 10/7) and (max-height: 720px) {
+    .VM-header .tab-car-list {
+        left: 24px;
+        top: auto;
+        bottom: 0;
+        transform: translateX(0) translateY(100%);
+    }
+
+    .dynamic-island-color-name,
+    .dynamic-island-in-color-name,
+    .in-car-color-name {
+        position: relative;
+        top: 50%;
+        left: auto;
+        margin-left: 4px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 10px;
+    }
+
+    .hide-tire-box {
+        left: 20px;
+        bottom: 9px;
+    }
+
+    .tire-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 62px;
+    }
+
+    .greyTireSize,
+    .tireSize {
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        width: 100%;
+        margin-right: 36px;
+    }
+
+    .greyTireSize:first-of-type,
+    .tireSize:first-of-type {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .greyTireSize:last-of-type,
+    .tireSize:last-of-type {
+        font-weight: 400;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1) and (max-width: 1366px) {
+    .VM-swiper.s800-swiper {
+        padding: 0 14px;
+    }
+
+    .VM-swiper.s800-swiper .VM-swiper-box {
+        left: 16px;
+        right: auto;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(calc(-50% + 30px));
+        width: 240px;
+        height: 256px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-close.swiper-close_white {
+        width: 24px;
+        height: 24px;
+        top: 16px;
+        right: 12px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-button {
+        width: 32px;
+        height: 32px;
+        top: auto;
+        bottom: 4px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-button-prev {
+        left: 4px;
+        right: auto;
+    }
+
+    .VM-swiper.s800-swiper .swiper-button-next {
+        left: auto;
+        right: 4px;
+    }
+
+    .VM-swiper.s800-swiper .VM-swiper-slide {
+        padding: 16px 12px 46px;
+    }
+
+    .VM-swiper.s800-swiper .card-title {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .VM-swiper.s800-swiper .card-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .VM-swiper.s800-swiper .card-explain {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .VM-swiper.s800-swiper .text-hint {
+        height: 46px;
+    }
+
+    .VM-swiper.s800-swiper .icon-show {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 6px;
+        background-size: 12px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-index {
+        margin-bottom: 13px;
+        font-size: 10px;
+        line-height: 13px;
+    }
+}
+
+/* 竖版版 */
+@media screen and (max-aspect-ratio: 1) and (max-width: 1366px) {
+    .VM-swiper.s800-swiper {
+        padding: 0 24px;
+    }
+
+    .VM-swiper.s800-swiper .VM-swiper-box {
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: 40px;
+        width: calc(100% - 48px);
+        height: 166px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-close.swiper-close_white {
+        width: 24px;
+        height: 24px;
+        top: 16px;
+        right: 12px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-button {
+        width: 32px;
+        height: 32px;
+        top: auto;
+        bottom: 4px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-button-prev {
+        left: 4px;
+        right: auto;
+    }
+
+    .VM-swiper.s800-swiper .swiper-button-next {
+        left: auto;
+        right: 4px;
+    }
+
+    .VM-swiper.s800-swiper .VM-swiper-slide {
+        padding: 16px 12px 46px;
+    }
+
+    .VM-swiper.s800-swiper .card-title {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .VM-swiper.s800-swiper .card-text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .VM-swiper.s800-swiper .card-explain {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .VM-swiper.s800-swiper .text-hint {
+        height: 46px;
+    }
+
+    .VM-swiper.s800-swiper .icon-show {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 6px;
+        background-size: 12px;
+    }
+
+    .VM-swiper.s800-swiper .swiper-index {
+        margin-bottom: 13px;
+        font-size: 10px;
+        line-height: 13px;
+    }
+}
+
+/* 暗色主题 */
+.dark-theme .VM-main.VM-mask-main::after,
+.VM-main.dark-theme.VM-mask-main::after {
+    display: none;
+}
+
+.dark-theme .VM-header .VM-icon-back {
+    background-image: url('$141007396%');
+}
+
+.dark-theme .VM-header .VM-icon-arrow {
+    background-image: url('$282939345%');
+}
+
+.dark-theme .event_none {
+    cursor: not-allowed !important;
+}

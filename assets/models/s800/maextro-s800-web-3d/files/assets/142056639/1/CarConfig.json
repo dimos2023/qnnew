@@ -1,0 +1,226 @@
+[
+    {
+        "id": 0,
+        "carName": "尊界 S800",
+        "assetId": 229370383,
+        "sceneName": "5008010020201",
+        "size": {
+            "long": 5480,
+            "width": 2000,
+            "height": 1536
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 228242844,
+        "cameraFoldConfig": 228242775,
+        "cameraMagicWindowConfig": 228242792,
+        "cameraConfigPortrait": 228242843
+    },
+    {
+        "id": 1,
+        "carName": "尊界 S800",
+        "assetId": 240445812,
+        "sceneName": "5008010020301",
+        "size": {
+            "long": 5480,
+            "width": 2000,
+            "height": 1536
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 240435231,
+        "cameraFoldConfig": 240435234,
+        "cameraMagicWindowConfig": 240435233,
+        "cameraConfigPortrait": 240435232
+    },
+    {
+        "id": 2,
+        "carName": "问界 M9 纯电 Ultra 六座版",
+        "assetId": 220555575,
+        "sceneName": "5008010004501",
+        "size": {
+            "long": 5230,
+            "width": 1999,
+            "height": 1800
+        },
+        "wheelHubUI": 3,
+        "cameraConfig": 220554055,
+        "cameraFoldConfig": 220554059,
+        "cameraMagicWindowConfig": 220554060,
+        "cameraConfigPortrait": 220554062
+    },
+    {
+        "id": 3,
+        "carName": "问界 M8 增程 UItra 六座版",
+        "assetId": 223090680,
+        "sceneName": "5008010007101",
+        "size": {
+            "long": 5190,
+            "width": 1999,
+            "height": 1795
+        },
+        "wheelHubUI": 2,
+        "cameraConfig": 223098388,
+        "cameraFoldConfig": 223098645,
+        "cameraMagicWindowConfig": 223098647,
+        "cameraConfigPortrait": 223098649
+    },
+    {
+        "id": 4,
+        "carName": "问界 M7 Ultra",
+        "assetId": 180798977,
+        "sceneName": "50080100143",
+        "size": {
+            "long": 5020,
+            "width": 1945,
+            "height": 1760
+        },
+        "wheelHubUI": 2,
+        "cameraConfig": 182931093,
+        "cameraFoldConfig": 182931103,
+        "cameraMagicWindowConfig": 183003855,
+        "cameraConfigPortrait": 182979987
+    },
+    {
+        "id": 5,
+        "carName": "问界 M7 增程 Ultra 五座版",
+        "assetId": 257545846,
+        "sceneName": "5008010023501",
+        "size": {
+            "long": 5080,
+            "width": 1999,
+            "height": 1780
+        },
+        "wheelHubUI": 2,
+        "cameraConfig": 251425560,
+        "cameraFoldConfig": 251425564,
+        "cameraMagicWindowConfig": 251425567,
+        "cameraConfigPortrait": 251425569
+    },
+    {
+        "id": 6,
+        "carName": "问界 新M5 增程 Ultra 四驱版",
+        "assetId": 214713569,
+        "sceneName": "5008010013301",
+        "size": {
+            "long": 4785,
+            "width": 1930,
+            "height": 1625
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 214713317,
+        "cameraFoldConfig": 214713342,
+        "cameraMagicWindowConfig": 214713333,
+        "cameraConfigPortrait": 214713319
+    },
+    {
+        "id": 7,
+        "carName": "智界 R7 纯电 Ultra",
+        "assetId": 245541852,
+        "sceneName": "5008010015901",
+        "size": {
+            "long": 4982,
+            "width": 1981,
+            "height": 1634
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 245541769,
+        "cameraFoldConfig": 245541770,
+        "cameraMagicWindowConfig": 245541803,
+        "cameraConfigPortrait": 245541804
+    },
+    {
+        "id": 8,
+        "carName": "智界 新S7 Ultra",
+        "assetId": 244954876,
+        "sceneName": "5008010010601",
+        "size": {
+            "long": 4971,
+            "width": 1963,
+            "height": 1460
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 244954814,
+        "cameraFoldConfig": 244954815,
+        "cameraMagicWindowConfig": 244954817,
+        "cameraConfigPortrait": 244954820
+    },
+    {
+        "id": 12,
+        "carName": "享界 S9 增程 Ultra",
+        "assetId": 266490283,
+        "sceneName": "50080100157",
+        "size": {
+            "long": 5160,
+            "width": 2005,
+            "height": 1486
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 190708984,
+        "cameraFoldConfig": 190709051,
+        "cameraMagicWindowConfig": 190709052,
+        "cameraConfigPortrait": 190709053
+    },
+    {
+        "id": 10,
+        "carName": "尚界 H5 增程 Max",
+        "assetId": 248239233,
+        "sceneName": "5008010028001",
+        "size": {
+            "long": 4770,
+            "width": 1912,
+            "height": 1655
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 248239234,
+        "cameraFoldConfig": 248239681,
+        "cameraMagicWindowConfig": 248239682,
+        "cameraConfigPortrait": 248239683
+    },
+    {
+        "id": 11,
+        "carName": "享界 S9T 纯电 Ultra",
+        "assetId": 253397547,
+        "sceneName": "5008010029801",
+        "size": {
+            "long": 5160,
+            "width": 2005,
+            "height": 1492
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 253226381,
+        "cameraFoldConfig": 253226375,
+        "cameraMagicWindowConfig": 253226378,
+        "cameraConfigPortrait": 253226380
+    },
+    {
+        "id": 12,
+        "carName": "问界 M6 增程 Ultra 四驱版",
+        "assetId": 282985611,
+        "sceneName": "M6",
+        "size": {
+            "long": 4960,
+            "width": 1985,
+            "height": 1736
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 282821623,
+        "cameraFoldConfig": 282821624,
+        "cameraMagicWindowConfig": 282821625,
+        "cameraConfigPortrait": 282821626
+    },
+    {
+        "id": 9,
+        "carName": "旧的享界 S9 增程 Ultra",
+        "assetId": 190705756,
+        "sceneName": "---50080100157---",
+        "size": {
+            "long": 5160,
+            "width": 2005,
+            "height": 1486
+        },
+        "wheelHubUI": 1,
+        "cameraConfig": 190708984,
+        "cameraFoldConfig": 190709051,
+        "cameraMagicWindowConfig": 190709052,
+        "cameraConfigPortrait": 190709053
+    }
+]

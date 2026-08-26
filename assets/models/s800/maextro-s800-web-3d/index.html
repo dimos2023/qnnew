@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
+<meta charset='utf-8'>
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:;base64,=">
+<style>:root{color-scheme:dark;}</style>
+<!-- auto-china: show only the car. The Huawei-mall DOM chrome (header, share,
+     "dynamic-island" option panels, vehicle/tire/trunk modals, loading bar) is
+     an overlay rooted at .VM-main-root and siblings; the WebGL car canvas
+     (#application-canvas / .VM-main-root-3d) is separate, so hiding the chrome
+     leaves just the rotatable car. Our configurator side panel drives options. -->
+<style>
+  .VM-main-root,
+  .VM-model,
+  .VM-selectVehicleModel-box,
+  .tire-box,
+  .car-trunk-box { display: none !important; }
+  #application-canvas, .VM-main-root-3d { display: block !important; }
+  html, body { background: transparent !important; }
+</style>
+<!-- auto-china: replace the branded PlayCanvas loading splash (logo + progress
+     bar) with a plain spinner on a clean backdrop. The splash element is still
+     created/removed by the engine on app-start, so the spinner's timing is
+     correct — it shows during load and disappears when the car is ready. -->
+<style>
+  #application-splash-wrapper {
+    /* Anchor to the viewport edges so the spinner centers in ANY embed
+       height — the mall build sizes this wrapper off percentage heights,
+       which collapse in small/legacy WebView embeds and left the spinner
+       hugging the top of the app's 240dp stage. */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    background: #0d0d0d !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  #application-splash-wrapper * { display: none !important; }
+  #application-splash-wrapper::after {
+    content: "";
+    width: 48px; height: 48px;
+    border: 4px solid rgba(255, 255, 255, 0.18);
+    border-top-color: #EED29F;
+    border-radius: 50%;
+    animation: mx-spin 0.9s linear infinite;
+  }
+  @keyframes mx-spin { to { transform: rotate(360deg); } }
+</style>
+<title>Maextro S800</title>
+<script src="engine.js"></script>
+<script src="__settings__.js"></script>
+<script src="custom/files/overrideSetting.js"></script>
+<script src="custom/files/AssetPreloadMgr.js"></script>
+<!-- auto-china: bridge so our configurator's side panel drives the car.
+     COLORS & WHEELS are applied via the car script (carX6, reached through
+     pc.app). The VIEW is driven by clicking the mall's OWN hidden nav controls,
+     so the operate-mode, camera, interior mode, drag direction and door state
+     all stay in sync exactly like the official viewer (no camera/contrary hacks).
+     nav data-index: 1 = 颜色/exterior, 3 = 内饰/interior; interior sub-tab
+     data-index 32 = 车内 (driver's seat). Parent posts
+     {type:'maextroSetOption', kind, value:'e5'} and
+     {type:'maextroSetView', view:'exterior'|'interior'}. -->
+<script>
+(function () {
+  var MAP = {
+    exterior: {e1: 3, e2: 1, e3: 5, e4: 2, e5: 0, e6: 4}, // DoSwitchColorOut
+    interior: {i1: 0, i2: 2, i3: 4, i4: 4, i5: 1, i6: 3}, // DoSwitchColorIn
+    wheels:   {w1: 2, w2: 0, w3: 1},                       // DoChangeWheelHub
+  };
+  var pending = {};            // kind -> index, applied once the car script is ready
+  var pendingView = null;      // 'exterior'|'interior', applied once the nav exists
+  var currentView = 'exterior'; // where the camera currently is (avoid replaying)
+  function carScript() {
+    var app = window.pc && pc.app;
+    var car = app && app.root && app.root.findByName('X6_S800');
+    return (car && car.script && car.script.carX6) || null;
+  }
+  function cameraScript() {
+    var app = window.pc && pc.app;
+    var cam = app && app.root && app.root.findByName('Camera');
+    return (cam && cam.script && cam.script.camera) || null;
+  }
+  var INITIAL_DIST = 7.2; // exterior default distance (matches stepDataX6 step 0)
+  function apply(kind, idx) {
+    var s = carScript();
+    if (!s) { pending[kind] = idx; return false; }
+    try {
+      if (kind === 'exterior' && s.DoSwitchColorOut) s.DoSwitchColorOut(idx);
+      else if (kind === 'interior' && s.DoSwitchColorIn) s.DoSwitchColorIn(idx);
+      else if (kind === 'wheels' && s.DoChangeWheelHub) s.DoChangeWheelHub(idx);
+      else return false;
+      return true;
+    } catch (err) { console.warn('[maextro bridge]', kind, idx, err); return false; }
+  }
+  function clickEl(sel) {
+    var el = document.querySelector(sel);
+    if (!el) return false;
+    el.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
+    return true;
+  }
+  function navReady() {
+    return !!document.querySelector('.dynamic-island-item[data-index="1"]');
+  }
+  // Drive the view through the mall's own (hidden) nav so everything stays synced.
+  function setView(view) {
+    if (!navReady()) { pendingView = view; return; }
+    // Already inside and asked for interior again (e.g. switching interior
+    // colors) — keep the current camera, don't replay the exit/re-enter.
+    if (view === 'interior' && currentView === 'interior') return;
+    // Close any door the user opened via the 3D hotspot first — an open door
+    // leaves the car in a state that blocks the view change (the mall does the
+    // same via its EnterCar -> CloseCarDoor).
+    var s = carScript();
+    if (s && s.CloseAllDoor) { try { s.CloseAllDoor(); } catch (e) {} }
+    if (view === 'interior') {
+      // Stagger the two interior clicks: clicking them back-to-back can drop the
+      // second (or stall right after opening a door); a short gap lets each
+      // transition register. 内饰 -> then 车内 (driver's seat).
+      setTimeout(function () { clickEl('.dynamic-island-item[data-index="3"]'); }, 250);
+      setTimeout(function () { clickEl('.dynamic-island-item-children-item[data-index="32"]'); }, 600);
+    } else {
+      clickEl('.dynamic-island-item[data-index="1"]');                 // 颜色 / exterior
+      // Clicking 颜色 when already in that section doesn't re-frame, so force the
+      // zoom back to the initial distance (the camera lerps to targetDistance).
+      var cs = cameraScript();
+      if (cs) cs.targetDistance = INITIAL_DIST;
+    }
+    currentView = view;
+  }
+  window.addEventListener('message', function (e) {
+    var d = e && e.data;
+    if (!d) return;
+    if (d.type === 'maextroSetOption') {
+      var m = MAP[d.kind];
+      if (m && m[d.value] !== undefined) apply(d.kind, m[d.value]);
+    } else if (d.type === 'maextroSetView' && d.view) {
+      setView(d.view);
+    }
+  });
+  // Flush anything requested before the car / UI finished loading.
+  var ticks = 0;
+  var timer = setInterval(function () {
+    if (carScript()) {
+      Object.keys(pending).forEach(function (k) { apply(k, pending[k]); });
+      pending = {};
+    }
+    if (navReady() && pendingView !== null) { setView(pendingView); pendingView = null; }
+    if (carScript() && navReady()) clearInterval(timer);
+    else if (++ticks > 160) clearInterval(timer);
+  }, 500);
+})();
+</script>
+</head>
+<body>
+<script src="__modules__.js"></script>
+<script src="__start__.js"></script>
+<script src="__loading__.js"></script>
+</body>
+</html>

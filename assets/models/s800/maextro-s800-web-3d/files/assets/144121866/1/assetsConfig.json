@@ -1,0 +1,316 @@
+[
+    {
+        "sceneName": "M6",
+        "assetsTags": [
+            {
+                "tags": "x1l"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x1l_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "50080100157",
+        "assetsTags": [
+            {
+                "tags": "x4a"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x4a_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010029801",
+        "assetsTags": [
+            {
+                "tags": "x4w"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x4w_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010023501",
+        "assetsTags": [
+            {
+                "tags": "f1l"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "f1l_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010028001",
+        "assetsTags": [
+            {
+                "tags": "SHA"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "SHA_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010020301",
+        "assetsTags": [
+            {
+                "tags": "x65s"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x65s_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010020201",
+        "assetsTags": [
+            {
+                "tags": "x6"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x6_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010007101",
+        "assetsTags": [
+            {
+                "tags": "f3"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "f3_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010004501",
+        "assetsTags": [
+            {
+                "tags": "f2a"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "f2a_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010010601",
+        "assetsTags": [
+            {
+                "tags": "eh3n"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "eh3n_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010013301",
+        "assetsTags": [
+            {
+                "tags": "x1c"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x1c_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "5008010015901",
+        "assetsTags": [
+            {
+                "tags": "ehyn"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "ehyn_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "---50080100157----",
+        "assetsTags": [
+            {
+                "tags": "x4_single"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x4_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "50080100109",
+        "assetsTags": [
+            {
+                "tags": "x2_single"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "x2_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "50080100057",
+        "assetsTags": [
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "50080100057_single"
+            },
+            {
+                "tags": "m7_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "50080100137",
+        "assetsTags": [
+            {
+                "tags": "x1a_camera_data"
+            },
+            {
+                "tags": "x1a_single"
+            },
+            {
+                "tags": "x1a_materials"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "50080100121",
+        "assetsTags": [
+            {
+                "tags": "m9_single"
+            },
+            {
+                "tags": "single_car_scene"
+            },
+            {
+                "tags": "m9_camera_data"
+            },
+            {
+                "tags": "opendoor_mp3"
+            }
+        ]
+    },
+    {
+        "sceneName": "VR",
+        "assetsTags": [
+            {
+                "tags": "VR"
+            }
+        ]
+    },
+    {
+        "sceneName": "DelayLoadAssets",
+        "assetsTags": [
+            {
+                "tags": "m5_jiaren"
+            },
+            {
+                "tags": "m7_jiaren"
+            },
+            {
+                "tags": "x2_jiaren"
+            }
+        ]
+    }
+]

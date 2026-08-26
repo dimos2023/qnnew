@@ -1,0 +1,135 @@
+[
+    {
+        "colorName": "ju_se",
+        "modifyMaterialArray": [
+            {
+                "modifyEntityName": "F1A_qianmen_n",
+                "materialArray": [
+                    {
+                        "matId": "F1A_pige_ju"
+                    },
+                    {
+                        "matId": "F1A_ns_muwen_A"
+                    },
+                    {
+                        "matId": "F1A_zkmb_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp4_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp1_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp_gl_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp3_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp2_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp5_hei"
+                    },
+                    {
+                        "matId": "F1A_xianfeng_ju"
+                    },
+                    {
+                        "matId": "F1A_fm_hei"
+                    },
+                    {
+                        "matId": "F1A_zk_dong_hei"
+                    }
+                ]
+            },
+            {
+                "modifyEntityName": "F1A_qianmen_n_a",
+                "materialArray": [
+                    {
+                        "matId": "F1A_pige_ju"
+                    },
+                    {
+                        "matId": "F1A_ns_muwen_A"
+                    },
+                    {
+                        "matId": "F1A_zkmb_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp4_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp1_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp_gl_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp3_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp2_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp5_hei"
+                    },
+                    {
+                        "matId": "F1A_xianfeng_ju"
+                    },
+                    {
+                        "matId": "F1A_fm_hei"
+                    },
+                    {
+                        "matId": "F1A_zk_dong_hei"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "colorName": "xing_se",
+        "modifyMaterialArray": [
+            {
+                "modifyEntityName": "F1A_ZK",
+                "materialArray": [
+                    {
+                        "matId": "F1A_pige_ju"
+                    },
+                    {
+                        "matId": "F1A_ns_muwen_A"
+                    },
+                    {
+                        "matId": "F1A_zkmb_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp4_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp1_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp_gl_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp3_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp2_hei"
+                    },
+                    {
+                        "matId": "F1A_fxp5_hei"
+                    },
+                    {
+                        "matId": "F1A_xianfeng_ju"
+                    },
+                    {
+                        "matId": "F1A_fm_hei"
+                    },
+                    {
+                        "matId": "F1A_zk_dong_hei"
+                    }
+                ]
+            }
+        ]
+    }
+]

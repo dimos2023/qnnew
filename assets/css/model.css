@@ -27,6 +27,16 @@
 .md-hero .md-tagline { color: var(--ink-dim); margin-top: var(--s3); font-size: clamp(16px, 2vw, 21px); }
 html.rtl .md-hero h1 { font-family: var(--serif-ar); font-weight: 600; letter-spacing: 0; }
 
+/* On phones, show the whole car: image flows on top, copy sits beneath it. */
+@media (max-width: 760px) {
+  .md-hero { min-height: 0; display: block; }
+  .md-hero .md-hero-media { position: relative; inset: auto; }
+  .md-hero .md-hero-media img, .md-hero .md-hero-media video { height: auto; object-fit: contain; }
+  .md-hero .md-hero-media::after { display: none; }
+  .md-hero-inner { padding-block: var(--s4) var(--s2); }
+  .md-hero .hero-scroll { display: none; }
+}
+
 /* --- Spec figures band (oversized, Ferrari-style) ------------------------ */
 .md-figures { border-block: 1px solid var(--line); }
 .md-figures .shell { display: grid; grid-template-columns: repeat(4, 1fr); }
@@ -56,9 +66,24 @@ html.rtl .md-hero h1 { font-family: var(--serif-ar); font-weight: 600; letter-sp
 /* --- Gallery: masonry columns so every image shows in full, never cropped - */
 .md-gallery-grid { column-count: 3; column-gap: var(--s3); }
 .md-gallery-grid a { display: block; margin-bottom: var(--s3); break-inside: avoid; }
-.md-gallery-grid img { width: 100%; height: auto; object-fit: contain; display: block; }
+.md-gallery-grid img { width: 100%; height: auto; object-fit: contain; display: block; cursor: zoom-in; }
 @media (max-width: 900px) { .md-gallery-grid { column-count: 2; } }
 @media (max-width: 560px) { .md-gallery-grid { column-count: 1; } }
+
+/* --- Gallery lightbox: click to open, arrows / swipe to move between shots - */
+.qn-lb { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center;
+  background: rgba(8,9,11,0.94); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); padding: clamp(16px,4vw,52px); }
+.qn-lb.on { display: flex; }
+.qn-lb-img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 3px; box-shadow: 0 30px 90px rgba(0,0,0,.6); }
+.qn-lb button { color: var(--ink); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18); border-radius: 50%; cursor: pointer; display: grid; place-items: center; transition: background .18s ease, transform .18s ease; }
+.qn-lb button:hover { background: rgba(255,255,255,.16); }
+.qn-lb-close { position: absolute; top: clamp(12px,3vw,26px); inset-inline-end: clamp(12px,3vw,26px); width: 46px; height: 46px; font-size: 26px; line-height: 1; }
+.qn-lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 54px; height: 54px; font-size: 30px; line-height: 1; }
+.qn-lb-nav:hover { transform: translateY(-50%) scale(1.06); }
+.qn-lb-prev { inset-inline-start: clamp(10px,3vw,30px); }
+.qn-lb-next { inset-inline-end: clamp(10px,3vw,30px); }
+.qn-lb-count { position: absolute; bottom: clamp(14px,4vw,30px); left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 13px; letter-spacing: .12em; color: var(--ink-dim); }
+@media (max-width: 560px) { .qn-lb-nav { width: 44px; height: 44px; font-size: 26px; } .qn-lb-close { width: 42px; height: 42px; } }
 
 /* --- Persistent CTA bar -------------------------------------------------- */
 .md-cta { position: sticky; bottom: 0; z-index: 40; background: rgba(13,14,16,0.9); backdrop-filter: blur(16px); border-block-start: 1px solid var(--line); }
