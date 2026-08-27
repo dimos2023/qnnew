@@ -238,12 +238,17 @@
     var stage = media.closest('.cfg-stage');
     var url = VIEWER[m.id];
     if (url) {
-      /* Interactive 3D viewer for this model. */
+      /* Interactive 3D viewer for this model. Recreate the iframe only when the
+         MODEL changes (not on every re-render) so switching straight between two
+         3D models loads the right car instead of keeping the previous one. */
       if (stage) stage.classList.add('has-3d');
-      if (!viewerFrame()) {
+      var f = viewerFrame();
+      if (!f || f.getAttribute('data-model') !== m.id) {
+        if (f) f.remove();
         media.style.background = '#0d0d0d';
-        var f = document.createElement('iframe');
+        f = document.createElement('iframe');
         f.className = 'cfg-3d';
+        f.setAttribute('data-model', m.id);
         f.title = m.name + ' — interactive 3D';
         f.setAttribute('allow', 'accelerometer; gyroscope; xr-spatial-tracking; fullscreen');
         f.addEventListener('load', pushCurrentToViewer);
