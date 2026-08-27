@@ -7,9 +7,9 @@ header > div { text-align: right; }
 header p { margin: 0; font-size: 11px; letter-spacing: .5em; color: #aaa; }
 header h1 { margin: 2px 0 0; font-weight: 300; font-size: 32px; letter-spacing: .18em; }
 .brand { width: 130px; max-height: 64px; object-fit: contain; }
-.stage { position: relative; min-height: 0; display: grid; place-items: center; cursor: grab; user-select: none; touch-action: pan-y; }
+.stage { position: relative; min-height: 0; display: grid; place-items: center; cursor: grab; user-select: none; touch-action: none; overflow: hidden; }
 .stage:active { cursor: grabbing; }
-#car { width: min(100%, 1920px); height: 100%; max-height: calc(100vh - 190px); object-fit: contain; pointer-events: none; }
+#car { width: min(100%, 1920px); height: 100%; max-height: calc(100vh - 190px); object-fit: contain; pointer-events: none; transform-origin: center center; transition: transform .12s ease-out; will-change: transform; }
 .loading { position: absolute; inset: 0; display: grid; place-items: center; background: #111; letter-spacing: .18em; transition: opacity .35s; }
 .loading.hidden { opacity: 0; pointer-events: none; }
 .drag-hint { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); color: #bdbdbd; font-size: 12px; letter-spacing: .12em; }
