@@ -3,7 +3,7 @@
    this file does nothing — no external calls, no errors. Once set, it tracks
    visits, engagement time and page views across the whole site. */
 (function () {
-  var GA_ID = 'G-XXXXXXXXXX';   // <-- replace with your GA4 Measurement ID
+  var GA_ID = 'G-GQD8V39HTZ';   // QN Automotive GA4 Measurement ID
 
   if (!GA_ID || GA_ID.indexOf('XXXX') !== -1) return;   // not configured yet
 
