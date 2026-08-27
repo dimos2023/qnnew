@@ -132,7 +132,7 @@
     },
     {
       id: 'u8l', name: 'YANGWANG U8L', eyebrow: 'The Luxury SUV', eyebrowAr: 'الـ SUV الفاخرة',
-      base: 179000, baseEgp: 22200000,
+      base: 179000, baseEgp: 22500000,
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
           { id: 'e1', name: 'Obsidian Black', nameAr: 'أسود أوبسيديان', css: 'linear-gradient(135deg,#141416,#33343a)', price: 0 },
