@@ -87,7 +87,7 @@
     },
     {
       id: 'u9', name: 'YANGWANG U9', eyebrow: 'The Hypercar', eyebrowAr: 'الهايبركار',
-      base: 236000,
+      base: 236000, baseEgp: 27500000,
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
           { id: 'e1', name: 'Red Glow Danzhu', nameAr: 'أحمر متوهج', css: 'linear-gradient(135deg,#c1121f,#7a0a12)', price: 0 },
@@ -116,7 +116,7 @@
     },
     {
       id: 'u8l', name: 'YANGWANG U8L', eyebrow: 'The Luxury SUV', eyebrowAr: 'الـ SUV الفاخرة',
-      base: 179000, baseEgp: 16058000,
+      base: 179000, baseEgp: 22200000,
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
           { id: 'e1', name: 'Obsidian Black', nameAr: 'أسود أوبسيديان', css: 'linear-gradient(135deg,#141416,#33343a)', price: 0 },
@@ -308,15 +308,23 @@
   }
 
   function renderSummary() {
-    var sub = total();
+    var sub = total(), m = model();
     var c = CURRENCIES[country()] || CURRENCIES.us;
-    var vat = Math.round(sub * c.rate * c.vat) / c.rate; // keep in USD terms for fmt
     var setTxt = function (id, v) { var e = $(id); if (e) e.textContent = v; };
+    var vl = $('#cfg-vat-label');
     setTxt('#cfg-subtotal', fmt(sub));
-    setTxt('#cfg-vat', fmt(vat));
-    setTxt('#cfg-total', fmt(sub + vat));
+    if (m.baseEgp) {
+      /* Full Package: an all-inclusive price — tax is already included. */
+      if (vl) vl.textContent = isAr() ? 'الضريبة' : 'VAT';
+      setTxt('#cfg-vat', isAr() ? 'مشمولة' : 'Included');
+      setTxt('#cfg-total', fmt(sub));
+    } else {
+      var vat = Math.round(sub * c.rate * c.vat) / c.rate; // keep in USD terms for fmt
+      if (vl) vl.textContent = (isAr() ? 'ضريبة القيمة المضافة ' : 'VAT ') + Math.round(c.vat * 100) + '%';
+      setTxt('#cfg-vat', fmt(vat));
+      setTxt('#cfg-total', fmt(sub + vat));
+    }
     setTxt('#cfg-fee', fmt(ORDER_FEE_USD));
-    var vl = $('#cfg-vat-label'); if (vl) vl.textContent = (isAr() ? 'ضريبة القيمة المضافة ' : 'VAT ') + Math.round(c.vat * 100) + '%';
   }
 
   function renderAll() { renderTabs(); renderStage(); renderGroups(); renderSummary(); }
