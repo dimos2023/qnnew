@@ -15,11 +15,42 @@
   };
   var ORDER_FEE_USD = 500;
 
+  /* Live daily FX. The rates in CURRENCIES are fallbacks; on load we fetch
+     today's USD rates (once a day, cached) so every country's price tracks the
+     real dollar rate. S800's base is anchored to an EGP list price (below). */
+  function applyRates(r) {
+    if (r.EGP) CURRENCIES.eg.rate = r.EGP;
+    if (r.AED) CURRENCIES.ae.rate = r.AED;
+    if (r.SAR) CURRENCIES.sa.rate = r.SAR;
+  }
+  function loadRates() {
+    var today = new Date().toISOString().slice(0, 10);
+    try {
+      var cached = JSON.parse(localStorage.getItem('qn_fx') || 'null');
+      if (cached && cached.date === today && cached.rates) { applyRates(cached.rates); return Promise.resolve(); }
+    } catch (e) {}
+    return fetch('https://open.er-api.com/v6/latest/USD')
+      .then(function (res) { return res.json(); })
+      .then(function (d) {
+        if (d && d.result === 'success' && d.rates) {
+          var rates = { EGP: d.rates.EGP, AED: d.rates.AED, SAR: d.rates.SAR };
+          applyRates(rates);
+          try { localStorage.setItem('qn_fx', JSON.stringify({ date: today, rates: rates })); } catch (e) {}
+        }
+      })
+      .catch(function () { /* keep the fallback rates already in CURRENCIES */ });
+  }
+  /* Base price in USD. A model with baseEgp is anchored to an EGP list price and
+     converted at today's live rate; otherwise base is already in USD. */
+  function baseUsd(m) {
+    return m.baseEgp ? (m.baseEgp / (CURRENCIES.eg.rate || 48)) : m.base;
+  }
+
   /* ---- Model + option data (edit here) ---- */
   var MODELS = [
     {
       id: 's800', name: 'MAEXTRO S800', eyebrow: 'The Flagship', eyebrowAr: 'الطراز الرائد',
-      base: 178000,
+      base: 178000, baseEgp: 18900000,
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
           { id: 'e1', name: 'Starlight Black', nameAr: 'أسود النجوم', css: 'linear-gradient(135deg,#15151a,#3a3a42)', price: 0 },
@@ -173,7 +204,7 @@
   }
 
   function total() {
-    var m = model(), sum = m.base;
+    var m = model(), sum = baseUsd(m);
     m.groups.forEach(function (g) {
       if (g.type === 'multi') {
         g.options.forEach(function (o) { if (state.multi[g.id] && state.multi[g.id][o.id]) sum += o.price; });
@@ -328,6 +359,8 @@
     resetSelections();
     renderAll();
     wireCTAs();
+    /* Pull today's live USD rates, then re-price everything. */
+    loadRates().then(function () { renderAll(); });
     /* Re-render on country/language change so text, currency and RTL update. */
     window.addEventListener('legacy:langchange', function () { renderAll(); });
   }
