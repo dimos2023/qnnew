@@ -88,9 +88,8 @@
       base: 179000,
       groups: [
         { id: 'exterior', label: 'Exterior finish', labelAr: 'اللون الخارجي', type: 'swatch', options: [
-          { id: 'e1', name: 'Obsidian Black / Sunstone Gold', nameAr: 'أسود / ذهبي', css: 'linear-gradient(135deg,#141416,#8a744c)', price: 0 },
-          { id: 'e2', name: 'Glacier White', nameAr: 'أبيض جليدي', css: 'linear-gradient(135deg,#eef0f2,#cdd0d4)', price: 0 },
-          { id: 'e3', name: 'Desert Bronze', nameAr: 'برونزي صحراوي', css: 'linear-gradient(135deg,#9a7a4a,#5a4227)', price: 1600 }
+          { id: 'e1', name: 'Obsidian Black', nameAr: 'أسود أوبسيديان', css: 'linear-gradient(135deg,#141416,#33343a)', price: 0 },
+          { id: 'e2', name: 'Glacier White', nameAr: 'أبيض جليدي', css: 'linear-gradient(135deg,#eef0f2,#cdd0d4)', price: 0 }
         ]},
         { id: 'interior', label: 'Interior', labelAr: 'المقصورة', type: 'swatch', options: [
           { id: 'i1', name: 'Executive Cream', nameAr: 'كريمي تنفيذي', css: 'linear-gradient(135deg,#e8ddc7,#bda986)', price: 0 },
@@ -120,7 +119,8 @@
      is driven by postMessage (exterior/interior colour, wheels, camera view) —
      its option codes (e1-e6, i1-i6, w1-w3) match the groups above. */
   var VIEWER = {
-    s800: '/assets/models/s800/maextro-s800-web-3d/index.html?SN=5008010020201'
+    s800: '/assets/models/s800/maextro-s800-web-3d/index.html?SN=5008010020201',
+    u8l:  '/assets/models/u8l/yangwang-u8-360/index.html?embed=1'
   };
   function viewerFrame() { return document.querySelector('#cfg-stage-media iframe.cfg-3d'); }
   function postViewer(msg) {

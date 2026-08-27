@@ -3,8 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yangwang U8 — QN Motors 360°</title>
+  <!-- Hosted under a site sub-path; <base> keeps the relative frame/asset URLs
+       correct regardless of clean-URL rewrites. -->
+  <base href="/assets/models/u8l/yangwang-u8-360/">
+  <title>Yangwang U8 — QN Automotive 360°</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- When embedded in the configurator (?embed=1) hide the built-in chrome so
+       only the rotatable car shows; our side panel drives the colour. -->
+  <script>if (location.search.indexOf('embed') !== -1) document.documentElement.className += ' embed';</script>
+  <style>
+    .embed header, .embed .controls, .embed .drag-hint { display: none !important; }
+    .embed, .embed body { background: #0d0d0d !important; }
+    .embed .viewer { height: 100vh; display: grid; }
+    .embed .stage { height: 100vh; }
+  </style>
 </head>
 <body>
   <main class="viewer" aria-label="Yangwang U8 360 degree viewer">

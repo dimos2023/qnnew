@@ -83,3 +83,14 @@ Promise.all([preload('black'), preload('white')]).then(() => {
   render();
   loading.classList.add('hidden');
 });
+
+// Bridge: let the QN configurator's side panel drive the exterior colour
+// (same message shape as the S800 viewer). e1 = black, e2 = white.
+window.addEventListener('message', (event) => {
+  const d = event && event.data;
+  if (!d || d.type !== 'maextroSetOption' || d.kind !== 'exterior') return;
+  const c = { e1: 'black', e2: 'white' }[d.value];
+  if (!c) return;
+  const sw = swatches.find((s) => s.dataset.color === c);
+  if (sw) sw.click();
+});
