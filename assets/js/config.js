@@ -15,6 +15,22 @@
   };
   var ORDER_FEE_USD = 500;
 
+  /* Same Google Sheet the forms use — we log each downloaded quotation here so
+     the admin dashboard can show how many quotes each model generated. */
+  var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4P7oZLtUMhHeVkLHki14FjOcw9gN_-yZHWLqx6ZTq26WoOkiIdHiWusmjkhXURbzO/exec';
+  function logQuote(m, priceStr, configStr) {
+    if (!SHEET_ENDPOINT) return;
+    try {
+      var body = new URLSearchParams({
+        _form: 'Quote download — ' + m.name,
+        model: m.name,
+        message: 'Full Package ' + priceStr + (configStr ? ' · ' + configStr : ''),
+        _page: location.pathname
+      });
+      fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: body });
+    } catch (e) {}
+  }
+
   /* Live daily FX. The rates in CURRENCIES are fallbacks; on load we fetch
      today's USD rates (once a day, cached) so every country's price tracks the
      real dollar rate. S800's base is anchored to an EGP list price (below). */
@@ -432,6 +448,7 @@
       doc.setFontSize(7.5); setDim();
       doc.text('Indicative pricing for guidance only. Your concierge confirms the final, all-inclusive quote and delivery for your market.', L, y, { maxWidth: R - L });
       doc.save('QN-Automotive-' + m.id + '-quotation.pdf');
+      logQuote(m, fmtEn(total()), selectedRows().map(function (r) { return r[1]; }).join(', '));
     }).catch(function () {
       var blob = new Blob([buildSummaryText()], { type: 'text/plain' });
       var a = document.createElement('a'); a.href = URL.createObjectURL(blob);

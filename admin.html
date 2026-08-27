@@ -43,7 +43,8 @@
     .ad-btn:hover { border-color: var(--gold); }
     .ad-btn.primary { background: var(--chrome-grad); color: #17181c; border: 0; }
 
-    .ad-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); margin-bottom: var(--s6); }
+    .ad-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--s3); margin-bottom: var(--s6); }
+    @media (max-width: 1000px) { .ad-stats { grid-template-columns: repeat(3, 1fr); } }
     .stat { border: 1px solid var(--line); background: rgba(255,255,255,.015); padding: clamp(18px,2.4vw,26px); }
     .stat .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-mute); }
     .stat .num { font-family: var(--sans); font-weight: 700; font-size: clamp(34px,5vw,52px); line-height: 1.05; margin-top: 10px;
@@ -69,6 +70,13 @@
     .badge.reg { background: rgba(183,147,90,.15); color: #d8b779; border: 1px solid rgba(183,147,90,.4); }
     .badge.cc { background: rgba(120,200,150,.12); color: #7fd0a6; border: 1px solid rgba(120,200,150,.35); }
     .badge.other { background: rgba(255,255,255,.06); color: var(--ink-dim); border: 1px solid var(--line-strong); }
+    .badge.quote { background: rgba(183,147,90,.15); color: #d8b779; border: 1px solid rgba(183,147,90,.4); }
+
+    /* Quotations per-model cards */
+    .q-bymodel { display: flex; flex-wrap: wrap; gap: 10px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .q-mcard { display: flex; align-items: center; gap: 12px; border: 1px solid var(--line-strong); padding: 10px 16px; }
+    .q-mname { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--ink); }
+    .q-mnum { font-family: var(--serif); font-size: 22px; color: var(--gold); line-height: 1; }
 
     .analytics-body { padding: 20px; }
     .analytics-body p { color: var(--ink-dim); font-size: 14px; line-height: 1.7; }
@@ -117,7 +125,20 @@
       <div class="stat gold"><div class="lbl">Test drives</div><div class="num" id="s-td">—</div><div class="sub">Requested drives</div></div>
       <div class="stat gold"><div class="lbl">Registrations</div><div class="num" id="s-reg">—</div><div class="sub">Interest registered</div></div>
       <div class="stat"><div class="lbl">Concierge</div><div class="num" id="s-cc">—</div><div class="sub">Private enquiries</div></div>
-      <div class="stat"><div class="lbl">Total</div><div class="num" id="s-total">—</div><div class="sub">All submissions</div></div>
+      <div class="stat gold"><div class="lbl">Quotations</div><div class="num" id="s-q">—</div><div class="sub">PDF quotes built</div></div>
+      <div class="stat"><div class="lbl">Total enquiries</div><div class="num" id="s-total">—</div><div class="sub">Excl. quotations</div></div>
+    </div>
+
+    <!-- Quotations: how many PDF quotes each model generated, and their configs -->
+    <div class="panel" style="margin-bottom:var(--s5)">
+      <div class="panel-head"><h2>Quotations · Build &amp; Price</h2><span class="count" id="q-count"></span></div>
+      <div class="q-bymodel" id="q-bymodel"></div>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>When</th><th>Model</th><th>Configuration &amp; price</th></tr></thead>
+          <tbody id="q-body"><tr><td colspan="3" class="ad-state">Loading…</td></tr></tbody>
+        </table>
+      </div>
     </div>
 
     <div class="ad-grid">
@@ -186,6 +207,7 @@
 
     function typeOf(form) {
       var f = (form || '').toLowerCase();
+      if (f.indexOf('quote') !== -1) return { cls: 'quote', label: 'Quote' };
       if (f.indexOf('test-drive') !== -1 || f.indexOf('test drive') !== -1) return { cls: 'td', label: 'Test drive' };
       if (f.indexOf('registration') !== -1 || f.indexOf('interest') !== -1) return { cls: 'reg', label: 'Registration' };
       if (f.indexOf('concierge') !== -1) return { cls: 'cc', label: 'Concierge' };
@@ -201,34 +223,56 @@
 
     function render(rows) {
       rows = rows || [];
-      var td = 0, reg = 0, cc = 0;
+      var leads = [], quotes = [], td = 0, reg = 0, cc = 0;
       rows.forEach(function (r) {
         var t = typeOf(r.Form || r.form);
+        if (t.cls === 'quote') { quotes.push(r); return; }
+        leads.push(r);
         if (t.cls === 'td') td++; else if (t.cls === 'reg') reg++; else if (t.cls === 'cc') cc++;
       });
       document.getElementById('s-td').textContent = td;
       document.getElementById('s-reg').textContent = reg;
       document.getElementById('s-cc').textContent = cc;
-      document.getElementById('s-total').textContent = rows.length;
-      document.getElementById('tbl-count').textContent = rows.length + ' total';
+      document.getElementById('s-q').textContent = quotes.length;
+      document.getElementById('s-total').textContent = leads.length;
+      document.getElementById('tbl-count').textContent = leads.length + ' total';
 
-      var recent = rows.slice().reverse().slice(0, 40);
+      /* ---- Enquiries table (leads only) ---- */
+      var recent = leads.slice().reverse().slice(0, 40);
       var body = document.getElementById('tbl-body');
-      if (!recent.length) {
-        body.innerHTML = '<tr><td colspan="6" class="ad-state">No enquiries yet.</td></tr>';
-      } else {
-        body.innerHTML = recent.map(function (r) {
-          var t = typeOf(r.Form || r.form);
-          return '<tr>' +
-            '<td>' + esc(fmtTime(r.Time || r.time)) + '</td>' +
-            '<td><span class="badge ' + t.cls + '">' + esc(t.label) + '</span></td>' +
-            '<td class="name">' + esc(r.Name || r.name) + '</td>' +
-            '<td class="ltr">' + esc(r.Phone || r.phone) + '</td>' +
-            '<td>' + esc(r.Model || r.model) + '</td>' +
-            '<td>' + esc(r.City || r.city) + '</td>' +
-          '</tr>';
-        }).join('');
-      }
+      body.innerHTML = !recent.length
+        ? '<tr><td colspan="6" class="ad-state">No enquiries yet.</td></tr>'
+        : recent.map(function (r) {
+            var t = typeOf(r.Form || r.form);
+            return '<tr>' +
+              '<td>' + esc(fmtTime(r.Time || r.time)) + '</td>' +
+              '<td><span class="badge ' + t.cls + '">' + esc(t.label) + '</span></td>' +
+              '<td class="name">' + esc(r.Name || r.name) + '</td>' +
+              '<td class="ltr">' + esc(r.Phone || r.phone) + '</td>' +
+              '<td>' + esc(r.Model || r.model) + '</td>' +
+              '<td>' + esc(r.City || r.city) + '</td>' +
+            '</tr>';
+          }).join('');
+
+      /* ---- Quotations: per-model counts + list ---- */
+      var byModel = {};
+      quotes.forEach(function (q) { var mm = (q.Model || q.model || '—'); byModel[mm] = (byModel[mm] || 0) + 1; });
+      document.getElementById('q-count').textContent = quotes.length + ' total';
+      var keys = Object.keys(byModel).sort(function (a, b) { return byModel[b] - byModel[a]; });
+      document.getElementById('q-bymodel').innerHTML = keys.length
+        ? keys.map(function (mm) { return '<div class="q-mcard"><span class="q-mname">' + esc(mm) + '</span><span class="q-mnum">' + byModel[mm] + '</span></div>'; }).join('')
+        : '<div class="ad-state" style="padding:14px 4px">No quotations downloaded yet.</div>';
+      var qbody = document.getElementById('q-body');
+      qbody.innerHTML = !quotes.length
+        ? '<tr><td colspan="3" class="ad-state">No quotations yet.</td></tr>'
+        : quotes.slice().reverse().slice(0, 40).map(function (q) {
+            return '<tr>' +
+              '<td>' + esc(fmtTime(q.Time || q.time)) + '</td>' +
+              '<td class="name">' + esc(q.Model || q.model) + '</td>' +
+              '<td>' + esc(q.Message || q.message) + '</td>' +
+            '</tr>';
+          }).join('');
+
       document.getElementById('updated').textContent = 'Updated ' + new Date().toLocaleString('en-GB');
     }
 
