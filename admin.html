@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · QN AUTOMOTIVE</title>
+  <link rel="icon" href="/assets/brand/qn-crest.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/legacy.css">
+  <style>
+    body { background: var(--bg); color: var(--ink); min-height: 100vh; }
+    .ad-wrap { max-width: 1160px; margin-inline: auto; padding: clamp(20px,4vw,44px); }
+
+    /* ---- Passcode gate ---- */
+    #gate { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
+      background: radial-gradient(120% 90% at 50% 0%, #16171b, #0d0e10); padding: 24px; }
+    .gate-card { width: min(380px, 100%); text-align: center; border: 1px solid var(--line);
+      background: rgba(255,255,255,.02); padding: clamp(28px,5vw,44px); }
+    .gate-card img { height: 62px; margin-bottom: var(--s4); }
+    .gate-card h1 { font-family: var(--serif); font-size: 26px; margin-bottom: 6px; }
+    .gate-card p { color: var(--ink-dim); font-size: 14px; margin-bottom: var(--s4); }
+    .gate-card input { width: 100%; padding: 13px 15px; background: #0c0d10; border: 1px solid var(--line-strong);
+      color: var(--ink); font-family: var(--sans); font-size: 15px; text-align: center; letter-spacing: .1em; }
+    .gate-card input:focus { outline: none; border-color: var(--gold); }
+    .gate-card button { width: 100%; margin-top: var(--s3); padding: 13px; cursor: pointer;
+      background: var(--chrome-grad); color: #17181c; font-family: var(--sans); font-weight: 700; letter-spacing: .04em; border: 0; }
+    .gate-err { color: #e88; font-size: 13px; margin-top: 12px; min-height: 16px; }
+
+    /* ---- Dashboard ---- */
+    .ad-head { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      flex-wrap: wrap; padding-bottom: var(--s4); border-bottom: 1px solid var(--line); margin-bottom: var(--s6); }
+    .ad-head .brand { display: flex; align-items: center; gap: 14px; }
+    .ad-head .brand img { height: 52px; }
+    .ad-head .brand h1 { font-family: var(--serif); font-size: 24px; line-height: 1; }
+    .ad-head .brand span { display: block; font-family: var(--sans); font-size: 11px; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--gold); margin-top: 4px; }
+    .ad-actions { display: flex; gap: 10px; }
+    .ad-btn { padding: 10px 16px; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .03em;
+      cursor: pointer; background: transparent; border: 1px solid var(--line-strong); color: var(--ink); }
+    .ad-btn:hover { border-color: var(--gold); }
+    .ad-btn.primary { background: var(--chrome-grad); color: #17181c; border: 0; }
+
+    .ad-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); margin-bottom: var(--s6); }
+    .stat { border: 1px solid var(--line); background: rgba(255,255,255,.015); padding: clamp(18px,2.4vw,26px); }
+    .stat .lbl { font-family: var(--sans); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-mute); }
+    .stat .num { font-family: var(--sans); font-weight: 700; font-size: clamp(34px,5vw,52px); line-height: 1.05; margin-top: 10px;
+      letter-spacing: -.03em; background: var(--chrome-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .stat .sub { font-size: 12px; color: var(--ink-dim); margin-top: 6px; }
+    .stat.gold .num { background: linear-gradient(120deg, #e7c98f, #b7935a); -webkit-background-clip: text; background-clip: text; }
+
+    .ad-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--s5); align-items: start; }
+    .panel { border: 1px solid var(--line); background: rgba(255,255,255,.015); }
+    .panel-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .panel-head h2 { font-family: var(--serif); font-size: 20px; }
+    .panel-head .count { font-family: var(--sans); font-size: 12px; color: var(--ink-dim); }
+
+    .tbl-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 13.5px; }
+    th { text-align: start; padding: 12px 16px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--ink-mute); border-bottom: 1px solid var(--line); white-space: nowrap; }
+    td { padding: 13px 16px; border-bottom: 1px solid var(--line); color: var(--ink-dim); vertical-align: top; }
+    td.name { color: var(--ink); font-weight: 600; }
+    tr:last-child td { border-bottom: 0; }
+    .badge { display: inline-block; padding: 3px 9px; border-radius: 2px; font-size: 11px; font-weight: 600; letter-spacing: .04em; white-space: nowrap; }
+    .badge.td { background: rgba(120,170,255,.12); color: #8fb6ff; border: 1px solid rgba(120,170,255,.35); }
+    .badge.reg { background: rgba(183,147,90,.15); color: #d8b779; border: 1px solid rgba(183,147,90,.4); }
+    .badge.cc { background: rgba(120,200,150,.12); color: #7fd0a6; border: 1px solid rgba(120,200,150,.35); }
+    .badge.other { background: rgba(255,255,255,.06); color: var(--ink-dim); border: 1px solid var(--line-strong); }
+
+    .analytics-body { padding: 20px; }
+    .analytics-body p { color: var(--ink-dim); font-size: 14px; line-height: 1.7; }
+    .analytics-body .ga-link { display: inline-block; margin-top: var(--s3); padding: 12px 18px; background: var(--chrome-grad);
+      color: #17181c; font-family: var(--sans); font-weight: 700; font-size: 13px; letter-spacing: .03em; text-decoration: none; }
+    .ga-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: var(--s4); }
+    .ga-metric { border: 1px dashed var(--line-strong); padding: 14px; }
+    .ga-metric .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); }
+    .ga-metric .v { font-family: var(--serif); font-size: 18px; color: var(--ink); margin-top: 4px; }
+
+    .ad-state { text-align: center; padding: var(--s7) 0; color: var(--ink-dim); }
+    .ad-foot { margin-top: var(--s7); padding-top: var(--s4); border-top: 1px solid var(--line); color: var(--ink-mute); font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    @media (max-width: 900px) { .ad-grid { grid-template-columns: 1fr; } .ad-stats { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px) { .ad-stats { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Passcode gate ===== -->
+  <div id="gate">
+    <form class="gate-card" id="gate-form">
+      <img src="/assets/brand/qn-crest.png" alt="QN Automotive">
+      <h1>Admin access</h1>
+      <p>Enter the admin passcode to view enquiries.</p>
+      <input id="pass" type="password" autocomplete="off" placeholder="Passcode" autofocus>
+      <button type="submit">Enter</button>
+      <div class="gate-err" id="gate-err"></div>
+    </form>
+  </div>
+
+  <!-- ===== Dashboard ===== -->
+  <main class="ad-wrap" id="dash" hidden>
+    <div class="ad-head">
+      <div class="brand">
+        <img src="/assets/brand/qn-crest.png" alt="QN Automotive">
+        <div><h1>QN Automotive</h1><span>Enquiry dashboard</span></div>
+      </div>
+      <div class="ad-actions">
+        <button class="ad-btn" id="refresh">↻ Refresh</button>
+        <button class="ad-btn" id="logout">Sign out</button>
+      </div>
+    </div>
+
+    <div class="ad-stats">
+      <div class="stat gold"><div class="lbl">Test drives</div><div class="num" id="s-td">—</div><div class="sub">Requested drives</div></div>
+      <div class="stat gold"><div class="lbl">Registrations</div><div class="num" id="s-reg">—</div><div class="sub">Interest registered</div></div>
+      <div class="stat"><div class="lbl">Concierge</div><div class="num" id="s-cc">—</div><div class="sub">Private enquiries</div></div>
+      <div class="stat"><div class="lbl">Total</div><div class="num" id="s-total">—</div><div class="sub">All submissions</div></div>
+    </div>
+
+    <div class="ad-grid">
+      <div class="panel">
+        <div class="panel-head"><h2>Recent enquiries</h2><span class="count" id="tbl-count"></span></div>
+        <div class="tbl-scroll">
+          <table>
+            <thead><tr><th>When</th><th>Type</th><th>Name</th><th>Phone</th><th>Model</th><th>City</th></tr></thead>
+            <tbody id="tbl-body"><tr><td colspan="6" class="ad-state" id="tbl-state">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Traffic &amp; engagement</h2></div>
+        <div class="analytics-body">
+          <p>Live visitor numbers, average time on site and the pages people open are tracked in <strong>Google Analytics</strong>. Open the property to see visits, engagement time and top pages in real time.</p>
+          <div class="ga-metrics">
+            <div class="ga-metric"><div class="k">Visits</div><div class="v">Google Analytics →</div></div>
+            <div class="ga-metric"><div class="k">Avg. time on site</div><div class="v">Google Analytics →</div></div>
+            <div class="ga-metric"><div class="k">Pages / session</div><div class="v">Google Analytics →</div></div>
+            <div class="ga-metric"><div class="k">Top pages</div><div class="v">Google Analytics →</div></div>
+          </div>
+          <a class="ga-link" id="ga-open" href="https://analytics.google.com/" target="_blank" rel="noopener">Open Google Analytics</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-foot">
+      <span id="updated">—</span>
+      <span>QN Automotive · internal use only</span>
+    </div>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+    // Same Apps Script web app that receives the forms. Its doGet returns the
+    // leads as JSONP (bypasses CORS) and checks the passcode as a token.
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbz00TPSN7ooyEvdLjltVJv9SRkJrsjmfM31_iwtae09aiCfZTxW1mF2NlEC9IbfFTDkEg/exec';
+    // Optional: your GA4 property URL (paste it to make the button open your property directly).
+    var GA_PROPERTY_URL = 'https://analytics.google.com/';
+
+    var gate = document.getElementById('gate');
+    var gateForm = document.getElementById('gate-form');
+    var passInput = document.getElementById('pass');
+    var gateErr = document.getElementById('gate-err');
+    var dash = document.getElementById('dash');
+    var token = '';
+
+    document.getElementById('ga-open').href = GA_PROPERTY_URL;
+
+    function jsonp(params) {
+      return new Promise(function (resolve, reject) {
+        var cb = 'qncb_' + Math.floor(Math.random() * 1e9);
+        var s = document.createElement('script');
+        var timeout = setTimeout(function () { cleanup(); reject(new Error('timeout')); }, 15000);
+        function cleanup() { clearTimeout(timeout); delete window[cb]; if (s.parentNode) s.remove(); }
+        window[cb] = function (data) { cleanup(); resolve(data); };
+        s.onerror = function () { cleanup(); reject(new Error('network')); };
+        var q = Object.keys(params).map(function (k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
+        s.src = ENDPOINT + '?' + q + '&callback=' + cb + '&_=' + Date.now();
+        document.body.appendChild(s);
+      });
+    }
+
+    function typeOf(form) {
+      var f = (form || '').toLowerCase();
+      if (f.indexOf('test-drive') !== -1 || f.indexOf('test drive') !== -1) return { cls: 'td', label: 'Test drive' };
+      if (f.indexOf('registration') !== -1 || f.indexOf('interest') !== -1) return { cls: 'reg', label: 'Registration' };
+      if (f.indexOf('concierge') !== -1) return { cls: 'cc', label: 'Concierge' };
+      return { cls: 'other', label: form || 'Enquiry' };
+    }
+    function fmtTime(v) {
+      if (!v) return '—';
+      var d = new Date(v);
+      if (isNaN(d.getTime())) return String(v);
+      return d.toLocaleString('en-GB', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+    }
+    function esc(s) { return String(s == null ? '' : s).replace(/[<>&]/g, function (c) { return { '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]; }); }
+
+    function render(rows) {
+      rows = rows || [];
+      var td = 0, reg = 0, cc = 0;
+      rows.forEach(function (r) {
+        var t = typeOf(r.Form || r.form);
+        if (t.cls === 'td') td++; else if (t.cls === 'reg') reg++; else if (t.cls === 'cc') cc++;
+      });
+      document.getElementById('s-td').textContent = td;
+      document.getElementById('s-reg').textContent = reg;
+      document.getElementById('s-cc').textContent = cc;
+      document.getElementById('s-total').textContent = rows.length;
+      document.getElementById('tbl-count').textContent = rows.length + ' total';
+
+      var recent = rows.slice().reverse().slice(0, 40);
+      var body = document.getElementById('tbl-body');
+      if (!recent.length) {
+        body.innerHTML = '<tr><td colspan="6" class="ad-state">No enquiries yet.</td></tr>';
+      } else {
+        body.innerHTML = recent.map(function (r) {
+          var t = typeOf(r.Form || r.form);
+          return '<tr>' +
+            '<td>' + esc(fmtTime(r.Time || r.time)) + '</td>' +
+            '<td><span class="badge ' + t.cls + '">' + esc(t.label) + '</span></td>' +
+            '<td class="name">' + esc(r.Name || r.name) + '</td>' +
+            '<td class="ltr">' + esc(r.Phone || r.phone) + '</td>' +
+            '<td>' + esc(r.Model || r.model) + '</td>' +
+            '<td>' + esc(r.City || r.city) + '</td>' +
+          '</tr>';
+        }).join('');
+      }
+      document.getElementById('updated').textContent = 'Updated ' + new Date().toLocaleString('en-GB');
+    }
+
+    function load() {
+      document.getElementById('tbl-state') && (document.getElementById('tbl-body').innerHTML =
+        '<tr><td colspan="6" class="ad-state">Loading…</td></tr>');
+      return jsonp({ action: 'leads', token: token }).then(function (data) {
+        if (!data || data.error) throw new Error(data && data.error || 'error');
+        render(data.rows || []);
+      }).catch(function (e) {
+        document.getElementById('tbl-body').innerHTML =
+          '<tr><td colspan="6" class="ad-state">Could not load data (' + esc(e.message) + '). Check the passcode / that the script is deployed with a doGet.</td></tr>';
+      });
+    }
+
+    function openDash() {
+      gate.style.display = 'none';
+      dash.hidden = false;
+      load();
+    }
+
+    // Try a saved passcode
+    try { token = localStorage.getItem('qn_admin_token') || ''; } catch (e) {}
+    if (token) {
+      jsonp({ action: 'leads', token: token }).then(function (data) {
+        if (data && !data.error) { render(data.rows || []); gate.style.display = 'none'; dash.hidden = false; }
+      }).catch(function () {});
+    }
+
+    gateForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var val = passInput.value.trim();
+      if (!val) return;
+      gateErr.textContent = 'Checking…';
+      token = val;
+      jsonp({ action: 'leads', token: token }).then(function (data) {
+        if (!data || data.error) { gateErr.textContent = 'Wrong passcode.'; return; }
+        try { localStorage.setItem('qn_admin_token', token); } catch (e) {}
+        gateErr.textContent = '';
+        render(data.rows || []);
+        openDash();
+      }).catch(function () { gateErr.textContent = 'Could not reach the server. Is the script deployed?'; });
+    });
+
+    document.getElementById('refresh').addEventListener('click', load);
+    document.getElementById('logout').addEventListener('click', function () {
+      try { localStorage.removeItem('qn_admin_token'); } catch (e) {}
+      location.reload();
+    });
+  })();
+  </script>
+</body>
+</html>
