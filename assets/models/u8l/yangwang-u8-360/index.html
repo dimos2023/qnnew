@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yangwang U8 — QN Motors 360°</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="viewer" aria-label="Yangwang U8 360 degree viewer">
+    <header>
+      <img class="brand" src="assets/qn-motors-logo.png" alt="QN Motors">
+      <div>
+        <p>YANGWANG</p>
+        <h1>U8</h1>
+      </div>
+    </header>
+
+    <section class="stage" id="stage">
+      <img id="car" src="assets/black/9.png" alt="Yangwang U8 exterior view" draggable="false">
+      <div class="loading" id="loading">Loading 360°…</div>
+      <div class="drag-hint">↔ Drag to rotate</div>
+    </section>
+
+    <section class="controls">
+      <div>
+        <span class="label">Exterior</span>
+        <strong id="colorName">Obsidian Black</strong>
+      </div>
+      <div class="swatches" aria-label="Exterior color">
+        <button class="swatch black active" data-color="black" data-name="Obsidian Black" aria-label="Obsidian Black"></button>
+        <button class="swatch white" data-color="white" data-name="Snow White" aria-label="Snow White"></button>
+      </div>
+      <button class="play" id="play" type="button">Auto rotate</button>
+    </section>
+  </main>
+  <script src="viewer.js"></script>
+</body>
+</html>

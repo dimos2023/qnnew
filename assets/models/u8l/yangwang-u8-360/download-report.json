@@ -1,0 +1,290 @@
+[
+  {
+    "color": "black",
+    "frame": 1,
+    "status": "ok",
+    "bytes": 867038
+  },
+  {
+    "color": "black",
+    "frame": 2,
+    "status": "ok",
+    "bytes": 1040243
+  },
+  {
+    "color": "black",
+    "frame": 3,
+    "status": "ok",
+    "bytes": 1185540
+  },
+  {
+    "color": "black",
+    "frame": 4,
+    "status": "ok",
+    "bytes": 1217836
+  },
+  {
+    "color": "black",
+    "frame": 5,
+    "status": "ok",
+    "bytes": 1212885
+  },
+  {
+    "color": "black",
+    "frame": 6,
+    "status": "ok",
+    "bytes": 1133564
+  },
+  {
+    "color": "black",
+    "frame": 7,
+    "status": "ok",
+    "bytes": 1055191
+  },
+  {
+    "color": "black",
+    "frame": 8,
+    "status": "ok",
+    "bytes": 1094608
+  },
+  {
+    "color": "black",
+    "frame": 9,
+    "status": "ok",
+    "bytes": 1185871
+  },
+  {
+    "color": "black",
+    "frame": 10,
+    "status": "ok",
+    "bytes": 1189843
+  },
+  {
+    "color": "black",
+    "frame": 11,
+    "status": "ok",
+    "bytes": 1116403
+  },
+  {
+    "color": "black",
+    "frame": 12,
+    "status": "ok",
+    "bytes": 938836
+  },
+  {
+    "color": "black",
+    "frame": 13,
+    "status": "ok",
+    "bytes": 699433
+  },
+  {
+    "color": "black",
+    "frame": 14,
+    "status": "ok",
+    "bytes": 958480
+  },
+  {
+    "color": "black",
+    "frame": 15,
+    "status": "ok",
+    "bytes": 1091309
+  },
+  {
+    "color": "black",
+    "frame": 16,
+    "status": "ok",
+    "bytes": 1173153
+  },
+  {
+    "color": "black",
+    "frame": 17,
+    "status": "ok",
+    "bytes": 1247979
+  },
+  {
+    "color": "black",
+    "frame": 18,
+    "status": "ok",
+    "bytes": 1123003
+  },
+  {
+    "color": "black",
+    "frame": 19,
+    "status": "ok",
+    "bytes": 1061537
+  },
+  {
+    "color": "black",
+    "frame": 20,
+    "status": "ok",
+    "bytes": 1110793
+  },
+  {
+    "color": "black",
+    "frame": 21,
+    "status": "ok",
+    "bytes": 1170594
+  },
+  {
+    "color": "black",
+    "frame": 22,
+    "status": "ok",
+    "bytes": 1235644
+  },
+  {
+    "color": "black",
+    "frame": 23,
+    "status": "ok",
+    "bytes": 1195724
+  },
+  {
+    "color": "black",
+    "frame": 24,
+    "status": "ok",
+    "bytes": 1043140
+  },
+  {
+    "color": "white",
+    "frame": 1,
+    "status": "ok",
+    "bytes": 752049
+  },
+  {
+    "color": "white",
+    "frame": 2,
+    "status": "ok",
+    "bytes": 905473
+  },
+  {
+    "color": "white",
+    "frame": 3,
+    "status": "ok",
+    "bytes": 1031436
+  },
+  {
+    "color": "white",
+    "frame": 4,
+    "status": "ok",
+    "bytes": 1107268
+  },
+  {
+    "color": "white",
+    "frame": 5,
+    "status": "ok",
+    "bytes": 1034497
+  },
+  {
+    "color": "white",
+    "frame": 6,
+    "status": "ok",
+    "bytes": 955855
+  },
+  {
+    "color": "white",
+    "frame": 7,
+    "status": "ok",
+    "bytes": 892031
+  },
+  {
+    "color": "white",
+    "frame": 8,
+    "status": "ok",
+    "bytes": 956337
+  },
+  {
+    "color": "white",
+    "frame": 9,
+    "status": "ok",
+    "bytes": 1053382
+  },
+  {
+    "color": "white",
+    "frame": 10,
+    "status": "ok",
+    "bytes": 1043935
+  },
+  {
+    "color": "white",
+    "frame": 11,
+    "status": "ok",
+    "bytes": 975536
+  },
+  {
+    "color": "white",
+    "frame": 12,
+    "status": "ok",
+    "bytes": 880175
+  },
+  {
+    "color": "white",
+    "frame": 13,
+    "status": "ok",
+    "bytes": 638209
+  },
+  {
+    "color": "white",
+    "frame": 14,
+    "status": "ok",
+    "bytes": 889888
+  },
+  {
+    "color": "white",
+    "frame": 15,
+    "status": "ok",
+    "bytes": 997545
+  },
+  {
+    "color": "white",
+    "frame": 16,
+    "status": "ok",
+    "bytes": 1035311
+  },
+  {
+    "color": "white",
+    "frame": 17,
+    "status": "ok",
+    "bytes": 1055026
+  },
+  {
+    "color": "white",
+    "frame": 18,
+    "status": "ok",
+    "bytes": 984328
+  },
+  {
+    "color": "white",
+    "frame": 19,
+    "status": "ok",
+    "bytes": 903142
+  },
+  {
+    "color": "white",
+    "frame": 20,
+    "status": "ok",
+    "bytes": 931465
+  },
+  {
+    "color": "white",
+    "frame": 21,
+    "status": "ok",
+    "bytes": 1075765
+  },
+  {
+    "color": "white",
+    "frame": 22,
+    "status": "ok",
+    "bytes": 1096950
+  },
+  {
+    "color": "white",
+    "frame": 23,
+    "status": "ok",
+    "bytes": 1060511
+  },
+  {
+    "color": "white",
+    "frame": 24,
+    "status": "ok",
+    "bytes": 905956
+  }
+]
