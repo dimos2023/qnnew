@@ -92,7 +92,10 @@
     var cam = app && app.root && app.root.findByName('Camera');
     return (cam && cam.script && cam.script.camera) || null;
   }
-  var INITIAL_DIST = 7.2; // exterior default distance (matches stepDataX6 step 0)
+  // Exterior default camera distance. On narrow (mobile) stages the car is wide
+  // relative to the viewport, so pull the camera back to frame the whole car
+  // instead of leaving it cropped until the user drags.
+  var INITIAL_DIST = (window.innerWidth < 560) ? 9.8 : 7.2;
   function apply(kind, idx) {
     var s = carScript();
     if (!s) { pending[kind] = idx; return false; }
