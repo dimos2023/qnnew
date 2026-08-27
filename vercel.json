@@ -14,6 +14,7 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/build", "destination": "/configure.html" },
     { "source": "/join", "destination": "/join.html" },
+    { "source": "/join-exclusive", "destination": "/join.html" },
     { "source": "/test-drive", "destination": "/test-drive.html" },
     { "source": "/ownership", "destination": "/ownership.html" },
     { "source": "/compare", "destination": "/compare.html" },
