@@ -55,7 +55,7 @@
       'foot.models': 'Models', 'foot.experience': 'Experience', 'foot.contact': 'Contact',
       'foot.concierge': 'Concierge', 'foot.testdrive': 'Test drive', 'foot.about': 'About QN Automotive',
       'foot.whatsapp': 'WhatsApp', 'foot.callus': 'Contact us', 'foot.register': 'Register interest',
-      'foot.ownership': 'Ownership', 'foot.compare': 'Compare', 'foot.commission': 'Bespoke commission',
+      'foot.ownership': 'Ownership', 'foot.compare': 'Overview', 'foot.commission': 'Bespoke commission',
       'foot.journal': 'Journal', 'foot.owners': 'Owners', 'foot.xp': 'The Experience',
       'foot.marque': 'The Marque', 'foot.usage': 'Usage policy',
       'foot.tagline': 'The luxury you deserve. A legacy built for tomorrow. The elite gateway to the finest electric vehicles in Egypt, the UAE and Saudi Arabia.',
@@ -438,7 +438,7 @@
       'foot.models': 'الموديلات', 'foot.experience': 'التجربة', 'foot.contact': 'تواصل',
       'foot.concierge': 'الكونسيرج', 'foot.testdrive': 'تجربة قيادة', 'foot.about': 'عن QN Automotive',
       'foot.whatsapp': 'واتساب', 'foot.callus': 'اتصل بنا', 'foot.register': 'سجل اهتمامك',
-      'foot.ownership': 'التملك', 'foot.compare': 'المقارنة', 'foot.commission': 'التفصيل الخاص',
+      'foot.ownership': 'التملك', 'foot.compare': 'نظرة عامة', 'foot.commission': 'التفصيل الخاص',
       'foot.journal': 'المجلة', 'foot.owners': 'الملاك', 'foot.xp': 'التجربة الغامرة',
       'foot.marque': 'العلامة', 'foot.usage': 'سياسة الاستخدام',
       'foot.tagline': 'الفخامة التي تستحقها. إرث يبنى للغد. بوابة النخبة لأفخم السيارات الكهربائية في مصر والإمارات والسعودية.',
@@ -798,8 +798,8 @@
      dictionary). Extend freely — any data-i18n key can be tuned per country. */
   const OVERRIDES = {
     us: {
-      'hero.lede': 'A curated collection of the world’s most exclusive high-performance electric vehicles — commissioned for a discerning American clientele through the QN Automotive digital atelier.',
-      'cta.lede': 'Register your interest and our concierge team will reach out with an exclusive commissioning experience across the United States.'
+      'hero.lede': 'A curated collection of the world’s most exclusive high-performance electric vehicles — commissioned for a discerning clientele across the Middle East through the QN Automotive digital atelier.',
+      'cta.lede': 'Register your interest and our concierge team will reach out with an exclusive commissioning experience across the Middle East.'
     },
     ae: {
       'hero.lede': 'مجموعة منتقاة من أرقى السيارات الكهربائية فائقة الأداء — بتكليف خاص لنخبة دولة الإمارات والسعودية، عبر أتيليه QN Automotive الرقمي.',
