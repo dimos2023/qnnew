@@ -13,9 +13,12 @@
   <script>if (location.search.indexOf('embed') !== -1) document.documentElement.className += ' embed';</script>
   <style>
     .embed header, .embed .controls, .embed .drag-hint { display: none !important; }
-    .embed, .embed body { background: #0d0d0d !important; }
-    .embed .viewer { height: 100vh; display: grid; }
-    .embed .stage { height: 100vh; }
+    .embed, .embed body { background: #0d0d0d !important; overflow: hidden; }
+    .embed .viewer { min-height: 100%; height: 100%; grid-template-rows: 1fr; }
+    .embed .stage { height: 100%; min-height: 0; }
+    /* Fill the whole embed area (the 100vh−190px cap was for the now-hidden
+       header/controls; without it the car shrank in short/mobile stages). */
+    .embed #car { width: 100%; height: 100%; max-height: 100%; object-fit: contain; }
   </style>
 </head>
 <body>
