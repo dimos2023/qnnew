@@ -9,7 +9,7 @@
      1) GOOGLE SHEET — paste your Apps Script Web App URL between the quotes.
         (Deploy → New deployment → Web app → Execute as: Me, Access: Anyone.)
         It looks like: https://script.google.com/macros/s/AKfycb.../exec        */
-  const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz00TPSN7ooyEvdLjltVJv9SRkJrsjmfM31_iwtae09aiCfZTxW1mF2NlEC9IbfFTDkEg/exec';
+  const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4P7oZLtUMhHeVkLHki14FjOcw9gN_-yZHWLqx6ZTq26WoOkiIdHiWusmjkhXURbzO/exec';
   /*   2) EMAIL COPY (optional) via FormSubmit — needs a one-time activation.   */
   const FORM_EMAIL = 'info@qnautomotive.com';
   const EMAIL_ENDPOINT = 'https://formsubmit.co/ajax/' + encodeURIComponent(FORM_EMAIL);
