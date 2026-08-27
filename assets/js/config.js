@@ -349,6 +349,97 @@
     return lines.join('\n');
   }
 
+  /* English currency string for the PDF (jsPDF core fonts can't render Arabic). */
+  function fmtEn(usd) {
+    var c = CURRENCIES[country()] || CURRENCIES.us;
+    return Math.round(usd * c.rate).toLocaleString('en-US') + ' ' + c.code;
+  }
+  function loadScript(src) {
+    return new Promise(function (res, rej) {
+      var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej;
+      document.head.appendChild(s);
+    });
+  }
+  function loadImage(url) {
+    return new Promise(function (res) {
+      var img = new Image();
+      img.onload = function () {
+        try {
+          var cv = document.createElement('canvas'); cv.width = img.naturalWidth; cv.height = img.naturalHeight;
+          cv.getContext('2d').drawImage(img, 0, 0);
+          res({ data: cv.toDataURL('image/png'), w: img.naturalWidth, h: img.naturalHeight });
+        } catch (e) { res(null); }
+      };
+      img.onerror = function () { res(null); };
+      img.src = url;
+    });
+  }
+  function selectedRows() {
+    var m = model(), rows = [];
+    m.groups.forEach(function (g) {
+      if (g.type === 'multi') {
+        g.options.forEach(function (o) { if (state.multi[g.id] && state.multi[g.id][o.id]) rows.push([g.label, o.name, '+ ' + fmtEn(o.price)]); });
+      } else {
+        var id = state.single[g.id];
+        g.options.forEach(function (o) { if (o.id === id) rows.push([g.label, o.name, o.price ? '+ ' + fmtEn(o.price) : 'Included']); });
+      }
+    });
+    return rows;
+  }
+
+  /* Branded PDF quotation: crest + configuration + Full Package price + contacts. */
+  function downloadPdf() {
+    var ready = window.jspdf ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js');
+    ready.then(function () { return loadImage('/assets/brand/qn-crest.png'); }).then(function (logo) {
+      var jsPDF = window.jspdf.jsPDF, doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      var W = doc.internal.pageSize.getWidth(), L = 56, R = W - 56;
+      var GOLD = [183, 147, 90], INK = [26, 26, 30], DIM = [120, 120, 128];
+      var m = model(), d = new Date(), y = 52;
+      var setInk = function () { doc.setTextColor(INK[0], INK[1], INK[2]); };
+      var setDim = function () { doc.setTextColor(DIM[0], DIM[1], DIM[2]); };
+      if (logo) { var lw = 104, lh = lw * logo.h / logo.w; doc.addImage(logo.data, 'PNG', (W - lw) / 2, y, lw, lh); y += lh + 4; }
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(15); setInk();
+      doc.text('QN AUTOMOTIVE', W / 2, y, { align: 'center' }); y += 15;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setDim();
+      doc.text('VEHICLE CONFIGURATION QUOTATION', W / 2, y, { align: 'center', charSpace: 1.5 }); y += 20;
+      doc.setDrawColor(GOLD[0], GOLD[1], GOLD[2]); doc.setLineWidth(1); doc.line(L, y, R, y); y += 26;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(19); setInk(); doc.text(m.name, L, y);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); setDim();
+      doc.text('Date: ' + d.toLocaleDateString('en-GB'), R, y - 12, { align: 'right' });
+      doc.text('Ref: QN-' + m.id.toUpperCase() + '-' + (d.getTime() + '').slice(-6), R, y, { align: 'right' });
+      doc.text(m.eyebrow, L, y + 14); y += 34;
+      doc.setFontSize(8); setDim();
+      doc.text('SPECIFICATION', L, y); doc.text('SELECTION', 215, y); doc.text('PRICE', R, y, { align: 'right' }); y += 6;
+      doc.setDrawColor(220, 220, 224); doc.setLineWidth(0.6); doc.line(L, y, R, y); y += 15;
+      doc.setFontSize(10);
+      selectedRows().forEach(function (r) {
+        setDim(); doc.text(r[0], L, y);
+        setInk(); doc.text(r[1], 215, y, { maxWidth: 200 });
+        doc.text(r[2], R, y, { align: 'right' }); y += 17;
+      });
+      y += 6; doc.setDrawColor(220, 220, 224); doc.line(L, y, R, y); y += 22;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(13); setInk();
+      doc.text('Full Package Total', L, y); doc.text(fmtEn(total()), R, y, { align: 'right' });
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setDim();
+      doc.text('All-inclusive price · taxes included', R, y + 12, { align: 'right' }); y += 40;
+      doc.setDrawColor(GOLD[0], GOLD[1], GOLD[2]); doc.setLineWidth(1); doc.line(L, y, R, y); y += 20;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setInk();
+      doc.text('QN Automotive — Elite Concierge', L, y); y += 16;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5); setInk();
+      doc.text('Phone / WhatsApp:  +20 114 443 3316', L, y); y += 14;
+      doc.text('Email:  info@qnautomotive.com', L, y); y += 14;
+      doc.text('Website:  www.qnautomotive.com', L, y); y += 26;
+      doc.setFontSize(7.5); setDim();
+      doc.text('Indicative pricing for guidance only. Your concierge confirms the final, all-inclusive quote and delivery for your market.', L, y, { maxWidth: R - L });
+      doc.save('QN-Automotive-' + m.id + '-quotation.pdf');
+    }).catch(function () {
+      var blob = new Blob([buildSummaryText()], { type: 'text/plain' });
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+      a.download = 'qn-configuration-' + state.model + '.txt'; a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    });
+  }
+
   function wireCTAs() {
     var wa = $('#cfg-cta-wa');
     if (wa) wa.addEventListener('click', function (e) {
@@ -356,15 +447,7 @@
       window.open('https://wa.me/201144433316?text=' + encodeURIComponent(buildSummaryText()), '_blank', 'noopener');
     });
     var dl = $('#cfg-cta-download');
-    if (dl) dl.addEventListener('click', function (e) {
-      e.preventDefault();
-      var blob = new Blob([buildSummaryText()], { type: 'text/plain' });
-      var a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'qn-configuration-' + state.model + '.txt';
-      a.click();
-      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-    });
+    if (dl) dl.addEventListener('click', function (e) { e.preventDefault(); downloadPdf(); });
   }
 
   function init() {
