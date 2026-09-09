@@ -18,17 +18,18 @@
   /* Same Google Sheet the forms use — we log each downloaded quotation here so
      the admin dashboard can show how many quotes each model generated. */
   var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4P7oZLtUMhHeVkLHki14FjOcw9gN_-yZHWLqx6ZTq26WoOkiIdHiWusmjkhXURbzO/exec';
-  function logQuote(m, priceStr, configStr) {
-    if (!SHEET_ENDPOINT) return;
+  /* Nothing is emailed from here. The request registers the customer, and the
+     team sends the quotation from the admin dashboard in their own time.
+     Flip this on only if the customer should also get the file immediately in
+     their browser — as it stands they wait for the team's copy. */
+  var CUSTOMER_GETS_COPY = false;
+
+  function logQuote(payload) {
+    if (!SHEET_ENDPOINT) return Promise.resolve();
     try {
-      var body = new URLSearchParams({
-        _form: 'Quote download — ' + m.name,
-        model: m.name,
-        message: 'Full Package ' + priceStr + (configStr ? ' · ' + configStr : ''),
-        _page: location.pathname
-      });
-      fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: body });
-    } catch (e) {}
+      return fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(payload) })
+        .catch(function () {});
+    } catch (e) { return Promise.resolve(); }
   }
 
   /* Live daily FX. The rates in CURRENCIES are fallbacks; on load we fetch
@@ -370,26 +371,6 @@
     var c = CURRENCIES[country()] || CURRENCIES.us;
     return Math.round(usd * c.rate).toLocaleString('en-US') + ' ' + c.code;
   }
-  function loadScript(src) {
-    return new Promise(function (res, rej) {
-      var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej;
-      document.head.appendChild(s);
-    });
-  }
-  function loadImage(url) {
-    return new Promise(function (res) {
-      var img = new Image();
-      img.onload = function () {
-        try {
-          var cv = document.createElement('canvas'); cv.width = img.naturalWidth; cv.height = img.naturalHeight;
-          cv.getContext('2d').drawImage(img, 0, 0);
-          res({ data: cv.toDataURL('image/png'), w: img.naturalWidth, h: img.naturalHeight });
-        } catch (e) { res(null); }
-      };
-      img.onerror = function () { res(null); };
-      img.src = url;
-    });
-  }
   function selectedRows() {
     var m = model(), rows = [];
     m.groups.forEach(function (g) {
@@ -403,58 +384,163 @@
     return rows;
   }
 
-  /* Branded PDF quotation: crest + configuration + Full Package price + contacts. */
-  function downloadPdf() {
-    var ready = window.jspdf ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js');
-    ready.then(function () { return loadImage('/assets/brand/qn-crest.png'); }).then(function (logo) {
-      var jsPDF = window.jspdf.jsPDF, doc = new jsPDF({ unit: 'pt', format: 'a4' });
-      var W = doc.internal.pageSize.getWidth(), L = 56, R = W - 56;
-      var GOLD = [183, 147, 90], INK = [26, 26, 30], DIM = [120, 120, 128];
-      var m = model(), d = new Date(), y = 52;
-      var setInk = function () { doc.setTextColor(INK[0], INK[1], INK[2]); };
-      var setDim = function () { doc.setTextColor(DIM[0], DIM[1], DIM[2]); };
-      if (logo) { var lw = 104, lh = lw * logo.h / logo.w; doc.addImage(logo.data, 'PNG', (W - lw) / 2, y, lw, lh); y += lh + 4; }
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(15); setInk();
-      doc.text('QN AUTOMOTIVE', W / 2, y, { align: 'center' }); y += 15;
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setDim();
-      doc.text('VEHICLE CONFIGURATION QUOTATION', W / 2, y, { align: 'center', charSpace: 1.5 }); y += 20;
-      doc.setDrawColor(GOLD[0], GOLD[1], GOLD[2]); doc.setLineWidth(1); doc.line(L, y, R, y); y += 26;
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(19); setInk(); doc.text(m.name, L, y);
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); setDim();
-      doc.text('Date: ' + d.toLocaleDateString('en-GB'), R, y - 12, { align: 'right' });
-      doc.text('Ref: QN-' + m.id.toUpperCase() + '-' + (d.getTime() + '').slice(-6), R, y, { align: 'right' });
-      doc.text(m.eyebrow, L, y + 14); y += 34;
-      doc.setFontSize(8); setDim();
-      doc.text('SPECIFICATION', L, y); doc.text('SELECTION', 215, y); doc.text('PRICE', R, y, { align: 'right' }); y += 6;
-      doc.setDrawColor(220, 220, 224); doc.setLineWidth(0.6); doc.line(L, y, R, y); y += 15;
-      doc.setFontSize(10);
-      selectedRows().forEach(function (r) {
-        setDim(); doc.text(r[0], L, y);
-        setInk(); doc.text(r[1], 215, y, { maxWidth: 200 });
-        doc.text(r[2], R, y, { align: 'right' }); y += 17;
-      });
-      y += 6; doc.setDrawColor(220, 220, 224); doc.line(L, y, R, y); y += 22;
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(13); setInk();
-      doc.text('Full Package Total', L, y); doc.text(fmtEn(total()), R, y, { align: 'right' });
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setDim();
-      doc.text('All-inclusive price · taxes included', R, y + 12, { align: 'right' }); y += 40;
-      doc.setDrawColor(GOLD[0], GOLD[1], GOLD[2]); doc.setLineWidth(1); doc.line(L, y, R, y); y += 20;
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setInk();
-      doc.text('QN Automotive — Elite Concierge', L, y); y += 16;
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5); setInk();
-      doc.text('Phone / WhatsApp:  +20 114 443 3316', L, y); y += 14;
-      doc.text('Email:  info@qnautomotive.com', L, y); y += 14;
-      doc.text('Website:  www.qnautomotive.com', L, y); y += 26;
-      doc.setFontSize(7.5); setDim();
-      doc.text('Indicative pricing for guidance only. Your concierge confirms the final, all-inclusive quote and delivery for your market.', L, y, { maxWidth: R - L });
-      doc.save('QN-Automotive-' + m.id + '-quotation.pdf');
-      logQuote(m, fmtEn(total()), selectedRows().map(function (r) { return r[1]; }).join(', '));
-    }).catch(function () {
-      var blob = new Blob([buildSummaryText()], { type: 'text/plain' });
-      var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-      a.download = 'qn-configuration-' + state.model + '.txt'; a.click();
-      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-    });
+  /* ---- Quotation modal -------------------------------------------------
+     The PDF is gated behind name / email / phone, so every quotation reaches
+     the admin dashboard as a named lead the team can follow up and re-send,
+     instead of an anonymous download count. */
+  function tr(en, ar) { return isAr() ? ar : en; }
+
+  function quoteData(customer, ref, when) {
+    var m = model();
+    return {
+      model: { id: m.id, name: m.name, eyebrow: m.eyebrow },
+      rows: selectedRows(),
+      total: fmtEn(total()),
+      ref: ref,
+      date: when,
+      customer: customer || {}
+    };
+  }
+
+  /* Only reached if jsPDF or the crest can't load — the customer still leaves
+     with their configuration. */
+  function fallbackText() {
+    var blob = new Blob([buildSummaryText()], { type: 'text/plain' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = 'qn-configuration-' + state.model + '.txt'; a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  }
+
+  var modalEl = null, lastFocus = null;
+
+  function closeQuoteModal() {
+    if (!modalEl) return;
+    modalEl.remove(); modalEl = null;
+    document.removeEventListener('keydown', onModalKey);
+    document.documentElement.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function onModalKey(e) { if (e.key === 'Escape') closeQuoteModal(); }
+
+  function qmField(id, label, type, name, ph, auto) {
+    return '<div class="field">' +
+        '<label for="' + id + '">' + label + '</label>' +
+        '<input id="' + id + '" name="' + name + '" type="' + type + '" ' +
+               'placeholder="' + ph + '" autocomplete="' + auto + '">' +
+      '</div>';
+  }
+
+  function openQuoteModal() {
+    if (modalEl) return;
+    lastFocus = document.activeElement;
+    var m = model();
+
+    modalEl = document.createElement('div');
+    modalEl.className = 'qm-back';
+    modalEl.innerHTML =
+      '<div class="qm" role="dialog" aria-modal="true" aria-labelledby="qm-title">' +
+        '<button type="button" class="qm-x" aria-label="' + tr('Close', 'إغلاق') + '">&times;</button>' +
+        '<div class="qm-body">' +
+          '<p class="qm-eyebrow"></p>' +
+          '<h3 id="qm-title">' + tr('Your quotation', 'عرض السعر الخاص بك') + '</h3>' +
+          '<p class="qm-sub">' +
+            tr('Leave your details and our team will send your PDF quotation.',
+               'اترك بياناتك وسيرسل لك فريقنا عرض السعر بصيغة PDF.') +
+          '</p>' +
+          '<form class="qm-form" novalidate>' +
+            qmField('qm-name',  tr('Full name', 'الاسم بالكامل'),            'text',  'name',  tr('Your name', 'اسمك'), 'name') +
+            qmField('qm-email', tr('Email', 'البريد الإلكتروني'),            'email', 'email', 'name@example.com', 'email') +
+            qmField('qm-phone', tr('Phone / WhatsApp', 'الموبايل / واتساب'), 'tel',   'phone', '+20 1XX XXX XXXX', 'tel') +
+            '<div class="form-alert" role="alert"></div>' +
+            '<button class="btn btn-chrome qm-submit" type="submit">' +
+              tr('Send my quotation', 'أرسل لي عرض السعر') +
+            '</button>' +
+            '<p class="qm-fine">' +
+              tr('We use these details only to send your quotation and follow up.',
+                 'نستخدم بياناتك فقط لإرسال عرض السعر ومتابعة طلبك.') +
+            '</p>' +
+          '</form>' +
+        '</div>' +
+      '</div>';
+
+    modalEl.querySelector('.qm-eyebrow').textContent = m.name;
+    document.body.appendChild(modalEl);
+    document.documentElement.style.overflow = 'hidden';
+    document.addEventListener('keydown', onModalKey);
+
+    modalEl.addEventListener('click', function (e) { if (e.target === modalEl) closeQuoteModal(); });
+    modalEl.querySelector('.qm-x').addEventListener('click', closeQuoteModal);
+    modalEl.querySelector('.qm-form').addEventListener('submit', onQuoteSubmit);
+    var first = modalEl.querySelector('#qm-name');
+    if (first) first.focus();
+  }
+
+  function onQuoteSubmit(e) {
+    e.preventDefault();
+    var form  = e.currentTarget;
+    var box   = form.querySelector('.form-alert');
+    var btn   = form.querySelector('.qm-submit');
+    var val   = function (n) { return (form.querySelector('[name=' + n + ']').value || '').trim(); };
+    var name  = val('name'), email = val('email'), phone = val('phone');
+
+    function fail(msg, n) {
+      box.className = 'form-alert show err';
+      box.textContent = msg;
+      var el = form.querySelector('[name=' + n + ']');
+      if (el) el.focus();
+    }
+    if (!name) return fail(tr('Please enter your name.', 'من فضلك أدخل اسمك.'), 'name');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return fail(tr('Please enter a valid email.', 'من فضلك أدخل بريدًا إلكترونيًا صحيحًا.'), 'email');
+    if (phone.replace(/\D/g, '').length < 8)
+      return fail(tr('Please enter a valid phone number.', 'من فضلك أدخل رقم موبايل صحيح.'), 'phone');
+
+    box.className = 'form-alert';
+    btn.disabled = true;
+    btn.textContent = tr('Preparing…', 'جارٍ التجهيز…');
+
+    var m    = model();
+    var when = Date.now();
+    var ref  = window.QNQuote ? window.QNQuote.makeRef(m.id, when) : 'QN-' + String(m.id).toUpperCase();
+    var data = quoteData({ name: name, email: email, phone: phone }, ref, when);
+
+    /* The configuration travels as JSON so the admin dashboard can rebuild this
+       exact quotation later — the sheet only ever stores text. */
+    var payload = {
+      _form: 'Quote download — ' + m.name,
+      name: name, email: email, phone: phone,
+      model: m.name,
+      ref: ref,
+      message: 'Full Package ' + data.total +
+               (data.rows.length ? ' · ' + data.rows.map(function (r) { return r[1]; }).join(', ') : ''),
+      quote: JSON.stringify(data),
+      _page: location.pathname
+    };
+
+    var copy = (CUSTOMER_GETS_COPY && window.QNQuote)
+      ? window.QNQuote.save(data).catch(function () { fallbackText(); })
+      : Promise.resolve();
+
+    Promise.all([logQuote(payload), copy])
+      .then(function () { quoteThanks(); }, function () { quoteThanks(); });
+  }
+
+  function quoteThanks() {
+    if (!modalEl) return;
+    var body = modalEl.querySelector('.qm-body');
+    body.innerHTML =
+      '<div class="qm-done">' +
+        '<div class="qm-tick" aria-hidden="true">✓</div>' +
+        '<h3>' + tr('Thank you', 'شكرًا لك') + '</h3>' +
+        '<p class="qm-sub">' +
+          tr('We have your request. Our concierge team will send your quotation and be in touch shortly.',
+             'تم استلام طلبك. سيرسل لك فريق الكونسيرج عرض السعر ويتواصل معك قريبًا.') +
+        '</p>' +
+        '<button type="button" class="btn btn-ghost qm-close2">' + tr('Close', 'إغلاق') + '</button>' +
+      '</div>';
+    var close = body.querySelector('.qm-close2');
+    close.addEventListener('click', closeQuoteModal);
+    close.focus();
   }
 
   function wireCTAs() {
@@ -464,7 +550,7 @@
       window.open('https://wa.me/201144433316?text=' + encodeURIComponent(buildSummaryText()), '_blank', 'noopener');
     });
     var dl = $('#cfg-cta-download');
-    if (dl) dl.addEventListener('click', function (e) { e.preventDefault(); downloadPdf(); });
+    if (dl) dl.addEventListener('click', function (e) { e.preventDefault(); openQuoteModal(); });
   }
 
   function init() {
