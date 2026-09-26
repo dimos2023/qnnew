@@ -259,22 +259,43 @@
        identical PDF here — nothing but text is ever stored in the sheet.
        Rows logged before that field existed fall back to the summary line. */
     var quoteRows = [];
+    /* Requests logged before the configuration was stored as JSON kept only
+       the one-line summary ("Full Package 364,675 USD \u00b7 Starlight Black, \u2026").
+       Reading that back gives the PDF its table and its total, instead of a
+       page with a single sentence on it. */
+    function fromSummary(msg) {
+      var text = String(msg == null ? '' : msg).trim();
+      if (!text) return { rows: [], total: '', note: '' };
+      var parts = text.split(' \u00b7 ');
+      var total = (parts.shift() || '').replace(/^full package\s*/i, '').trim();
+      var options = parts.join(' \u00b7 ').split(/,\s+/).filter(Boolean);
+      return {
+        rows: options.map(function (o, i) { return [i ? '' : 'Configuration', o, '']; }),
+        total: total,
+        note: options.length ? '' : text
+      };
+    }
+
     function rebuildPdf(q, btn) {
       if (!q || !window.QNQuote) return;
       var data = null;
       try { data = JSON.parse(q.Quote || q.quote); } catch (err) { data = null; }
-      if (!data) {
+      if (!data || !data.model) {
+        var name = q.Model || q.model || 'Configuration';
+        var when = new Date(q.Time || q.time).getTime();
+        var sum = fromSummary(q.Message || q.message);
         data = {
-          model: { id: 'quotation', name: q.Model || q.model || 'Configuration', eyebrow: '' },
-          rows: [], total: '',
-          note: q.Message || q.message || '',
+          model: { id: String(name).split(/\s+/).pop() || 'Q', name: name, eyebrow: '' },
+          rows: sum.rows,
+          total: sum.total,
+          note: sum.note,
           ref: q.Ref || q.ref || '',
-          date: q.Time || q.time,
+          date: isNaN(when) ? Date.now() : when,
           customer: { name: q.Name || q.name, email: q.Email || q.email, phone: q.Phone || q.phone }
         };
       }
       var label = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Building…';
+      btn.disabled = true; btn.textContent = 'Building\u2026';
       window.QNQuote.save(data).then(
         function () { btn.disabled = false; btn.textContent = label; },
         function () { btn.disabled = false; btn.textContent = 'Failed'; }
@@ -328,7 +349,11 @@
             '<td>' + esc(o.currentvehicles || '-') + '</td>' +
             '<td><div class="rg-act">' +
               '<button type="button" class="rg-btn rg-more-btn" data-key="' + key + '" data-i="' + i + '">Details</button>' +
-              (isQuote ? '<button type="button" class="rg-btn rg-pdf" data-i="' + i + '">PDF</button>' : '') +
+              (isQuote
+                ? '<button type="button" class="rg-btn rg-pdf" data-i="' + i + '"' +
+                  (o.quote ? '' : ' title="Rebuilt from the saved summary \u2014 this request predates the stored configuration"') +
+                  '>PDF' + (o.quote ? '' : '*') + '</button>'
+                : '') +
               (st === 'pending'
                 ? '<button type="button" class="rg-btn ok" data-act="approved" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Approve</button>' +
                   '<button type="button" class="rg-btn no" data-act="rejected" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Reject</button>'
