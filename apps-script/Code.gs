@@ -156,5 +156,15 @@ function doGet(e) {
     return reply_(e, { ok: true, row: row, status: status });
   }
 
+  /* Removing a row is how a test or a spam entry leaves the sheet without
+     anyone opening it. It is permanent — the dashboard asks first. */
+  if (p.action === 'delete') {
+    var del = parseInt(p.row, 10);
+    var sh2 = sheet_();
+    if (!del || del < 2 || del > sh2.getLastRow()) return reply_(e, { error: 'bad row' });
+    sh2.deleteRow(del);
+    return reply_(e, { ok: true, deleted: del });
+  }
+
   return reply_(e, { rows: rows_() });
 }

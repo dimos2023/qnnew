@@ -91,7 +91,8 @@
     .badge.pending  { background: rgba(224,178,90,.14); color: #e3bd78; border: 1px solid rgba(224,178,90,.4); }
     .badge.approved { background: rgba(120,200,150,.12); color: #7fd0a6; border: 1px solid rgba(120,200,150,.35); }
     .badge.rejected { background: rgba(224,85,99,.12); color: #e88; border: 1px solid rgba(224,85,99,.4); }
-    .rg-tbl { min-width: 1150px; }
+    .ad-grid.one { grid-template-columns: 1fr; }
+    .rg-tbl { min-width: 1260px; }
     .rg-tbl td:last-child, .rg-tbl td:nth-child(1) { white-space: nowrap; }
     .rg-act { display: flex; gap: 6px; }
     .rg-btn { font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: .04em; white-space: nowrap;
@@ -159,14 +160,15 @@
       <div class="stat"><div class="lbl">Total enquiries</div><div class="num" id="s-total">—</div><div class="sub">Excl. quotations</div></div>
     </div>
 
-    <!-- Registration applications: every form on the site posts one of these,
-         and it stays pending until someone here approves it. -->
+    <!-- Every enquiry on the site is one of these: the registration form
+         posts it, and it stays pending until someone here approves it.
+         Older rows from the forms the site used before are listed too. -->
     <div class="panel" style="margin-bottom:var(--s5)">
       <div class="panel-head"><h2>Registration requests</h2><span class="count" id="reg-count"></span></div>
       <div class="tbl-scroll">
         <table class="rg-tbl">
-          <thead><tr><th>When</th><th>Status</th><th>Applicant</th><th>Contact</th><th>Job title</th><th>Desired model</th><th>Cars</th><th></th></tr></thead>
-          <tbody id="reg-body"><tr><td colspan="8" class="ad-state">Loading…</td></tr></tbody>
+          <thead><tr><th>When</th><th>Source</th><th>Status</th><th>Applicant</th><th>Contact</th><th>Job title</th><th>Desired model</th><th>Cars</th><th></th></tr></thead>
+          <tbody id="reg-body"><tr><td colspan="9" class="ad-state">Loading…</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -183,17 +185,7 @@
       </div>
     </div>
 
-    <div class="ad-grid">
-      <div class="panel">
-        <div class="panel-head"><h2>Recent enquiries</h2><span class="count" id="tbl-count"></span></div>
-        <div class="tbl-scroll">
-          <table>
-            <thead><tr><th>When</th><th>Type</th><th>Name</th><th>Phone</th><th>Model</th><th>City</th></tr></thead>
-            <tbody id="tbl-body"><tr><td colspan="6" class="ad-state" id="tbl-state">Loading…</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-
+    <div class="ad-grid one">
       <div class="panel">
         <div class="panel-head"><h2>Traffic &amp; engagement</h2></div>
         <div class="analytics-body">
@@ -305,10 +297,6 @@
       Object.keys(r || {}).forEach(function (k) { o[String(k).toLowerCase().replace(/[\s_-]/g, '')] = r[k]; });
       return o;
     }
-    function isApplication(r) {
-      var o = norm(r);
-      return /registration/i.test(String(o.form || '')) || !!o.jobtitle;
-    }
     function statusOf(o) {
       var v = String(o.status || 'pending').toLowerCase();
       return (v === 'approved' || v === 'rejected') ? v : 'pending';
@@ -325,9 +313,9 @@
 
       var body = document.getElementById('reg-body');
       body.innerHTML = !regRows.length
-        ? '<tr><td colspan="8" class="ad-state">No applications yet.</td></tr>'
+        ? '<tr><td colspan="9" class="ad-state">No requests yet.</td></tr>'
         : regRows.map(function (r, i) {
-            var o = norm(r), st = statusOf(o);
+            var o = norm(r), st = statusOf(o), t = typeOf(o.form);
             var email = o.email || '', phone = o.phone || '';
             var contact = [];
             if (email) contact.push('<a class="q-mail ltr" href="mailto:' + esc(email) + '">' + esc(email) + '</a>');
@@ -335,6 +323,7 @@
             var canAct = o.row != null && o.row !== '';
             return '<tr>' +
                 '<td>' + esc(fmtTime(o.time)) + '</td>' +
+                '<td><span class="badge ' + t.cls + '">' + esc(t.label) + '</span></td>' +
                 '<td><span class="badge ' + st + '">' + st.charAt(0).toUpperCase() + st.slice(1) + '</span></td>' +
                 '<td class="name">' + esc(o.name || o.company || '—') + '</td>' +
                 '<td>' + (contact.join('<br>') || '—') + '</td>' +
@@ -347,9 +336,10 @@
                     ? '<button type="button" class="rg-btn ok" data-act="approved" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Approve</button>' +
                       '<button type="button" class="rg-btn no" data-act="rejected" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Reject</button>'
                     : '') +
+                  '<button type="button" class="rg-btn no rg-del" data-del="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Delete</button>' +
                 '</div></td>' +
               '</tr>' +
-              '<tr class="rg-more" data-more="' + i + '" hidden><td colspan="8">' + details(o) + '</td></tr>';
+              '<tr class="rg-more" data-more="' + i + '" hidden><td colspan="9">' + details(o) + '</td></tr>';
           }).join('');
     }
 
@@ -364,6 +354,7 @@
         kv('Club', o.clubname) +
         kv('Membership no.', o.membershipnumber) +
         kv('Preferred date', o.date) +
+        kv('City', o.city) +
         kv('Source page', o.page || o.form) +
         kv('Address', o.address, true) +
         kv('Cars owned', o.currentvehicles, true) +
@@ -380,6 +371,18 @@
         if (row) { row.hidden = !row.hidden; more.textContent = row.hidden ? 'Details' : 'Hide'; }
         return;
       }
+      var del = e.target.closest && e.target.closest('.rg-del');
+      if (del && !del.disabled) {
+        if (!confirm('Delete this request permanently? This cannot be undone.')) return;
+        del.disabled = true; del.textContent = 'Deleting…';
+        jsonp({ action: 'delete', token: token, row: del.dataset.del })
+          .then(function (data) {
+            if (!data || data.error) throw new Error((data && data.error) || 'error');
+            load();
+          })
+          .catch(function () { del.disabled = false; del.textContent = 'Delete failed'; });
+        return;
+      }
       var act = e.target.closest && e.target.closest('.rg-btn[data-act]');
       if (!act || act.disabled) return;
       var label = act.textContent;
@@ -394,7 +397,6 @@
 
     function render(rows) {
       rows = rows || [];
-      renderRegs(rows.filter(isApplication));
       var leads = [], quotes = [], td = 0, cc = 0;
       rows.forEach(function (r) {
         var t = typeOf(r.Form || r.form);
@@ -402,28 +404,11 @@
         leads.push(r);
         if (t.cls === 'td') td++; else if (t.cls === 'cc') cc++;
       });
+      renderRegs(leads);
       document.getElementById('s-td').textContent = td;
       document.getElementById('s-cc').textContent = cc;
       document.getElementById('s-q').textContent = quotes.length;
       document.getElementById('s-total').textContent = leads.length;
-      document.getElementById('tbl-count').textContent = leads.length + ' total';
-
-      /* ---- Enquiries table (leads only) ---- */
-      var recent = leads.slice().reverse().slice(0, 40);
-      var body = document.getElementById('tbl-body');
-      body.innerHTML = !recent.length
-        ? '<tr><td colspan="6" class="ad-state">No enquiries yet.</td></tr>'
-        : recent.map(function (r) {
-            var t = typeOf(r.Form || r.form);
-            return '<tr>' +
-              '<td>' + esc(fmtTime(r.Time || r.time)) + '</td>' +
-              '<td><span class="badge ' + t.cls + '">' + esc(t.label) + '</span></td>' +
-              '<td class="name">' + esc(r.Name || r.name) + '</td>' +
-              '<td class="ltr">' + esc(r.Phone || r.phone) + '</td>' +
-              '<td>' + esc(r.Model || r.model) + '</td>' +
-              '<td>' + esc(r.City || r.city) + '</td>' +
-            '</tr>';
-          }).join('');
 
       /* ---- Quotations: per-model counts + list ---- */
       var byModel = {};
@@ -458,14 +443,14 @@
     }
 
     function load() {
-      document.getElementById('tbl-state') && (document.getElementById('tbl-body').innerHTML =
-        '<tr><td colspan="6" class="ad-state">Loading…</td></tr>');
+      document.getElementById('reg-body').innerHTML =
+        '<tr><td colspan="9" class="ad-state">Loading…</td></tr>';
       return jsonp({ action: 'leads', token: token }).then(function (data) {
         if (!data || data.error) throw new Error(data && data.error || 'error');
         render(data.rows || []);
       }).catch(function (e) {
-        document.getElementById('tbl-body').innerHTML =
-          '<tr><td colspan="6" class="ad-state">Could not load data (' + esc(e.message) + '). Check the passcode / that the script is deployed with a doGet.</td></tr>';
+        document.getElementById('reg-body').innerHTML =
+          '<tr><td colspan="9" class="ad-state">Could not load data (' + esc(e.message) + '). Check the passcode / that the script is deployed with a doGet.</td></tr>';
       });
     }
 
