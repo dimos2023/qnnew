@@ -227,6 +227,10 @@
       }
       window[cb] = function (data) { finish(!!(data && data.exists)); };
       s.onerror = function () { finish(false); };
+      /* A deployment without the check endpoint answers with an empty body:
+         the script loads but never calls back, so onload is the signal that
+         this backend can't answer — no point making the applicant wait. */
+      s.onload = function () { finish(false); };
       s.src = SHEET_ENDPOINT + '?check=' + encodeURIComponent(email) + '&callback=' + cb + '&_=' + Date.now();
       document.body.appendChild(s);
     });
