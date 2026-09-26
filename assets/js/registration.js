@@ -45,7 +45,10 @@
   var SOURCES = {
     join: { label: 'Registration — Interest' },
     concierge: { label: 'Registration — Concierge', extra: 'message' },
-    'test-drive': { label: 'Registration — Test drive', extra: 'date' }
+    'test-drive': { label: 'Registration — Test drive', extra: 'date' },
+    /* The Build & Price modal mounts the same form; the configuration it was
+       built from travels with it (see opts.extra in mount). */
+    quote: { label: 'Quote download — registration', submit: { en: 'Send my quotation', ar: 'أرسل لي عرض السعر' } }
   };
 
   function isAr() { return document.documentElement.lang === 'ar'; }
@@ -168,11 +171,15 @@
 
       '<p class="form-alert" role="alert"></p>' +
       '<p class="reg-foot">' +
-        tr('Submit to send your application for review. You will see a confirmation and return to the homepage.',
-           'اضغط إرسال لتقديم طلبك للمراجعة. ستظهر لك رسالة تأكيد ثم تعود للصفحة الرئيسية.') +
+        (src.foot
+          ? tr(src.foot.en, src.foot.ar)
+          : tr('Submit to send your application for review. You will see a confirmation and return to the homepage.',
+               'اضغط إرسال لتقديم طلبك للمراجعة. ستظهر لك رسالة تأكيد ثم تعود للصفحة الرئيسية.')) +
       '</p>' +
       '<div class="form-actions">' +
-        '<button type="submit" class="btn btn-chrome">' + tr('Register & continue', 'سجّل وتابع') + '</button>' +
+        '<button type="submit" class="btn btn-chrome">' +
+          (src.submit ? tr(src.submit.en, src.submit.ar) : tr('Register & continue', 'سجّل وتابع')) +
+        '</button>' +
       '</div>';
   }
 
@@ -264,7 +271,8 @@
 
   /* ---- submit ----------------------------------------------------------- */
 
-  function submit(form, src) {
+  function submit(form, src, opts) {
+    opts = opts || {};
     var email = val(form, 'email').toLowerCase();
 
     /* 1 — email present and well formed */
@@ -346,12 +354,13 @@
         _form: src.label,
         _subject: src.label + ' — QN Automotive',
         _page: location.pathname
-      });
+      }, opts.extra ? opts.extra(record) : {});
 
       try { localStorage.setItem(STORE_KEY, JSON.stringify(record)); } catch (e) { /* private mode */ }
 
       return Promise.all([sendToSheet(payload), sendEmail(payload)]).then(function () {
-        successPanel(form);
+        if (opts.onSuccess) opts.onSuccess(record, payload);
+        else successPanel(form);
       });
     }).catch(function () {
       release();
@@ -367,7 +376,7 @@
     if (wrap) wrap.classList.toggle('one', wrap.querySelectorAll('.reg-car').length < 2);
   }
 
-  function wire(form, src) {
+  function wire(form, src, opts) {
     var p = form.id || 'reg';
 
     form.addEventListener('click', function (e) {
@@ -397,7 +406,7 @@
       if (e.target.name === 'email') clearAlert(form);
     });
 
-    form.addEventListener('submit', function (e) { e.preventDefault(); submit(form, src); });
+    form.addEventListener('submit', function (e) { e.preventDefault(); submit(form, src, opts); });
   }
 
   function render(form, src) {
@@ -428,15 +437,27 @@
     });
   }
 
+  /* Build the form into an empty <form> and wire it up. Pages call this
+     through init(); the Build & Price modal calls it directly and passes
+     opts to attach the configuration and keep the receipt in the modal. */
+  function mount(form, sourceKey, opts) {
+    var src = SOURCES[sourceKey] || SOURCES.join;
+    render(form, src);
+    wire(form, src, opts);
+    /* Rebuild in the new language, keeping whatever they typed. */
+    window.addEventListener('legacy:langchange', function () {
+      if (form.isConnected && !form.hidden) render(form, src);
+    });
+    return form;
+  }
+
+  window.QNRegistration = { mount: mount };
+
   function init() {
     var forms = document.querySelectorAll('form[data-registration]');
     if (!forms.length) return;
     forms.forEach(function (form) {
-      var src = SOURCES[form.getAttribute('data-registration')] || SOURCES.join;
-      render(form, src);
-      wire(form, src);
-      /* Rebuild in the new language, keeping whatever they typed. */
-      window.addEventListener('legacy:langchange', function () { if (!form.hidden) render(form, src); });
+      mount(form, form.getAttribute('data-registration'));
     });
   }
 

@@ -244,6 +244,21 @@
   color: var(--ink); margin: 0;
 }
 .qm-sub { color: var(--ink-dim); font-size: 0.95rem; margin: 10px 0 0; }
+/* The registration form needs more room than the old three fields did. */
+.qm-wide { width: min(880px, 100%); max-height: calc(100svh - 2 * clamp(16px, 4vw, 40px)); overflow-y: auto; }
+.qm-wide .qm-body { padding: clamp(24px, 4vw, 40px) clamp(20px, 4vw, 40px) clamp(28px, 4vw, 40px); }
+.qm-reg { max-width: none; margin-top: var(--s5); }
+.qm-reg .reg-sec { margin-bottom: var(--s5); }
+.qm-reg .form-actions .btn { width: 100%; }
+/* .qm-body h3 is the modal's own title style — the section headings inside
+   the form keep theirs. */
+.qm-reg .reg-sec-h {
+  font-family: var(--sans); font-size: 15px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+html.rtl .qm-reg .reg-sec-h { font-family: var(--sans-ar); letter-spacing: 0.04em; }
+.qm-reg .form-success { border: 0; padding: 0; }
+
 .qm-form { display: flex; flex-direction: column; gap: var(--s3); margin-top: var(--s4); }
 .qm-form .form-alert { margin-top: 0; }
 .qm-submit { width: 100%; justify-content: center; }

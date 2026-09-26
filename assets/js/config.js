@@ -15,22 +15,13 @@
   };
   var ORDER_FEE_USD = 500;
 
-  /* Same Google Sheet the forms use — we log each downloaded quotation here so
-     the admin dashboard can show how many quotes each model generated. */
-  var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby4P7oZLtUMhHeVkLHki14FjOcw9gN_-yZHWLqx6ZTq26WoOkiIdHiWusmjkhXURbzO/exec';
-  /* Nothing is emailed from here. The request registers the customer, and the
-     team sends the quotation from the admin dashboard in their own time.
-     Flip this on only if the customer should also get the file immediately in
-     their browser — as it stands they wait for the team's copy. */
+  /* The quotation request is sent by the shared registration form
+     (assets/js/registration.js), which posts to the same Google Sheet as
+     every other form — so nothing is posted from here.
+     Nothing is emailed from here either: the team sends the quotation from
+     the admin dashboard. Flip this on only if the customer should also get
+     the file immediately in their browser. */
   var CUSTOMER_GETS_COPY = false;
-
-  function logQuote(payload) {
-    if (!SHEET_ENDPOINT) return Promise.resolve();
-    try {
-      return fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(payload) })
-        .catch(function () {});
-    } catch (e) { return Promise.resolve(); }
-  }
 
   /* Live daily FX. The rates in CURRENCIES are fallbacks; on load we fetch
      today's USD rates (once a day, cached) so every country's price tracks the
@@ -422,44 +413,28 @@
   }
   function onModalKey(e) { if (e.key === 'Escape') closeQuoteModal(); }
 
-  function qmField(id, label, type, name, ph, auto) {
-    return '<div class="field">' +
-        '<label for="' + id + '">' + label + '</label>' +
-        '<input id="' + id + '" name="' + name + '" type="' + type + '" ' +
-               'placeholder="' + ph + '" autocomplete="' + auto + '">' +
-      '</div>';
-  }
-
+  /* The modal hosts the same registration form the rest of the site uses —
+     the configuration the customer just built travels with their details, so
+     the admin dashboard shows the application and can rebuild the PDF. */
   function openQuoteModal() {
     if (modalEl) return;
+    if (!window.QNRegistration) { fallbackText(); return; }
     lastFocus = document.activeElement;
     var m = model();
 
     modalEl = document.createElement('div');
     modalEl.className = 'qm-back';
     modalEl.innerHTML =
-      '<div class="qm" role="dialog" aria-modal="true" aria-labelledby="qm-title">' +
+      '<div class="qm qm-wide" role="dialog" aria-modal="true" aria-labelledby="qm-title">' +
         '<button type="button" class="qm-x" aria-label="' + tr('Close', 'إغلاق') + '">&times;</button>' +
         '<div class="qm-body">' +
           '<p class="qm-eyebrow"></p>' +
           '<h3 id="qm-title">' + tr('Your quotation', 'عرض السعر الخاص بك') + '</h3>' +
           '<p class="qm-sub">' +
-            tr('Leave your details and our team will send your PDF quotation.',
-               'اترك بياناتك وسيرسل لك فريقنا عرض السعر بصيغة PDF.') +
+            tr('Complete your registration and our team will send your PDF quotation.',
+               'أكمل بيانات التسجيل وسيرسل لك فريقنا عرض السعر بصيغة PDF.') +
           '</p>' +
-          '<form class="qm-form" novalidate>' +
-            qmField('qm-name',  tr('Full name', 'الاسم بالكامل'),            'text',  'name',  tr('Your name', 'اسمك'), 'name') +
-            qmField('qm-email', tr('Email', 'البريد الإلكتروني'),            'email', 'email', 'name@example.com', 'email') +
-            qmField('qm-phone', tr('Phone / WhatsApp', 'الموبايل / واتساب'), 'tel',   'phone', '+20 1XX XXX XXXX', 'tel') +
-            '<div class="form-alert" role="alert"></div>' +
-            '<button class="btn btn-chrome qm-submit" type="submit">' +
-              tr('Send my quotation', 'أرسل لي عرض السعر') +
-            '</button>' +
-            '<p class="qm-fine">' +
-              tr('We use these details only to send your quotation and follow up.',
-                 'نستخدم بياناتك فقط لإرسال عرض السعر ومتابعة طلبك.') +
-            '</p>' +
-          '</form>' +
+          '<form class="form-card reg qm-reg" novalidate></form>' +
         '</div>' +
       '</div>';
 
@@ -470,60 +445,40 @@
 
     modalEl.addEventListener('click', function (e) { if (e.target === modalEl) closeQuoteModal(); });
     modalEl.querySelector('.qm-x').addEventListener('click', closeQuoteModal);
-    modalEl.querySelector('.qm-form').addEventListener('submit', onQuoteSubmit);
-    var first = modalEl.querySelector('#qm-name');
+
+    var form = modalEl.querySelector('.qm-reg');
+    window.QNRegistration.mount(form, 'quote', {
+      extra: function (record) {
+        var mm = model();
+        var when = Date.now();
+        var ref = window.QNQuote ? window.QNQuote.makeRef(mm.id, when) : 'QN-' + String(mm.id).toUpperCase();
+        var data = quoteData({ name: record.name, email: record.email, phone: record.phone }, ref, when);
+        lastQuote = data;
+        return {
+          model: mm.name,
+          ref: ref,
+          message: 'Full Package ' + data.total +
+                   (data.rows.length ? ' · ' + data.rows.map(function (r) { return r[1]; }).join(', ') : ''),
+          quote: JSON.stringify(data)
+        };
+      },
+      onSuccess: function () {
+        /* Nothing is emailed from here; the team sends the file. Flip
+           CUSTOMER_GETS_COPY on to hand the customer their copy at once. */
+        if (CUSTOMER_GETS_COPY && window.QNQuote && lastQuote) {
+          window.QNQuote.save(lastQuote).catch(function () { fallbackText(); });
+        }
+        quoteThanks();
+      }
+    });
+
+    var wanted = form.querySelector('[name="desired-model"]');
+    if (wanted) wanted.value = m.name;
+    var first = form.querySelector('input');
     if (first) first.focus();
   }
 
-  function onQuoteSubmit(e) {
-    e.preventDefault();
-    var form  = e.currentTarget;
-    var box   = form.querySelector('.form-alert');
-    var btn   = form.querySelector('.qm-submit');
-    var val   = function (n) { return (form.querySelector('[name=' + n + ']').value || '').trim(); };
-    var name  = val('name'), email = val('email'), phone = val('phone');
-
-    function fail(msg, n) {
-      box.className = 'form-alert show err';
-      box.textContent = msg;
-      var el = form.querySelector('[name=' + n + ']');
-      if (el) el.focus();
-    }
-    if (!name) return fail(tr('Please enter your name.', 'من فضلك أدخل اسمك.'), 'name');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      return fail(tr('Please enter a valid email.', 'من فضلك أدخل بريدًا إلكترونيًا صحيحًا.'), 'email');
-    if (phone.replace(/\D/g, '').length < 8)
-      return fail(tr('Please enter a valid phone number.', 'من فضلك أدخل رقم موبايل صحيح.'), 'phone');
-
-    box.className = 'form-alert';
-    btn.disabled = true;
-    btn.textContent = tr('Preparing…', 'جارٍ التجهيز…');
-
-    var m    = model();
-    var when = Date.now();
-    var ref  = window.QNQuote ? window.QNQuote.makeRef(m.id, when) : 'QN-' + String(m.id).toUpperCase();
-    var data = quoteData({ name: name, email: email, phone: phone }, ref, when);
-
-    /* The configuration travels as JSON so the admin dashboard can rebuild this
-       exact quotation later — the sheet only ever stores text. */
-    var payload = {
-      _form: 'Quote download — ' + m.name,
-      name: name, email: email, phone: phone,
-      model: m.name,
-      ref: ref,
-      message: 'Full Package ' + data.total +
-               (data.rows.length ? ' · ' + data.rows.map(function (r) { return r[1]; }).join(', ') : ''),
-      quote: JSON.stringify(data),
-      _page: location.pathname
-    };
-
-    var copy = (CUSTOMER_GETS_COPY && window.QNQuote)
-      ? window.QNQuote.save(data).catch(function () { fallbackText(); })
-      : Promise.resolve();
-
-    Promise.all([logQuote(payload), copy])
-      .then(function () { quoteThanks(); }, function () { quoteThanks(); });
-  }
+  var lastQuote = null;
 
   function quoteThanks() {
     if (!modalEl) return;

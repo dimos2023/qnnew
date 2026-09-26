@@ -157,7 +157,7 @@
       <div class="stat gold"><div class="lbl">Applications</div><div class="num" id="s-reg">—</div><div class="sub">Pending approval</div></div>
       <div class="stat"><div class="lbl">Concierge</div><div class="num" id="s-cc">—</div><div class="sub">Private enquiries</div></div>
       <div class="stat gold"><div class="lbl">Quotations</div><div class="num" id="s-q">—</div><div class="sub">PDF quotes built</div></div>
-      <div class="stat"><div class="lbl">Total enquiries</div><div class="num" id="s-total">—</div><div class="sub">Excl. quotations</div></div>
+      <div class="stat"><div class="lbl">Total enquiries</div><div class="num" id="s-total">—</div><div class="sub">All requests</div></div>
     </div>
 
     <!-- Every enquiry on the site is one of these: the registration form
@@ -263,11 +263,8 @@
        identical PDF here — nothing but text is ever stored in the sheet.
        Rows logged before that field existed fall back to the summary line. */
     var quoteRows = [];
-    document.addEventListener('click', function (e) {
-      var btn = e.target.closest && e.target.closest('.q-dl');
-      if (!btn || !window.QNQuote) return;
-      var q = quoteRows[+btn.dataset.i];
-      if (!q) return;
+    function rebuildPdf(q, btn) {
+      if (!q || !window.QNQuote) return;
       var data = null;
       try { data = JSON.parse(q.Quote || q.quote); } catch (err) { data = null; }
       if (!data) {
@@ -286,6 +283,12 @@
         function () { btn.disabled = false; btn.textContent = label; },
         function () { btn.disabled = false; btn.textContent = 'Failed'; }
       );
+    }
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('.q-dl');
+      if (btn) return rebuildPdf(quoteRows[+btn.dataset.i], btn);
+      var rbtn = e.target.closest && e.target.closest('.rg-pdf');
+      if (rbtn) return rebuildPdf(regRows[+rbtn.dataset.i], rbtn);
     });
 
 
@@ -332,6 +335,7 @@
                 '<td>' + esc(o.currentvehicles || '—') + '</td>' +
                 '<td><div class="rg-act">' +
                   '<button type="button" class="rg-btn rg-more-btn" data-i="' + i + '">Details</button>' +
+                  (o.quote ? '<button type="button" class="rg-btn rg-pdf" data-i="' + i + '">PDF</button>' : '') +
                   (st === 'pending'
                     ? '<button type="button" class="rg-btn ok" data-act="approved" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Approve</button>' +
                       '<button type="button" class="rg-btn no" data-act="rejected" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Reject</button>'
@@ -358,7 +362,9 @@
         kv('Source page', o.page || o.form) +
         kv('Address', o.address, true) +
         kv('Cars owned', o.currentvehicles, true) +
-        kv('Message', o.message, true) +
+        kv('Configuration', o.quote ? o.message : '', true) +
+        kv('Message', o.quote ? '' : o.message, true) +
+        kv('Quote ref', o.ref) +
         kv('Notes', o.notes, true) +
       '</div>';
     }
@@ -404,11 +410,11 @@
         leads.push(r);
         if (t.cls === 'td') td++; else if (t.cls === 'cc') cc++;
       });
-      renderRegs(leads);
+      renderRegs(rows);
       document.getElementById('s-td').textContent = td;
       document.getElementById('s-cc').textContent = cc;
       document.getElementById('s-q').textContent = quotes.length;
-      document.getElementById('s-total').textContent = leads.length;
+      document.getElementById('s-total').textContent = leads.length + quotes.length;
 
       /* ---- Quotations: per-model counts + list ---- */
       var byModel = {};
