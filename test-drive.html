@@ -75,28 +75,9 @@
           <p class="eyebrow" data-i18n="td.formEyebrow">Request your drive</p>
           <h2 style="margin-top:var(--s2)" data-i18n="td.formTitle">Tell us when and where</h2>
         </div>
-        <form class="form-card reveal d1" id="testdrive-form" novalidate>
-          <div class="field-grid">
-            <div class="field"><label data-i18n="td.fName">Full name</label><input name="name" type="text" required></div>
-            <div class="field"><label data-i18n="td.fEmail">Email</label><input name="email" type="email" dir="ltr" required></div>
-            <div class="field"><label data-i18n="td.fPhone">Phone</label><input name="phone" type="tel" dir="ltr"></div>
-            <div class="field">
-              <label data-i18n="td.fModel">Model</label>
-              <select name="model">
-                <option value="">—</option>
-                <option>MAEXTRO S800</option>
-                <option>YANGWANG U9</option>
-                <option>YANGWANG U8L</option>
-                <option data-i18n="td.optAll">All three</option>
-              </select>
-            </div>
-            <div class="field"><label data-i18n="td.fCity">City</label><input name="city" type="text"></div>
-            <div class="field"><label data-i18n="td.fDate">Preferred date</label><input name="date" type="date" dir="ltr"></div>
-          </div>
-          <p class="form-alert" id="td-alert"></p>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-chrome" data-i18n="td.submit">Request test drive</button>
-          </div>
+        <form class="form-card reg reveal d1" id="testdrive-form" data-registration="test-drive" novalidate>
+          <!-- Fields are built by /assets/js/registration.js — one shared
+               application form for every enquiry on the site. -->
         </form>
       </div>
     </section>
@@ -143,7 +124,7 @@
   </footer>
 
   <script src="/assets/js/legacy.js" defer></script>
-  <script src="/assets/js/forms.js" defer></script>
+  <script src="/assets/js/registration.js" defer></script>
   <script src="/assets/js/social-dock.js" defer></script>
 </body>
 </html>

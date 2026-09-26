@@ -86,6 +86,28 @@
     .q-dl[disabled] { opacity: .55; cursor: default; }
     .q-dl:focus-visible { outline: 1px solid var(--gold); outline-offset: 2px; }
 
+
+    /* Registration applications */
+    .badge.pending  { background: rgba(224,178,90,.14); color: #e3bd78; border: 1px solid rgba(224,178,90,.4); }
+    .badge.approved { background: rgba(120,200,150,.12); color: #7fd0a6; border: 1px solid rgba(120,200,150,.35); }
+    .badge.rejected { background: rgba(224,85,99,.12); color: #e88; border: 1px solid rgba(224,85,99,.4); }
+    .rg-tbl { min-width: 1150px; }
+    .rg-tbl td:last-child, .rg-tbl td:nth-child(1) { white-space: nowrap; }
+    .rg-act { display: flex; gap: 6px; }
+    .rg-btn { font-family: var(--sans); font-size: 11.5px; font-weight: 600; letter-spacing: .04em; white-space: nowrap;
+      padding: 6px 11px; cursor: pointer; border-radius: 2px; background: transparent;
+      color: var(--ink-dim); border: 1px solid var(--line-strong); }
+    .rg-btn:hover { color: var(--ink); border-color: var(--chrome-3); }
+    .rg-btn.ok:hover { color: #7fd0a6; border-color: rgba(120,200,150,.5); }
+    .rg-btn.no:hover { color: #e88; border-color: rgba(224,85,99,.5); }
+    .rg-btn[disabled] { opacity: .45; cursor: default; }
+    .rg-more tr, .rg-more td { background: rgba(255,255,255,.02); }
+    .rg-kv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 26px; }
+    .rg-kv .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); }
+    .rg-kv .v { color: var(--ink-dim); font-size: 13.5px; margin-top: 3px; word-break: break-word; }
+    .rg-kv .full { grid-column: 1 / -1; }
+    @media (max-width: 720px) { .rg-kv { grid-template-columns: 1fr; } }
+
     .analytics-body { padding: 20px; }
     .analytics-body p { color: var(--ink-dim); font-size: 14px; line-height: 1.7; }
     .analytics-body .ga-link { display: inline-block; margin-top: var(--s3); padding: 12px 18px; background: var(--chrome-grad);
@@ -131,10 +153,22 @@
 
     <div class="ad-stats">
       <div class="stat gold"><div class="lbl">Test drives</div><div class="num" id="s-td">—</div><div class="sub">Requested drives</div></div>
-      <div class="stat gold"><div class="lbl">Registrations</div><div class="num" id="s-reg">—</div><div class="sub">Interest registered</div></div>
+      <div class="stat gold"><div class="lbl">Applications</div><div class="num" id="s-reg">—</div><div class="sub">Pending approval</div></div>
       <div class="stat"><div class="lbl">Concierge</div><div class="num" id="s-cc">—</div><div class="sub">Private enquiries</div></div>
       <div class="stat gold"><div class="lbl">Quotations</div><div class="num" id="s-q">—</div><div class="sub">PDF quotes built</div></div>
       <div class="stat"><div class="lbl">Total enquiries</div><div class="num" id="s-total">—</div><div class="sub">Excl. quotations</div></div>
+    </div>
+
+    <!-- Registration applications: every form on the site posts one of these,
+         and it stays pending until someone here approves it. -->
+    <div class="panel" style="margin-bottom:var(--s5)">
+      <div class="panel-head"><h2>Registration requests</h2><span class="count" id="reg-count"></span></div>
+      <div class="tbl-scroll">
+        <table class="rg-tbl">
+          <thead><tr><th>When</th><th>Status</th><th>Applicant</th><th>Contact</th><th>Job title</th><th>Desired model</th><th>Cars</th><th></th></tr></thead>
+          <tbody id="reg-body"><tr><td colspan="8" class="ad-state">Loading…</td></tr></tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Quotations: how many PDF quotes each model generated, and their configs -->
@@ -220,8 +254,8 @@
       var f = (form || '').toLowerCase();
       if (f.indexOf('quote') !== -1) return { cls: 'quote', label: 'Quote' };
       if (f.indexOf('test-drive') !== -1 || f.indexOf('test drive') !== -1) return { cls: 'td', label: 'Test drive' };
-      if (f.indexOf('registration') !== -1 || f.indexOf('interest') !== -1) return { cls: 'reg', label: 'Registration' };
       if (f.indexOf('concierge') !== -1) return { cls: 'cc', label: 'Concierge' };
+      if (f.indexOf('registration') !== -1 || f.indexOf('interest') !== -1) return { cls: 'reg', label: 'Registration' };
       return { cls: 'other', label: form || 'Enquiry' };
     }
     function fmtTime(v) {
@@ -262,17 +296,113 @@
       );
     });
 
+
+    /* Applications carry many more columns than the old enquiry rows, and the
+       sheet headers may be capitalised differently, so each row is flattened
+       to lowercase keys once and read from there. */
+    function norm(r) {
+      var o = {};
+      Object.keys(r || {}).forEach(function (k) { o[String(k).toLowerCase().replace(/[\s_-]/g, '')] = r[k]; });
+      return o;
+    }
+    function isApplication(r) {
+      var o = norm(r);
+      return /registration/i.test(String(o.form || '')) || !!o.jobtitle;
+    }
+    function statusOf(o) {
+      var v = String(o.status || 'pending').toLowerCase();
+      return (v === 'approved' || v === 'rejected') ? v : 'pending';
+    }
+
+    var regRows = [];
+
+    function renderRegs(rows) {
+      regRows = rows.slice().reverse();
+      var pending = regRows.filter(function (r) { return statusOf(norm(r)) === 'pending'; }).length;
+      document.getElementById('s-reg').textContent = pending;
+      document.getElementById('reg-count').textContent =
+        regRows.length + ' total · ' + pending + ' pending';
+
+      var body = document.getElementById('reg-body');
+      body.innerHTML = !regRows.length
+        ? '<tr><td colspan="8" class="ad-state">No applications yet.</td></tr>'
+        : regRows.map(function (r, i) {
+            var o = norm(r), st = statusOf(o);
+            var email = o.email || '', phone = o.phone || '';
+            var contact = [];
+            if (email) contact.push('<a class="q-mail ltr" href="mailto:' + esc(email) + '">' + esc(email) + '</a>');
+            if (phone) contact.push('<span class="ltr">' + esc(phone) + '</span>');
+            var canAct = o.row != null && o.row !== '';
+            return '<tr>' +
+                '<td>' + esc(fmtTime(o.time)) + '</td>' +
+                '<td><span class="badge ' + st + '">' + st.charAt(0).toUpperCase() + st.slice(1) + '</span></td>' +
+                '<td class="name">' + esc(o.name || o.company || '—') + '</td>' +
+                '<td>' + (contact.join('<br>') || '—') + '</td>' +
+                '<td>' + esc(o.jobtitle || '—') + '</td>' +
+                '<td>' + esc(o.desiredmodel || o.model || '—') + '</td>' +
+                '<td>' + esc(o.currentvehicles || '—') + '</td>' +
+                '<td><div class="rg-act">' +
+                  '<button type="button" class="rg-btn rg-more-btn" data-i="' + i + '">Details</button>' +
+                  (st === 'pending'
+                    ? '<button type="button" class="rg-btn ok" data-act="approved" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Approve</button>' +
+                      '<button type="button" class="rg-btn no" data-act="rejected" data-row="' + esc(o.row) + '"' + (canAct ? '' : ' disabled') + '>Reject</button>'
+                    : '') +
+                '</div></td>' +
+              '</tr>' +
+              '<tr class="rg-more" data-more="' + i + '" hidden><td colspan="8">' + details(o) + '</td></tr>';
+          }).join('');
+    }
+
+    function kv(k, v, full) {
+      if (!v) return '';
+      return '<div' + (full ? ' class="full"' : '') + '><div class="k">' + esc(k) + '</div><div class="v">' + esc(v) + '</div></div>';
+    }
+    function details(o) {
+      return '<div class="rg-kv">' +
+        kv('Company', o.company) +
+        kv('LinkedIn', o.linkedinurl) +
+        kv('Club', o.clubname) +
+        kv('Membership no.', o.membershipnumber) +
+        kv('Preferred date', o.date) +
+        kv('Source page', o.page || o.form) +
+        kv('Address', o.address, true) +
+        kv('Cars owned', o.currentvehicles, true) +
+        kv('Message', o.message, true) +
+        kv('Notes', o.notes, true) +
+      '</div>';
+    }
+
+    /* Details toggle + approval, both delegated so re-rendering keeps working. */
+    document.addEventListener('click', function (e) {
+      var more = e.target.closest && e.target.closest('.rg-more-btn');
+      if (more) {
+        var row = document.querySelector('[data-more="' + more.dataset.i + '"]');
+        if (row) { row.hidden = !row.hidden; more.textContent = row.hidden ? 'Details' : 'Hide'; }
+        return;
+      }
+      var act = e.target.closest && e.target.closest('.rg-btn[data-act]');
+      if (!act || act.disabled) return;
+      var label = act.textContent;
+      act.disabled = true; act.textContent = 'Saving…';
+      jsonp({ action: 'status', token: token, row: act.dataset.row, status: act.dataset.act })
+        .then(function (data) {
+          if (!data || data.error) throw new Error((data && data.error) || 'error');
+          load();
+        })
+        .catch(function () { act.disabled = false; act.textContent = label + ' failed'; });
+    });
+
     function render(rows) {
       rows = rows || [];
-      var leads = [], quotes = [], td = 0, reg = 0, cc = 0;
+      renderRegs(rows.filter(isApplication));
+      var leads = [], quotes = [], td = 0, cc = 0;
       rows.forEach(function (r) {
         var t = typeOf(r.Form || r.form);
         if (t.cls === 'quote') { quotes.push(r); return; }
         leads.push(r);
-        if (t.cls === 'td') td++; else if (t.cls === 'reg') reg++; else if (t.cls === 'cc') cc++;
+        if (t.cls === 'td') td++; else if (t.cls === 'cc') cc++;
       });
       document.getElementById('s-td').textContent = td;
-      document.getElementById('s-reg').textContent = reg;
       document.getElementById('s-cc').textContent = cc;
       document.getElementById('s-q').textContent = quotes.length;
       document.getElementById('s-total').textContent = leads.length;

@@ -18,8 +18,26 @@ node serve.mjs
 - `/models/maextro-s800` · `/models/yangwang-u9` · `/models/yangwang-u8l`
 - `/concierge` · `/about` · `/join` · `/test-drive`
 
+## نموذج التسجيل (كل الفورمات)
+كل نماذج الموقع (`/join` · `/concierge` · `/test-drive`) بقت نفس نموذج التسجيل الواحد،
+مبني من ملف واحد: `assets/js/registration.js` — الصفحة فيها `<form data-registration="…">` فاضي بس.
+
+أربعة أقسام: بيانات التواصل · بيانات الشركة · سياراتك الحالية · تفضيلاتك.
+الطلب بيتسجل بحالة `pending` لحد ما الإدارة توافق عليه من `/admin`.
+
+قواعد التحقق: بريد إلكتروني صحيح · كل الحقول المطلوبة · سيارة واحدة على الأقل ·
+ومنع تكرار نفس البريد لو عنده طلب معلّق أو مقبول.
+
+### الباك إند (Google Apps Script)
+الكود الكامل موجود في `apps-script/Code.gs`. للرفع:
+1. افتح الـ Google Sheet ← **Extensions → Apps Script**.
+2. الصق محتوى `apps-script/Code.gs` مكان الكود القديم.
+3. غيّر `ADMIN_PASS` لرمز دخول لوحة الإدارة الحالي.
+4. **Deploy → New deployment → Web app** — *Execute as: Me* · *Who has access: Anyone*.
+5. لو اتغير رابط الـ `/exec`، حدّثه في `assets/js/registration.js` و `assets/js/config.js` و `admin.html`.
+
 ## اللغة
-إنجليزي أساسي + عربي. زرار **ع** فوق، أو ضيف `?lang=ar` لأي رابط.
+إنجليزي أساسي + عربي. اختيار الدولة من العلم فوق، أو ضيف `?country=eg` (أو `ae` / `sa` / `us`) لأي رابط.
 
 ## الرفع (Vercel)
 الفولدر جاهز للرفع كما هو (`vercel.json` موجود):

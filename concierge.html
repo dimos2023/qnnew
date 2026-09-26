@@ -77,26 +77,9 @@
           <p class="eyebrow" data-i18n="cc.formEyebrow">Private enquiry</p>
           <h2 style="margin-top:var(--s2)" data-i18n="cc.formTitle">Tell us how we can help</h2>
         </div>
-        <form class="form-card reveal d1" id="concierge-form" novalidate>
-          <div class="field-grid">
-            <div class="field"><label data-i18n="cc.fName">Full name</label><input name="name" type="text" required></div>
-            <div class="field"><label data-i18n="cc.fEmail">Email</label><input name="email" type="email" dir="ltr" required></div>
-            <div class="field"><label data-i18n="cc.fPhone">Phone</label><input name="phone" type="tel" dir="ltr"></div>
-            <div class="field">
-              <label data-i18n="cc.fModel">Model of interest</label>
-              <select name="model">
-                <option value="">—</option>
-                <option>MAEXTRO S800</option>
-                <option>YANGWANG U9</option>
-                <option>YANGWANG U8L</option>
-              </select>
-            </div>
-            <div class="field full"><label data-i18n="cc.fMsg">Message</label><textarea name="message" data-i18n-ph="cc.fMsgPh" placeholder="How can our concierge team help?"></textarea></div>
-          </div>
-          <p class="form-alert" id="cc-alert"></p>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-chrome" data-i18n="cc.submit">Send enquiry</button>
-          </div>
+        <form class="form-card reg reveal d1" id="concierge-form" data-registration="concierge" novalidate>
+          <!-- Fields are built by /assets/js/registration.js — one shared
+               application form for every enquiry on the site. -->
         </form>
       </div>
     </section>
@@ -112,7 +95,7 @@
   </footer>
 
   <script src="/assets/js/legacy.js" defer></script>
-  <script src="/assets/js/forms.js" defer></script>
+  <script src="/assets/js/registration.js" defer></script>
   <script src="/assets/js/social-dock.js" defer></script>
 </body>
 </html>

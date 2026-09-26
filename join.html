@@ -47,27 +47,9 @@
 
     <section class="page-body">
       <div class="shell">
-        <form class="form-card reveal" id="join-form" novalidate>
-          <div class="field-grid">
-            <div class="field"><label data-i18n="jn.fName">Full name</label><input name="name" type="text" required></div>
-            <div class="field"><label data-i18n="jn.fEmail">Email</label><input name="email" type="email" dir="ltr" required></div>
-            <div class="field"><label data-i18n="jn.fPhone">Phone</label><input name="phone" type="tel" dir="ltr"></div>
-            <div class="field"><label data-i18n="jn.fCity">City</label><input name="city" type="text"></div>
-            <div class="field"><label data-i18n="jn.fCompany">Company (optional)</label><input name="company" type="text"></div>
-            <div class="field">
-              <label data-i18n="jn.fModel">Model of interest</label>
-              <select name="model">
-                <option value="">—</option>
-                <option>MAEXTRO S800</option>
-                <option>YANGWANG U9</option>
-                <option>YANGWANG U8L</option>
-              </select>
-            </div>
-          </div>
-          <p class="form-alert" id="join-alert"></p>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-chrome" data-i18n="jn.submit">Register interest</button>
-          </div>
+        <form class="form-card reg reveal" id="join-form" data-registration="join" novalidate>
+          <!-- Fields are built by /assets/js/registration.js — one shared
+               application form for every enquiry on the site. -->
         </form>
       </div>
     </section>
@@ -83,7 +65,7 @@
   </footer>
 
   <script src="/assets/js/legacy.js" defer></script>
-  <script src="/assets/js/forms.js" defer></script>
+  <script src="/assets/js/registration.js" defer></script>
   <script src="/assets/js/social-dock.js" defer></script>
 </body>
 </html>

@@ -204,3 +204,77 @@ html.rtl .owner-card .quote { font-family: var(--serif-ar); }
 .legal p, .legal li { color: var(--ink-dim); line-height: 1.9; font-size: 16px; }
 .legal ul { margin: var(--s3) 0; padding-inline-start: var(--s4); display: flex; flex-direction: column; gap: 10px; }
 .legal .updated { color: var(--ink-mute); font-size: 13px; letter-spacing: 0.04em; }
+
+/* --- Registration application form ----------------------------------------
+   Shared by Register interest, Concierge and Test drive: four numbered
+   sections inside the same .form-card shell, widened because the application
+   asks for far more than a name and an email. */
+.form-card.reg { max-width: 920px; }
+
+.reg-legend {
+  font-family: var(--sans-ar); font-size: 13px; color: var(--ink-mute);
+  letter-spacing: 0.02em; margin-bottom: var(--s5);
+}
+.reg-req { color: #e08a8a; font-weight: 700; margin-inline-start: 2px; }
+.reg-opt { color: var(--ink-mute); font-size: 12px; margin-inline-start: 4px; }
+
+.reg-sec { margin-bottom: var(--s6); }
+.reg-sec:last-of-type { margin-bottom: var(--s5); }
+.reg-sec-h {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--sans); font-size: 15px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink);
+  padding-bottom: var(--s3); margin-bottom: var(--s4);
+  border-bottom: 1px solid var(--line);
+}
+html.rtl .reg-sec-h { font-family: var(--sans-ar); letter-spacing: 0.04em; }
+.reg-n {
+  flex: none; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 13px; font-weight: 700; letter-spacing: 0;
+  color: #17181c; background: var(--chrome-grad);
+}
+.reg-sec-sub { color: var(--ink-mute); font-size: 14px; margin: calc(var(--s4) * -1 + 2px) 0 var(--s4); }
+.reg-hint { color: var(--ink-mute); font-size: 12.5px; line-height: 1.6; margin-top: 2px; }
+
+/* Vehicles: type + brand + remove, collapsing to one column on phones. */
+.reg-cars { display: flex; flex-direction: column; gap: var(--s3); }
+.reg-car {
+  display: grid; grid-template-columns: 1fr 1fr 44px; gap: var(--s3);
+  align-items: end;
+}
+.reg-car-x {
+  height: 46px; border: 1px solid var(--line-strong); background: transparent;
+  color: var(--ink-mute); font-size: 22px; line-height: 1; cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.reg-car-x:hover { color: var(--ink); border-color: var(--chrome-3); }
+.reg-cars.one .reg-car-x { visibility: hidden; }
+.reg-add {
+  margin-top: var(--s4); padding: 12px 22px;
+  border: 1px dashed var(--line-strong); background: transparent;
+  color: var(--ink-dim); font-family: var(--sans); font-size: 13px;
+  letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+html.rtl .reg-add { font-family: var(--sans-ar); letter-spacing: 0.02em; }
+.reg-add:hover { color: var(--ink); border-color: var(--chrome-3); }
+
+.reg-foot { color: var(--ink-mute); font-size: 13px; margin-top: var(--s4); }
+.form-actions .btn[aria-busy='true'] { opacity: 0.6; cursor: default; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (max-width: 760px) {
+  .reg-car { grid-template-columns: 1fr 1fr; }
+  .reg-car-x { grid-column: 2; justify-self: end; width: 46px; }
+  .reg-cars.one .reg-car-x { display: none; }
+}
+@media (max-width: 560px) {
+  .reg-car { grid-template-columns: 1fr; }
+  .reg-car-x { grid-column: 1; }
+  .reg-add { width: 100%; }
+}
