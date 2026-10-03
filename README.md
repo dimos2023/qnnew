@@ -39,6 +39,25 @@ node serve.mjs
 4. **Deploy → New deployment → Web app** — *Execute as: Me* · *Who has access: Anyone*.
 5. لو اتغير رابط الـ `/exec`، حدّثه في `assets/js/registration.js` و `assets/js/config.js` و `admin.html`.
 
+## التقرير اليومي (Google Analytics + Claude)
+`apps-script/DailyReport.gs` بيشتغل مرة كل يوم الساعة 8 صباحاً: بيقرا أرقام GA4 لليوم اللي فات،
+وبيعد طلبات الموقع من نفس الشيت، وبيبعتهم لـ Claude يكتب التحليل بالعربي، وبيرسل التقرير
+على الإيميل (و تيليجرام لو متظبط).
+
+### التجهيز (مرة واحدة)
+1. في نفس مشروع Apps Script: **Services (+) → Google Analytics Data API** باسم `AnalyticsData`.
+2. الصق `apps-script/DailyReport.gs` كملف جديد جنب `Code.gs` (محتاجه، بيستخدم `rows_()` منه).
+3. **Project Settings → Script Properties** وضيف:
+   - `GA4_PROPERTY_ID` — رقم الـ Property من GA4 (Admin → Property Settings)، مش `G-GQD8V39HTZ`.
+   - `ANTHROPIC_API_KEY` — من console.anthropic.com
+   - `REPORT_EMAIL` — الإيميل اللي يوصله التقرير
+   - `TELEGRAM_BOT_TOKEN` و `TELEGRAM_CHAT_ID` — اختياري
+4. شغّل `testReport()` مرة بالإيد ووافق على الصلاحيات، وبعدها `createDailyTrigger()`.
+
+مفيش أي مفتاح مكتوب في الكود — كلهم في Script Properties، عشان الريبو عام.
+واتساب جاهز في `sendWhatsApp_()`: تضيف `WHATSAPP_TOKEN` و `WHATSAPP_PHONE_ID` و `WHATSAPP_TO`
+من WhatsApp Cloud API ويشتغل من غير أي تعديل تاني.
+
 ## اللغة
 إنجليزي أساسي + عربي. اختيار الدولة من العلم فوق، أو ضيف `?country=eg` (أو `ae` / `sa` / `us`) لأي رابط.
 
