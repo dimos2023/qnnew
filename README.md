@@ -43,9 +43,21 @@ node serve.mjs
 `assets/js/analytics.js` بيحمّل حاجتين: **Google Analytics 4** و**بيكسل Meta** — الـ IDs في أول الملف،
 وتفضية أي واحد منهم بتوقفه تماماً.
 
-الملف كمان بيعرّف `window.QNTrack`، والنماذج بتناديه لحظة ما الطلب يتبعت فعلاً، فيتسجل
-`generate_lead` في Analytics و `Lead` في Meta. مودال عرض السعر بيسجل تحويله بنفسه
-(`reportsLead: true`) عشان الطلب الواحد ما يتعدش مرتين.
+الملف كمان بيعرّف `window.QNTrack`، وكل حدث بيتبعت للاتنين مرة واحدة باسم Meta القياسي
+والاسم المقابل في GA4، ومعاه الصفحة والموديل:
+
+| الحدث في Meta | إمتى | GA4 |
+|---|---|---|
+| `PageView` | أي صفحة | تلقائي |
+| `ViewContent` | صفحة موديل، أو تبديل الموديل في Build & Price | `view_item` |
+| `CustomizeProduct` | تغيير لون/جنوط/باقة (مرة واحدة في الزيارة) | `customize_product` |
+| `InitiateCheckout` | فتح فورم عرض السعر | `begin_checkout` |
+| `Contact` | ضغط واتساب أو تليفون أو إيميل (أي مكان في الموقع) | `contact` |
+| `Lead` | إرسال أي نموذج | `generate_lead` |
+| `Schedule` | إرسال نموذج تجربة القيادة (مع `Lead`) | `schedule_test_drive` |
+| `CompleteRegistration` | إرسال نموذج تسجيل الاهتمام (مع `Lead`) | `sign_up` |
+
+مودال عرض السعر بيسجل تحويله بنفسه (`reportsLead: true`) عشان الطلب الواحد ما يتعدش مرتين.
 
 ## التقرير اليومي (Google Analytics + Claude)
 `apps-script/DailyReport.gs` بيشتغل مرة كل يوم الساعة 8 صباحاً: بيقرا أرقام GA4 لليوم اللي فات،

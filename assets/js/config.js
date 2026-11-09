@@ -232,7 +232,10 @@
         '" data-model="' + m.id + '">' + m.name + '</button>';
     }).join('');
     host.querySelectorAll('[data-model]').forEach(function (b) {
-      b.addEventListener('click', function () { state.model = b.getAttribute('data-model'); resetSelections(); renderAll(); });
+      b.addEventListener('click', function () {
+        state.model = b.getAttribute('data-model'); resetSelections(); renderAll();
+        if (window.QNTrack) window.QNTrack.viewModel(model().name, 'Build & Price');
+      });
     });
   }
 
@@ -316,6 +319,7 @@
           syncViewer(gid, oid);   // drive the live 3D car
         }
         renderGroups(); renderStage(); renderSummary();
+        if (window.QNTrack) window.QNTrack.customize({ model: m.name, label: gid });
       });
     });
   }
@@ -419,6 +423,7 @@
   function openQuoteModal() {
     if (modalEl) return;
     if (!window.QNRegistration) { fallbackText(); return; }
+    if (window.QNTrack) window.QNTrack.quoteStart({ model: model().name });
     lastFocus = document.activeElement;
     var m = model();
 
@@ -515,6 +520,7 @@
     resetSelections();
     renderAll();
     wireCTAs();
+    if (window.QNTrack) window.QNTrack.viewModel(model().name, 'Build & Price');
     /* Pull today's live USD rates, then re-price everything. */
     loadRates().then(function () { renderAll(); });
     /* Re-render on country/language change so text, currency and RTL update. */

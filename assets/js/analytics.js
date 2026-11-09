@@ -40,48 +40,108 @@
     window.fbq('track', 'PageView');
   }
 
-  /* ---- The site's own conversions --------------------------------------
-     Called by the registration form and the Build & Price modal. Both
-     platforms hear about the same moment, under the names each one expects:
-     generate_lead in Analytics, Lead in Meta. */
+  /* ---- What the site reports -------------------------------------------
+     One call reaches both platforms under the name each expects: a Meta
+     standard event, and the nearest GA4 event. Every event carries the page
+     and, where there is one, the model — so a report can answer "who did
+     what, and on which car".
+
+     Meta events used here:
+       PageView           every page
+       ViewContent        a model page, or a model chosen in Build & Price
+       CustomizeProduct   changed a colour / wheels / package (once a visit)
+       InitiateCheckout   opened the quotation form
+       Contact            tapped WhatsApp, the phone number or the email
+       Lead               sent any enquiry form
+       Schedule           booked a test drive
+       CompleteRegistration  registered interest                            */
+
+  function send(metaEvent, gaEvent, detail) {
+    detail = detail || {};
+    var data = {
+      page: location.pathname,
+      model: detail.model || '',
+      label: detail.label || ''
+    };
+    try {
+      if (window.gtag) window.gtag('event', gaEvent, data);
+      if (window.fbq) {
+        window.fbq('track', metaEvent, {
+          content_name: detail.label || document.title,
+          content_category: detail.model || '',
+          content_type: detail.model ? 'product' : undefined
+        });
+      }
+    } catch (e) { /* measurement must never break the page */ }
+  }
+
+  /* The model a page is about, read from the path. */
+  var MODEL_BY_PATH = {
+    '/models/maextro-s800': 'MAEXTRO S800',
+    '/models/yangwang-u9': 'YANGWANG U9',
+    '/models/yangwang-u8l': 'YANGWANG U8L'
+  };
+
+  var customizedOnce = false;
+
   window.QNTrack = {
+    /* A form reached the sheet. `form` says which one, and the name it
+       reports under follows from that. */
     lead: function (detail) {
       detail = detail || {};
-      try {
-        if (window.gtag) {
-          window.gtag('event', 'generate_lead', {
-            form: detail.form || '',
-            model: detail.model || '',
-            page: location.pathname
-          });
-        }
-        if (window.fbq) {
-          window.fbq('track', 'Lead', {
-            content_name: detail.form || 'Registration',
-            content_category: detail.model || ''
-          });
-        }
-      } catch (e) { /* measurement must never break a submission */ }
+      var form = String(detail.form || '');
+      send('Lead', 'generate_lead', { label: form, model: detail.model });
+      var also = { label: form, model: detail.model };
+      if (/test.?drive/i.test(form)) send('Schedule', 'schedule_test_drive', also);
+      else if (/interest/i.test(form)) send('CompleteRegistration', 'sign_up', also);
     },
 
-    /* A visitor who configured a car and asked for the quotation. */
+    /* The quotation request from Build & Price. */
     quote: function (detail) {
       detail = detail || {};
-      try {
-        if (window.gtag) {
-          window.gtag('event', 'generate_lead', {
-            form: 'Quote download',
-            model: detail.model || '',
-            page: location.pathname
-          });
-        }
-        if (window.fbq) {
-          window.fbq('track', 'Lead', {
-            content_name: 'Quote download',
-            content_category: detail.model || ''
-          });
-        }
-      } catch (e) { /* same */ }
+      send('Lead', 'generate_lead', { label: 'Quote download', model: detail.model });
+    },
+
+    /* Opened the quotation form — intent, before any details are given. */
+    quoteStart: function (detail) {
+      send('InitiateCheckout', 'begin_checkout', { label: 'Quote form opened', model: (detail || {}).model });
+    },
+
+    /* Looked at a car: a model page, or a model picked in the configurator. */
+    viewModel: function (model, label) {
+      send('ViewContent', 'view_item', { model: model, label: label || model });
+    },
+
+    /* Changed something in the configurator. Once a visit is enough to know
+       the visitor engaged; every click would drown the account. */
+    customize: function (detail) {
+      if (customizedOnce) return;
+      customizedOnce = true;
+      send('CustomizeProduct', 'customize_product', detail);
+    },
+
+    /* WhatsApp, phone or email — a conversation started off-site. */
+    contact: function (detail) {
+      send('Contact', 'contact', detail);
     }
   };
+
+  /* ---- Wiring that needs no change anywhere else -------------------------
+     A model page reports itself, and every WhatsApp / phone / email link on
+     the site reports a Contact, wherever it sits. */
+  var pageModel = MODEL_BY_PATH[location.pathname.replace(/\/$/, '')];
+  if (pageModel) window.QNTrack.viewModel(pageModel, pageModel);
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (/^https?:\/\/(wa\.me|api\.whatsapp\.com)/i.test(href)) {
+      window.QNTrack.contact({ label: 'WhatsApp', model: pageModel });
+    } else if (/^tel:/i.test(href)) {
+      window.QNTrack.contact({ label: 'Phone call', model: pageModel });
+    } else if (/^mailto:/i.test(href)) {
+      window.QNTrack.contact({ label: 'Email', model: pageModel });
+    }
+  }, true);
 })();
