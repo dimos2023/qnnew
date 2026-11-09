@@ -448,6 +448,7 @@
 
     var form = modalEl.querySelector('.qm-reg');
     window.QNRegistration.mount(form, 'quote', {
+      reportsLead: true,          /* this modal reports its own conversion */
       extra: function (record) {
         var mm = model();
         var when = Date.now();
@@ -463,6 +464,7 @@
         };
       },
       onSuccess: function () {
+        if (window.QNTrack) window.QNTrack.quote({ model: model().name });
         /* Nothing is emailed from here; the team sends the file. Flip
            CUSTOMER_GETS_COPY on to hand the customer their copy at once. */
         if (CUSTOMER_GETS_COPY && window.QNQuote && lastQuote) {

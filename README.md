@@ -39,6 +39,14 @@ node serve.mjs
 4. **Deploy → New deployment → Web app** — *Execute as: Me* · *Who has access: Anyone*.
 5. لو اتغير رابط الـ `/exec`، حدّثه في `assets/js/registration.js` و `assets/js/config.js` و `admin.html`.
 
+## التتبع والإعلانات
+`assets/js/analytics.js` بيحمّل حاجتين: **Google Analytics 4** و**بيكسل Meta** — الـ IDs في أول الملف،
+وتفضية أي واحد منهم بتوقفه تماماً.
+
+الملف كمان بيعرّف `window.QNTrack`، والنماذج بتناديه لحظة ما الطلب يتبعت فعلاً، فيتسجل
+`generate_lead` في Analytics و `Lead` في Meta. مودال عرض السعر بيسجل تحويله بنفسه
+(`reportsLead: true`) عشان الطلب الواحد ما يتعدش مرتين.
+
 ## التقرير اليومي (Google Analytics + Claude)
 `apps-script/DailyReport.gs` بيشتغل مرة كل يوم الساعة 8 صباحاً: بيقرا أرقام GA4 لليوم اللي فات،
 وبيعد طلبات الموقع من نفس الشيت، وبيبعتهم لـ Claude يكتب التحليل بالعربي، وبيرسل التقرير

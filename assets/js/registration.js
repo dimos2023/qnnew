@@ -359,6 +359,12 @@
       try { localStorage.setItem(STORE_KEY, JSON.stringify(record)); } catch (e) { /* private mode */ }
 
       return Promise.all([sendToSheet(payload), sendEmail(payload)]).then(function () {
+        /* The request is away: tell Analytics and the Meta pixel — unless the
+           host reports the conversion itself, as the quotation modal does, so
+           one request is never counted twice. */
+        if (window.QNTrack && !opts.reportsLead) {
+          window.QNTrack.lead({ form: src.label, model: record['desired-model'] });
+        }
         if (opts.onSuccess) opts.onSuccess(record, payload);
         else successPanel(form);
       });

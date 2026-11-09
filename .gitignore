@@ -7,3 +7,7 @@ Thumbs.db
 assets/video/Maextro_S800_Final_Master_v3_1080p.mp4
 assets/video/BYD_Yangwang_U9_Homepage_Hero_Film_1080p_v2.mp4
 assets/video/BYD_Yangwang_U8L_Homepage_Cinematic_Film_1080p.mp4
+
+# 3D showroom: Blender sources, renders and the web export live on the
+# designer's machine, not in the site repository (about 90 MB).
+3d showroom/
